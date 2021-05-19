@@ -6,6 +6,7 @@ import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
 import AccesoForm from "./AccesoForm";
 import Logo from "../Assets/logo_bancoppel_empresas.svg";
+import SecondaryNav from "./SecondaryNav";
 
 const StyledNavbar = styled.div`
   background: var(--white);
@@ -98,7 +99,7 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <>
         <StyledNavbar className="bancoppel_nav">
@@ -140,6 +141,7 @@ class Navbar extends Component {
             </div>
           </Container>
         </StyledNavbar>
+        <SecondaryNav />
         {this.state.onOpen ? (
           <SideDrawer setState={this.setState.bind(this)} />
         ) : null}
