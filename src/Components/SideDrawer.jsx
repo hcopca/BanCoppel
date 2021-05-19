@@ -84,6 +84,7 @@ export default class SideDrawer extends Component {
     document.body.style.overflow = "hidden";
     document.body.scroll = "no";
   }
+
   render() {
     return (
       <StyledSideDrawer>

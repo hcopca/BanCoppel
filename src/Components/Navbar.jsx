@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Container from "./Container";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
+import AccesoForm from "./AccesoForm";
 import Logo from "../Assets/logo_bancoppel_empresas.svg";
 
 const StyledNavbar = styled.div`
@@ -72,6 +73,9 @@ const StyledNavbar = styled.div`
             margin-right: 0;
           }
         }
+        .acceso {
+          position: relative;
+        }
       }
     }
   }
@@ -90,10 +94,11 @@ const StyledNavbar = styled.div`
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = { onOpen: false };
+    this.state = { onOpen: false, openAcceso: false };
   }
 
   render() {
+    console.log(this.state);
     return (
       <>
         <StyledNavbar className="bancoppel_nav">
@@ -117,11 +122,21 @@ class Navbar extends Component {
                 </BancoppelBtn>
               </NavLink>
               <NavLink to="/" className="navigation-item">
-                <BancoppelBtn amarillo>Empresas</BancoppelBtn>
+                <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink>
-              <NavLink to="/" className="navigation-item">
-                <BancoppelBtn secundario>Acceso</BancoppelBtn>
-              </NavLink>
+              <div className="acceso">
+                <BancoppelBtn
+                  secundario
+                  onClick={() =>
+                    this.setState({ openAcceso: !this.state.openAcceso })
+                  }
+                >
+                  Acceso
+                </BancoppelBtn>
+                {this.state.openAcceso ? (
+                  <AccesoForm setState={this.setState.bind(this)} />
+                ) : null}
+              </div>
             </div>
           </Container>
         </StyledNavbar>
