@@ -111,7 +111,7 @@ export default class AccesoForm extends Component {
         <form onSubmit={() => console.log("amonos")}>
           <div className="form_item">
             <InputBancoppel
-              type="email"
+              type="text"
               placeholder="RFC"
               name="RFC"
               id="RFC"
