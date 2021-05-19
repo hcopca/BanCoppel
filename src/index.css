@@ -18,12 +18,18 @@ body {
   --red: #f3685f;
   --green: #39c6ac;
   --white: #ffffff;
-  --gray: #aaaaaa;
+  --gray: #636363;
 }
 
 @font-face {
   font-family: futura_bold;
   src: url("./Assets/Fonts/futura/Futura\ Bold\ font.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: futura_normal;
+  src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
   /* font-display: swap; */
 }
 
@@ -36,6 +42,12 @@ body {
 @font-face {
   font-family: futura_book;
   src: url("./Assets/Fonts/futura/Futura\ Book\ font.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: futura_normal;
+  src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
   /* font-display: swap; */
 }
 
@@ -88,8 +100,8 @@ h4 {
 }
 
 p {
-  font-size: 16px;
-  font-family: futura_book;
+  font-size: 14px;
+  font-family: futura_normal;
 }
 
 .t_2 {
