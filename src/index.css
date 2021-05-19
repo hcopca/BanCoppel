@@ -1,13 +1,116 @@
+*,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --storm-blue: #225aa7;
+  --night-blue: #002a61;
+  --blue: #36679a;
+  --sky-blue: #338cbf;
+  --morning-blue: #81c1ea;
+  --yellow: #fcda47;
+  --summer-yellow: #ffbe12;
+  --light-blue: #f4f6f9;
+  --shadow-blue: #dae0e9;
+  --red: #f3685f;
+  --green: #39c6ac;
+  --white: #ffffff;
+  --gray: #aaaaaa;
 }
+
+@font-face {
+  font-family: futura_bold;
+  src: url("./Assets/Fonts/futura/Futura\ Bold\ font.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "futura_heavy";
+  src: url("./Assets/Fonts/futura/Futura\ Heavy\ font.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "futura_book";
+  src: url("./Assets/Fonts/futura/Futura\ Book\ font.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "lato_bold";
+  src: url("./Assets/Fonts/Lato/Lato-Bold.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "lato_regular";
+  src: url("./Assets/Fonts/Lato/Lato-Regular.ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "lato_medium";
+  src: url("./Assets/Fonts/Lato/Lato-Regular.ttf");
+  /* font-display: swap; */
+}
+
+h1 {
+  font-size: 36px;
+  font-family: futura_bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: futura_heavy;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: futura_bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: futura_heavy;
+}
+
+.bold_1 {
+  font-size: 16px;
+  font-family: futura_bold;
+}
+
+.bold_2 {
+  font-size: 14px;
+  font-family: lato_bold;
+}
+
+p {
+  font-size: 16px;
+  font-family: futura_book;
+}
+
+.t_2 {
+  font-size: 14px;
+  font-family: lato_regular;
+}
+
+.t_3 {
+  font-size: 12px;
+  font-family: lato_regular;
+}
+
+.t_4 {
+  font-size: 10px;
+  font-family: lato_regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* * {
+  border: 1px solid red;
+} */
