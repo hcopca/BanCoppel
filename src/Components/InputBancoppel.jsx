@@ -6,8 +6,8 @@ const StyledInput = styled.div`
   position: relative;
 
   label {
-    transition: all 0.3s ease-in-out;
-    font-size: 16px;
+    /* transition: all 0.3s ease-in-out; */
+    font-size: ${(props) => (props.focus || props.hasText ? "12px" : "16px")};
     font-family: futura_book;
     color: var(--gray);
     position: absolute;
@@ -25,7 +25,7 @@ const StyledInput = styled.div`
     padding: 10px;
     border: 0;
     border-bottom: 2px solid var(--sky-blue);
-    font-family: futura_normal;
+    font-family: futura_book;
     font-size: 18px;
 
     &::placeholder {
@@ -49,7 +49,6 @@ class InputBancoppel extends Component {
     super(props);
     this.state = {
       focus: false,
-      show: false,
     };
     this.myRef = React.createRef();
   }
@@ -66,10 +65,6 @@ class InputBancoppel extends Component {
     }
   }
   showPassword() {
-    this.setState({
-      show: !this.state.show,
-    });
-
     if (this.myRef.current !== null) {
       if (this.myRef.current.type === "text") {
         this.myRef.current.type = "password";
