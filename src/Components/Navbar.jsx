@@ -8,7 +8,7 @@ import Logo from "../Assets/logo_bancoppel_empresas.svg";
 
 const StyledNavbar = styled.div`
   background: var(--white);
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 2px solid var(--shadow-blue);
   .container {
@@ -116,10 +116,10 @@ class Navbar extends Component {
                   Personas
                 </BancoppelBtn>
               </NavLink>
-              <NavLink to="/soluciones" className="navigation-item">
+              <NavLink to="/" className="navigation-item">
                 <BancoppelBtn amarillo>Empresas</BancoppelBtn>
               </NavLink>
-              <NavLink to="/soluciones" className="navigation-item">
+              <NavLink to="/" className="navigation-item">
                 <BancoppelBtn secundario>Acceso</BancoppelBtn>
               </NavLink>
             </div>

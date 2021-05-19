@@ -11,7 +11,7 @@ const StyledSideDrawer = styled.div`
   position: absolute;
   top: 0;
   width: 100vw;
-  padding-top: 50px;
+  padding-top: 30px;
   .container {
     .header {
       display: flex;
@@ -69,7 +69,6 @@ const StyledSideDrawer = styled.div`
       }
     }
   }
-
   @media (min-width: 768px) {
     height: auto;
   }

@@ -28,31 +28,31 @@ body {
 }
 
 @font-face {
-  font-family: "futura_heavy";
+  font-family: futura_heavy;
   src: url("./Assets/Fonts/futura/Futura\ Heavy\ font.ttf");
   /* font-display: swap; */
 }
 
 @font-face {
-  font-family: "futura_book";
+  font-family: futura_book;
   src: url("./Assets/Fonts/futura/Futura\ Book\ font.ttf");
   /* font-display: swap; */
 }
 
 @font-face {
-  font-family: "lato_bold";
+  font-family: lato_bold;
   src: url("./Assets/Fonts/Lato/Lato-Bold.ttf");
   /* font-display: swap; */
 }
 
 @font-face {
-  font-family: "lato_regular";
+  font-family: lato_regular;
   src: url("./Assets/Fonts/Lato/Lato-Regular.ttf");
   /* font-display: swap; */
 }
 
 @font-face {
-  font-family: "lato_medium";
+  font-family: lato_medium;
   src: url("./Assets/Fonts/Lato/Lato-Regular.ttf");
   /* font-display: swap; */
 }
