@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Hero, BancoppelBtn } from "../../Components";
+import { Container, Hero, BancoppelBtn, Footer } from "../../Components";
 import HeroHome from "../../Assets/Hero_Home.svg";
 import styled from "styled-components";
 
@@ -69,6 +69,7 @@ export default function Home() {
           <BancoppelBtn amarillo>Solicita ya tu crédito</BancoppelBtn>
         </StyledHomeHero>
       </Hero>
+      <Footer />
     </>
   );
 }
