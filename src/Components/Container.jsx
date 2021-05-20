@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  width: 100%;
+  width: 85%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     max-width: 540px;
   }
 
@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
 
   @media (min-width: 1200px) {
     max-width: 1140px;
-  }
+  } */
 `;
 
 export default function Container(props) {

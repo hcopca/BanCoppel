@@ -3,74 +3,77 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Container from "./Container";
 import Logo_BN from "../Assets/logo_bancoppel_b&w.svg";
-import Close from "../Assets/close.png";
-import Search from "../Assets/search.png";
+import Close from "../Assets/close.svg";
+import Search from "../Assets/search.svg";
 
 const StyledSideDrawer = styled.div`
-  background: var(--night-blue);
   position: absolute;
   top: 0;
   width: 100vw;
-  padding-top: 30px;
-  .container {
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  height: 100vh;
+  z-index: 100000000000;
+  background: rgba(0, 0, 0, 0.7);
+  .sideDrawer {
+    background: var(--night-blue);
 
-      .brand_close {
+    padding-top: 30px;
+    .container {
+      .header {
         display: flex;
         align-items: center;
-        .close {
-          margin-right: 10px;
+        justify-content: space-between;
+
+        .brand_close {
+          display: flex;
+          align-items: center;
+          .close {
+            margin-right: 10px;
+            width: 30px;
+            cursor: pointer;
+          }
+          img.Logo_BN {
+            width: 70%;
+          }
+        }
+        img.Search {
           width: 30px;
-          cursor: pointer;
-        }
-        img.Logo_BN {
-          width: 70%;
         }
       }
-      img.Search {
-        width: 30px;
-      }
     }
-  }
-  .line {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: flex;
-    .blue {
-      background: var(--morning-blue);
-      flex: 1;
-      height: 2px;
-      &:last-child {
-        flex: 3;
-      }
-    }
-    .yellow {
-      flex: 1;
-      height: 2px;
-      background: var(--yellow);
-    }
-  }
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    .navigation-item {
-      transition: all 0.2s ease-in-out;
+    .line {
+      margin-top: 50px;
       margin-bottom: 30px;
-      color: var(--white);
-      font-family: Futura;
-      font-size: 14px;
-      line-height: 130%;
-      &:hover {
-        color: var(--morning-blue);
+      display: flex;
+      .blue {
+        background: var(--morning-blue);
+        flex: 1;
+        height: 2px;
+        &:last-child {
+          flex: 3;
+        }
+      }
+      .yellow {
+        flex: 1;
+        height: 2px;
+        background: var(--yellow);
       }
     }
-  }
-  @media (min-width: 768px) {
-    height: auto;
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .navigation-item {
+        transition: all 0.2s ease-in-out;
+        margin-bottom: 30px;
+        color: var(--white);
+        font-family: Futura;
+        font-size: 14px;
+        line-height: 130%;
+        &:hover {
+          color: var(--morning-blue);
+        }
+      }
+    }
   }
 `;
 
@@ -85,44 +88,54 @@ export default class SideDrawer extends Component {
     document.body.scroll = "no";
   }
 
+  setModal(e) {
+    if (this.props.setState) {
+      if (e.target.dataset.action === "close") {
+        this.props.setState({ onOpen: false });
+      }
+    }
+  }
+
   render() {
     return (
-      <StyledSideDrawer>
-        <Container>
-          <div className="header">
-            <div className="brand_close">
-              <img
-                src={Close}
-                alt="close"
-                className="close"
-                onClick={() => this.props.setState({ onOpen: false })}
-              />
-              <img src={Logo_BN} alt="Logo_BN" className="Logo_BN" />
+      <StyledSideDrawer data-action="close" onClick={(e) => this.setModal(e)}>
+        <div className="sideDrawer">
+          <Container>
+            <div className="header">
+              <div className="brand_close">
+                <img
+                  src={Close}
+                  alt="close"
+                  className="close"
+                  onClick={() => this.props.setState({ onOpen: false })}
+                />
+                <img src={Logo_BN} alt="Logo_BN" className="Logo_BN" />
+              </div>
+              <img src={Search} alt="Search" className="Search" />
             </div>
-            <img src={Search} alt="Search" className="Search" />
+          </Container>
+          <div className="line">
+            <div className="blue"></div>
+            <div className="yellow"></div>
+            <div className="blue"></div>
           </div>
-        </Container>
-        <div className="line">
-          <div className="blue"></div>
-          <div className="yellow"></div>
-          <div className="blue"></div>
+          <Container>
+            <div className="navigation">
+              <NavLink to="/soluciones" className="navigation-item ">
+                Cuenta Eje
+              </NavLink>
+              <NavLink to="/soluciones" className="navigation-item ">
+                EmpresaNet
+              </NavLink>
+              <NavLink to="/soluciones" className="navigation-item ">
+                Nómina BanCoppel
+              </NavLink>
+              <NavLink to="/soluciones" className="navigation-item ">
+                BanCoppel Pyme
+              </NavLink>
+            </div>
+          </Container>
         </div>
-        <Container>
-          <div className="navigation">
-            <NavLink to="/soluciones" className="navigation-item ">
-              Cuenta Eje
-            </NavLink>
-            <NavLink to="/soluciones" className="navigation-item ">
-              EmpresaNet
-            </NavLink>
-            <NavLink to="/soluciones" className="navigation-item ">
-              Nómina BanCoppel
-            </NavLink>
-            <NavLink to="/soluciones" className="navigation-item ">
-              BanCoppel Pyme
-            </NavLink>
-          </div>
-        </Container>
       </StyledSideDrawer>
     );
   }

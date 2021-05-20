@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const BancoppelBtn = styled.button`
-  padding: 0 8px;
-  height: 32px;
-  width: 80px;
+  padding: 0 10px;
+  height: 37px;
+  min-width: 80px;
   max-width: 100%;
   display: flex;
   flex-direction: row;
@@ -40,17 +40,16 @@ const BancoppelBtn = styled.button`
   } */
 
   @media (min-width: 576px) {
-    padding: 0 10px;
     height: 50px;
-    width: 120px;
+    min-width: 120px;
   }
 
   @media (min-width: 992px) {
-    width: 150px;
+    min-width: 150px;
   }
 
   @media (min-width: 1200px) {
-    width: 180px;
+    min-width: 180px;
   }
 `;
 

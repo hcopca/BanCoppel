@@ -17,11 +17,14 @@ const StyledNavbar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 90% !important;
+    max-width: 2000px !important;
     .brand {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex: 1;
+      flex: 1.3;
+
       .hamburger {
         cursor: pointer;
         width: 24px;
@@ -43,7 +46,7 @@ const StyledNavbar = styled.div`
         }
       }
       img {
-        max-width: 100%;
+        max-width: 80%;
       }
     }
     .navigation {
@@ -51,14 +54,14 @@ const StyledNavbar = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .container {
       .brand {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         img {
-          max-width: 80%;
+          max-width: 70%;
         }
         .hamburger {
           margin-right: 23px;
@@ -76,16 +79,6 @@ const StyledNavbar = styled.div`
         }
         .acceso {
           position: relative;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 992px) {
-    .container {
-      .brand {
-        img {
-          max-width: 100%;
         }
       }
     }

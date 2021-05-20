@@ -5,13 +5,15 @@ import styled from "styled-components";
 
 const StyledAcceso = styled.div`
   position: absolute;
-  top: calc(100% + 67px);
+  top: 115px;
 
   border-radius: 24px;
   padding: 10px 15px;
   background: var(--white);
   width: 385px;
   left: -220%;
+
+  z-index: 1000000;
 
   .type_user {
     display: flex;
@@ -75,6 +77,7 @@ const StyledForm = styled.div`
 
     .captcha {
       height: 60px;
+      border: 1px solid red;
     }
   }
 `;
@@ -95,20 +98,25 @@ export default class AccesoForm extends Component {
     });
   }
 
-  componentWillUnmount() {
-    document.body.style.overflow = "scroll";
-    document.body.scroll = "yes";
-  }
+  // componentWillUnmount() {
+  //   document.body.style.overflow = "scroll";
+  //   document.body.scroll = "yes";
+  // }
 
-  componentDidMount() {
-    document.body.style.overflow = "hidden";
-    document.body.scroll = "no";
+  // componentDidMount() {
+  //   document.body.style.overflow = "hidden";
+  //   document.body.scroll = "no";
+  // }
+
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(this.state);
   }
 
   renderForm() {
     return (
       <StyledForm>
-        <form onSubmit={() => console.log("amonos")}>
+        <form onSubmit={(e) => this.onSubmit(e)}>
           <div className="form_item">
             <InputBancoppel
               type="text"

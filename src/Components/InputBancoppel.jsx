@@ -6,7 +6,7 @@ const StyledInput = styled.div`
   position: relative;
 
   label {
-    /* transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
     font-size: ${(props) => (props.focus || props.hasText ? "12px" : "16px")};
     font-family: futura_book;
     color: var(--gray);
