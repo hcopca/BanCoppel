@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Hero } from "../../Components";
+import { Container, Hero, Footer } from "../../Components";
 import styled from "styled-components";
 
 const StyledHome = styled.div``;
@@ -10,6 +10,7 @@ export default function Home() {
       <Hero>
         <Container>hola</Container>
       </Hero>
+      <Footer/>
     </StyledHome>
   );
 }
