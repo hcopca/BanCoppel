@@ -14,8 +14,18 @@ import Logo_bancoppel from "../Assets/logo_bancoppel.svg";
 import Play_store from "../Assets/play_store.svg";
 import App_store from "../Assets/app_store.svg";
 
+import './styles/custom_accordion_conoceCredito.css'
 
 
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+// import 'react-accessible-accordion/dist/fancy-example.css';
 
 
 
@@ -42,10 +52,26 @@ import App_store from "../Assets/app_store.svg";
 `
 
  const Column = styled.div`
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  @media (min-width: 576px) { 
+    display: flex;
+
+   }
+`;
+
+const ColumnResponsive = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  @media (min-width: 576px) { 
+    display: none;
+
+ }
 `;
+
+
 
  const Row = styled.div`
   display: grid;
@@ -91,6 +117,11 @@ text-decoration: none;
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
+
+  @media (max-width: 576px) { 
+    margin-bottom: 0px;
+
+ }
 `;
 
 
@@ -139,6 +170,19 @@ const RowTituloFooter = styled.div`
  margin-bottom: 30px;
 `;
 
+const styl = styled.section`
+  .accordion__button {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+`;
+
+   
+
 export default class Footer extends Component {
   render() {
     return <>
@@ -149,6 +193,72 @@ export default class Footer extends Component {
 
             </RowTituloFooter>
             <Row>
+
+                <ColumnResponsive>
+                  <Accordion allowMultipleExpanded={false} allowZeroExpanded={true}>
+                    <AccordionItem>
+                      <AccordionItemHeading>
+                        <AccordionItemButton className="accordion__button_CC">
+                          <Title>Acerca de Bancoppel</Title>
+                        </AccordionItemButton>
+                      </AccordionItemHeading>
+                        <AccordionItemPanel className="accordion__panel_CC">
+                          <Link href="#">¿Quiénes somos?</Link><br/>
+                          <Link href="#">Preguntas frecuentes</Link><br/>
+                          <Link href="#">Información corporativa</Link><br/>
+                          <Link href="#">Plan de apoyo para cuidar tu crédito</Link><br/>
+                          <Link href="#">Unidad especializada Bancoppel Condusef</Link><br/>
+                          <Link href="#">Productos protegidos por el IPAB</Link><br/>
+                          <Link href="#">Aviso de privacidad</Link><br/>
+                          <Link href="#">Robo de identidad</Link><br/>
+                          <Link href="#">Tarifas y comisiones</Link><br/>
+                          <Link href="#">Corresponsales</Link><br/>
+                          <Link href="#">Despachos de cobranza </Link><br/>
+                          <Link href="#">Tips de seguridad</Link>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                        
+                        
+                      <AccordionItem>
+                        <AccordionItemHeading>
+                            <AccordionItemButton className="accordion__button_CC">
+                              <Title>Contacto</Title>
+                            </AccordionItemButton>
+                          </AccordionItemHeading>
+                          <AccordionItemPanel className="accordion__panel_CC">
+                            <Link href="#">Lada sin costo: 800 1 2267735</Link><br/>
+                            <Link href="#">EU. y Canadá: 866 2543790</Link><br/>
+                            <div style={{display:'flex', flexDirection:'row'}}>
+                        
+                            <ImgRedesSociales src={Youtube}></ImgRedesSociales>
+                            <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
+                            <ImgRedesSociales src={Facebook}></ImgRedesSociales>
+
+                            </div>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+
+                        <AccordionItem>
+                          <AccordionItemHeading>
+                              <AccordionItemButton className="accordion__button_CC">
+                                
+                                <Title>Descarga</Title>
+                              </AccordionItemButton>
+                            </AccordionItemHeading>
+                            <AccordionItemPanel className="accordion__panel_CC">
+                            <div>
+                              <img src={Play_store}></img><br/>
+
+                              <img src={App_store}></img>
+
+                            </div>
+                          </AccordionItemPanel>
+                        </AccordionItem>
+
+                    </Accordion>
+
+                </ColumnResponsive>
+
                 <Column>
                 <Title>Acerca de Bancoppel</Title>
                     <Link href="#">¿Quiénes somos?</Link>
