@@ -137,6 +137,10 @@ const RowLogotipos = styled.div`
 
   justify-content: space-between;
   width:100%;
+  @media (max-width: 576px) { 
+    justify-content: space-evenly;
+
+ }
 `;
 
 const HrFooter=styled.hr`
