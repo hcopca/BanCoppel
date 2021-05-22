@@ -85,9 +85,7 @@ class Home extends Component {
 
         <Accordion items={HomeSections} body={this.body} />
 
-        <Container>
-          <ConoceCredito />
-        </Container>
+        <ConoceCredito />
       </>
     );
   }

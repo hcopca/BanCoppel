@@ -6,39 +6,27 @@ import PymesMobile from "../Assets/pymes_last_mobile.png";
 import Pymes from "../Assets/pymes.png";
 import BancoppelBtn from "./BancoppelBtn";
 
-
-
-
-
-
-
-
-
 const StyledBanner = styled.section`
-
-    .imgNormal{
-        display:block;
-        @media (max-width: 768px) { 
-            display: none;
-        
-         }
+  .imgNormal {
+    display: block;
+    @media (max-width: 768px) {
+      display: none;
     }
-    .imgResponsivo{
-        display:none;
-        @media (max-width: 768px) { 
-            display: block;
-        
-         }
+  }
+  .imgResponsivo {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
     }
+  }
 
   .img-holder {
     position: relative;
     display: inline-block;
     margin: 50px 40px;
-    @media (max-width: 768px) { 
-        margin: 50px -15px;
-    
-     }
+    @media (max-width: 768px) {
+      margin: 50px -15px;
+    }
   }
   .img-holder {
     img {
@@ -58,18 +46,15 @@ const StyledBanner = styled.section`
     img {
       display: none;
     }
-    @media (max-width: 768px) { 
-        
-        display: flex;
-        flex-direction:row;
-        width:100%;
-        left: auto;
-        justify-content: center;
-        top: auto;
-        bottom: 17%;
-
-    
-     }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      left: auto;
+      justify-content: center;
+      top: auto;
+      bottom: 17%;
+    }
   }
 
   .img-holder .login-in-banner {
@@ -119,29 +104,27 @@ const StyledBanner = styled.section`
   }
 `;
 
- 
-
-
 export default class ConoceCredito extends Component {
   render() {
-    return <>
-      <StyledBanner>
-      <div className="img-holder">
-        <img
-          className="imgNormal"
-          src={Pymes}
-          alt=""
-          draggable="false"
-        ></img>
+    return (
+      <Container>
+        <StyledBanner>
+          <div className="img-holder">
+            <img
+              className="imgNormal"
+              src={Pymes}
+              alt=""
+              draggable="false"
+            ></img>
 
-        <img
-          className="imgResponsivo"
-          src={PymesMobile}
-          alt=""
-          draggable="false"
-        ></img>
+            <img
+              className="imgResponsivo"
+              src={PymesMobile}
+              alt=""
+              draggable="false"
+            ></img>
 
-        {/* <div className="login-in-banner">
+            {/* <div className="login-in-banner">
           <div className="container">
             <div className="row">
               <div className="offset-lg-9 col-lg-2">
@@ -150,19 +133,18 @@ export default class ConoceCredito extends Component {
             </div>
           </div>
         </div> */}
-        <div className="contenido_sobrepuesto">
-   
-            <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
+            <div className="contenido_sobrepuesto">
+              <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
 
-
-          {/* <h1 className="mainTitle">COSECHÓMETRO</h1>
+              {/* <h1 className="mainTitle">COSECHÓMETRO</h1>
           <p className="subTitle">Es hora de sumar nuestros resultados</p>
           <p className="subTitle">
             y conocer el potencial de rendimiento DEKALB®
           </p> */}
-        </div>
-      </div>
-    </StyledBanner>
-    </>;
+            </div>
+          </div>
+        </StyledBanner>
+      </Container>
+    );
   }
 }
