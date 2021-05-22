@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Fondo_mujer from "../Assets/Fondo_mujer.png";
 import Fondo_mujer_res from "../Assets/Fondo_mujer_responsive.png";
 import Container from "./Container";
+import BancoppelBtn from "./BancoppelBtn";
 
 const StyledHero = styled.div`
   display: flex;
@@ -48,6 +49,13 @@ const StyledHero = styled.div`
         align-items: center;
         .children {
           width: 60%;
+          img {
+            max-width: 100%;
+          }
+          button {
+            margin-top: 30px;
+            margin-left: 37px;
+          }
         }
       }
     }
@@ -66,7 +74,10 @@ class Hero extends Component {
         />
         <div className="hero_container">
           <Container>
-            <div className="children">{this.props.children}</div>
+            <div className="children">
+              <img src={this.props.banner} alt="banner" />
+              <BancoppelBtn amarillo>{this.props.btnCoppy}</BancoppelBtn>
+            </div>
           </Container>
         </div>
       </StyledHero>
