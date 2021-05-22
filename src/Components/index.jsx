@@ -6,3 +6,4 @@ export { default as InputBancoppel } from "./InputBancoppel";
 export { default as Hero } from "./Hero";
 export { default as Accordion } from "./Accordion";
 export { default as CardBlue } from "./CardBlue";
+export { default as ConoceCredito } from "./ConoceCredito";

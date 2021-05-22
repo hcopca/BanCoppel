@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Hero, BancoppelBtn } from "../../Components";
+import { Container, Hero, BancoppelBtn, ConoceCredito } from "../../Components";
 import HeroHome from "../../Assets/Hero_Home.svg";
 import styled from "styled-components";
 import { Accordion, CardBlue } from "../../Components";
@@ -82,7 +82,12 @@ class Home extends Component {
           </Container>
         </StyledHeader>
         <Hero btnCoppy="Solicita ya tu crédito" banner={HeroHome} />
+
         <Accordion items={HomeSections} body={this.body} />
+
+        <Container>
+          <ConoceCredito />
+        </Container>
       </>
     );
   }
