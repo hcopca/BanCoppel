@@ -156,16 +156,16 @@ const RowTituloFooter = styled.div`
   margin-bottom: 30px;
 `;
 
-const styl = styled.section`
-  .accordion__button {
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-  }
-`;
+// const styl = styled.section`
+//   .accordion__button {
+//     color: white;
+//     cursor: pointer;
+//     padding: 18px;
+//     width: 100%;
+//     text-align: left;
+//     border: none;
+//   }
+// `;
 
 export default class Footer extends Component {
   render() {
@@ -244,10 +244,10 @@ export default class Footer extends Component {
                     </AccordionItemHeading>
                     <AccordionItemPanel className="accordion__panel_CC">
                       <div>
-                        <img src={Play_store}></img>
+                        <img src={Play_store} alt=""></img>
                         <br />
 
-                        <img src={App_store}></img>
+                        <img src={App_store} alt=""></img>
                       </div>
                     </AccordionItemPanel>
                   </AccordionItem>
