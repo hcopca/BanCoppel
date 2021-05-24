@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Views/Home/Home";
-import SolucionesCredito from "./Views/SolucionesCredito/SolucionesCredito";
+import Home from "./Views/Home";
+import SolucionesCredito from "./Views/SolucionesCredito";
 import { Navbar, Footer } from "./Components";
 
 class App extends Component {

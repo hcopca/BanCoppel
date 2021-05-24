@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Mostrar from "../Assets/Mostrar.svg";
-// ${(props) => console.log(props)}
+//
 const StyledInput = styled.div`
   position: relative;
 
@@ -68,8 +68,10 @@ class InputBancoppel extends Component {
     if (this.myRef.current !== null) {
       if (this.myRef.current.type === "text") {
         this.myRef.current.type = "password";
+        return false;
       } else {
         this.myRef.current.type = "text";
+        return true;
       }
     }
   }

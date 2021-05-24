@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import { Container, Hero, BancoppelBtn, ConoceCredito } from "../../Components";
-import HeroHome from "../../Assets/Hero_Home.svg";
+import {
+  Container,
+  Hero,
+  BancoppelBtn,
+  ConoceCredito,
+  Accordion,
+  CardBlue,
+  Slider,
+} from "../Components";
+import HeroHome from "../Assets/Hero_Home.svg";
 import styled from "styled-components";
-import { Accordion, CardBlue, Slider } from "../../Components";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
@@ -56,21 +63,6 @@ const StyledCardsSlider = styled.div`
   .CardBlue {
     width: 100% !important;
     max-width: 100% !important;
-    .body {
-      h1 {
-        font-size: 26px;
-      }
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .CardBlue {
-      .body {
-        h1 {
-          font-size: 36px;
-        }
-      }
-    }
   }
 `;
 
@@ -138,7 +130,7 @@ const HomeSections = [
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
         path: "/",
-        image: require("../../Assets/Persons2.png").default,
+        image: require("../Assets/Persons2.png").default,
         button: "Ver más",
       },
       {
@@ -146,7 +138,7 @@ const HomeSections = [
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
-        image: require("../../Assets/Persons1.png").default,
+        image: require("../Assets/Persons1.png").default,
         button: "Ver más",
       },
       {
@@ -154,7 +146,7 @@ const HomeSections = [
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
-        image: require("../../Assets/IpadHands.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
       {
@@ -162,7 +154,7 @@ const HomeSections = [
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
-        image: require("../../Assets/GirlHand.png").default,
+        image: require("../Assets/GirlHand.png").default,
         button: "Ver más",
       },
     ],
@@ -175,7 +167,7 @@ const HomeSections = [
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
         path: "/",
-        image: require("../../Assets/Persons2.png").default,
+        image: require("../Assets/Persons2.png").default,
         button: "Ver más",
       },
       {
@@ -183,7 +175,7 @@ const HomeSections = [
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
-        image: require("../../Assets/Persons1.png").default,
+        image: require("../Assets/Persons1.png").default,
         button: "Ver más",
       },
       {
@@ -191,7 +183,7 @@ const HomeSections = [
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
-        image: require("../../Assets/IpadHands.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
       {
@@ -199,7 +191,7 @@ const HomeSections = [
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
-        image: require("../../Assets/GirlHand.png").default,
+        image: require("../Assets/GirlHand.png").default,
         button: "Ver más",
       },
     ],
@@ -212,7 +204,7 @@ const HomeSections = [
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
         path: "/",
-        image: require("../../Assets/Persons2.png").default,
+        image: require("../Assets/Persons2.png").default,
         button: "Ver más",
       },
       {
@@ -220,7 +212,7 @@ const HomeSections = [
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
-        image: require("../../Assets/Persons1.png").default,
+        image: require("../Assets/Persons1.png").default,
         button: "Ver más",
       },
       {
@@ -228,7 +220,7 @@ const HomeSections = [
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
-        image: require("../../Assets/IpadHands.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
       {
@@ -236,7 +228,7 @@ const HomeSections = [
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
-        image: require("../../Assets/GirlHand.png").default,
+        image: require("../Assets/GirlHand.png").default,
         button: "Ver más",
       },
     ],
@@ -249,7 +241,7 @@ const HomeSections = [
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
         path: "/",
-        image: require("../../Assets/Persons2.png").default,
+        image: require("../Assets/Persons2.png").default,
         button: "Ver más",
       },
       {
@@ -257,7 +249,7 @@ const HomeSections = [
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
-        image: require("../../Assets/Persons1.png").default,
+        image: require("../Assets/Persons1.png").default,
         button: "Ver más",
       },
       {
@@ -265,7 +257,7 @@ const HomeSections = [
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
-        image: require("../../Assets/IpadHands.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
       {
@@ -273,7 +265,7 @@ const HomeSections = [
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
-        image: require("../../Assets/GirlHand.png").default,
+        image: require("../Assets/GirlHand.png").default,
         button: "Ver más",
       },
     ],
@@ -286,7 +278,7 @@ const HomeSections = [
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
         path: "/",
-        image: require("../../Assets/Persons2.png").default,
+        image: require("../Assets/Persons2.png").default,
         button: "Ver más",
       },
       {
@@ -294,7 +286,7 @@ const HomeSections = [
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
-        image: require("../../Assets/Persons1.png").default,
+        image: require("../Assets/Persons1.png").default,
         button: "Ver más",
       },
       {
@@ -302,7 +294,7 @@ const HomeSections = [
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
-        image: require("../../Assets/IpadHands.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
       {
@@ -310,7 +302,7 @@ const HomeSections = [
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
-        image: require("../../Assets/GirlHand.png").default,
+        image: require("../Assets/GirlHand.png").default,
         button: "Ver más",
       },
     ],

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import ActiveBtn from "../Assets/circular_active.svg";
-import DisableBtn from "../Assets/circular_disabled.svg";
+// import DisableBtn from "../Assets/circular_disabled.svg";
 import styled from "styled-components";
 import Container from "./Container";
 
@@ -18,7 +18,7 @@ const StylesCarousel = styled.div`
     width: 80%;
     margin: auto;
     .section {
-      padding: 20px 0;
+      padding-bottom: 20px;
       flex: 1;
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
@@ -115,7 +115,6 @@ class Slider extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <StylesCarousel>
         <Container>
@@ -123,6 +122,7 @@ class Slider extends Component {
             {this.props.items.map((item, idx) => {
               return (
                 <div
+                  key={idx}
                   className={`section ${
                     this.state.currentSlide === idx ? "current" : ""
                   }`}

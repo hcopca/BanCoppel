@@ -11,9 +11,7 @@ const Card = styled.div`
 
   background: var(--night-blue);
   border-radius: 25px;
-  br {
-    display: none;
-  }
+
   img {
     height: ${(props) => (props.row ? "100%" : "50%")};
     width: ${(props) => (props.row ? "175px" : "212px")};
@@ -22,7 +20,7 @@ const Card = styled.div`
     border-radius: 25px;
   }
 
-  .body {
+  .card_body {
     flex: 1;
     width: ${(props) => (props.row ? "175px" : "100%")};
     padding: 10px;
@@ -50,11 +48,11 @@ const Card = styled.div`
   }
 
   @media (min-width: 992px) {
-    height: ${(props) => (props.row ? "220px" : "522px")};
+    height: ${(props) => (props.row ? "210px" : "522px")};
     width: ${(props) => (props.row ? "522px" : "306px")};
 
     br {
-      display: block;
+      display: none;
     }
 
     img {
@@ -62,13 +60,17 @@ const Card = styled.div`
       max-width: ${(props) => (props.row ? "261px" : "306px")};
     }
 
-    .body {
-      justify-content: space-evenly;
+    .card_body {
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
       width: ${(props) => (props.row ? "261px" : "100%")};
       h1 {
-        font-size: 36px;
+        font-size: ${(props) => (props.row ? "26px" : "36px%")};
+        text-align: left;
       }
       p {
+        text-align: left;
         font-size: 14px;
       }
     }
@@ -82,7 +84,7 @@ class CardBlue extends Component {
         {this.props.card.image ? (
           <img src={this.props.card.image} alt="img" />
         ) : null}
-        <div className="body">
+        <div className="card_body">
           {this.props.card.titleWhite && this.props.card.titleBlue ? (
             <h1>
               {this.props.card.titleWhite} <br />
