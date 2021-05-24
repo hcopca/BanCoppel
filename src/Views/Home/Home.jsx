@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Hero, BancoppelBtn, ConoceCredito } from "../../Components";
 import HeroHome from "../../Assets/Hero_Home.svg";
 import styled from "styled-components";
-import { Accordion, CardBlue } from "../../Components";
+import { Accordion, CardBlue, Slider } from "../../Components";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
@@ -49,6 +49,30 @@ const StyledCards = styled.div`
     }
   }
 `;
+const StyledCardsSlider = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  .CardBlue {
+    width: 100% !important;
+    max-width: 100% !important;
+    .body {
+      h1 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .CardBlue {
+      .body {
+        h1 {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+`;
 
 class Home extends Component {
   body(data) {
@@ -62,6 +86,19 @@ class Home extends Component {
           <p>no hay "cards" para mostrar</p>
         )}
       </StyledCards>
+    );
+  }
+  bodySlider(data) {
+    return (
+      <StyledCardsSlider>
+        {data.cards ? (
+          data.cards.map((card, idx) => {
+            return <CardBlue card={card} key={idx} row />;
+          })
+        ) : (
+          <p>no hay "cards" para mostrar</p>
+        )}
+      </StyledCardsSlider>
     );
   }
 
@@ -82,9 +119,8 @@ class Home extends Component {
           </Container>
         </StyledHeader>
         <Hero btnCoppy="Solicita ya tu crédito" banner={HeroHome} />
-
         <Accordion items={HomeSections} body={this.body} />
-
+        <Slider items={HomeSections} body={this.bodySlider} />
         <ConoceCredito />
       </>
     );

@@ -32,6 +32,9 @@ const StyledAccordion = styled.div`
       font-size: 16px;
     }
   }
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const AccordionCoppel = ({ items, body }) => {
@@ -53,7 +56,7 @@ const AccordionCoppel = ({ items, body }) => {
                     {body
                       ? body(item)
                       : console.error(
-                          "Necesitas una funcion que rendere el cuerpo de cada acordeón. De esta forma podemos ocupar el mismo componente, con los mismos headers pero cambiando solo el cuerpo de cada acordeón según se necesite. "
+                          "Necesitas una funcion que rendere el cuerpo de cada item. De esta forma podemos ocupar el mismo componente, con los mismos headers pero cambiando solo el cuerpo de cada acordeón según se necesite."
                         )}
                   </AccordionItemPanel>
                 </AccordionItem>

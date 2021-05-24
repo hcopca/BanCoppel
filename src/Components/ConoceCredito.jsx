@@ -23,7 +23,7 @@ const StyledBanner = styled.section`
   .img-holder {
     position: relative;
     display: inline-block;
-    margin: 50px 40px;
+    margin: 50px 00px;
     @media (max-width: 768px) {
       margin: 50px -15px;
     }

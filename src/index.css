@@ -19,6 +19,7 @@ body {
   --green: #39c6ac;
   --white: #ffffff;
   --gray: #636363;
+  --light-gray: #aaaaaa;
 }
 
 @font-face {

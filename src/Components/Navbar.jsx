@@ -17,8 +17,7 @@ const StyledNavbar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90% !important;
-    max-width: 2000px !important;
+
     .brand {
       display: flex;
       align-items: center;
@@ -51,6 +50,13 @@ const StyledNavbar = styled.div`
     }
     .navigation {
       display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 90% !important;
+      max-width: 1400px;
     }
   }
 

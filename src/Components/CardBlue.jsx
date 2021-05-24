@@ -5,27 +5,31 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.row ? "row" : "column")};
-  height: 321px;
-  width: 212px;
+  height: ${(props) => (props.row ? "222px" : "321px")};
+  width: ${(props) => (props.row ? "350px" : "212px")};
+  max-width: 100%;
+
   background: var(--night-blue);
   border-radius: 25px;
   br {
     display: none;
   }
   img {
-    height: 50%;
-    width: 212px;
+    height: ${(props) => (props.row ? "100%" : "50%")};
+    width: ${(props) => (props.row ? "175px" : "212px")};
+
     object-fit: cover;
     border-radius: 25px;
   }
 
   .body {
     flex: 1;
+    width: ${(props) => (props.row ? "175px" : "100%")};
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: ${(props) => (props.row ? "center" : "space-between")};
     text-align: center;
     h1 {
       color: var(--white);
@@ -38,26 +42,29 @@ const Card = styled.div`
     p {
       color: var(--white);
       font-size: 12px;
+      margin: ${(props) => (props.row ? "15px 0" : "0")};
     }
     button {
       border: 0;
     }
   }
 
-  @media (min-width: 768px) {
-    height: 522px;
-    width: 306px;
+  @media (min-width: 992px) {
+    height: ${(props) => (props.row ? "220px" : "522px")};
+    width: ${(props) => (props.row ? "522px" : "306px")};
 
     br {
       display: block;
     }
 
     img {
-      width: 306px;
+      height: ${(props) => (props.row ? "100%" : "50%")};
+      max-width: ${(props) => (props.row ? "261px" : "306px")};
     }
 
     .body {
       justify-content: space-evenly;
+      width: ${(props) => (props.row ? "261px" : "100%")};
       h1 {
         font-size: 36px;
       }

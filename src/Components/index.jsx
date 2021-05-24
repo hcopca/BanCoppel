@@ -7,3 +7,4 @@ export { default as Hero } from "./Hero";
 export { default as Accordion } from "./Accordion";
 export { default as CardBlue } from "./CardBlue";
 export { default as ConoceCredito } from "./ConoceCredito";
+export { default as Slider } from "./Slider";
