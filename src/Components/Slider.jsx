@@ -9,7 +9,7 @@ import Container from "./Container";
 const StylesCarousel = styled.div`
   background: var(--light-blue);
 
-  padding: 50px 0;
+  padding: 30px 0;
   display: none;
 
   .sections {

@@ -6,6 +6,7 @@ import {
   Accordion,
   CardBlue,
   Slider,
+  ProductHeader,
 } from "../Components";
 import HeroHome from "../Assets/Hero_SolucionesCredito.svg";
 import styled from "styled-components";
@@ -114,17 +115,24 @@ class SolucionesCredito extends Component {
         <StyledHeader>
           <Container>
             <div className="title">
-              <h1>Tu aliado</h1>
-              <h1>en Banca</h1>
-              <h1>Empresarial</h1>
+              <h1> UN CRÉDITO</h1>
+              <h1>DE ACUERDO A</h1>
+              <h1> TUS NECESIDADES</h1>
             </div>
             <div className="copy">
-              <h4>Brindamos soluciones a tu empresa</h4>
+              <h4>
+                Ajustamos el crédito a tu <br /> capacidad de pago
+              </h4>
             </div>
-            <BancoppelBtn amarillo>Solicita ya tu crédito</BancoppelBtn>
+            <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
           </Container>
         </StyledHeader>
         <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <ProductHeader>
+          <h1>
+            CRÉDITO <span>CUENTA CORRIENTE CRAV</span>
+          </h1>
+        </ProductHeader>
         <Accordion items={HomeSections} body={this.body} />
         <Slider items={HomeSections} body={this.bodySlider} />
       </>
