@@ -81,6 +81,16 @@ const StyledCardsSlider = styled.div`
   }
 `;
 
+const StyledPruductHeader = styled.div`
+  .header_product {
+    text-align: center;
+    color: var(--night-blue);
+    span {
+      color: var(--sky-blue);
+    }
+  }
+`;
+
 class SolucionesCredito extends Component {
   body(data) {
     return (
@@ -129,9 +139,15 @@ class SolucionesCredito extends Component {
         </StyledHeader>
         <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
         <ProductHeader>
-          <h1>
-            CRÉDITO <span>CUENTA CORRIENTE CRAV</span>
-          </h1>
+          <StyledPruductHeader>
+            <h1 className="header_product">
+              CRÉDITO{" "}
+              <span>
+                CUENTA
+                <br /> CORRIENTE CRAV
+              </span>
+            </h1>
+          </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={HomeSections} body={this.body} />
         <Slider items={HomeSections} body={this.bodySlider} />
@@ -144,7 +160,7 @@ export default SolucionesCredito;
 
 const HomeSections = [
   {
-    section: "Cuenta Eje",
+    section: "Beneficios",
     cards: [
       {
         titleWhite: "Crédito",
@@ -181,7 +197,7 @@ const HomeSections = [
     ],
   },
   {
-    section: "Nómina",
+    section: "Características",
     cards: [
       {
         titleWhite: "Crédito",
@@ -218,81 +234,7 @@ const HomeSections = [
     ],
   },
   {
-    section: "Soluciones de crédito",
-    cards: [
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "El capital para impulsar tu negocio.",
-        path: "/",
-        image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
-        image: require("../Assets/Persons1.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Puente",
-        copy: "Pensado para crear proyectos habitacionales.",
-        path: "/",
-        image: require("../Assets/GirlHand.png").default,
-        button: "Ver más",
-      },
-    ],
-  },
-  {
-    section: "Soluciones integrales",
-    cards: [
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "El capital para impulsar tu negocio.",
-        path: "/",
-        image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
-        image: require("../Assets/Persons1.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Puente",
-        copy: "Pensado para crear proyectos habitacionales.",
-        path: "/",
-        image: require("../Assets/GirlHand.png").default,
-        button: "Ver más",
-      },
-    ],
-  },
-  {
-    section: "EmpresaNET",
+    section: "Requisitos",
     cards: [
       {
         titleWhite: "Crédito",

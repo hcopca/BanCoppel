@@ -9,7 +9,7 @@ import Container from "./Container";
 const StylesCarousel = styled.div`
   background: var(--light-blue);
 
-  padding: 30px 0;
+  padding: 50px 0;
   display: none;
 
   .sections {
@@ -46,7 +46,7 @@ const StylesCarousel = styled.div`
   }
   .bancoppel_slider {
     margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
     max-width: 1250px;
 
     .slide {

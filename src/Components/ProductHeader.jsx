@@ -4,39 +4,35 @@ import styled from "styled-components";
 const StyledHead = styled.div`
   display: none;
   background: var(--light-blue);
-  padding-top: 30px;
+  padding-top: 50px;
   .header_body {
     flex: 2;
-    margin: 0 5px;
   }
   .item {
-    flex: 1.5;
+    flex: 3;
     display: flex;
     align-items: center;
     .line {
       height: 3px;
       flex: 1;
-      background: green;
+      background: var(--night-blue);
     }
     .circle {
       height: 15px;
       width: 15px;
       border-radius: 50%;
-      border: 3px solid green;
+      border: 3px solid var(--night-blue);
     }
-  }
-
-  @media (min-width: 576px) {
-  }
-
-  @media (min-width: 768px) {
   }
 
   @media (min-width: 992px) {
     display: flex;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
+    .header_body {
+      flex: 1.5;
+    }
   }
 `;
 
