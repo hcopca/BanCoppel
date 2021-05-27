@@ -7,8 +7,8 @@ import {
   SecondaryCardBlue,
   Slider,
   ProductHeader,
-  ListaProductos
-  CardBullets,
+  ListaProductos,
+  CardBullets
 } from "../Components";
 import HeroHome from "../Assets/Hero_SolucionesCredito.svg";
 import styled from "styled-components";
@@ -147,6 +147,8 @@ class SolucionesCredito extends Component {
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
         <Slider items={SolucionesCreditoSections} body={this.body} />
+        <ListaProductos items={Productos}/>
+
       </>
     );
   }
