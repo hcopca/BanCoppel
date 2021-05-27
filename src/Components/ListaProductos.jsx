@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Accordion from "./Accordion";
 import CardBlue from "./CardBlue";
+import Container from "./Container";
 import Slider from "./Slider";
 
 
@@ -16,18 +17,29 @@ const StyledCards = styled.div`
   overflow-x: scroll;
   width: 100%;
   justify-content: center;
-
- 
-
   .CardBlue {
     margin-right: 10px;
     &:last-child {
       margin-right: 0px;
     }
   }
-
 `;
 
+const StyledCardsResponsive=styled.div`
+padding: 10px 0;
+display: flex;
+overflow-x: scroll;
+width: 100%;
+.CardBlue {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+@media (min-width: 992px) {
+  display: none;
+}
+`;
 
 
 
@@ -103,9 +115,14 @@ class ListaProductos extends Component {
         this.state = {
         };
       }
+      componentDidMount(){
+        console.log("a ver kpo q pasa"+JSON.stringify(this.props.items[0].cards))
+
+      }
 
     body(data) {
         return (
+        
         <StyledCards>
             {data.cards ? (
             data.cards.map((card, idx) => {
@@ -119,7 +136,9 @@ class ListaProductos extends Component {
     }
     
     bodySlider(data) {
+
         return (
+          
         <StyledCards>
             {data.cards ? (
             data.cards.map((card, idx) => {
@@ -136,6 +155,24 @@ class ListaProductos extends Component {
     return (
       <>
         {/* {this.bodySlider(this.props.items)} */}
+        <Container>
+          <StyledCardsResponsive>
+              {this.props.items ? (
+              this.props.items.map((bloque, idx) => {
+                return(
+              (bloque.cards.map((item, indx) => {
+
+                  return <CardBlue card={item} key={indx} />;
+                })))
+              
+
+              })
+
+              ) : (
+              <p>no hay "cards" para mostrar</p>
+              )}
+          </StyledCardsResponsive>
+        </Container>
         <Slider items={this.props.items} body={this.bodySlider} showHeader={false}/>
       </>
     );

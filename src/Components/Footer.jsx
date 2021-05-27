@@ -26,7 +26,7 @@ import {
 
 // import 'react-accessible-accordion/dist/fancy-example.css';
 
-const Container = styled.div`
+const ContainerFooter = styled.div`
   padding: 60px;
   //background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112,71,247,1) 100%);
   background: var(--storm-blue);
@@ -171,7 +171,7 @@ export default class Footer extends Component {
   render() {
     return (
       <>
-        <Container>
+        <ContainerFooter>
           <Wrapper>
             <RowTituloFooter>
               <img src={Logo_bancoppel} alt="Logo_bancoppel"></img>
@@ -315,7 +315,7 @@ export default class Footer extends Component {
               </FinalFooter>
             </RowNormal>
           </Wrapper>
-        </Container>
+        </ContainerFooter>
       </>
     );
   }
