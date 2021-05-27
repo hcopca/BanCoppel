@@ -39,6 +39,7 @@ const StyledSecondaryCard = styled.div`
     }
 
     .body_secondary {
+      width: 100%;
       h2 {
         text-align: center;
       }
@@ -63,7 +64,7 @@ const StyledSecondaryCard = styled.div`
 
 class SecondaryCardBlue extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <StyledSecondaryCard className="SecondaryCardBlue">
         <div className="img">

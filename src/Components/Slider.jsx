@@ -51,7 +51,7 @@ const StylesCarousel = styled.div`
 
     .slide {
       .container {
-        width: 95%;
+        width: 85%;
         margin: auto;
       }
     }
@@ -95,8 +95,12 @@ const StylesCarousel = styled.div`
 class Slider extends Component {
   constructor(props) {
     super(props);
-    this.state = { avaliableServices: this.props.services, currentSlide: 0,
-       mostrarEncabezado: this.props.showHeader!=null? this.props.showHeader: true};
+    this.state = {
+      avaliableServices: this.props.services,
+      currentSlide: 0,
+      mostrarEncabezado:
+        this.props.showHeader != null ? this.props.showHeader : true,
+    };
   }
 
   changeSlide(idx) {
@@ -118,25 +122,25 @@ class Slider extends Component {
   render() {
     return (
       <StylesCarousel>
-        {this.state.mostrarEncabezado?
-        <Container>
-          <div className="sections">
-            {this.props.items.map((item, idx) => {
-              return (
-                <div
-                  key={idx}
-                  className={`section ${
-                    this.state.currentSlide === idx ? "current" : ""
-                  }`}
-                  onClick={() => this.changeSlide(idx)}
-                >
-                  <h3>{item.section}</h3>
-                </div>
-              );
-            })}
-          </div>
-        </Container>
-        :null}
+        {this.state.mostrarEncabezado ? (
+          <Container>
+            <div className="sections">
+              {this.props.items.map((item, idx) => {
+                return (
+                  <div
+                    key={idx}
+                    className={`section ${
+                      this.state.currentSlide === idx ? "current" : ""
+                    }`}
+                    onClick={() => this.changeSlide(idx)}
+                  >
+                    <h3>{item.section}</h3>
+                  </div>
+                );
+              })}
+            </div>
+          </Container>
+        ) : null}
         <Carousel
           showThumbs={false}
           showStatus={false}

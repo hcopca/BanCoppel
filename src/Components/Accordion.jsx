@@ -21,6 +21,7 @@ const StyledAccordions = styled.div`
 
 const StyledAccordion = styled.div`
   padding-bottom: 10px;
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -42,6 +43,10 @@ const StyledAccordion = styled.div`
       font-size: 16px;
       font-weight: bold;
     }
+  }
+
+  .accordion-body {
+    margin-top: 10px;
   }
 `;
 

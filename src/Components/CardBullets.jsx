@@ -7,14 +7,12 @@ const StyledBigCard = styled.div`
     display: none;
   }
   .bullets {
-    padding: 30px 0;
     .bullet {
       display: flex;
       align-items: center;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
       &:last-child {
-        padding-bottom: 0;
+        margin-bottom: 0;
       }
       &:first-child {
         padding-top: 0;
@@ -29,12 +27,6 @@ const StyledBigCard = styled.div`
     }
   }
 
-  @media (min-width: 576px) {
-  }
-
-  @media (min-width: 768px) {
-  }
-
   @media (min-width: 992px) {
     display: flex;
     .card {
@@ -42,7 +34,7 @@ const StyledBigCard = styled.div`
       flex: 1;
 
       display: flex;
-      align-items: center;
+      margin-top: 30px;
       justify-content: center;
       .CardBlue {
         min-width: 90%;
@@ -62,7 +54,7 @@ const StyledBigCard = styled.div`
     }
     .bullets {
       flex: 0.8;
-
+      margin-top: 30px;
       padding-left: 20px;
       .bullet {
         width: 60%;

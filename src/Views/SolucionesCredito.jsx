@@ -4,11 +4,12 @@ import {
   Hero,
   BancoppelBtn,
   Accordion,
-  SecondaryCardBlue,
   Slider,
   ProductHeader,
   ListaProductos,
-  CardBullets
+  CardBullets,
+  ListCardsSecondary,
+  ListBullets,
 } from "../Components";
 import HeroHome from "../Assets/Hero_SolucionesCredito.svg";
 import styled from "styled-components";
@@ -57,61 +58,17 @@ const StyledPruductHeader = styled.div`
   }
 `;
 
-const StyledSencdaryCards = styled.div`
-  padding: 30px 0;
-  margin: auto;
-
-  .SecondaryCardBlue {
-    margin-bottom: 20px;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
-
-  @media (min-width: 576px) {
-  }
-
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-
-    .SecondaryCardBlue {
-      margin-bottom: 0px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    height: 550px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-  }
-
-  @media (min-width: 1200px) {
-  }
-`;
-
 class SolucionesCredito extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
-        return (
-          <StyledSencdaryCards>
-            {data.cards.map((card, idx) => {
-              return <SecondaryCardBlue card={card} key={idx} />;
-            })}
-          </StyledSencdaryCards>
-        );
-
+        return <ListCardsSecondary cards={data.cards} />;
+      case "Requisitos":
+        return <ListBullets bullets={data.bullets} />;
       default:
         console.error("No hay solucion definida", data);
-    }
-
-    if (data.section === "Beneficios") {
     }
   }
 
@@ -147,8 +104,7 @@ class SolucionesCredito extends Component {
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
         <Slider items={SolucionesCreditoSections} body={this.body} />
-        <ListaProductos items={Productos}/>
-
+        <ListaProductos items={Productos} />
       </>
     );
   }
@@ -213,39 +169,12 @@ const SolucionesCreditoSections = [
   },
   {
     section: "Requisitos",
-    cards: [
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "El capital para impulsar tu negocio.",
-        path: "/",
-        image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
-        image: require("../Assets/Persons1.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Puente",
-        copy: "Pensado para crear proyectos habitacionales.",
-        path: "/",
-        image: require("../Assets/GirlHand.png").default,
-        button: "Ver más",
-      },
+    bullets: [
+      "Solicitud de crédito.",
+      "Autorización para consulta historial crediticio.",
+      "Estados Financieros: Dictaminados, internos y proyectados.",
+      "Información legal del acreditado o del proyecto.",
+      "Contacto con ejecutivo.",
     ],
   },
 ];
@@ -278,7 +207,6 @@ const Productos = [
         image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
-      
     ],
   },
   {
@@ -308,7 +236,6 @@ const Productos = [
         image: require("../Assets/IpadHands.png").default,
         button: "Ver más",
       },
-      
     ],
-  }
+  },
 ];

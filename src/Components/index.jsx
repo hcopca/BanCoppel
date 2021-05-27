@@ -10,6 +10,7 @@ export { default as ConoceCredito } from "./ConoceCredito";
 export { default as Slider } from "./Slider";
 export { default as ProductHeader } from "./ProductHeader";
 export { default as ListaProductos } from "./ListaProductos";
-
+export { default as ListCardsSecondary } from "./ListCardsSecondary";
 export { default as CardBullets } from "./CardBullets";
 export { default as SecondaryCardBlue } from "./SecondaryCardBlue";
+export { default as ListBullets } from "./ListBullets";
