@@ -12,7 +12,7 @@ import HeroHome from "../Assets/Hero_Home.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
-  padding: 20px 0;
+  padding: 25px 0;
   .container {
     display: flex;
     flex-direction: column;

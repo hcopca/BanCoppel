@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const StyledHead = styled.div`
-  display: none;
   background: var(--light-blue);
-  padding-top: 50px;
+  padding-top: 25px;
+
+  display: flex;
   .header_body {
     flex: 2;
   }
   .item {
     flex: 3;
-    display: flex;
+    display: none;
     align-items: center;
+
     .line {
       height: 3px;
       flex: 1;
@@ -26,7 +28,10 @@ const StyledHead = styled.div`
   }
 
   @media (min-width: 992px) {
-    display: flex;
+    padding-top: 50px;
+    .item {
+      display: flex;
+    }
   }
 
   @media (min-width: 1400px) {

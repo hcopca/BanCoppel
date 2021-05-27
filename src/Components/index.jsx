@@ -9,3 +9,5 @@ export { default as CardBlue } from "./CardBlue";
 export { default as ConoceCredito } from "./ConoceCredito";
 export { default as Slider } from "./Slider";
 export { default as ProductHeader } from "./ProductHeader";
+export { default as CardBullets } from "./CardBullets";
+export { default as SecondaryCardBlue } from "./SecondaryCardBlue";

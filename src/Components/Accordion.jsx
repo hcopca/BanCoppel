@@ -12,10 +12,18 @@ import AddIcon from "../Assets/AddIcon.svg";
 
 const StyledAccordions = styled.div`
   background: var(--light-blue);
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const StyledAccordion = styled.div`
-  padding: 10px 0;
+  padding-bottom: 10px;
+  &:last-child {
+    padding-bottom: 0;
+  }
   .accordion-header {
     &:focus {
       outline: none !important;
@@ -23,6 +31,8 @@ const StyledAccordion = styled.div`
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--shadow-blue);
     img {
       width: 30px;
       height: 30px;
@@ -30,10 +40,8 @@ const StyledAccordion = styled.div`
     p {
       color: var(--night-blue);
       font-size: 16px;
+      font-weight: bold;
     }
-  }
-  @media (min-width: 992px) {
-    display: none;
   }
 `;
 
