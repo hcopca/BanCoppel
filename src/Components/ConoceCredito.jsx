@@ -23,6 +23,7 @@ const StyledBanner = styled.section`
   .img-holder {
     position: relative;
     display: inline-block;
+
     padding: 25px 0;
 
     @media (min-width: 992px) {

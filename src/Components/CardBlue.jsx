@@ -66,7 +66,7 @@ const Card = styled.div`
       padding: 20px;
       width: ${(props) => (props.row ? "261px" : "100%")};
       h1 {
-        font-size: ${(props) => (props.row ? "26px" : "36px%")};
+        font-size: ${(props) => (props.row ? "26px" : "30px")};
         text-align: left;
       }
       p {

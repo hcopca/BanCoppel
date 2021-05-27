@@ -10,7 +10,7 @@ const StyledBigCard = styled.div`
     .bullet {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -38,7 +38,6 @@ const StyledBigCard = styled.div`
       justify-content: center;
       .CardBlue {
         min-width: 90%;
-        max-height: 90%;
         img {
           height: 75%;
           width: 100% !important;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "./Container";
 import {
@@ -9,9 +9,11 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import AddIcon from "../Assets/AddIcon.svg";
+import restIcon from "../Assets/rest_icon.svg";
 
 const StyledAccordions = styled.div`
   background: var(--light-blue);
+
   padding: 25px 0;
 
   @media (min-width: 992px) {
@@ -25,6 +27,7 @@ const StyledAccordion = styled.div`
   &:last-child {
     padding-bottom: 0;
   }
+
   .accordion-header {
     &:focus {
       outline: none !important;
@@ -34,6 +37,7 @@ const StyledAccordion = styled.div`
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--shadow-blue);
+
     img {
       width: 30px;
       height: 30px;
@@ -44,13 +48,24 @@ const StyledAccordion = styled.div`
       font-weight: bold;
     }
   }
-
+  .active {
+    border-bottom: 0px solid var(--shadow-blue) !important;
+  }
   .accordion-body {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 `;
 
 const AccordionCoppel = ({ items, body }) => {
+  const [state, setstate] = useState(null);
+  function chanState(idx) {
+    if (state === idx) {
+      setstate(null);
+    } else {
+      setstate(idx);
+    }
+  }
+
   return (
     <StyledAccordions>
       <Container>
@@ -58,11 +73,15 @@ const AccordionCoppel = ({ items, body }) => {
           {items.map((item, idx) => {
             return (
               <StyledAccordion key={idx}>
-                <AccordionItem>
+                <AccordionItem onClick={(e) => chanState(idx)}>
                   <AccordionItemHeading>
-                    <AccordionItemButton className="accordion-header">
+                    <AccordionItemButton
+                      className={`accordion-header ${
+                        state === idx ? "active" : ""
+                      }`}
+                    >
                       <p>{item.section}</p>
-                      <img src={AddIcon} alt="" />
+                      <img src={state === idx ? restIcon : AddIcon} alt="" />
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel className="accordion-body">

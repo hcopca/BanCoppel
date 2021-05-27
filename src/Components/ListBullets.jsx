@@ -3,8 +3,6 @@ import styled from "styled-components";
 import blue_mark from "../Assets/blue_mark.svg";
 
 const StyledBullets = styled.ul`
-  ${(props) => console.log(props)}
-
   list-style: ${(props) => (props.showdots ? "none" : "")};
   display: flex;
   flex-direction: column;
@@ -14,6 +12,7 @@ const StyledBullets = styled.ul`
     display: flex;
     align-items: center;
     margin-bottom: 25px;
+    padding-bottom: 10px;
     &:last-child {
       margin-bottom: 0px;
     }
@@ -26,7 +25,7 @@ const StyledBullets = styled.ul`
       color: var(--sky-blue); /* Change the color */
       font-weight: bold; /* If you want it to be bold */
       display: inline-block; /* Needed to add space between the bullet and the text */
-      margin: 10px;
+      margin-right: 10px;
     }
   }
 `;

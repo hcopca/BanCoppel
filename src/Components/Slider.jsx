@@ -10,6 +10,7 @@ const StylesCarousel = styled.div`
   background: var(--light-blue);
 
   padding: 50px 0;
+
   display: none;
 
   .sections {
@@ -46,7 +47,7 @@ const StylesCarousel = styled.div`
   }
   .bancoppel_slider {
     margin: auto;
-    margin-top: 50px;
+    margin-top: ${(props) => (props.showHeader ? "50px" : 0)};
     max-width: 1250px;
 
     .slide {
@@ -121,7 +122,10 @@ class Slider extends Component {
 
   render() {
     return (
-      <StylesCarousel>
+      <StylesCarousel
+        showHeader={this.state.mostrarEncabezado}
+        className="bancoppel__slider"
+      >
         {this.state.mostrarEncabezado ? (
           <Container>
             <div className="sections">
