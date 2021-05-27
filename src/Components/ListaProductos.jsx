@@ -7,6 +7,9 @@ import Slider from "./Slider";
 const StyledPructs = styled.div`
   background: var(--white) !important;
   padding: 25px 0;
+  @media (min-width: 992px) {
+    padding: 0;
+  }
   .bancoppel_slider,
   .bancoppel__slider {
     background: var(--white) !important;
