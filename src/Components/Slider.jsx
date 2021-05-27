@@ -95,7 +95,8 @@ const StylesCarousel = styled.div`
 class Slider extends Component {
   constructor(props) {
     super(props);
-    this.state = { avaliableServices: this.props.services, currentSlide: 0 };
+    this.state = { avaliableServices: this.props.services, currentSlide: 0,
+       mostrarEncabezado: this.props.showHeader!=null? this.props.showHeader: true};
   }
 
   changeSlide(idx) {
@@ -117,6 +118,7 @@ class Slider extends Component {
   render() {
     return (
       <StylesCarousel>
+        {this.state.mostrarEncabezado?
         <Container>
           <div className="sections">
             {this.props.items.map((item, idx) => {
@@ -134,6 +136,7 @@ class Slider extends Component {
             })}
           </div>
         </Container>
+        :null}
         <Carousel
           showThumbs={false}
           showStatus={false}
