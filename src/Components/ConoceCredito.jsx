@@ -23,7 +23,11 @@ const StyledBanner = styled.section`
   .img-holder {
     position: relative;
     display: inline-block;
-    margin: 50px 0px;
+    padding: 25px 0;
+
+    @media (min-width: 992px) {
+      padding: 50px 0;
+    }
   }
   .img-holder {
     img {
@@ -33,7 +37,7 @@ const StyledBanner = styled.section`
   }
   .img-holder .contenido_sobrepuesto {
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 65px;
     right: 0;
     transform: translate(0, -50%);

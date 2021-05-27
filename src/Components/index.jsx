@@ -11,3 +11,5 @@ export { default as Slider } from "./Slider";
 export { default as ProductHeader } from "./ProductHeader";
 export { default as ListaProductos } from "./ListaProductos";
 
+export { default as CardBullets } from "./CardBullets";
+export { default as SecondaryCardBlue } from "./SecondaryCardBlue";
