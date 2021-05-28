@@ -51,9 +51,11 @@ const StylesCarousel = styled.div`
     max-width: 1250px;
 
     .slide {
+      height: 522px;
       .container {
         width: 85%;
         margin: auto;
+        height: 100%;
       }
     }
     .carousel .control-next.control-arrow:before {

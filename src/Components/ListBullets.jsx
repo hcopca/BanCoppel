@@ -6,18 +6,23 @@ const StyledBullets = styled.ul`
   list-style: ${(props) => (props.showdots ? "none" : "")};
   display: flex;
   flex-direction: column;
-
+  height: 100%;
   li {
     flex: 1;
     display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+    border-bottom: 1px solid var(--shadow-blue);
     padding-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0px;
+    margin-top: 40px;
+    &:first-child {
+      margin-top: 0;
     }
 
-    border-bottom: 1px solid var(--shadow-blue);
+    @media (min-width: 992px) {
+      align-items: flex-end;
+      margin-top: 0px;
+      padding-bottom: 20px;
+    }
+
     &:before {
       // prettier-ignore
       ${(props) =>

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Views/Home";
-import SolucionesCredito from "./Views/SolucionesCredito";
+import Crav from "./Views/Crav";
+import Factoraje from "./Views/Factoraje";
 import { Navbar, Footer } from "./Components";
 
 class App extends Component {
@@ -14,8 +15,11 @@ class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/soluciones">
-            <SolucionesCredito />
+          <Route path="/crav">
+            <Crav />
+          </Route>
+          <Route path="/factoraje">
+            <Factoraje />
           </Route>
         </Switch>
         <Footer />

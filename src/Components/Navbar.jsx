@@ -55,8 +55,9 @@ const StyledNavbar = styled.div`
 
   @media (min-width: 768px) {
     .container {
-      width: 90% !important;
-      max-width: 1400px;
+      width: 100vw !important;
+      min-width: 100vw;
+      background: red;
     }
   }
 

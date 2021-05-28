@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Card from "./SecondaryCardBlue";
 
 const StyledSencdaryCards = styled.div`
+  height: 100%;
   .SecondaryCardBlue {
     margin-bottom: 20px;
     &:last-child {
@@ -24,7 +25,6 @@ const StyledSencdaryCards = styled.div`
   }
 
   @media (min-width: 992px) {
-    height: 550px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
