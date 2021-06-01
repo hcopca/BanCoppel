@@ -5,8 +5,8 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.row ? "row" : "column")};
-  height: ${(props) => (props.row ? "222px" : "321px")};
-  width: ${(props) => (props.row ? "350px" : "212px")};
+  height: ${(props) => (props.row ? "224px" : "321px")};
+  width: ${(props) => (props.row ? "472px" : "212px")};
   max-width: 100%;
 
   background: var(--night-blue);
@@ -48,8 +48,8 @@ const Card = styled.div`
   }
 
   @media (min-width: 992px) {
-    height: ${(props) => (props.row ? "210px" : "522px")};
-    width: ${(props) => (props.row ? "522px" : "306px")};
+    height: ${(props) => (props.row ? "224px" : "522px")};
+    width: ${(props) => (props.row ? "472px" : "306px")};
 
     br {
       display: none;

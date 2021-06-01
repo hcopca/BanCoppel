@@ -5,7 +5,7 @@ const BancoppelBtn = styled.button`
   padding: 0 10px;
   height: 37px;
   min-width: 80px;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,12 +21,13 @@ const BancoppelBtn = styled.button`
 
   background: var(--white);
   background: ${(props) => (props.secundario ? "var(--storm-blue)" : "")};
-  background: ${(props) => (props.amarillo ? "var(--yellow)" : "")};
+  background: ${(props) => (props.amarillo ? "var(--summer-yellow)" : "")};
   background: ${(props) => (props.disabled ? "var(--gray)" : "")};
 
   color: var(--storm-blue);
   color: ${(props) => (props.secundario ? "var(--white)" : "")};
   color: ${(props) => (props.disabled ? "var(--white)" : "")};
+  color: ${(props) => (props.amarillo ? "var(--night-blue)" : "")};
 
   /* &:hover {
     background: var(--morning-blue);
@@ -41,15 +42,15 @@ const BancoppelBtn = styled.button`
 
   @media (min-width: 576px) {
     height: 50px;
-    min-width: 120px;
+    width: 120px;
   }
 
   @media (min-width: 992px) {
-    min-width: 150px;
+    width: 150px;
   }
 
   @media (min-width: 1200px) {
-    min-width: 180px;
+    width: 180px;
   }
 `;
 

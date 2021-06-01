@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledNav = styled.div`
   background: var(--white);
-  padding: 13px 0;
+  padding: 16px 0;
   display: none;
   .secondaryNav {
     width: 100%;
@@ -14,6 +14,7 @@ const StyledNav = styled.div`
     h4 {
       color: var(--gray);
       cursor: pointer;
+      font-size: 14px;
     }
   }
 

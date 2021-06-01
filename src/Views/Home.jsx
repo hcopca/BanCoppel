@@ -60,10 +60,20 @@ const StyledCards = styled.div`
 const StyledCardsSlider = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  .CardBlue {
-    width: 100% !important;
-    max-width: 100% !important;
+  grid-gap: 23px;
+
+  .item_card {
+    display: flex;
+
+    background: green;
+
+    .CardBlue {
+      width: 100%;
+      margin: auto;
+      @media (min-width: 1200px) {
+        width: 472px;
+      }
+    }
   }
 `;
 
@@ -86,7 +96,11 @@ class Home extends Component {
       <StyledCardsSlider>
         {data.cards ? (
           data.cards.map((card, idx) => {
-            return <CardBlue card={card} key={idx} row />;
+            return (
+              <div className="item_card">
+                <CardBlue card={card} key={idx} row />
+              </div>
+            );
           })
         ) : (
           <p>no hay "cards" para mostrar</p>

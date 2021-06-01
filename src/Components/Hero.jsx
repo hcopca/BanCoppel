@@ -49,12 +49,23 @@ const StyledHero = styled.div`
         align-items: center;
         .children {
           width: 60%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
           img {
             max-width: 100%;
+            margin-top: 100px;
           }
           button {
-            margin-top: 30px;
-            margin-left: 37px;
+            margin-left: 30px;
+            align-self: flex-start;
+            margin-top: 100px;
+            font-family: Futura;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            width: 200px;
           }
         }
       }

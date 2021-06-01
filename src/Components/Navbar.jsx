@@ -10,10 +10,9 @@ import SecondaryNav from "./SecondaryNav";
 
 const StyledNavbar = styled.div`
   background: var(--white);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 16px 15px;
   border-bottom: 2px solid var(--shadow-blue);
-  .container {
+  .nav_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +21,7 @@ const StyledNavbar = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex: 1.3;
+      flex: 1;
 
       .hamburger {
         cursor: pointer;
@@ -32,7 +31,7 @@ const StyledNavbar = styled.div`
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-        margin-right: 10px;
+        margin-right: 32px;
         .ham-item {
           width: 100%;
           height: 3px;
@@ -53,16 +52,9 @@ const StyledNavbar = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
-    .container {
-      width: 100vw !important;
-      min-width: 100vw;
-      background: red;
-    }
-  }
-
   @media (min-width: 992px) {
-    .container {
+    padding: 16px;
+    .nav_container {
       .brand {
         display: flex;
         align-items: center;
@@ -75,11 +67,10 @@ const StyledNavbar = styled.div`
         }
       }
       .navigation {
-        flex: 1;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         .navigation-item {
-          margin-right: 10px;
+          margin-right: 27px;
           &:last-child {
             margin-right: 0;
           }
@@ -103,7 +94,7 @@ class Navbar extends Component {
     return (
       <>
         <StyledNavbar className="bancoppel_nav">
-          <Container>
+          <div className="nav_container">
             <div className="brand">
               <div
                 className="hamburger"
@@ -139,7 +130,7 @@ class Navbar extends Component {
                 ) : null}
               </div>
             </div>
-          </Container>
+          </div>
         </StyledNavbar>
         <SecondaryNav />
         {this.state.onOpen ? (

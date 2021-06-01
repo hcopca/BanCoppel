@@ -9,6 +9,7 @@ body {
   --storm-blue: #225aa7;
   --night-blue: #002a61;
   --blue: #36679a;
+
   --sky-blue: #338cbf;
   --morning-blue: #81c1ea;
   --yellow: #fcda47;
@@ -124,6 +125,6 @@ a {
   text-decoration: none;
 }
 
-/* * {
+* {
   border: 1px solid red;
-} */
+}

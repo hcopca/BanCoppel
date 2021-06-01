@@ -26,6 +26,8 @@ const StylesCarousel = styled.div`
       h3 {
         text-align: center;
         color: var(--light-gray);
+        font-weight: bold;
+        font-size: 14px;
       }
 
       &:hover {
@@ -48,12 +50,10 @@ const StylesCarousel = styled.div`
   .bancoppel_slider {
     margin: auto;
     margin-top: ${(props) => (props.showHeader ? "50px" : 0)};
-    max-width: 1250px;
 
     .slide {
-      height: 522px;
       .container {
-        width: 85%;
+        width: 90%;
         margin: auto;
         height: 100%;
       }
@@ -92,6 +92,16 @@ const StylesCarousel = styled.div`
 
   @media (min-width: 992px) {
     display: block;
+  }
+
+  @media (min-width: 1200px) {
+    .bancoppel_slider {
+      .slide {
+        .container {
+          width: 100%;
+        }
+      }
+    }
   }
 `;
 
