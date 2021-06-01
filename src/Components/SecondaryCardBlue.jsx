@@ -2,34 +2,51 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const StyledSecondaryCard = styled.div`
-  padding: 20px;
+  padding: 10px;
   background: var(--night-blue);
   border-radius: 16px;
   display: flex;
   align-items: center;
-  .img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-  }
+  flex-direction: column;
   .body_secondary {
-    padding: 10px 20px;
-    width: 75%;
+    margin-top: 10px;
+    width: 100%;
     h2 {
       font-size: 18px;
       color: var(--morning-blue);
-      margin-bottom: 10px;
       text-align: left;
+      font-family: futura_normal;
     }
     p {
       color: var(--white);
       text-align: left;
+      font-family: lato_medium;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  @media (min-width: 426px) {
+    flex-direction: row;
+    height: 150px;
+
+    .body_secondary {
+      margin-top: 0px;
+    }
+    .img {
+      width: 40%;
+      display: flex;
+      justify-content: center;
     }
   }
 
   @media (min-width: 768px) {
     flex-direction: column;
+    height: 246px;
+    width: 226px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     .img {
       width: 100%;
 
@@ -40,6 +57,7 @@ const StyledSecondaryCard = styled.div`
 
     .body_secondary {
       width: 100%;
+      margin-top: 10px;
       h2 {
         text-align: center;
       }

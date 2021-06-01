@@ -4,6 +4,9 @@ import Card from "./SecondaryCardBlue";
 
 const StyledSencdaryCards = styled.div`
   height: 100%;
+
+  margin: auto;
+
   .SecondaryCardBlue {
     margin-bottom: 20px;
     &:last-child {
@@ -11,10 +14,8 @@ const StyledSencdaryCards = styled.div`
     }
   }
 
-  @media (min-width: 576px) {
-  }
-
   @media (min-width: 768px) {
+    width: 492px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -25,6 +26,7 @@ const StyledSencdaryCards = styled.div`
   }
 
   @media (min-width: 992px) {
+    width: 738px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;

@@ -75,7 +75,7 @@ class Crav extends Component {
   render() {
     return (
       <>
-        <StyledHeader>
+        <StyledHeader backgrounredd>
           <Container>
             <div className="title">
               <h1>UN CRÉDITO</h1>
@@ -94,16 +94,18 @@ class Crav extends Component {
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
-              CRÉDITO{" "}
-              <span>
-                CUENTA
-                <br /> CORRIENTE CRAV
-              </span>
+              CRÉDITO <span>SIMPLE</span>
             </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Slider items={SolucionesCreditoSections} body={this.body} />
+
+        <Slider
+          items={SolucionesCreditoSections}
+          body={this.body}
+          className="slider_creditoSimple"
+        />
+
         <ListaProductos />
       </>
     );

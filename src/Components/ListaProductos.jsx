@@ -7,6 +7,7 @@ import Slider from "./Slider";
 const StyledPructs = styled.div`
   background: var(--white) !important;
   padding: 25px 0;
+
   @media (min-width: 992px) {
     padding: 0;
   }
@@ -45,6 +46,7 @@ const StyledCardsResponsive = styled.div`
   overflow-x: scroll;
   width: 100%;
   margin-top: 25px;
+  background: var(--white) !important;
   .CardBlue {
     margin-right: 10px;
     &:last-child {

@@ -37,7 +37,7 @@ const Card = styled.div`
 
       font-family: futura_heavy;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 10px;
     }
     p {
@@ -69,7 +69,7 @@ const Card = styled.div`
 
     img {
       height: ${(props) => (props.row ? "100%" : "50%")};
-      max-width: ${(props) => (props.row ? "188px" : "306px")};
+      max-width: ${(props) => (props.row ? "200px" : "306px")};
     }
 
     .card_body {
@@ -78,12 +78,12 @@ const Card = styled.div`
       padding: 15px;
       width: ${(props) => (props.row ? "261px" : "100%")};
       h1 {
-        font-size: ${(props) => (props.row ? "23px" : "30px")};
+        font-size: ${(props) => (props.row ? "20px" : "24px")};
         text-align: left;
       }
       p {
         text-align: left;
-        font-size: 16px;
+        font-size: 15px;
       }
     }
   }
@@ -91,9 +91,10 @@ const Card = styled.div`
   @media (min-width: 1200px) {
     .card_body {
       h1 {
-        font-size: ${(props) => (props.row ? "26px" : "30px")};
+        font-size: 24px;
       }
       p {
+        font-size: 16px;
       }
     }
   }

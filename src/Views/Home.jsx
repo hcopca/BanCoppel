@@ -13,6 +13,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.div`
   padding: 25px 0;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -49,6 +50,7 @@ const StyledCards = styled.div`
   padding: 10px 0;
   display: flex;
   overflow-x: scroll;
+
   .CardBlue {
     margin-right: 10px;
     &:last-child {

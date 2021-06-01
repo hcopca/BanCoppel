@@ -8,11 +8,10 @@ import Container from "./Container";
 
 const StylesCarousel = styled.div`
   background: var(--light-blue);
-
   padding: 50px 0;
 
   display: none;
-
+  min-height: 300px;
   .sections {
     display: flex;
     align-items: center;
@@ -52,6 +51,9 @@ const StylesCarousel = styled.div`
     margin-top: ${(props) => (props.showHeader ? "50px" : 0)};
     max-width: 1130px;
     .slide {
+      flex: 1;
+      height: 100%;
+
       .container {
         width: 90%;
         margin: auto;
@@ -133,6 +135,7 @@ class Slider extends Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <StylesCarousel
         showHeader={this.state.mostrarEncabezado}
@@ -161,7 +164,9 @@ class Slider extends Component {
           showThumbs={false}
           showStatus={false}
           showIndicators={false}
-          className="bancoppel_slider"
+          className={`bancoppel_slider ${
+            this.props.className ? this.props.className : ""
+          }`}
           selectedItem={this.state.currentSlide}
           onChange={this.updateCurrentSlide}
         >

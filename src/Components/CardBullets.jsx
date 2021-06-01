@@ -32,12 +32,8 @@ const StyledBigCard = styled.div`
     .card {
       display: block;
       flex: 1;
-
-      display: flex;
-
-      justify-content: center;
       .CardBlue {
-        min-width: 90%;
+        min-width: 100%;
         img {
           height: 70%;
           width: 100% !important;
@@ -52,7 +48,7 @@ const StyledBigCard = styled.div`
       }
     }
     .bullets {
-      flex: 0.8;
+      flex: 1.2;
 
       padding-left: 20px;
       .bullet {

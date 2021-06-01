@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./Views/Home";
-import Crav from "./Views/Crav";
+import CreditoSimple from "./Views/CreditoSimple";
 import Factoraje from "./Views/Factoraje";
 import { Navbar, Footer } from "./Components";
 
@@ -14,8 +14,8 @@ class App extends Component {
           <Link to="/" style={{ marginRight: 10 }}>
             Home
           </Link>
-          <Link to="/crav" style={{ marginRight: 10 }}>
-            crav
+          <Link to="/creditoSimple" style={{ marginRight: 10 }}>
+            creditoSimple
           </Link>
           <Link to="/factoraje" style={{ marginRight: 10 }}>
             factoraje
@@ -26,8 +26,8 @@ class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/crav">
-            <Crav />
+          <Route path="/creditoSimple">
+            <CreditoSimple />
           </Route>
           <Route path="/factoraje">
             <Factoraje />
