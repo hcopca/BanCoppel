@@ -5,7 +5,7 @@ const BancoppelBtn = styled.button`
   padding: 0 10px;
   height: 37px;
   min-width: 80px;
-  width: 100%;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -47,10 +47,6 @@ const BancoppelBtn = styled.button`
 
   @media (min-width: 992px) {
     width: 150px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 180px;
   }
 `;
 

@@ -65,11 +65,14 @@ const StyledCardsSlider = styled.div`
   .item_card {
     display: flex;
 
-    background: green;
+    justify-content: flex-start;
+    &:nth-child(even) {
+      justify-content: flex-end;
+    }
 
     .CardBlue {
       width: 100%;
-      margin: auto;
+
       @media (min-width: 1200px) {
         width: 472px;
       }

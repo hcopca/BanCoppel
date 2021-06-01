@@ -48,12 +48,6 @@ body {
 }
 
 @font-face {
-  font-family: futura_normal;
-  src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
-  /* font-display: swap; */
-}
-
-@font-face {
   font-family: lato_bold;
   src: url("./Assets/Fonts/Lato/Lato-Bold.ttf");
   /* font-display: swap; */
@@ -125,6 +119,6 @@ a {
   text-decoration: none;
 }
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */

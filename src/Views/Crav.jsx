@@ -58,7 +58,7 @@ const StyledPruductHeader = styled.div`
   }
 `;
 
-class SolucionesCredito extends Component {
+class Crav extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -110,7 +110,7 @@ class SolucionesCredito extends Component {
   }
 }
 
-export default SolucionesCredito;
+export default Crav;
 
 const SolucionesCreditoSections = [
   {

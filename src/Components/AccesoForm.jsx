@@ -6,12 +6,11 @@ import styled from "styled-components";
 const StyledAcceso = styled.div`
   position: absolute;
   top: 115px;
-
   border-radius: 24px;
   padding: 10px 15px;
   background: var(--white);
   width: 385px;
-  left: -220%;
+  left: -170%;
 
   z-index: 1000000;
 
@@ -44,11 +43,7 @@ const StyledAcceso = styled.div`
   }
 
   @media (min-width: 992px) {
-    left: -155%;
-  }
-
-  @media (min-width: 1200px) {
-    left: -110%;
+    left: -200%;
   }
 `;
 

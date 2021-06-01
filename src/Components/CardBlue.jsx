@@ -34,16 +34,28 @@ const Card = styled.div`
       span {
         color: var(--morning-blue);
       }
-      font-size: 20px;
-      line-height: 110%;
+
+      font-family: futura_heavy;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
     p {
       color: var(--white);
       font-size: 12px;
-      margin: ${(props) => (props.row ? "15px 0" : "0")};
     }
     button {
+      margin-top: 10px;
       border: 0;
+    }
+  }
+
+  @media (min-width: 576px) {
+    height: ${(props) => (props.row ? "224px" : "381px")};
+    .card_body {
+      p {
+        font-size: 14px;
+      }
     }
   }
 
@@ -57,21 +69,31 @@ const Card = styled.div`
 
     img {
       height: ${(props) => (props.row ? "100%" : "50%")};
-      max-width: ${(props) => (props.row ? "261px" : "306px")};
+      max-width: ${(props) => (props.row ? "188px" : "306px")};
     }
 
     .card_body {
       justify-content: space-between;
       align-items: flex-start;
-      padding: 20px;
+      padding: 15px;
       width: ${(props) => (props.row ? "261px" : "100%")};
       h1 {
-        font-size: ${(props) => (props.row ? "26px" : "30px")};
+        font-size: ${(props) => (props.row ? "23px" : "30px")};
         text-align: left;
       }
       p {
         text-align: left;
-        font-size: 14px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card_body {
+      h1 {
+        font-size: ${(props) => (props.row ? "26px" : "30px")};
+      }
+      p {
       }
     }
   }
@@ -85,13 +107,16 @@ class CardBlue extends Component {
           <img src={this.props.card.image} alt="img" />
         ) : null}
         <div className="card_body">
-          {this.props.card.titleWhite && this.props.card.titleBlue ? (
-            <h1>
-              {this.props.card.titleWhite} <br />
-              <span>{this.props.card.titleBlue} </span>
-            </h1>
-          ) : null}
-          {this.props.card.copy ? <p>{this.props.card.copy}</p> : null}
+          <div className="copy">
+            {this.props.card.titleWhite && this.props.card.titleBlue ? (
+              <h1>
+                {this.props.card.titleWhite} <br />
+                <span>{this.props.card.titleBlue} </span>
+              </h1>
+            ) : null}
+            {this.props.card.copy ? <p>{this.props.card.copy}</p> : null}
+          </div>
+
           {this.props.card.button ? (
             <BancoppelBtn>{this.props.card.button}</BancoppelBtn>
           ) : null}

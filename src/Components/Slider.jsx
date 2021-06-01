@@ -50,7 +50,7 @@ const StylesCarousel = styled.div`
   .bancoppel_slider {
     margin: auto;
     margin-top: ${(props) => (props.showHeader ? "50px" : 0)};
-
+    max-width: 1130px;
     .slide {
       .container {
         width: 90%;
@@ -61,7 +61,7 @@ const StylesCarousel = styled.div`
     .carousel .control-next.control-arrow:before {
       content: "";
       border: solid transparent;
-      padding: 14px;
+      padding: 18px;
       background-image: url(${ActiveBtn});
       background-repeat: no-repeat;
       background-size: contain;
@@ -70,7 +70,7 @@ const StylesCarousel = styled.div`
     .carousel .control-prev.control-arrow:before {
       content: "";
       border: solid transparent;
-      padding: 14px;
+      padding: 18px;
       background-image: url(${ActiveBtn});
       background-repeat: no-repeat;
       background-size: contain;

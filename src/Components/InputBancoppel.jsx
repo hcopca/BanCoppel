@@ -15,9 +15,6 @@ const StyledInput = styled.div`
     left: 10px;
     top: ${(props) => (props.focus || props.hasText ? "-25%" : "25%")};
     /* bottom: 0; */
-
-    display: flex;
-    align-items: center;
   }
 
   input {

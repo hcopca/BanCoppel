@@ -55,10 +55,10 @@ const StyledHero = styled.div`
 
           img {
             max-width: 100%;
-            margin-top: 100px;
+            margin-top: 130px;
           }
           button {
-            margin-left: 30px;
+            margin-left: 25px;
             align-self: flex-start;
             margin-top: 100px;
             font-family: Futura;
