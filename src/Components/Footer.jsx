@@ -14,6 +14,8 @@ import Logo_bancoppel from "../Assets/logo_bancoppel.svg";
 import Play_store from "../Assets/play_store.svg";
 import App_store from "../Assets/app_store.svg";
 
+import Container from "./Container";
+
 import "./styles/custom_accordion_conoceCredito.css";
 
 import {
@@ -27,7 +29,7 @@ import {
 // import 'react-accessible-accordion/dist/fancy-example.css';
 
 const ContainerFooter = styled.div`
-  padding: 60px;
+  padding:60px 0; 
   //background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112,71,247,1) 100%);
   background: var(--storm-blue);
   @media (max-width: 1000px) {
@@ -39,8 +41,9 @@ const ContainerFooter = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
+  justify-content: space-between;
+  // max-width: 1000px;
+  width:100%;
   margin: 0 auto;
 `;
 
@@ -172,6 +175,8 @@ export default class Footer extends Component {
     return (
       <>
         <ContainerFooter>
+        <Container>
+
           <Wrapper>
             <RowTituloFooter>
               <img src={Logo_bancoppel} alt="Logo_bancoppel"></img>
@@ -274,8 +279,8 @@ export default class Footer extends Component {
               </Column>
               <Column>
                 <Title>Contacto</Title>
-                <Link href="#">Lada sin costo: 800 1 2267735</Link>
-                <Link href="#">EU. y Canadá: 866 2543790</Link>
+                <Link href="tel:+80012267735">Lada sin costo: 800 1 2267735</Link>
+                <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <ImgRedesSociales src={Youtube}></ImgRedesSociales>
                   <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
@@ -286,9 +291,9 @@ export default class Footer extends Component {
                 <Title>Descarga</Title>
 
                 <div>
-                  <img src={Play_store} alt=""></img>
+                <Link href="#" target="_blank"> <img src={Play_store} alt=""></img></Link>
 
-                  <img src={App_store} alt=""></img>
+                <Link href="#" target="_blank">  <img src={App_store} alt=""></img></Link>
                 </div>
               </Column>
             </Row>
@@ -315,7 +320,9 @@ export default class Footer extends Component {
               </FinalFooter>
             </RowNormal>
           </Wrapper>
+          </Container>
         </ContainerFooter>
+        
       </>
     );
   }
