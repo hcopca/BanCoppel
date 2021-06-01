@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./Views/Home";
 import Crav from "./Views/Crav";
@@ -10,6 +10,17 @@ class App extends Component {
   render() {
     return (
       <div className="bancoppel">
+        <div style={{ background: "red" }}>
+          <Link to="/" style={{ marginRight: 10 }}>
+            Home
+          </Link>
+          <Link to="/crav" style={{ marginRight: 10 }}>
+            crav
+          </Link>
+          <Link to="/factoraje" style={{ marginRight: 10 }}>
+            factoraje
+          </Link>
+        </div>
         <Navbar />
         <Switch>
           <Route exact path="/">
