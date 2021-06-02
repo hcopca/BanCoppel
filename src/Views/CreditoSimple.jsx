@@ -75,7 +75,7 @@ class Crav extends Component {
   render() {
     return (
       <>
-        <StyledHeader backgrounredd>
+        <StyledHeader>
           <Container>
             <div className="title">
               <h1>UN CRÉDITO</h1>
@@ -120,7 +120,7 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../Assets/Persons2.png").default,
-      copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy: "El financiamiento que necesitas para pontencializar tu empresa.",
     },
 
     items: [

@@ -6,13 +6,14 @@ const StyledBullets = styled.ul`
   list-style: ${(props) => (props.showdots ? "none" : "")};
   display: flex;
   flex-direction: column;
-  height: 100%;
+
   li {
     flex: 1;
     display: flex;
     border-bottom: 1px solid var(--shadow-blue);
-    padding-bottom: 10px;
-    margin-top: 40px;
+    /* padding-bottom: 10px; */
+    /* margin-top: 40px; */
+    padding: 15px 0;
     &:first-child {
       margin-top: 0;
     }
@@ -20,7 +21,7 @@ const StyledBullets = styled.ul`
     @media (min-width: 992px) {
       align-items: flex-end;
       margin-top: 0px;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
 
     &:before {
@@ -32,6 +33,10 @@ const StyledBullets = styled.ul`
       display: inline-block; /* Needed to add space between the bullet and the text */
       margin-right: 10px;
     }
+  }
+
+  @media (min-width: 992px) {
+    height: 490px;
   }
 `;
 

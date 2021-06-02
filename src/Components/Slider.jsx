@@ -15,11 +15,11 @@ const StylesCarousel = styled.div`
   .sections {
     display: flex;
     align-items: center;
-    width: 80%;
+    justify-content: center;
     margin: auto;
     .section {
       padding-bottom: 20px;
-      flex: 1;
+      flex: 0 1 20%;
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
       h3 {
@@ -52,7 +52,6 @@ const StylesCarousel = styled.div`
     max-width: 1130px;
     .slide {
       flex: 1;
-      height: 100%;
 
       .container {
         width: 90%;

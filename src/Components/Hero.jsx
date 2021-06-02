@@ -58,9 +58,9 @@ const StyledHero = styled.div`
             margin-top: 130px;
           }
           button {
-            margin-left: 25px;
+            margin-left: 30px;
             align-self: flex-start;
-            margin-top: 100px;
+            margin-top: 70px;
             font-family: Futura;
             font-style: normal;
             font-weight: bold;
