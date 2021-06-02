@@ -31,7 +31,9 @@ import {
 const ContainerFooter = styled.div`
   padding:60px 0; 
   //background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112,71,247,1) 100%);
-  background: var(--storm-blue);
+  background: linear-gradient(192.32deg, #225AA7 -2.61%, #002A61 95.1%);
+  //background: radial-gradient(circle, var(--storm-blue), #04316B);
+  // background: var(--storm-blue);
   @media (max-width: 1000px) {
     padding: 70px 30px;
   }
@@ -45,6 +47,12 @@ const Wrapper = styled.div`
   // max-width: 1000px;
   width:100%;
   margin: 0 auto;
+`;
+
+const SimpleColumn=styled.div`
+display: flex;
+flex-direction: column;
+
 `;
 
 const Column = styled.div`
@@ -66,12 +74,19 @@ const ColumnResponsive = styled.div`
 `;
 
 const Row = styled.div`
-  display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px;
+  //display: grid;
+  //// grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  //grid-gap: 20px;
   @media (max-width: 1000px) {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+
   }
 `;
 
@@ -84,7 +99,7 @@ const Link = styled.a`
 
   text-decoration: none;
   &:hover {
-    color: #ff9c00;
+    color: #FFBE12;
     transition: 200ms ease-in;
   }
 `;
@@ -99,10 +114,11 @@ const SubLink = styled.a`
 
   text-decoration: none;
   &:hover {
-    color: #ff9c00;
+    color: #FFBE12;
     transition: 200ms ease-in;
   }
 `;
+
 
 const Title = styled.p`
   font-size: 16px;
@@ -151,7 +167,7 @@ const RowNormal = styled.div`
 `;
 
 const ImgRedesSociales = styled.img`
-  margin-right: 20px;
+  margin-right: 40px;
   margin-top: 5px;
   height: 25.43px;
 `;
@@ -248,12 +264,11 @@ export default class Footer extends Component {
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel className="accordion__panel_CC">
-                      <div>
-                        <img src={Play_store} alt=""></img>
-                        <br />
-
-                        <img src={App_store} alt=""></img>
-                      </div>
+                      <SimpleColumn>
+                        <img src={Play_store} alt="" style={{width:'129.21px'}}></img>
+<br></br>
+                        <img src={App_store} alt="" style={{width:'129.21px'}}></img>
+                      </SimpleColumn>
                     </AccordionItemPanel>
                   </AccordionItem>
                 </Accordion>
@@ -282,22 +297,24 @@ export default class Footer extends Component {
                 <Link href="tel:+80012267735">Lada sin costo: 800 1 2267735</Link>
                 <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  <ImgRedesSociales src={Youtube}></ImgRedesSociales>
-                  <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
                   <ImgRedesSociales src={Facebook}></ImgRedesSociales>
+                  <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
+                  <ImgRedesSociales src={Youtube}></ImgRedesSociales>
+                 
+                  
                 </div>
               </Column>
               <Column>
                 <Title>Descarga</Title>
 
-                <div>
-                <Link href="#" target="_blank"> <img src={Play_store} alt=""></img></Link>
+                <SimpleColumn>
+                <Link href="#" target="_blank"> <img src={Play_store} alt="" style={{width:'129.21px'}}></img></Link>
 
-                <Link href="#" target="_blank">  <img src={App_store} alt=""></img></Link>
-                </div>
+                <Link href="#" target="_blank">  <img src={App_store} alt="" style={{width:'129.21px'}}></img></Link>
+                </SimpleColumn>
               </Column>
             </Row>
-            <HrFooter color="#37689A" size="5px" />
+            <HrFooter color="#36679A" size="5px" />
             <RowLogotipos>
               <img src={IPAB} alt="Fondo_mujer" />
               <img src={El_punto_es_mejorar} alt="Fondo_mujer" />
