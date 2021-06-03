@@ -9,7 +9,9 @@ import SecondaryNav from "./SecondaryNav";
 
 const StyledNavbar = styled.div`
   background: var(--white);
-  padding: 16px 15px;
+  padding: 16px;
+  padding-top: 35px;
+
   border-bottom: 2px solid var(--shadow-blue);
   .nav_container {
     display: flex;
@@ -25,7 +27,7 @@ const StyledNavbar = styled.div`
       .hamburger {
         cursor: pointer;
         width: 24px;
-        height: 24px;
+        height: 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -33,7 +35,7 @@ const StyledNavbar = styled.div`
         margin-right: 32px;
         .ham-item {
           width: 100%;
-          height: 3px;
+          height: 2px;
           background: var(--storm-blue);
           border-radius: 10px;
           padding: 1px;
@@ -52,7 +54,7 @@ const StyledNavbar = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding: 16px;
+    padding: 16px 32px;
     .nav_container {
       .brand {
         display: flex;

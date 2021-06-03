@@ -17,7 +17,7 @@ const BancoppelBtn = styled.button`
   transition: all 0.2s ease-in-out;
   border-radius: 10px;
   border: ${(props) =>
-    !props.amarillo && !props.secundario ? "1.5px solid var(--storm-blue)" : 0};
+    !props.amarillo && !props.secundario ? "2px solid var(--storm-blue)" : 0};
 
   background: var(--white);
   background: ${(props) => (props.secundario ? "var(--storm-blue)" : "")};

@@ -111,16 +111,16 @@ const CravSections = [
         copy: "Optimización de capital de trabajo a largo plazo.",
       },
       {
-        icon: require("../../Assets/moneda_azul.svg").default,
+        icon: require("../../Assets/hand_start.svg").default,
         copy: "Capital para proyectos productivos.",
       },
       {
-        icon: require("../../Assets/billetes_azul.svg").default,
+        icon: require("../../Assets/hand_money_blue.svg").default,
         copy: "Compra de activo fijo.",
       },
       {
-        icon: require("../../Assets/moneda_azul.svg").default,
-        copy: "Compra de inventarios..",
+        icon: require("../../Assets/circle_blue_money.svg").default,
+        copy: "Compra de inventarios.",
       },
     ],
   },

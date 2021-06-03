@@ -26,7 +26,8 @@ const StylesCarousel = styled.div`
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
+        font-family: futura_normal;
       }
 
       &:hover {

@@ -50,9 +50,8 @@ const StyledBigCard = styled.div`
       }
     }
     .bullets {
-      flex: 1.1;
+      flex: 1.2;
       padding-left: 36px;
-
       .bullet {
         width: 60%;
         img {
@@ -61,18 +60,40 @@ const StyledBigCard = styled.div`
         }
       }
     }
+
+    .row-grap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-content: flex-start;
+      .bullet {
+        width: auto;
+        flex: 1 0 45%;
+        margin-bottom: 28px;
+        margin-right: 5px;
+      }
+    }
   }
 `;
 
 class CardBullets extends Component {
+  ClassNameByArrLen(arr) {
+    if (arr.length <= 3) {
+      return "column";
+    } else {
+      return "row-grap";
+    }
+  }
   render() {
-    console.log(this.props);
     return (
       <StyledBigCard>
         <div className="card">
           <CardBlue card={this.props.data.card} />
         </div>
-        <div className="bullets">
+        <div
+          className={`bullets ${this.ClassNameByArrLen(this.props.data.items)}`}
+        >
           {this.props.data.items.map((item, idx) => {
             return (
               <div className="bullet" key={idx}>

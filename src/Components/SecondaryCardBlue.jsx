@@ -42,6 +42,7 @@ const StyledSecondaryCard = styled.div`
       }
       p {
         text-align: left;
+        /* font-size: 14px; */
       }
     }
     .img {

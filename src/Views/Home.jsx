@@ -102,8 +102,8 @@ class Home extends Component {
         {data.cards ? (
           data.cards.map((card, idx) => {
             return (
-              <div className="item_card">
-                <CardBlue card={card} key={idx} row />
+              <div className="item_card" key={idx}>
+                <CardBlue card={card} row />
               </div>
             );
           })
