@@ -14,14 +14,20 @@ const StyledBullets = styled.ul`
     /* padding-bottom: 10px; */
     /* margin-top: 40px; */
     padding: 15px 0;
+    p {
+      font-family: futura_light;
+      font-size: 12px;
+    }
     &:first-child {
       margin-top: 0;
+      padding-top: 0;
     }
-
     @media (min-width: 992px) {
-      align-items: flex-end;
-      margin-top: 0px;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
+      margin-top: 52px;
+      p {
+        font-size: 16px;
+      }
     }
 
     &:before {
@@ -31,12 +37,8 @@ const StyledBullets = styled.ul`
       color: var(--sky-blue); /* Change the color */
       font-weight: bold; /* If you want it to be bold */
       display: inline-block; /* Needed to add space between the bullet and the text */
-      margin-right: 10px;
+      margin-right: 23px;
     }
-  }
-
-  @media (min-width: 992px) {
-    height: 490px;
   }
 `;
 

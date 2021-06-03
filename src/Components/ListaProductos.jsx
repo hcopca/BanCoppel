@@ -32,7 +32,7 @@ const StyledCards = styled.div`
   display: flex;
   overflow-x: scroll;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   .CardBlue {
     margin-right: 10px;
     &:last-child {

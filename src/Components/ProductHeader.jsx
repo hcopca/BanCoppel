@@ -8,6 +8,16 @@ const StyledHead = styled.div`
   display: flex;
   .header_body {
     flex: 2;
+    text-align: center;
+    color: var(--night-blue);
+
+    h1 {
+      font-size: 24px;
+      line-height: 24px;
+      span {
+        color: var(--sky-blue);
+      }
+    }
   }
   .item {
     flex: 3;
@@ -31,6 +41,13 @@ const StyledHead = styled.div`
     padding-top: 50px;
     .item {
       display: flex;
+    }
+
+    .header_body {
+      h1 {
+        font-size: 36px;
+        line-height: 36px;
+      }
     }
   }
 

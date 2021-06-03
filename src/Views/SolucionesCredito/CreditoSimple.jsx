@@ -4,14 +4,14 @@ import {
   Hero,
   BancoppelBtn,
   Accordion,
-  Slider,
-  ProductHeader,
   ListaProductos,
   CardBullets,
   ListCardsSecondary,
   ListBullets,
-} from "../Components";
-import HeroHome from "../Assets/Hero_Crav.svg";
+  Switcher,
+  ProductHeader,
+} from "../../Components";
+import HeroHome from "../../Assets/Hero_Credito_Simple.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -48,17 +48,7 @@ const StyledHeader = styled.div`
   }
 `;
 
-const StyledPruductHeader = styled.div`
-  .header_product {
-    text-align: center;
-    color: var(--night-blue);
-    span {
-      color: var(--sky-blue);
-    }
-  }
-`;
-
-class Crav extends Component {
+class CreditoSimple extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -68,7 +58,7 @@ class Crav extends Component {
       case "Requisitos":
         return <ListBullets bullets={data.bullets} />;
       default:
-        console.error("No hay solucion definida", data);
+        <CardBullets data={data} />;
     }
   }
 
@@ -90,47 +80,47 @@ class Crav extends Component {
             <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero btnCoppy="Me interesa" banner={HeroHome} />
         <ProductHeader>
-          <StyledPruductHeader>
-            <h1 className="header_product">
-              CRÉDITO <span>SIMPLE</span>
-            </h1>
-          </StyledPruductHeader>
+          <h1>
+            CRÉDITO <span>SIMPLE</span>
+          </h1>
         </ProductHeader>
-        <Accordion items={SolucionesCreditoSections} body={this.body} />
-
-        <Slider
-          items={SolucionesCreditoSections}
-          body={this.body}
-          className="slider_creditoSimple"
-        />
-
+        <Accordion items={CravSections} body={this.body} />
+        <Switcher items={CravSections} body={this.body} />
         <ListaProductos />
       </>
     );
   }
 }
 
-export default Crav;
+export default CreditoSimple;
 
-const SolucionesCreditoSections = [
+const CravSections = [
   {
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
+      image: require("../../Assets/Persons2.png").default,
       copy: "El financiamiento que necesitas para pontencializar tu empresa.",
     },
 
     items: [
       {
-        icon: require("../Assets/billetes_azul.svg").default,
+        icon: require("../../Assets/billetes_azul.svg").default,
         copy: "Optimización de capital de trabajo a largo plazo.",
       },
       {
-        icon: require("../Assets/moneda_azul.svg").default,
-        copy: "Capital para apoyar el proceso productivo.",
+        icon: require("../../Assets/moneda_azul.svg").default,
+        copy: "Capital para proyectos productivos.",
+      },
+      {
+        icon: require("../../Assets/billetes_azul.svg").default,
+        copy: "Compra de activo fijo.",
+      },
+      {
+        icon: require("../../Assets/moneda_azul.svg").default,
+        copy: "Compra de inventarios..",
       },
     ],
   },
@@ -139,33 +129,33 @@ const SolucionesCreditoSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
-        image: require("../Assets/hand_money.svg").default,
+        copy: "Capital de trabajo, equipamiento o compra de activo fijo.",
+        image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
-        image: require("../Assets/hand_coins.svg").default,
+        copy: "En función al monto de la inversión en capital de trabajo y proyectos de largo plazo, sujeto a capacidad de pago.",
+        image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Primeros 24 meses: pago de capital e intereses mensual. Últimos 12 meses: pagos periódicos de capital e intereses sin revolvencia.",
-        image: require("../Assets/gear_coin.svg").default,
+        copy: "Pagos periódicos de capital e intereses.",
+        image: require("../../Assets/gear_coin.svg").default,
       },
       {
         title: "TAZA",
         copy: "Variable.",
-        image: require("../Assets/money_plant.svg").default,
+        image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura y/o anualidad.",
-        image: require("../Assets/card_coins.svg").default,
+        copy: "Por apertura.",
+        image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Vigencia de contrato a 36 meses con periodo de revolvencia de 24 meses.",
-        image: require("../Assets/calendar_bill.svg").default,
+        copy: "Hasta siete años.",
+        image: require("../../Assets/calendar_bill.svg").default,
       },
     ],
   },

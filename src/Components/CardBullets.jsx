@@ -23,6 +23,8 @@ const StyledBigCard = styled.div`
       p {
         max-width: 70%;
         text-align: left;
+        font-size: 16px;
+        font-family: futura_light;
       }
     }
   }
@@ -35,7 +37,7 @@ const StyledBigCard = styled.div`
       .CardBlue {
         min-width: 100%;
         img {
-          height: 70%;
+          height: 75%;
           width: 100% !important;
           max-width: 1000px;
         }
@@ -48,25 +50,23 @@ const StyledBigCard = styled.div`
       }
     }
     .bullets {
-      flex: 1.2;
+      flex: 1.1;
+      padding-left: 36px;
 
-      padding-left: 20px;
       .bullet {
         width: 60%;
         img {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
         }
       }
     }
-  }
-
-  @media (min-width: 1200px) {
   }
 `;
 
 class CardBullets extends Component {
   render() {
+    console.log(this.props);
     return (
       <StyledBigCard>
         <div className="card">
