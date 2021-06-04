@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./Views/Home";
+import NominasBanCoppel from "./Views/NominasBanCoppel";
 import { Navbar, Footer } from "./Components";
 
 // Soluciones credito
@@ -22,6 +23,9 @@ class App extends Component {
           <Link to="/credito_simple" style={{ marginRight: 10 }}>
             CreditoSimple
           </Link>
+          <Link to="/nomina_bancoppel" style={{ marginRight: 10 }}>
+            NominasBancoppel
+          </Link>
         </div>
         <Navbar />
         <Switch>
@@ -33,6 +37,9 @@ class App extends Component {
           </Route>
           <Route path="/credito_simple">
             <CreditoSimple />
+          </Route>
+          <Route path="/nomina_bancoppel">
+            <NominasBanCoppel />
           </Route>
         </Switch>
         <Footer />

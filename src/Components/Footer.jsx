@@ -266,7 +266,7 @@ export default class Footer extends Component {
                     <AccordionItemPanel className="accordion__panel_CC">
                       <SimpleColumn>
                         <img src={Play_store} alt="" style={{width:'129.21px'}}></img>
-<br></br>
+                        <br></br>
                         <img src={App_store} alt="" style={{width:'129.21px'}}></img>
                       </SimpleColumn>
                     </AccordionItemPanel>
