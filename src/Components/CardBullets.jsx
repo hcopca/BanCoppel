@@ -25,6 +25,15 @@ const StyledBigCard = styled.div`
         text-align: left;
         font-size: 16px;
         font-family: futura_light;
+        line-height: 110%;
+
+        span {
+          font-family: Futura;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 120%;
+        }
       }
     }
   }
@@ -45,6 +54,10 @@ const StyledBigCard = styled.div`
           justify-content: center;
           p {
             font-size: 21px;
+
+            span {
+              font-size: 21px;
+            }
           }
         }
       }
@@ -86,6 +99,7 @@ const StyledBigCard = styled.div`
         flex: 1 0 45%;
         margin-bottom: 28px;
         margin-right: 5px;
+
         &:last-child {
           p {
             max-width: 100%;
@@ -119,7 +133,10 @@ class CardBullets extends Component {
             return (
               <div className="bullet" key={idx}>
                 <img src={item.icon} alt="item.icon" />
-                <p>{item.copy}</p>
+                <p>
+                  {item.bullet ? <span>{item.bullet} </span> : ""}
+                  {item.copy}
+                </p>
               </div>
             );
           })}
