@@ -17,3 +17,4 @@ export { default as ListBullets } from "./ListBullets";
 export { default as Switcher } from "./Switcher";
 export { default as ResponsiveHeader } from "./ResponsiveHeader";
 export { default as Requisitos } from "./Requisitos";
+export { default as PerfilSolicitante } from "./PerfilSolicitante";
