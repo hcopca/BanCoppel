@@ -11,9 +11,9 @@ import {
   ResponsiveHeader,
   Requisitos,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Crav.svg";
+import HeroHome from "../../Assets/Hero_credito_puente.svg";
 
-class Crav extends Component {
+class CreditoPuente extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -32,76 +32,78 @@ class Crav extends Component {
       <>
         <ResponsiveHeader>
           <div className="title">
-            <h1>UN CRÉDITO</h1>
             <h1>
-              DE ACUERDO A<br />
-              TUS NECESIDADES
+              Pensado <br /> para crear
+            </h1>
+            <h1>
+              proyectos
+              <br />
+              habitacionales
             </h1>
           </div>
           <div className="copy">
-            <h4>
-              Ajustamos el crédito a tu <br /> capacidad de pago
-            </h4>
+            <h4>Juntos construimos México</h4>
           </div>
-          <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
+          <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero btnCoppy="Contáctanos" banner={HeroHome} />
         <ProductHeader>
           <h1>
-            CRÉDITO{" "}
-            <span>
-              CUENTA <br />
-              CORRIENTE CRAV
-            </span>
+            CRÉDITO <span>PUENTE</span>
           </h1>
         </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Accordion items={CreditoPuenteSections} body={this.body} />
+        <Switcher items={CreditoPuenteSections} body={this.body} />
         <ListaProductos />
       </>
     );
   }
 }
 
-export default Crav;
+export default CreditoPuente;
 
-const CravSections = [
+const CreditoPuenteSections = [
   {
     section: "Beneficios",
 
     card: {
       image: require("../../Assets/Persons2.png").default,
-      copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy: "El impulso que necesitas para comenzar a contruir un México mejor.",
     },
 
     items: [
       {
-        icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de capital de trabajo a largo plazo.",
+        icon: require("../../Assets/stacked_blue_coins.svg").default,
+        copy: "Disposiciones de capital conforme avance de obra.",
       },
       {
-        icon: require("../../Assets/moneda_azul.svg").default,
-        copy: "Capital para apoyar el proceso productivo.",
+        icon: require("../../Assets/hand_coin_blue.svg").default,
+        copy: "Paga capital hasta que inicia la comercialización.",
+      },
+      {
+        icon: require("../../Assets/hands_exchanging_coin.svg").default,
+        copy: "Sin penalización por pagos anticipados.",
       },
     ],
   },
+
   {
     section: "Características",
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
+        copy: "Proyectos de edificación de vivienda.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función del valor de la edificación.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
-        title: "AMORTIZACIÓN",
-        copy: "Primeros 24 meses: pago de capital e intereses mensual. Últimos 12 meses: pagos periódicos de capital e intereses sin revolvencia.",
+        title: "FORMA DE PAGO",
+        copy: "Hasta 12 meses de gracia de capital. Pagos mensuales de interés.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -111,12 +113,12 @@ const CravSections = [
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura y/o anualidad.",
+        copy: "Por apertura. Por estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Vigencia de contrato a 36 meses con periodo de revolvencia de 24 meses.",
+        copy: "Hasta cinco años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

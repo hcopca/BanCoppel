@@ -27,30 +27,36 @@ const StyledAccordion = styled.div`
   &:last-child {
     padding-bottom: 0;
   }
-
-  .accordion-header {
-    &:focus {
-      outline: none !important;
-    }
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--shadow-blue);
-
-    img {
-      width: 30px;
-      height: 30px;
-    }
-    p {
-      color: var(--night-blue);
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
   .active {
     border-bottom: 0px solid var(--shadow-blue) !important;
   }
+
+  .heading {
+    .accordion-header {
+      &:focus {
+        outline: none !important;
+      }
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: ${(props) =>
+          props.arr.length - 1 === props.id ? "0" : "1px"}
+        solid var(--shadow-blue);
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      p {
+        color: var(--night-blue);
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+
   .accordion-body {
     margin-top: 20px;
   }
@@ -72,9 +78,9 @@ const AccordionCoppel = ({ items, body }) => {
         <Accordion allowZeroExpanded={true}>
           {items.map((item, idx) => {
             return (
-              <StyledAccordion key={idx}>
+              <StyledAccordion key={idx} arr={items} id={idx}>
                 <AccordionItem onClick={(e) => chanState(idx)}>
-                  <AccordionItemHeading>
+                  <AccordionItemHeading className="heading">
                     <AccordionItemButton
                       className={`accordion-header ${
                         state === idx ? "active" : ""

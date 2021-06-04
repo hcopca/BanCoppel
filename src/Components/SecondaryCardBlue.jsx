@@ -7,48 +7,35 @@ const StyledSecondaryCard = styled.div`
   border-radius: 16px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  height: 150px;
+
+  .img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
   .body_secondary {
-    margin-top: 10px;
     width: 100%;
+    margin-left: 10px;
     h2 {
       font-size: 18px;
       color: var(--morning-blue);
-      text-align: center;
-      font-family: futura_normal;
-      margin-bottom: 15px;
+      text-align: left;
+      margin-bottom: 5px;
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
     }
     p {
       color: var(--white);
-      text-align: center;
-      font-family: lato_medium;
-      font-size: 12px;
+      text-align: left;
+      font-family: lato_light;
+      font-size: 14px;
       line-height: 16px;
 
       @media (min-width: 992px) {
         font-size: 13px;
       }
-    }
-  }
-
-  @media (min-width: 426px) {
-    flex-direction: row;
-    height: 150px;
-
-    .body_secondary {
-      margin-top: 0px;
-      h2 {
-        text-align: left;
-      }
-      p {
-        text-align: left;
-        /* font-size: 14px; */
-      }
-    }
-    .img {
-      width: 40%;
-      display: flex;
-      justify-content: center;
     }
   }
 

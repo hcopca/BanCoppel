@@ -74,6 +74,25 @@ const StyledBigCard = styled.div`
         margin-right: 5px;
       }
     }
+
+    .row-grap-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-content: flex-start;
+      .bullet {
+        width: auto;
+        flex: 1 0 45%;
+        margin-bottom: 28px;
+        margin-right: 5px;
+        &:last-child {
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -81,8 +100,10 @@ class CardBullets extends Component {
   ClassNameByArrLen(arr) {
     if (arr.length <= 3) {
       return "column";
-    } else {
+    } else if (arr.length === 4) {
       return "row-grap";
+    } else {
+      return "row-grap-flex";
     }
   }
   render() {

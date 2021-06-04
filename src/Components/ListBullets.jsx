@@ -10,13 +10,14 @@ const StyledBullets = styled.ul`
   li {
     flex: 1;
     display: flex;
+    align-items: center;
     border-bottom: 1px solid var(--shadow-blue);
     /* padding-bottom: 10px; */
     /* margin-top: 40px; */
     padding: 15px 0;
     p {
       font-family: futura_light;
-      font-size: 12px;
+      font-size: 14px;
     }
     &:first-child {
       margin-top: 0;
@@ -38,6 +39,7 @@ const StyledBullets = styled.ul`
       font-weight: bold; /* If you want it to be bold */
       display: inline-block; /* Needed to add space between the bullet and the text */
       margin-right: 23px;
+      font-size: 28px;
     }
   }
 `;

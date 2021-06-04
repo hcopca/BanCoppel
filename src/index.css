@@ -56,6 +56,7 @@ body {
 @font-face {
   font-family: lato_bold;
   src: url("./Assets/Fonts/Lato/Lato-Bold.ttf");
+  font-weight: bold;
   /* font-display: swap; */
 }
 
@@ -68,6 +69,11 @@ body {
 @font-face {
   font-family: lato_medium;
   src: url("./Assets/Fonts/Lato/Lato-Regular.ttf");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: lato_light;
+  src: url("./Assets/Fonts/Lato/Lato-Light.ttf");
   /* font-display: swap; */
 }
 

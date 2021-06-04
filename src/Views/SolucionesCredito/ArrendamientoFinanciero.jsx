@@ -11,9 +11,9 @@ import {
   ResponsiveHeader,
   Requisitos,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Crav.svg";
+import HeroHome from "../../Assets/Hero_Arrendamiento.svg";
 
-class Crav extends Component {
+class ArrendamientoFinanciero extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -32,28 +32,24 @@ class Crav extends Component {
       <>
         <ResponsiveHeader>
           <div className="title">
-            <h1>UN CRÉDITO</h1>
             <h1>
-              DE ACUERDO A<br />
-              TUS NECESIDADES
+              Financiamiento <br /> de Activos fijos
+            </h1>
+            <h1>
+              pensados para
+              <br />
+              tu empresa
             </h1>
           </div>
           <div className="copy">
-            <h4>
-              Ajustamos el crédito a tu <br /> capacidad de pago
-            </h4>
+            <h4>Encuentra el lugar ideal para desarrollar tu potencial.</h4>
           </div>
-          <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
+          <BancoppelBtn amarillo>Quiero saber más</BancoppelBtn>
         </ResponsiveHeader>
-
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero btnCoppy="Quiero saber más" banner={HeroHome} />
         <ProductHeader>
           <h1>
-            CRÉDITO{" "}
-            <span>
-              CUENTA <br />
-              CORRIENTE CRAV
-            </span>
+            Arrendamiento <span>financiero</span>
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
@@ -64,7 +60,7 @@ class Crav extends Component {
   }
 }
 
-export default Crav;
+export default ArrendamientoFinanciero;
 
 const CravSections = [
   {
@@ -72,36 +68,37 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/Persons2.png").default,
-      copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
     },
 
     items: [
       {
-        icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de capital de trabajo a largo plazo.",
+        icon: require("../../Assets/hand_house_blue.svg").default,
+        copy: "Deducción fiscal de rentas.",
       },
       {
-        icon: require("../../Assets/moneda_azul.svg").default,
-        copy: "Capital para apoyar el proceso productivo.",
+        icon: require("../../Assets/Financial_Document.svg").default,
+        copy: "Adquisición de activo Fijo con financiamiento del 100% del valor total.",
       },
     ],
   },
+
   {
     section: "Características",
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
+        copy: "Adquisición de maquinaria y equipo, ya sea nuevo o usado.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función al valor de los bienes a adquirir en el arrendamiento, sujeto a capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Primeros 24 meses: pago de capital e intereses mensual. Últimos 12 meses: pagos periódicos de capital e intereses sin revolvencia.",
+        copy: "Rentas mensuales compuestas por capital e intereses.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -111,12 +108,12 @@ const CravSections = [
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura y/o anualidad.",
+        copy: "Apertura y/o anualidad.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Vigencia de contrato a 36 meses con periodo de revolvencia de 24 meses.",
+        copy: "Hasta siete años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

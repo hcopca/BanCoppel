@@ -52,10 +52,10 @@ const StyledHero = styled.div`
           height: 100%;
           display: flex;
           flex-direction: column;
+          justify-content: center;
 
           img {
             max-width: 100%;
-            margin-top: 130px;
           }
           button {
             margin-left: 30px;

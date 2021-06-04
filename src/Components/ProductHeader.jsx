@@ -14,6 +14,7 @@ const StyledHead = styled.div`
     h1 {
       font-size: 24px;
       line-height: 24px;
+      text-transform: uppercase;
       span {
         color: var(--sky-blue);
       }

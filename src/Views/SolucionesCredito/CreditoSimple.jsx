@@ -1,52 +1,17 @@
 import React, { Component } from "react";
 import {
-  Container,
   Hero,
   BancoppelBtn,
   Accordion,
   ListaProductos,
   CardBullets,
   ListCardsSecondary,
-  ListBullets,
+  Requisitos,
   Switcher,
   ProductHeader,
+  ResponsiveHeader,
 } from "../../Components";
 import HeroHome from "../../Assets/Hero_Credito_Simple.svg";
-import styled from "styled-components";
-
-const StyledHeader = styled.div`
-  padding: 20px 0;
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .title {
-    margin-bottom: 20px;
-    h1 {
-      text-transform: uppercase;
-      color: var(--sky-blue);
-      line-height: 35px;
-      &:first-child {
-        color: var(--night-blue);
-      }
-    }
-  }
-  .copy {
-    margin-bottom: 20px;
-    h4 {
-      color: var(--night-blue);
-      font-family: futura_normal;
-      font-weight: 500;
-    }
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
 
 class CreditoSimple extends Component {
   body(data) {
@@ -56,7 +21,7 @@ class CreditoSimple extends Component {
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <ListBullets bullets={data.bullets} />;
+        return <Requisitos />;
       default:
         <CardBullets data={data} />;
     }
@@ -65,29 +30,32 @@ class CreditoSimple extends Component {
   render() {
     return (
       <>
-        <StyledHeader>
-          <Container>
-            <div className="title">
-              <h1>UN CRÉDITO</h1>
-              <h1>DE ACUERDO A</h1>
-              <h1> TUS NECESIDADES</h1>
-            </div>
-            <div className="copy">
-              <h4>
-                Ajustamos el crédito a tu <br /> capacidad de pago
-              </h4>
-            </div>
-            <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
-          </Container>
-        </StyledHeader>
+        <ResponsiveHeader>
+          <div className="title">
+            <h1>EL CAPITAL PARA</h1>
+            <h1>
+              IMPULSAR TU
+              <br />
+              NEGOCIO
+            </h1>
+          </div>
+          <div className="copy">
+            <h4>
+              Financiamiento a largo plazo
+              <br /> para darle vida a tus proyectos
+            </h4>
+          </div>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
+        </ResponsiveHeader>
+
         <Hero btnCoppy="Me interesa" banner={HeroHome} />
         <ProductHeader>
           <h1>
             CRÉDITO <span>SIMPLE</span>
           </h1>
         </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Accordion items={CreditoSimpleSections} body={this.body} />
+        <Switcher items={CreditoSimpleSections} body={this.body} />
         <ListaProductos />
       </>
     );
@@ -96,7 +64,7 @@ class CreditoSimple extends Component {
 
 export default CreditoSimple;
 
-const CravSections = [
+const CreditoSimpleSections = [
   {
     section: "Beneficios",
 
@@ -161,12 +129,5 @@ const CravSections = [
   },
   {
     section: "Requisitos",
-    bullets: [
-      "Solicitud de crédito.",
-      "Autorización para consulta historial crediticio.",
-      "Estados Financieros: Dictaminados, internos y proyectados.",
-      "Información legal del acreditado o del proyecto.",
-      "Contacto con ejecutivo.",
-    ],
   },
 ];

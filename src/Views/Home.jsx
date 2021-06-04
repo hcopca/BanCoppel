@@ -1,50 +1,15 @@
 import React, { Component } from "react";
 import {
-  Container,
   Hero,
   BancoppelBtn,
   ConoceCredito,
   Accordion,
   CardBlue,
   Slider,
+  ResponsiveHeader,
 } from "../Components";
 import HeroHome from "../Assets/Hero_Home.svg";
 import styled from "styled-components";
-
-const StyledHeader = styled.div`
-  padding: 25px 0;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .title {
-    margin-bottom: 20px;
-    h1 {
-      text-transform: uppercase;
-      color: var(--sky-blue);
-      line-height: 35px;
-      &:first-child {
-        color: var(--night-blue);
-      }
-    }
-  }
-  .copy {
-    margin-bottom: 20px;
-    h4 {
-      color: var(--night-blue);
-      font-family: futura_normal;
-      font-weight: 500;
-    }
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
 
 const StyledCards = styled.div`
   padding: 10px 0;
@@ -117,19 +82,21 @@ class Home extends Component {
   render() {
     return (
       <>
-        <StyledHeader>
-          <Container>
-            <div className="title">
-              <h1>Tu aliado</h1>
-              <h1>en Banca</h1>
-              <h1>Empresarial</h1>
-            </div>
-            <div className="copy">
-              <h4>Brindamos soluciones a tu empresa</h4>
-            </div>
-            <BancoppelBtn amarillo>Solicita ya tu crédito</BancoppelBtn>
-          </Container>
-        </StyledHeader>
+        <ResponsiveHeader>
+          <div className="title">
+            <h1>Tu aliado</h1>
+            <h1>
+              en Banca
+              <br />
+              Empresarial
+            </h1>
+          </div>
+          <div className="copy">
+            <h4>Brindamos soluciones a tu empresa</h4>
+          </div>
+          <BancoppelBtn amarillo>Solicita ya tu crédito</BancoppelBtn>
+        </ResponsiveHeader>
+
         <Hero btnCoppy="Solicita ya tu crédito" banner={HeroHome} />
         <Accordion items={HomeSections} body={this.body} />
         <Slider items={HomeSections} body={this.bodySlider} />

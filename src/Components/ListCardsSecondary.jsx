@@ -8,7 +8,7 @@ const StyledSencdaryCards = styled.div`
   margin: auto;
 
   .SecondaryCardBlue {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     &:last-child {
       margin-bottom: 0;
     }

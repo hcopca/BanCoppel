@@ -11,9 +11,9 @@ import {
   ResponsiveHeader,
   Requisitos,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Crav.svg";
+import HeroHome from "../../Assets/Hero_amortizable.svg";
 
-class Crav extends Component {
+class CreditoAmortizable extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -32,27 +32,26 @@ class Crav extends Component {
       <>
         <ResponsiveHeader>
           <div className="title">
-            <h1>UN CRÉDITO</h1>
+            <h1>EL RESPALDO QUE</h1>
             <h1>
-              DE ACUERDO A<br />
-              TUS NECESIDADES
+              LE HACÍA FALTA <br />A TU NEGOCIO
             </h1>
           </div>
           <div className="copy">
             <h4>
-              Ajustamos el crédito a tu <br /> capacidad de pago
+              Apoyamos las necesidades de <br /> tu capital de trabajo
             </h4>
           </div>
-          <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
+          <BancoppelBtn amarillo>Descubre más</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero btnCoppy="Descubre más" banner={HeroHome} />
+
         <ProductHeader>
           <h1>
             CRÉDITO{" "}
             <span>
-              CUENTA <br />
-              CORRIENTE CRAV
+              CUENTA <br /> CORRIENTE AMORTIZABLE
             </span>
           </h1>
         </ProductHeader>
@@ -64,7 +63,7 @@ class Crav extends Component {
   }
 }
 
-export default Crav;
+export default CreditoAmortizable;
 
 const CravSections = [
   {
@@ -72,7 +71,7 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/Persons2.png").default,
-      copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
     },
 
     items: [
@@ -81,8 +80,12 @@ const CravSections = [
         copy: "Optimización de capital de trabajo a largo plazo.",
       },
       {
-        icon: require("../../Assets/moneda_azul.svg").default,
-        copy: "Capital para apoyar el proceso productivo.",
+        icon: require("../../Assets/hand_start.svg").default,
+        copy: "Capital para proyectos productivos.",
+      },
+      {
+        icon: require("../../Assets/network_blue.svg").default,
+        copy: "Disposiciones ágiles al amparo de la línea.",
       },
     ],
   },
@@ -101,7 +104,7 @@ const CravSections = [
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Primeros 24 meses: pago de capital e intereses mensual. Últimos 12 meses: pagos periódicos de capital e intereses sin revolvencia.",
+        copy: "Pago de capital e intereses mensual.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -116,7 +119,7 @@ const CravSections = [
       },
       {
         title: "PLAZO",
-        copy: "Vigencia de contrato a 36 meses con periodo de revolvencia de 24 meses.",
+        copy: "Plazo indefinido.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

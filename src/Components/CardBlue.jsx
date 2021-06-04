@@ -37,7 +37,7 @@ const Card = styled.div`
 
       font-family: futura_heavy;
       font-weight: bold;
-      font-size: 17px;
+      font-size: 15px;
       margin-bottom: 10px;
     }
     p {
@@ -53,6 +53,9 @@ const Card = styled.div`
   @media (min-width: 576px) {
     height: ${(props) => (props.row ? "224px" : "381px")};
     .card_body {
+      h1 {
+        font-size: 17px;
+      }
       p {
         font-size: 14px;
       }
