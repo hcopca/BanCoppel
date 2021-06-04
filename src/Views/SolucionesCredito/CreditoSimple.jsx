@@ -9,8 +9,7 @@ import {
   ListCardsSecondary,
   ListBullets,
   Switcher,
-  ProductHeader,
-  PerfilSolicitante
+  ProductHeader
 } from "../../Components";
 import HeroHome from "../../Assets/Hero_Credito_Simple.svg";
 import styled from "styled-components";
@@ -90,8 +89,6 @@ class CreditoSimple extends Component {
         <Accordion items={CravSections} body={this.body} />
         <Switcher items={CravSections} body={this.body} />
         <ListaProductos />
-
-        <PerfilSolicitante/>
       </>
     );
   }
