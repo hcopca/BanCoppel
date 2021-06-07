@@ -6,6 +6,7 @@ import { Navbar, Footer } from "./Components";
 import Home from "./Views/Home";
 import NominasBanCoppel from "./Views/NominasBanCoppel";
 import EmpresaNet from "./Views/EmpresaNet";
+import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
 
 // Soluciones credito
 import Crav from "./Views/SolucionesCredito/Crav";
@@ -45,6 +46,9 @@ class App extends Component {
           <Link to="/empresa_net" style={{ marginRight: 10 }}>
             empresa_net
           </Link>
+          <Link to="/cuenta_inversion_empresarial" style={{ marginRight: 10 }}>
+            cuenta_inversion_empresarial
+          </Link>
         </div>
         <Navbar />
         <Switch>
@@ -71,6 +75,9 @@ class App extends Component {
           </Route>
           <Route path="/empresa_net">
             <EmpresaNet />
+          </Route>
+          <Route path="/cuenta_inversion_empresarial">
+            <CuentaInversionEmpresarial />
           </Route>
         </Switch>
         <Footer />

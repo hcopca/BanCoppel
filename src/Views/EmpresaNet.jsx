@@ -92,7 +92,7 @@ const CravSections = [
         bullet: "Control:",
       },
       {
-        icon: require("../Assets/shield_blue.svg").default,
+        icon: require("../Assets/shield_blue.png").default,
         copy: "Seguridad para realizar tus operaciones con la tranquilidad de que tu información estará segura en nuestros canales. Contarás con usuario único y contraseña personalizada. Ambos confidenciales e intransferibles. Dispositivo electrónico de seguridad Token.",
       },
     ],

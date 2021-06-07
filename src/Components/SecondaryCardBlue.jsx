@@ -81,16 +81,17 @@ const StyledSecondaryCard = styled.div`
 
 class SecondaryCardBlue extends Component {
   render() {
-    // console.log(this.props);
     return (
       <StyledSecondaryCard className="SecondaryCardBlue">
         <div className="img">
-          <img src={this.props.card.image} alt="" />
+          {this.props.card.image ? (
+            <img src={this.props.card.image} alt="" />
+          ) : null}
         </div>
 
         <div className="body_secondary">
-          <h2>{this.props.card.title}</h2>
-          <p>{this.props.card.copy}</p>
+          {this.props.card.title ? <h2>{this.props.card.title}</h2> : null}
+          {this.props.card.copy ? <p>{this.props.card.copy}</p> : null}
         </div>
       </StyledSecondaryCard>
     );
