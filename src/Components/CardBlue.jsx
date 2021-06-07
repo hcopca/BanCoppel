@@ -73,6 +73,8 @@ const Card = styled.div`
     img {
       height: ${(props) => (props.row ? "100%" : "50%")};
       max-width: ${(props) => (props.row ? "200px" : "306px")};
+      flex: ${(props) => (props.row ? "" : "1")};
+      max-height: ${(props) => (props.row ? "" : "69%")};
     }
 
     .card_body {
