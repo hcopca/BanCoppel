@@ -4,14 +4,15 @@ import {
   Hero,
   BancoppelBtn,
   Accordion,
-  Slider,
+  Switcher,
   ProductHeader,
   ListaProductos,
   CardBullets,
   ListCardsSecondary,
-  ListBullets,
-} from "../Components";
-import HeroHome from "../Assets/factoreje_home.svg.svg";
+  Requisitos
+  // ListBullets,
+} from "../../Components";
+import HeroHome from "../../Assets/factoreje_home.svg.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -66,7 +67,7 @@ class SolucionesCredito extends Component {
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <ListBullets bullets={data.bullets} />;
+        return <Requisitos/>;
       default:
         console.error("No hay solucion definida", data);
     }
@@ -103,7 +104,7 @@ class SolucionesCredito extends Component {
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Slider items={SolucionesCreditoSections} body={this.body} />
+        <Switcher items={SolucionesCreditoSections} body={this.body} />
         <ListaProductos />
       </>
     );
@@ -117,34 +118,28 @@ const SolucionesCreditoSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
+      image: require("../../Assets/Persons2.png").default,
       copy: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
     },
 
     items: [
       {
-        icon: require("../Assets/portfolios_blue.svg").default,
+        icon: require("../../Assets/portfolios_blue.svg").default,
         copy: "Convierte tus ventas a crédito en ventas a contado.",
       },
       {
-        icon: require("../Assets/like_plant.svg").default,
+        icon: require("../../Assets/like_plant.svg").default,
         copy: "Eficiencia en el manejo de tus recursos.",
       },
       {
-        icon: require("../Assets/gear_coin_white.svg").default,
+        icon: require("../../Assets/gear_coin_white.svg").default,
         copy: "Obtén capital de trabajo.",
       },
     ],
   },
   {
     section: "Requisitos",
-    bullets: [
-      "Solicitud de crédito.",
-      "Autorización para consulta historial crediticio.",
-      "Estados Financieros: Dictaminados, internos y proyectados.",
-      "Información legal del acreditado o del proyecto.",
-      "Contacto con ejecutivo.",
-    ],
+   
   },
   {
     section: "Perfil del solicitante",
@@ -155,32 +150,32 @@ const SolucionesCreditoSections = [
       {
         title: "DESTINO",
         copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
-        image: require("../Assets/hand_money.svg").default,
+        image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
         copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
-        image: require("../Assets/hand_coins.svg").default,
+        image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "FORMA DE PAGO",
         copy: "Al vencimiento de la factura.",
-        image: require("../Assets/gear_coin.svg").default,
+        image: require("../../Assets/gear_coin.svg").default,
       },
       {
         title: "TAZA",
         copy: "Descuento.",
-        image: require("../Assets/money_plant.svg").default,
+        image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
         copy: "Apertura y/o anualidad, Operación.",
-        image: require("../Assets/card_coins.svg").default,
+        image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
         copy: "Hasta 180 días.",
-        image: require("../Assets/calendar_bill.svg").default,
+        image: require("../../Assets/calendar_bill.svg").default,
       },
     ],
   },
