@@ -9,7 +9,8 @@ import {
   ListaProductos,
   CardBullets,
   ListCardsSecondary,
-  Requisitos
+  Requisitos,
+  PerfilSolicitante
   // ListBullets,
 } from "../../Components";
 import HeroHome from "../../Assets/factoreje_home.svg.svg";
@@ -68,6 +69,8 @@ class SolucionesCredito extends Component {
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
         return <Requisitos/>;
+      case "Perfil del solicitante":
+        return <PerfilSolicitante/>;
       default:
         console.error("No hay solucion definida", data);
     }
