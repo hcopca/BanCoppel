@@ -15,10 +15,19 @@ import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
 import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
 import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
 
+import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
+
 class App extends Component {
   render() {
     return (
       <div className="bancoppel">
+        <div
+          style={{ background: "orange", display: "flex", flexWrap: "wrap" }}
+        >
+          <Link to="/soluciones_integrales" style={{ marginRight: 10 }}>
+            soluciones integrales
+          </Link>
+        </div>
         <div style={{ background: "red", display: "flex", flexWrap: "wrap" }}>
           <Link to="/credito_simple" style={{ marginRight: 10 }}>
             CreditoSimple
@@ -78,6 +87,9 @@ class App extends Component {
           </Route>
           <Route path="/cuenta_inversion_empresarial">
             <CuentaInversionEmpresarial />
+          </Route>
+          <Route path="/soluciones_integrales">
+            <SolucionesIntegrales />
           </Route>
         </Switch>
         <Footer />
