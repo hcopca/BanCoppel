@@ -92,21 +92,19 @@ class PerfilSolicitante extends Component {
             <ImagenPerfil>
                 <img src={Perfil_solicitante} alt="" style={{height:'298px'}}/>
                 <TextoBullets>
-                    <label style={{marginBottom:'37px'}}>Personas Morales con Actividad Empresarial.</label>
-                    <label style={{marginBottom:'37px'}}>Personas Físicas con Actividad Empresarial.</label>
-                    <label>Propietarios de un inmueble que arrienden a Grupo Coppel.</label>
+                {this.props.primer_bullet? <label style={{marginBottom:'37px'}}>{this.props.primer_bullet}</label> : <label style={{marginBottom:'37px'}}>Personas Morales con Actividad Empresarial.</label>}
+                {this.props.segundo_bullet? <label style={{marginBottom:'37px'}}>{this.props.segundo_bullet}</label> : <label style={{marginBottom:'37px'}}>Personas Físicas con Actividad Empresarial.</label>}
+                {this.props.tercer_bullet?<label>{this.props.tercer_bullet}</label> : <label>Propietarios de un inmueble que arrienden a Grupo Coppel.</label>}
                 </TextoBullets>
             </ImagenPerfil>
 
             <PerfilSolicitanteResponsive>
                 <img src={perfil_solicitante_only} alt="" style={{minWidth:'183.72px', maxWidth:'250.72px'}}/>
                 <ul>
-                    <li>Personas Morales con Actividad Empresarial.</li>
-                    <li>Personas Físicas con Actividad Empresarial.</li>
-                    <li>Propietarios de un inmueble que arrienden a Grupo Coppel.</li>
-
-                </ul>
-                
+                    {this.props.primer_bullet? <li>{this.props.primer_bullet}</li> : <li>Personas Morales con Actividad Empresarial.</li>}
+                    {this.props.segundo_bullet? <li>{this.props.segundo_bullet}</li> : <li>Personas Físicas con Actividad Empresarial.</li>}
+                    {this.props.tercer_bullet? <li>{this.props.tercer_bullet}</li> : <li>Propietarios de un inmueble que arrienden a Grupo Coppel.</li>}
+                </ul>          
             </PerfilSolicitanteResponsive>
         </Container>
     );
