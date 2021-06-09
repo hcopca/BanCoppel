@@ -114,12 +114,11 @@ class CardBlue extends Component {
         ) : null}
         <div className="card_body">
           <div className="copy">
-            {this.props.card.titleWhite && this.props.card.titleBlue ? (
-              <h1>
-                {this.props.card.titleWhite} <br />
-                <span>{this.props.card.titleBlue} </span>
-              </h1>
-            ) : null}
+            <h1>
+              {this.props.card.titleWhite} <br />
+              <span>{this.props.card.titleBlue} </span>
+            </h1>
+
             {this.props.card.copy ? <p>{this.props.card.copy}</p> : null}
           </div>
 

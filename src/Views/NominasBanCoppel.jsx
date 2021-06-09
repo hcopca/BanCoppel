@@ -10,6 +10,7 @@ import {
   Requisitos,
   Switcher,
   ProductHeader,
+  SwitcherBullets,
 } from "../Components";
 import HeroHome from "../Assets/Hero_NominaBancoppel.svg";
 
@@ -22,6 +23,8 @@ class NominasBanCoppel extends Component {
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
         return <Requisitos />;
+      case "Tips de seguridad":
+        return <SwitcherBullets data={data} />;
       default:
         <CardBullets data={data} />;
     }
@@ -40,9 +43,7 @@ class NominasBanCoppel extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>
-              Transfiere tus fondos <br /> cuando quieras
-            </h4>
+            <h4>Transfiere tus fondos cuando quieras</h4>
           </div>
           <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
         </ResponsiveHeader>
@@ -69,7 +70,7 @@ const CravSections = [
 
     card: {
       image: require("../Assets/Persons2.png").default,
-      copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
 
     items: [
@@ -101,5 +102,45 @@ const CravSections = [
   },
   {
     section: "Requisitos",
+  },
+  {
+    section: "Tips de seguridad",
+    items: [
+      {
+        title: "Personas Morales",
+        bullets: [
+          "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
+          "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
+          "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
+          "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
+        ],
+      },
+
+      {
+        title: "Personas Físicas con Actividad Empresarial",
+        legals: `"Los tips de seguridad antes señalados serán considerados para todos los efectos a los que haya lugar como preventivos; su aplicación será consecuencia de una decisión personal del cliente y sin responsabilidad alguna para BanCoppel".`,
+        bullets: [
+          "Durante tus viajes nunca dejes tus tarjetas en la maleta, mejor guárdalas en la caja de seguridad y/o cárgalas contigo.",
+
+          "No dejes tu Tarjeta o documentación personal con firmas en tu automóvil, especialmente en estacionamientos y/o establecimientos con servicio de valet parking.",
+
+          "Evita perder de vista tu tarjeta al pagar. Solicita que la transacción se realice en tu presencia. Cuando te devuelvan la tarjeta, asegúrate de que sea la tuya.",
+
+          "No prestes tu tarjeta, ni permitas que otras personas la usen en tu nombre.",
+
+          "Si alguien te llama por teléfono tpara solicitarte el número de tu Tarjeta y la fecha de vencimiento de la misma, NO PROPORCIONES NINGÚN DATO y cuelga inmediatamente, puede tratarse de un fraude.",
+
+          "Guarda en un lugar seguro tu Tarjeta y evita que alguien haga mal uso de ella.",
+
+          "Firma tu Tarjeta en el momento que la recibas para que nadie más la firme en tu lugar y pueda utilizarla.",
+
+          "Recuerda que el número de identificación personal NIP que elegiste cuando te entregaron tu tarjeta es privado y NO debes proporcionarlo a nadie. Memorízalo y no lo portes contigo. BanCoppel no te realizará llamadas a menos de que necesite verificar alguna información, por lo que se identificará previamente contigo.",
+
+          "No dejes tus comprobantes de operación en los cajeros automáticos. Cuando te encuentres en un cajero automático, no aceptes ayuda de nadie aunque te la ofrezcan, aún cuando tu Tarjeta haya quedado retenida en el cajero.",
+
+          "En caso de que el cajero automático retenga tu Tarjeta, acude a la Sucursal en donde esté el cajero para reportarla. Si el cajero no está en sucursal o ésta se encuentra cerrada, llama al Centro de Atención Telefónica al:<br/> <a href=tel:+80012267735>800 1226 7735 (800 1BCOPPEL)</a> <br/> Utiliza cajeros automáticos ubicados en sitios seguros.<br/> Si tienes alguna duda, pregunta al personal de BanCoppel que con gusto te atenderán.",
+        ],
+      },
+    ],
   },
 ];

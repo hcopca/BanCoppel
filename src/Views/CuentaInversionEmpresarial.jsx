@@ -10,6 +10,7 @@ import {
   ResponsiveHeader,
   Requisitos,
   SecondaryCardBlue,
+  SwitcherBullets,
 } from "../Components";
 import HeroHome from "../Assets/Hero_CuentaInversionEmpresarial.svg";
 import styled from "styled-components";
@@ -38,6 +39,8 @@ class EmpresaNet extends Component {
             })}
           </RowCards>
         );
+      case "Tips de seguridad":
+        return <SwitcherBullets data={data} />;
       default:
         <CardBullets data={data} />;
     }
@@ -131,5 +134,42 @@ const InversionEmpresarialSections = [
   },
   {
     section: "Requisitos",
+  },
+  {
+    section: "Tips de seguridad",
+    items: [
+      {
+        title: "Cuenta Inversión Empresarial",
+        bullets: [
+          "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
+          "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
+          "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
+          "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
+        ],
+      },
+
+      {
+        title: "Cuenta Eje Empresarial Cheques",
+        bullets: [
+          "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
+
+          "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
+
+          "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
+
+          "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
+
+          "Revise que el talonario y los cheques no estén dañados y verifique que la numeración de los folios sea consecutiva.",
+
+          "Verifique que el número de cheques coincida con la cantidad que acepto recibir al momento de tramitar su chequera.",
+
+          "Guarde su chequera en un lugar seguro, no se deje al alcance de terceros y en caso de robo o extravío realice la cancelación en el portal.",
+
+          "En caso de robo o extravió puede cancelar sus cheques o chequeras desde EmpresaNet o comuníquese a Contacto Empresarial   en Culiacán o al <a href=tel:+(667)758-9978 >(667)758-9978 </a>para otras ciudades.",
+
+          "Expide tus cheques a nombre del beneficiario y preferentemente con la leyenda “Para abono a cuenta”.",
+        ],
+      },
+    ],
   },
 ];

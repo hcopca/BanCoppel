@@ -33,9 +33,6 @@ const StyledAccordion = styled.div`
 
   .heading {
     .accordion-header {
-      &:focus {
-        outline: none !important;
-      }
       padding: 10px 0;
       display: flex;
       justify-content: space-between;
@@ -58,7 +55,7 @@ const StyledAccordion = styled.div`
   }
 
   .accordion-body {
-    margin-top: 20px;
+    margin: 10px 0;
   }
 `;
 
@@ -79,8 +76,11 @@ const AccordionCoppel = ({ items, body }) => {
           {items.map((item, idx) => {
             return (
               <StyledAccordion key={idx} arr={items} id={idx}>
-                <AccordionItem onClick={(e) => chanState(idx)}>
-                  <AccordionItemHeading className="heading">
+                <AccordionItem>
+                  <AccordionItemHeading
+                    className="heading"
+                    onClick={(e) => chanState(idx)}
+                  >
                     <AccordionItemButton
                       className={`accordion-header ${
                         state === idx ? "active" : ""

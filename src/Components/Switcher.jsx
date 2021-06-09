@@ -44,6 +44,9 @@ const StyledSwitch = styled.div`
   @media (min-width: 992px) {
     display: block;
   }
+  .bancoppel__slider {
+    padding: 0 !important;
+  }
 `;
 
 class Switcher extends Component {
@@ -89,8 +92,12 @@ class Switcher extends Component {
               );
             })}
           </div>
-          {this.props.body(this.state.currenView)}
         </Container>
+        {this.props.noContainer ? (
+          this.props.body(this.state.currenView)
+        ) : (
+          <Container>{this.props.body(this.state.currenView)}</Container>
+        )}
       </StyledSwitch>
     ) : null;
   }

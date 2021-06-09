@@ -11,45 +11,10 @@ const StylesCarousel = styled.div`
   padding: 50px 0;
 
   display: none;
-  min-height: 300px;
-  .sections {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    .section {
-      padding-bottom: 20px;
-      flex: 0 1 20%;
-      border-bottom: 2px solid var(--shadow-blue);
-      cursor: pointer;
-      h3 {
-        text-align: center;
-        color: var(--light-gray);
-        font-weight: bold;
-        font-size: 16px;
-        font-family: futura_normal;
-      }
 
-      &:hover {
-        border-bottom: 2px solid var(--yellow);
-        h3 {
-          text-align: center;
-          color: var(--storm-blue);
-        }
-      }
-    }
-
-    .current {
-      border-bottom: 2px solid var(--yellow);
-      h3 {
-        text-align: center;
-        color: var(--storm-blue);
-      }
-    }
-  }
   .bancoppel_slider {
     margin: auto;
-    margin-top: ${(props) => (props.showHeader ? "50px" : 0)};
+    margin-top: 0;
     max-width: 1130px;
     .slide {
       flex: 1;
@@ -111,10 +76,7 @@ class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      avaliableServices: this.props.services,
       currentSlide: 0,
-      mostrarEncabezado:
-        this.props.showHeader != null ? this.props.showHeader : true,
     };
   }
 
@@ -140,25 +102,6 @@ class Slider extends Component {
         showHeader={this.state.mostrarEncabezado}
         className="bancoppel__slider"
       >
-        {this.state.mostrarEncabezado ? (
-          <Container>
-            <div className="sections">
-              {this.props.items.map((item, idx) => {
-                return (
-                  <div
-                    key={idx}
-                    className={`section ${
-                      this.state.currentSlide === idx ? "current" : ""
-                    }`}
-                    onClick={() => this.changeSlide(idx)}
-                  >
-                    <h3>{item.section}</h3>
-                  </div>
-                );
-              })}
-            </div>
-          </Container>
-        ) : null}
         <Carousel
           showThumbs={false}
           showStatus={false}
