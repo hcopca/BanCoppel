@@ -13,7 +13,7 @@ import {
   PerfilSolicitante
   // ListBullets,
 } from "../../Components";
-import HeroHome from "../../Assets/factoreje_home.svg.svg";
+import HeroHome from "../../Assets/proyectos_inversion.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -60,7 +60,7 @@ const StyledPruductHeader = styled.div`
   }
 `;
 
-class SolucionesCredito extends Component {
+class ProyectosInversion extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -70,7 +70,7 @@ class SolucionesCredito extends Component {
       case "Requisitos":
         return <Requisitos/>;
       case "Perfil del solicitante":
-        return <PerfilSolicitante/>;
+        return <PerfilSolicitante tercer_bullet={"Empresas Proveedoras de bienes y/o servicios a Grandes Empresas."}/>;
       default:
         console.error("No hay solucion definida", data);
     }
@@ -83,27 +83,27 @@ class SolucionesCredito extends Component {
           <Container>
             <div className="title">
               <h1>
-                Producto de <br />
-                financiamiento
+              Construimos <br/> soluciones a la         
               </h1>
+           
               <h1>
-                pensado para
-                <br /> hacer crecer a<br />
-                tu empresa
+              medida de tu <br/>  negocio
               </h1>
             </div>
             <div className="copy">
               <h4>
-                El manejo de tus cobros está <br /> en buenas manos
+              El Financiamiento que necesitas <br /> para darle vida a tus proyectos
               </h4>
             </div>
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="Regístrate" banner={HeroHome} />
+        <Hero btnCoppy="¡Solícitalo ahora!" banner={HeroHome} />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">FACTORAJE</h1>
+            <h1 className="header_product">
+            Proyectos <span>de inversión</span>
+            </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
@@ -114,30 +114,31 @@ class SolucionesCredito extends Component {
   }
 }
 
-export default SolucionesCredito;
+export default ProyectosInversion;
 
 const SolucionesCreditoSections = [
   {
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
-      copy: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+      image: require("../../Assets/personas4.png").default,
+      copy: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
     },
 
     items: [
       {
-        icon: require("../../Assets/portfolios_blue.svg").default,
-        copy: "Convierte tus ventas a crédito en ventas a contado.",
+        icon: require("../../Assets/blue_acces_card.svg").default,
+        copy: "Acceso a mayor plazo y monto.",
       },
       {
-        icon: require("../../Assets/like_plant.svg").default,
-        copy: "Eficiencia en el manejo de tus recursos.",
+        icon: require("../../Assets/blue_up_coins.svg").default,
+        copy: "Se usa un Vehículo de Propósito Específico sin afectar el balance de la empresa.",
       },
       {
-        icon: require("../../Assets/gear_coin_white.svg").default,
-        copy: "Obtén capital de trabajo.",
+        icon: require("../../Assets/hand_money_blue.svg").default,
+        copy: "Financiamiento hecho de acuerdo a las necesidades de tu proyecto.",
       },
+      
     ],
   },
   {
@@ -150,34 +151,36 @@ const SolucionesCreditoSections = [
   {
     section: "Características",
     cards: [
-      {
-        title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
-        image: require("../../Assets/hand_money.svg").default,
-      },
+     
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función de las órdenes de compra estimados, sujeto a capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
+        
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Al vencimiento de la factura.",
+        copy: "Gracia de capital de acuerdo a proyecto. Cobro de capital de acuerdo a la capacidad de flujo del proyecto, e interés mensuales. Balloon paymet.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
-        copy: "Descuento.",
+        title: " ",
+        copy: "Empresas Proveedoras de bienes y/o servicios a Grandes Empresas.",
+        image: require("../../Assets/two_servers_and_coin.svg").default,
+      },
+      {
+        title: "TASA",
+        copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
-        copy: "Apertura y/o anualidad, Operación.",
+        copy: "Por apertura y/o anualidad. Por estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Hasta 180 días.",
+        copy: "Hasta 10 años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

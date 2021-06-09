@@ -4,7 +4,7 @@ const data = {
   section: "Requisitos",
   bullets: [
     "Solicitud de crédito.",
-    "Autorización para consulta historial crediticio.",
+    "Autorización para consultar historial crediticio.",
     "Estados Financieros: Dictaminados, internos y proyectados.",
     "Información legal del acreditado o del proyecto.",
     "Contacto con ejecutivo.",

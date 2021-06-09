@@ -13,7 +13,7 @@ import {
   PerfilSolicitante
   // ListBullets,
 } from "../../Components";
-import HeroHome from "../../Assets/factoreje_home.svg.svg";
+import HeroHome from "../../Assets/monetizacion_activos.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -60,7 +60,7 @@ const StyledPruductHeader = styled.div`
   }
 `;
 
-class SolucionesCredito extends Component {
+class MonetizacionActivos extends Component {
   body(data) {
     switch (data.section) {
       case "Beneficios":
@@ -83,27 +83,25 @@ class SolucionesCredito extends Component {
           <Container>
             <div className="title">
               <h1>
-                Producto de <br />
-                financiamiento
+                Arrendamiento 
               </h1>
+           
               <h1>
-                pensado para
-                <br /> hacer crecer a<br />
-                tu empresa
+                a largo plazo
               </h1>
             </div>
             <div className="copy">
               <h4>
-                El manejo de tus cobros está <br /> en buenas manos
+              El financiamiento que <br />  estabas buscando
               </h4>
             </div>
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="Regístrate" banner={HeroHome} />
+        <Hero btnCoppy="Solícitalo aquí" banner={HeroHome} />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">FACTORAJE</h1>
+            <h1 className="header_product">Monetización <span>de Activos</span></h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
@@ -114,30 +112,27 @@ class SolucionesCredito extends Component {
   }
 }
 
-export default SolucionesCredito;
+export default MonetizacionActivos;
 
 const SolucionesCreditoSections = [
   {
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
-      copy: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+      image: require("../../Assets/Persons3.png").default,
+      copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
 
     items: [
       {
-        icon: require("../../Assets/portfolios_blue.svg").default,
-        copy: "Convierte tus ventas a crédito en ventas a contado.",
+        icon: require("../../Assets/credit_card_blue.svg").default,
+        copy: "Otorga liquidez para capital de trabajo.",
       },
       {
-        icon: require("../../Assets/like_plant.svg").default,
+        icon: require("../../Assets/hand_house_blue.svg").default,
         copy: "Eficiencia en el manejo de tus recursos.",
       },
-      {
-        icon: require("../../Assets/gear_coin_white.svg").default,
-        copy: "Obtén capital de trabajo.",
-      },
+      
     ],
   },
   {
@@ -152,27 +147,28 @@ const SolucionesCreditoSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
+        copy: "Capital de trabajo de largo plazo.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "Lo que resulte menor entre el 85% del valor presente de las rentas futuras del contrato de arrendamiento vigente o 2 millones de UDI’s.",
         image: require("../../Assets/hand_coins.svg").default,
+        
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Al vencimiento de la factura.",
+        copy: "Pago mensual de capital e intereses.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
         title: "TAZA",
-        copy: "Descuento.",
+        copy: "Variable..",
         image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
-        copy: "Apertura y/o anualidad, Operación.",
+        copy: "Por apertura.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {

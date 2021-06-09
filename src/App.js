@@ -16,6 +16,10 @@ import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
 import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
 
 import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
+import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivos";
+import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
+import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
+
 
 class App extends Component {
   render() {
@@ -25,7 +29,16 @@ class App extends Component {
           style={{ background: "orange", display: "flex", flexWrap: "wrap" }}
         >
           <Link to="/soluciones_integrales" style={{ marginRight: 10 }}>
-            soluciones integrales
+            factoraje
+          </Link>
+          <Link to="/monetizacion_activos" style={{ marginRight: 10 }}>
+            monetizacion activos
+          </Link>
+          <Link to="/financiamiento_ordenes_compra" style={{ marginRight: 10 }}>
+            Financiamiento Ordenes Compra
+          </Link>
+          <Link to="/proyectos_inversion" style={{ marginRight: 10 }}>
+            Proyectos de inversion
           </Link>
         </div>
         <div style={{ background: "red", display: "flex", flexWrap: "wrap" }}>
@@ -91,6 +104,17 @@ class App extends Component {
           <Route path="/soluciones_integrales">
             <SolucionesIntegrales />
           </Route>
+          <Route path="/monetizacion_activos">
+            <MonetizacionActivos/>
+          </Route>
+          <Route path="/financiamiento_ordenes_compra">
+            <FinanciamientoOrdenesCompra/>
+          </Route>
+          <Route path="/proyectos_inversion">
+            <ProyectosInversion/>
+          </Route>
+
+
         </Switch>
         <Footer />
       </div>
