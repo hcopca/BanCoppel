@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Fondo_mujer from "../Assets/Fondo_mujer.png";
-import Fondo_mujer_res from "../Assets/Fondo_mujer_responsive.png";
 import Container from "./Container";
 import BancoppelBtn from "./BancoppelBtn";
+import { Link } from "react-router-dom";
+import Fondo_mujer from "../Assets/Heros/hero_home.png";
+import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.png";
+import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
 
 const StyledHero = styled.div`
   display: flex;
@@ -75,19 +77,28 @@ const StyledHero = styled.div`
 
 class Hero extends Component {
   render() {
+    const { banner, btnCoppy, imagen, path, responsiveImg } = this.props;
     return (
       <StyledHero>
-        <img src={Fondo_mujer} alt="Fondo_mujer" className="Fondo_mujer" />
         <img
-          src={Fondo_mujer_res}
+          src={imagen ? imagen : Fondo_mujer}
+          alt="Fondo_mujer"
+          className="Fondo_mujer"
+        />
+        <img
+          src={responsiveImg ? responsiveImg : Fondo_mujer_res}
           alt="Fondo_mujer"
           className="Fondo_mujer_res"
         />
         <div className="hero_container">
           <Container>
             <div className="children">
-              <img src={this.props.banner} alt="banner" />
-              <BancoppelBtn amarillo>{this.props.btnCoppy}</BancoppelBtn>
+              <img src={banner ? banner : bannerDeafult} alt="banner" />
+              <Link to={path ? path : "/"}>
+                <BancoppelBtn amarillo>
+                  {btnCoppy ? btnCoppy : "no copy"}
+                </BancoppelBtn>
+              </Link>
             </div>
           </Container>
         </div>

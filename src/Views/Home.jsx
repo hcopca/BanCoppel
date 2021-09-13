@@ -9,8 +9,11 @@ import {
   Switcher,
   Slider,
 } from "../Components";
-import HeroHome from "../Assets/Hero_Home.svg";
+
 import styled from "styled-components";
+import Hero_ from "../Assets/Heros/hero_home.png";
+import Hero_responsive from "../Assets/Heros/hero_home_responsive.png";
+import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
 
 const StyledCards = styled.div`
   padding: 10px 0;
@@ -106,20 +109,29 @@ class Home extends Component {
       <>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Tu aliado</h1>
+            <h1>La Banca que</h1>
             <h1>
-              en Banca
-              <br />
-              Empresarial
+              tu empresa <br /> necesita
             </h1>
           </div>
           <div className="copy">
-            <h4>Brindamos soluciones a tu empresa</h4>
+            <h4>
+              Brindamos <span>soluciones </span>
+            </h4>
+            <h4>
+              a tu <span>empresa</span>
+            </h4>
           </div>
-          <BancoppelBtn amarillo>Solicita ya tu crédito</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Solicita ya tu crédito" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <Accordion items={HomeSections} body={this.body} />
         <Switcher items={HomeSections} body={this.bodySlider} noContainer />
         <ConoceCredito />
@@ -132,7 +144,7 @@ export default Home;
 
 const HomeSections = [
   {
-    section: "Cuenta Eje",
+    section: "Cuenta Inversión",
     cards: [
       {
         titleWhite: "Cuenta",
@@ -168,7 +180,7 @@ const HomeSections = [
         copy: "El capital para impulsar tu negocio.",
         path: "/",
         image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
+        button: "Me interesa",
       },
       {
         titleWhite: "Crédito Cuenta",
@@ -176,7 +188,7 @@ const HomeSections = [
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
         image: require("../Assets/Persons1.png").default,
-        button: "Ver más",
+        button: "Me interesa",
       },
       {
         titleWhite: "Arrendamiento",
@@ -184,7 +196,7 @@ const HomeSections = [
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/",
         image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
+        button: "Me interesa",
       },
       {
         titleWhite: "Crédito",
@@ -192,7 +204,7 @@ const HomeSections = [
         copy: "Pensado para crear proyectos habitacionales.",
         path: "/",
         image: require("../Assets/GirlHand.png").default,
-        button: "Ver más",
+        button: "Me interesa",
       },
     ],
   },
@@ -237,12 +249,11 @@ const HomeSections = [
     section: "EmpresaNET",
     cards: [
       {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "El capital para impulsar tu negocio.",
+        titleWhite: "EmpresaNet",
+        copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
         path: "/",
         image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
+        button: "Me interesa",
       },
     ],
   },
