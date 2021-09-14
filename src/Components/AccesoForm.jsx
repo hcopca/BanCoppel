@@ -26,9 +26,6 @@ const StyledAcceso = styled.div`
         text-align: center;
         color: var(--gray);
       }
-      /* &:hover .bold_2 {
-        transform: scale(1.1);
-      } */
     }
 
     .selected {
