@@ -10,21 +10,45 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_crav.png";
 import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.png";
 import HeroHome from "../../Assets/Heros/crav_banner.svg";
+
 class Crav extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -63,8 +87,13 @@ class Crav extends Component {
             </span>
           </h1>
         </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Accordion items={CravSections} body={this.body.bind(this)} />
+        <Switcher
+          items={CravSections}
+          body={this.body.bind(this)}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );

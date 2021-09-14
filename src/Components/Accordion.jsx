@@ -50,6 +50,8 @@ const StyledAccordion = styled.div`
         color: var(--night-blue);
         font-size: 16px;
         font-weight: bold;
+
+        font-family: futura_bold;
       }
     }
   }
@@ -92,7 +94,7 @@ const AccordionCoppel = ({ items, body }) => {
                   </AccordionItemHeading>
                   <AccordionItemPanel className="accordion-body">
                     {body
-                      ? body(item)
+                      ? body(item, true)
                       : console.error(
                           "Necesitas una funcion que rendere el cuerpo de cada item. De esta forma podemos ocupar el mismo componente, con los mismos headers pero cambiando solo el cuerpo de cada acordeón según se necesite."
                         )}
