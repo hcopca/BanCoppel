@@ -7,6 +7,7 @@ import Home from "./Views/Home";
 import NominasBanCoppel from "./Views/NominasBanCoppel";
 import EmpresaNet from "./Views/EmpresaNet";
 import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
+import FormularioContacto from "./Views/FormularioContacto";
 
 // Soluciones credito
 import Crav from "./Views/SolucionesCredito/Crav";
@@ -19,7 +20,6 @@ import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
 import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivos";
 import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
 import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
-
 
 class App extends Component {
   render() {
@@ -105,16 +105,17 @@ class App extends Component {
             <SolucionesIntegrales />
           </Route>
           <Route path="/monetizacion_activos">
-            <MonetizacionActivos/>
+            <MonetizacionActivos />
           </Route>
           <Route path="/financiamiento_ordenes_compra">
-            <FinanciamientoOrdenesCompra/>
+            <FinanciamientoOrdenesCompra />
           </Route>
           <Route path="/proyectos_inversion">
-            <ProyectosInversion/>
+            <ProyectosInversion />
           </Route>
-
-
+          <Route path="/contacto">
+            <FormularioContacto />
+          </Route>
         </Switch>
         <Footer />
       </div>

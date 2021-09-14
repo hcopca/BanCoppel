@@ -10,20 +10,45 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Crav.svg";
+import Hero_ from "../../Assets/Heros/hero_crav.png";
+import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.png";
+import HeroHome from "../../Assets/Heros/crav_banner.svg";
 
 class Crav extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -43,10 +68,16 @@ class Crav extends Component {
               Ajustamos el crédito a tu <br /> capacidad de pago
             </h4>
           </div>
-          <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             CRÉDITO{" "}
@@ -56,8 +87,13 @@ class Crav extends Component {
             </span>
           </h1>
         </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Accordion items={CravSections} body={this.body.bind(this)} />
+        <Switcher
+          items={CravSections}
+          body={this.body.bind(this)}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -71,7 +107,8 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_corriente_crav.png").default,
       copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
     },
 
@@ -101,11 +138,11 @@ const CravSections = [
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Primeros 24 meses: pago de capital e intereses mensual. Últimos 12 meses: pagos periódicos de capital e intereses sin revolvencia.",
+        copy: "24 meses de resolvencia de capital y pago de interés mensual, 12 meses de amortización lineal.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },
@@ -116,7 +153,7 @@ const CravSections = [
       },
       {
         title: "PLAZO",
-        copy: "Vigencia de contrato a 36 meses con periodo de revolvencia de 24 meses.",
+        copy: "36 meses.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

@@ -7,26 +7,54 @@ const StyledInput = styled.div`
 
   label {
     transition: all 0.3s ease-in-out;
-    font-size: ${(props) => (props.focus || props.hasText ? "12px" : "16px")};
+
     font-family: futura_book;
     color: var(--gray);
-    position: absolute;
 
-    left: 10px;
-    top: ${(props) => (props.focus || props.hasText ? "-25%" : "25%")};
-    /* bottom: 0; */
+    position: absolute;
+    top: ${({ hasText, focus, example }) =>
+      hasText || focus || example ? "17%" : "50%"};
+    left: 15px;
+    right: 0;
+    transform: ${({ hasText, focus, example }) =>
+      hasText || focus || example ? "translateY(-17%)" : "translateY(-50%)"};
+    font-size: ${({ hasText, focus, example }) =>
+      hasText || focus || example ? "12px" : "16px"};
+
+    pointer-events: none;
+  }
+
+  p {
+    font-family: futura_book;
+    color: var(--gray);
+
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 0;
+
+    font-size: 16px;
+
+    pointer-events: none;
   }
 
   input {
     width: 100%;
-    padding: 10px;
-    border: 0;
+    padding-top: 21px;
+    padding-bottom: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+
     border-bottom: 2px solid var(--sky-blue);
     font-family: futura_book;
     font-size: 18px;
 
+    border: ${({ secondary }) =>
+      secondary ? "2px solid var(--sky-blue)" : null};
+
+    border-radius: ${({ secondary }) => (secondary ? "10px" : null)};
+
     &::placeholder {
-      color: transparent;
     }
     &:focus {
       outline: none;
@@ -73,19 +101,38 @@ class InputBancoppel extends Component {
     }
   }
   render() {
-    // console.log(this.props);
+    const {
+      className,
+      name,
+      type,
+      placeholder,
+      secondary,
+      value,
+      example,
+      ...rest
+    } = this.props;
+
+    console.log("Hola");
+
     return (
-      <StyledInput focus={this.state.focus} hasText={this.hasText()}>
-        {this.props.placeholder ? (
-          <label htmlFor={this.props.name}>{this.props.placeholder}</label>
-        ) : null}
+      <StyledInput
+        className={className ? className : ""}
+        focus={this.state.focus}
+        hasText={this.hasText()}
+        secondary={secondary}
+        example={example}
+      >
+        {placeholder ? <label htmlFor={name}>{placeholder}</label> : null}
+
         <input
           ref={this.myRef}
-          {...this.props}
+          {...rest}
+          type={type}
+          placeholder={example ? example : null}
           onFocus={() => this.setState({ focus: true })}
           onBlur={() => this.setState({ focus: false })}
         />
-        {this.props.type === "password" ? (
+        {type === "password" ? (
           <img
             src={Mostrar}
             alt="Mostrar"

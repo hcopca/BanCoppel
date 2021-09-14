@@ -10,20 +10,43 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_amortizable.svg";
-
+// import HeroHome from "../../Assets/Hero_amortizable.svg";
+import Hero_ from "../../Assets/Heros/hero_corriente.png";
+import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.png";
+import HeroHome from "../../Assets/Heros/banner_corriente.svg";
 class CreditoAmortizable extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -45,7 +68,13 @@ class CreditoAmortizable extends Component {
           <BancoppelBtn amarillo>Descubre más</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Descubre más" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
 
         <ProductHeader>
           <h1>
@@ -56,7 +85,8 @@ class CreditoAmortizable extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -70,23 +100,24 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_cuenta_amortizable.png").default,
       copy: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
     },
 
     items: [
       {
         icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de capital de trabajo a largo plazo.",
+        copy: "Optimización de flujo de capital de trabajo en corto plazo.",
       },
       {
         icon: require("../../Assets/hand_start.svg").default,
-        copy: "Capital para proyectos productivos.",
+        copy: "Capital para apoyar el proceso productivo.",
       },
-      {
-        icon: require("../../Assets/network_blue.svg").default,
-        copy: "Disposiciones ágiles al amparo de la línea.",
-      },
+      // {
+      //   icon: require("../../Assets/network_blue.svg").default,
+      //   copy: "Disposiciones ágiles al amparo de la línea.",
+      // },
     ],
   },
   {
@@ -99,16 +130,16 @@ const CravSections = [
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función a la necesidad de capital de trabajo y la capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Pago de capital e intereses mensual.",
+        copy: "Amortización 36 meses con amortizaciones máximas a 12 meses",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },

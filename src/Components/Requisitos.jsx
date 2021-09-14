@@ -8,6 +8,7 @@ const data = {
     "Estados Financieros: Dictaminados, internos y proyectados.",
     "Información legal del acreditado o del proyecto.",
     "Contacto con ejecutivo.",
+    "Firma de solicitud y contrato"
   ],
 };
 

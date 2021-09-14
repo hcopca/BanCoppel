@@ -10,20 +10,44 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_credito_puente.svg";
+// import HeroHome from "../../Assets/Hero_credito_puente.svg";
+import Hero_ from "../../Assets/Heros/hero_puente.png";
+import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
+import HeroHome from "../../Assets/Heros/banner_puente.svg";
 
 class CreditoPuente extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -47,14 +71,21 @@ class CreditoPuente extends Component {
           <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Contáctanos" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             CRÉDITO <span>PUENTE</span>
           </h1>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
-        <Switcher items={CreditoPuenteSections} body={this.body} />
+        <Switcher items={CreditoPuenteSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -68,7 +99,8 @@ const CreditoPuenteSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_credito_puente.png").default,
       copy: "El impulso que necesitas para comenzar a contruir un México mejor.",
     },
 
@@ -107,13 +139,13 @@ const CreditoPuenteSections = [
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura. Por estructuración.",
+        copy: "Por apertura. \n Por estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
