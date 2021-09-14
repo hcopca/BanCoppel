@@ -9,21 +9,46 @@ import {
   Requisitos,
   Switcher,
   ProductHeader,
-  ResponsiveHeader,
+  ResponsiveHeader, 
+  TeInteresa, 
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Credito_Simple.svg";
+import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
+import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
+import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
+
 
 class CreditoSimple extends Component {
-  body(data) {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -48,14 +73,20 @@ class CreditoSimple extends Component {
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Me interesa" banner={HeroHome} />
-        <ProductHeader>
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />        <ProductHeader>
           <h1>
             CRÉDITO <span>SIMPLE</span>
           </h1>
         </ProductHeader>
         <Accordion items={CreditoSimpleSections} body={this.body} />
-        <Switcher items={CreditoSimpleSections} body={this.body} />
+        <Switcher items={CreditoSimpleSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -70,7 +101,7 @@ const CreditoSimpleSections = [
 
     card: {
       image: require("../../Assets/Persons2.png").default,
-      copy: "El financiamiento que necesitas para pontencializar tu empresa.",
+      copy2: "El financiamiento que necesitas para pontencializar tu empresa.",
     },
 
     items: [
@@ -84,7 +115,7 @@ const CreditoSimpleSections = [
       },
       {
         icon: require("../../Assets/hand_money_blue.svg").default,
-        copy: "Compra de activo fijo.",
+        copy: "Compra de Activo Fijo.",
       },
       {
         icon: require("../../Assets/circle_blue_money.svg").default,
