@@ -10,20 +10,43 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_Arrendamiento.svg";
-
+// import HeroHome from "../../Assets/Hero_Arrendamiento.svg";
+import Hero_ from "../../Assets/Heros/hero_arrendamiento.png";
+import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.png";
+import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
 class ArrendamientoFinanciero extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -46,14 +69,21 @@ class ArrendamientoFinanciero extends Component {
           </div>
           <BancoppelBtn amarillo>Quiero saber más</BancoppelBtn>
         </ResponsiveHeader>
-        <Hero btnCoppy="Quiero saber más" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             Arrendamiento <span>financiero</span>
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -67,18 +97,23 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
-      copy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_arrendamiento.png").default,
+      copy2: "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
     },
 
     items: [
       {
         icon: require("../../Assets/hand_house_blue.svg").default,
-        copy: "Deducción fiscal de rentas.",
+        copy: "Deducción de intereses de las rentas.",
       },
       {
         icon: require("../../Assets/Financial_Document.svg").default,
-        copy: "Adquisición de activo Fijo con financiamiento del 100% del valor total.",
+        copy: "Opción de compra al finalizar el contrato",
+      },
+      {
+        icon: require("../../Assets/tickets.svg").default,
+        copy: "No descapitalizar a la empresa para adquirir los activos que necesitas.",
       },
     ],
   },
@@ -102,7 +137,7 @@ const CravSections = [
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },

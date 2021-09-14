@@ -45,6 +45,17 @@ const Card = styled.div`
       color: var(--white);
       font-size: 12px;
     }
+    h2 {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 125%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      color: #FFFFFF;
+    }
     button {
       margin-top: 10px;
       border: 0;
@@ -121,6 +132,7 @@ class CardBlue extends Component {
             </h1>
 
             {this.props.card.copy ? <p>{this.props.card.copy}</p> : null}
+            {this.props.card.copy2 ? <h2>{this.props.card.copy2}</h2> : null}
           </div>
 
           {this.props.card.button ? (
