@@ -128,7 +128,7 @@ const CreditoSimpleSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo, equipamiento o compra de activo fijo.",
+        copy: "Capital de trabajo, equipamiento o compra de Activo Fijo.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
