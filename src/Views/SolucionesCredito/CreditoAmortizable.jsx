@@ -11,8 +11,10 @@ import {
   ResponsiveHeader,
   Requisitos,
 } from "../../Components";
-import HeroHome from "../../Assets/Hero_amortizable.svg";
-
+// import HeroHome from "../../Assets/Hero_amortizable.svg";
+import Hero_ from "../../Assets/Heros/hero_corriente.png";
+import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.png";
+import HeroHome from "../../Assets/Heros/banner_corriente.svg";
 class CreditoAmortizable extends Component {
   body(data) {
     switch (data.section) {
@@ -45,7 +47,13 @@ class CreditoAmortizable extends Component {
           <BancoppelBtn amarillo>Descubre más</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Descubre más" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
 
         <ProductHeader>
           <h1>
@@ -70,23 +78,24 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_cuenta_amortizable.png").default,
       copy: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
     },
 
     items: [
       {
         icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de capital de trabajo a largo plazo.",
+        copy: "Optimización de flujo de capital de trabajo en corto plazo.",
       },
       {
         icon: require("../../Assets/hand_start.svg").default,
-        copy: "Capital para proyectos productivos.",
+        copy: "Capital para apoyar el proceso productivo.",
       },
-      {
-        icon: require("../../Assets/network_blue.svg").default,
-        copy: "Disposiciones ágiles al amparo de la línea.",
-      },
+      // {
+      //   icon: require("../../Assets/network_blue.svg").default,
+      //   copy: "Disposiciones ágiles al amparo de la línea.",
+      // },
     ],
   },
   {
@@ -99,16 +108,16 @@ const CravSections = [
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función a la necesidad de capital de trabajo y la capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Pago de capital e intereses mensual.",
+        copy: "Amortización 36 meses con amortizaciones máximas a 12 meses",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },

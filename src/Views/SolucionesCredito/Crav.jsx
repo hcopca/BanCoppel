@@ -78,7 +78,8 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
+      // image: require("../../Assets/Persons2.png").default,
+      image: require("../../Assets/mano_corriente_crav.png").default,
       copy: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
     },
 
