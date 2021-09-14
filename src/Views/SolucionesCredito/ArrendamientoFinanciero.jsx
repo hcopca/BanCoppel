@@ -12,7 +12,6 @@ import {
   Requisitos,
   TeInteresa,
 } from "../../Components";
-// import HeroHome from "../../Assets/Hero_Arrendamiento.svg";
 import Hero_ from "../../Assets/Heros/hero_arrendamiento.png";
 import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
@@ -97,7 +96,6 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      // image: require("../../Assets/Persons2.png").default,
       image: require("../../Assets/mano_arrendamiento.png").default,
       copy2: "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
     },

@@ -12,7 +12,6 @@ import {
   Requisitos,
   TeInteresa,
 } from "../../Components";
-// import HeroHome from "../../Assets/Hero_credito_puente.svg";
 import Hero_ from "../../Assets/Heros/hero_puente.png";
 import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_puente.svg";
@@ -99,9 +98,8 @@ const CreditoPuenteSections = [
     section: "Beneficios",
 
     card: {
-      // image: require("../../Assets/Persons2.png").default,
       image: require("../../Assets/mano_credito_puente.png").default,
-      copy: "El impulso que necesitas para comenzar a contruir un México mejor.",
+      copy2: "El impulso que necesitas para comenzar a contruir un México mejor.",
     },
 
     items: [

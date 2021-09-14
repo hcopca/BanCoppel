@@ -12,7 +12,6 @@ import {
   Requisitos,
   TeInteresa,
 } from "../../Components";
-// import HeroHome from "../../Assets/Hero_amortizable.svg";
 import Hero_ from "../../Assets/Heros/hero_corriente.png";
 import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_corriente.svg";
@@ -100,9 +99,8 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      // image: require("../../Assets/Persons2.png").default,
       image: require("../../Assets/mano_cuenta_amortizable.png").default,
-      copy: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
+      copy2: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
     },
 
     items: [
