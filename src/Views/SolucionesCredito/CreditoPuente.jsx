@@ -10,6 +10,7 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+  TeInteresa,
 } from "../../Components";
 // import HeroHome from "../../Assets/Hero_credito_puente.svg";
 import Hero_ from "../../Assets/Heros/hero_puente.png";
@@ -17,16 +18,36 @@ import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_puente.svg";
 
 class CreditoPuente extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -63,7 +84,8 @@ class CreditoPuente extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
-        <Switcher items={CreditoPuenteSections} body={this.body} />
+        <Switcher items={CreditoPuenteSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
