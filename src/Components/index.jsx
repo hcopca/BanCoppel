@@ -20,3 +20,4 @@ export { default as Requisitos } from "./Requisitos";
 export { default as PerfilSolicitante } from "./PerfilSolicitante";
 export { default as SwitcherBullets } from "./SwitcherBullets";
 export { default as SelectBancoppel } from "./SelectBancoppel";
+export { default as TeInteresa } from "./TeInteresa";

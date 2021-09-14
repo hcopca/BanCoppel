@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import blue_mark from "../Assets/blue_mark.svg";
+import { TeInteresa } from ".";
 
 const StyledBullets = styled.ul`
   list-style: ${(props) => (props.showdots ? "none" : "")};
@@ -47,6 +48,7 @@ const StyledBullets = styled.ul`
 export default class ListBullets extends Component {
   render() {
     return (
+      <>
       <StyledBullets showdots={this.props.showdots}>
         {this.props.bullets.map((bull, idx) => {
           return (
@@ -56,6 +58,8 @@ export default class ListBullets extends Component {
           );
         })}
       </StyledBullets>
+      <TeInteresa/>
+      </>
     );
   }
 }

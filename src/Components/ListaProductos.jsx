@@ -122,8 +122,8 @@ const Productos = [
     section: "Cuenta Eje",
     cards: [
       {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
+        titleWhite: "Crédito",
+        titleBlue: "Simple",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
         path: "/",
         image: require("../Assets/Persons2.png").default,
