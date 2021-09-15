@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="bancoppel">
-        <div
+        {/* <div
           style={{ background: "orange", display: "flex", flexWrap: "wrap" }}
         >
           <Link to="/soluciones_integrales" style={{ marginRight: 10 }}>
@@ -71,7 +71,7 @@ class App extends Component {
           <Link to="/cuenta_inversion_empresarial" style={{ marginRight: 10 }}>
             cuenta_inversion_empresarial
           </Link>
-        </div>
+        </div> */}
         <Navbar />
         <Switch>
           <Route exact path="/">

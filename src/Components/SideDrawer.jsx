@@ -10,7 +10,7 @@ const StyledSideDrawer = styled.div`
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   z-index: 100000000000;
   background: rgba(0, 0, 0, 0.7);
   .sideDrawer {
