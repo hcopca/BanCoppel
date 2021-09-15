@@ -1,73 +1,73 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Mostrar from "../Assets/Mostrar.svg";
-//
+// import Mostrar from "../Assets/Mostrar.svg";
+
 const StyledInput = styled.div`
   position: relative;
-
   label {
-    transition: all 0.3s ease-in-out;
-
-    font-family: futura_book;
-    color: var(--gray);
-
     position: absolute;
-    top: ${({ hasText, focus, example }) =>
-      hasText || focus || example ? "17%" : "50%"};
-    left: 15px;
-    right: 0;
-    transform: ${({ hasText, focus, example }) =>
-      hasText || focus || example ? "translateY(-17%)" : "translateY(-50%)"};
-    font-size: ${({ hasText, focus, example }) =>
-      hasText || focus || example ? "12px" : "16px"};
-
-    pointer-events: none;
-  }
-
-  p {
-    font-family: futura_book;
-    color: var(--gray);
-
+    font-family: futura_light;
+    font-size: 12px;
+    line-height: 130%;
+    color: #636363;
     position: absolute;
-    bottom: 10px;
-    left: 15px;
-    right: 0;
-
-    font-size: 16px;
-
+    top: 7px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    color: #636363;
     pointer-events: none;
   }
 
   input {
+    transition: all 0.3s ease-in-out;
     width: 100%;
-    padding-top: 21px;
-    padding-bottom: 9px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    border-bottom: 2px solid var(--sky-blue);
-    font-family: futura_book;
-    font-size: 18px;
-
-    border: ${({ secondary }) =>
-      secondary ? "2px solid var(--sky-blue)" : null};
-
-    border-radius: ${({ secondary }) => (secondary ? "10px" : null)};
-
+    padding: 27px 12px 7px 12px;
+    border: 1.5px solid #225aa7;
+    border-radius: 10px;
+    font-family: futura_normal;
+    font-size: 14px;
+    line-height: 141%;
+    color: #282828;
     &::placeholder {
-    }
-    &:focus {
-      outline: none;
+      font-family: futura_light;
+      font-size: 14px;
+      line-height: 115%;
+      display: flex;
+      align-items: center;
+      color: #aaaaaa;
+      opacity: 0.7;
     }
   }
 
-  .mostrar {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    cursor: pointer;
+  /* SECONDARY */
+
+  label {
+    font-size: ${({ secondary }) => (secondary ? "18px" : null)};
+    line-height: ${({ secondary }) => (secondary ? "27px" : null)};
+    top: ${({ secondary }) => (secondary ? "0" : null)};
+    bottom: ${({ secondary }) => (secondary ? "0" : null)};
+    right: ${({ secondary }) => (secondary ? "0" : null)};
+    margin: ${({ secondary }) => (secondary ? "auto" : null)};
+
+    top: ${({ hasText, secondary }) => (hasText && secondary ? "-20px" : null)};
+    left: ${({ hasText, secondary }) => (hasText && secondary ? "0px" : null)};
+    font-size: ${({ hasText, secondary }) =>
+      hasText && secondary ? "12px" : null};
+  }
+
+  input {
+    padding: ${({ secondary }) => (secondary ? "20px 12px 7px 0px" : null)};
+    border: ${({ secondary }) => (secondary ? "0" : null)};
+    border-bottom: ${({ secondary }) =>
+      secondary ? "1.5px solid #338CBF" : null};
+    border-radius: ${({ secondary }) => (secondary ? "0" : null)};
+    &::placeholder {
+      color: ${({ secondary }) => (secondary ? "transparent" : null)};
+    }
   }
 `;
+// ${({secondary}) => secondary ? "" : null};
 
 class InputBancoppel extends Component {
   constructor(props) {
@@ -89,57 +89,14 @@ class InputBancoppel extends Component {
       return false;
     }
   }
-  showPassword() {
-    if (this.myRef.current !== null) {
-      if (this.myRef.current.type === "text") {
-        this.myRef.current.type = "password";
-        return false;
-      } else {
-        this.myRef.current.type = "text";
-        return true;
-      }
-    }
-  }
-  render() {
-    const {
-      className,
-      name,
-      type,
-      placeholder,
-      secondary,
-      value,
-      example,
-      ...rest
-    } = this.props;
 
-    console.log("Hola");
+  render() {
+    const { label, secondary, ...rest } = this.props;
 
     return (
-      <StyledInput
-        className={className ? className : ""}
-        focus={this.state.focus}
-        hasText={this.hasText()}
-        secondary={secondary}
-        example={example}
-      >
-        {placeholder ? <label htmlFor={name}>{placeholder}</label> : null}
-
-        <input
-          ref={this.myRef}
-          {...rest}
-          type={type}
-          placeholder={example ? example : null}
-          onFocus={() => this.setState({ focus: true })}
-          onBlur={() => this.setState({ focus: false })}
-        />
-        {type === "password" ? (
-          <img
-            src={Mostrar}
-            alt="Mostrar"
-            className="mostrar"
-            onClick={() => this.showPassword()}
-          />
-        ) : null}
+      <StyledInput secondary={secondary} hasText={this.hasText()}>
+        {label ? <label>{label}</label> : null}
+        <input {...rest} ref={this.myRef} />
       </StyledInput>
     );
   }

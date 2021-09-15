@@ -63,7 +63,9 @@ class Switcher extends Component {
     this.setState({
       currenView: view,
     });
-    this.props.isRequisitos(view);
+    if (this.props.isRequisitos) {
+      this.props.isRequisitos(view);
+    }
   }
 
   componentDidMount() {
