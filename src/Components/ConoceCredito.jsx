@@ -44,7 +44,7 @@ const StyledBanner = styled.section`
     transform: translate(0, -50%);
     text-align: center;
     color: #fff;
-
+    display: flex;
     img {
       display: none;
     }
@@ -126,23 +126,10 @@ export default class ConoceCredito extends Component {
               draggable="false"
             ></img>
 
-            {/* <div className="login-in-banner">
-          <div className="container">
-            <div className="row">
-              <div className="offset-lg-9 col-lg-2">
-                <LoginPortable />
-              </div>
-            </div>
-          </div>
-        </div> */}
             <div className="contenido_sobrepuesto">
-              <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
-
-              {/* <h1 className="mainTitle">COSECHÓMETRO</h1>
-          <p className="subTitle">Es hora de sumar nuestros resultados</p>
-          <p className="subTitle">
-            y conocer el potencial de rendimiento DEKALB®
-          </p> */}
+              <a href="/contacto">
+                <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
+              </a>
             </div>
           </div>
         </StyledBanner>

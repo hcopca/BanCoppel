@@ -122,7 +122,9 @@ class Home extends Component {
               a tu <span>empresa</span>
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
+          <a href="/contacto">
+            <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
+          </a>
         </ResponsiveHeader>
 
         <Hero
@@ -130,7 +132,7 @@ class Home extends Component {
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
-          path="/"
+          path="/contacto"
         />
         <Accordion items={HomeSections} body={this.body} />
         <Switcher items={HomeSections} body={this.bodySlider} noContainer />
@@ -151,7 +153,7 @@ const HomeSections = [
         titleBlue: "Inversión Empresarial",
 
         copy: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
-        path: "/",
+        path: "/cuenta_inversion_empresarial",
         image: require("../Assets/Persons2.png").default,
         button: "Me interesa",
       },
@@ -165,7 +167,7 @@ const HomeSections = [
         titleBlue: "Bancoppel",
 
         copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero...",
-        path: "/",
+        path: "/nomina_bancoppel",
         image: require("../Assets/Persons2.png").default,
         button: "Me interesa",
       },
@@ -178,7 +180,7 @@ const HomeSections = [
         titleWhite: "Crédito",
         titleBlue: "Simple",
         copy: "El capital para impulsar tu negocio.",
-        path: "/",
+        path: "/credito_simple",
         image: require("../Assets/Persons2.png").default,
         button: "Me interesa",
       },
@@ -186,7 +188,7 @@ const HomeSections = [
         titleWhite: "Crédito Cuenta",
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
+        path: "/crav",
         image: require("../Assets/Persons1.png").default,
         button: "Me interesa",
       },
@@ -194,7 +196,7 @@ const HomeSections = [
         titleWhite: "Arrendamiento",
         titleBlue: "Financiero",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
+        path: "/arrendamiento_financiero",
         image: require("../Assets/IpadHands.png").default,
         button: "Me interesa",
       },
@@ -202,7 +204,7 @@ const HomeSections = [
         titleWhite: "Crédito",
         titleBlue: "Puente",
         copy: "Pensado para crear proyectos habitacionales.",
-        path: "/",
+        path: "/credito_puente",
         image: require("../Assets/GirlHand.png").default,
         button: "Me interesa",
       },
@@ -214,7 +216,7 @@ const HomeSections = [
       {
         titleWhite: "Factoraje",
         copy: "El capital para impulsar tu negocio.",
-        path: "/",
+        path: "/soluciones_integrales",
         image: require("../Assets/Persons2.png").default,
         button: "Me interesa",
       },
@@ -222,7 +224,7 @@ const HomeSections = [
         titleWhite: "Monetización",
         titleBlue: "de Activos",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
+        path: "/monetizacion_activos",
         image: require("../Assets/Persons1.png").default,
         button: "Me interesa",
       },
@@ -231,7 +233,7 @@ const HomeSections = [
         titleBlue: "órdenes de compra",
 
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
+        path: "/financiamiento_ordenes_compra",
         image: require("../Assets/IpadHands.png").default,
         button: "Me interesa",
       },
@@ -239,7 +241,7 @@ const HomeSections = [
         titleWhite: "Proyectos",
         titleBlue: "de inversión",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/",
+        path: "/proyectos_inversion",
         image: require("../Assets/GirlHand.png").default,
         button: "Me interesa",
       },
@@ -251,7 +253,7 @@ const HomeSections = [
       {
         titleWhite: "EmpresaNet",
         copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
-        path: "/",
+        path: "/empresa_net",
         image: require("../Assets/Persons2.png").default,
         button: "Me interesa",
       },

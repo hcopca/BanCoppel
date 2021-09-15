@@ -94,11 +94,12 @@ class Hero extends Component {
           <Container>
             <div className="children">
               <img src={banner ? banner : bannerDeafult} alt="banner" />
-              <Link to={path ? path : "/"}>
+              {/* <a href={path ? path : "/"}> */}
+              <a href={"/contacto"}>
                 <BancoppelBtn amarillo>
                   {btnCoppy ? btnCoppy : "no copy"}
                 </BancoppelBtn>
-              </Link>
+              </a>
             </div>
           </Container>
         </div>
