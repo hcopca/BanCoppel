@@ -17,6 +17,7 @@ const StyledContacto = styled.div`
   background-image: url(${({ imgResponsive }) => imgResponsive});
   background-size: cover;
   background-repeat: no-repeat;
+
   .container {
     display: flex;
     align-items: center;
@@ -32,11 +33,14 @@ const StyledContacto = styled.div`
       .headers {
         margin-bottom: 25px;
         h1 {
-          font-family: futura_bold;
+          margin-bottom: 8px;
+
+          font-family: Futura;
+          font-style: normal;
+          font-weight: bold;
           font-size: 32px;
           line-height: 110%;
-          color: var(--night-blue);
-          margin-bottom: 8px;
+          color: #002a61;
           span {
             color: var(--blue);
           }
@@ -48,7 +52,9 @@ const StyledContacto = styled.div`
           color: #636363;
         }
       }
-
+      .productos {
+        margin-top: 25px;
+      }
       .input_formulario {
         margin-bottom: 15px;
       }
@@ -56,7 +62,7 @@ const StyledContacto = styled.div`
       button {
         width: 200px;
         height: 50px;
-        margin-top: 20px;
+        margin-top: 25px;
       }
     }
   }
@@ -68,9 +74,6 @@ const StyledContacto = styled.div`
     background-image: url(${({ img }) => img});
     .container {
       justify-content: flex-end;
-      form {
-        height: 696px;
-      }
     }
   }
 `;
@@ -114,7 +117,10 @@ class FormularioContacto extends Component {
             <div className="headers">
               <h1>
                 Estás muy cerca de <br />
-                comenzar <span>tu historia con nosotros</span>
+                comenzar{" "}
+                <span>
+                  tu historia <br /> con nosotros
+                </span>
               </h1>
               <p>Deja tus datos y un asesor se pondrá en contacto contigo.</p>
             </div>
@@ -162,7 +168,7 @@ class FormularioContacto extends Component {
                 onChange={this.onchange.bind(this)}
               />
             </div>
-            <div className="input_formulario">
+            <div className="input_formulario ">
               <SelectBancoppel
                 required
                 name="entity"
@@ -170,13 +176,14 @@ class FormularioContacto extends Component {
                 placeholder="Ej. Ciudad de México"
                 value={this.state.entity}
                 onChange={this.onchange.bind(this)}
+                secondary
               >
                 <option value="0">COMEZON TENEDOR</option>
                 <option value="1">1</option>
               </SelectBancoppel>
             </div>
 
-            <div className="input_formulario">
+            <div className="input_formulario productos">
               <SelectBancoppel
                 required
                 name="product"

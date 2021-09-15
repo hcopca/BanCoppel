@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-// import Mostrar from "../Assets/Mostrar.svg";
+import Mostrar from "../Assets/Mostrar.svg";
 
 const StyledInput = styled.div`
   position: relative;
+
   label {
+    transition: all 0.3s ease-in-out;
     position: absolute;
     font-family: futura_light;
     font-size: 12px;
@@ -40,24 +42,33 @@ const StyledInput = styled.div`
     }
   }
 
+  .mostrar {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+  }
+
   /* SECONDARY */
+  label.secondary {
+    position: absolute;
+    font-size: ${({ hasText }) => (hasText ? "12px" : "18px")};
+    bottom: 0;
+    left: ${({ hasText }) => (hasText ? "0px" : "12px")};
+    transform: ${({ hasText }) => (hasText ? "translateY(-20px)" : null)};
+  }
 
-  label {
-    font-size: ${({ secondary }) => (secondary ? "18px" : null)};
-    line-height: ${({ secondary }) => (secondary ? "27px" : null)};
-    top: ${({ secondary }) => (secondary ? "0" : null)};
-    bottom: ${({ secondary }) => (secondary ? "0" : null)};
-    right: ${({ secondary }) => (secondary ? "0" : null)};
-    margin: ${({ secondary }) => (secondary ? "auto" : null)};
-
-    top: ${({ hasText, secondary }) => (hasText && secondary ? "-20px" : null)};
-    left: ${({ hasText, secondary }) => (hasText && secondary ? "0px" : null)};
-    font-size: ${({ hasText, secondary }) =>
-      hasText && secondary ? "12px" : null};
+  &:hover label.secondary {
+    font-size: 12px;
+    transform: translateY(-20px);
+    left: 0;
+  }
+  &:target {
+    background: red;
   }
 
   input {
-    padding: ${({ secondary }) => (secondary ? "20px 12px 7px 0px" : null)};
+    padding: ${({ secondary }) => (secondary ? "20px 0px 7px 0px" : null)};
     border: ${({ secondary }) => (secondary ? "0" : null)};
     border-bottom: ${({ secondary }) =>
       secondary ? "1.5px solid #338CBF" : null};
@@ -90,13 +101,50 @@ class InputBancoppel extends Component {
     }
   }
 
+  showPassword() {
+    if (this.myRef.current !== null) {
+      if (this.myRef.current.type === "text") {
+        this.myRef.current.type = "password";
+        return false;
+      } else {
+        this.myRef.current.type = "text";
+        return true;
+      }
+    }
+  }
+
   render() {
-    const { label, secondary, ...rest } = this.props;
+    const { type, label, secondary, ...rest } = this.props;
 
     return (
-      <StyledInput secondary={secondary} hasText={this.hasText()}>
-        {label ? <label>{label}</label> : null}
-        <input {...rest} ref={this.myRef} />
+      <StyledInput
+        secondary={secondary}
+        hasText={this.hasText() || this.state.focus}
+      >
+        {secondary ? (
+          label ? (
+            <label className="secondary">{label}</label>
+          ) : null
+        ) : label ? (
+          <label>{label}</label>
+        ) : null}
+
+        <input
+          {...rest}
+          ref={this.myRef}
+          onFocus={() => this.setState({ focus: true })}
+          onBlur={() => this.setState({ focus: false })}
+          type={type}
+        />
+
+        {type === "password" ? (
+          <img
+            src={Mostrar}
+            alt="Mostrar"
+            className="mostrar"
+            onClick={() => this.showPassword()}
+          />
+        ) : null}
       </StyledInput>
     );
   }
