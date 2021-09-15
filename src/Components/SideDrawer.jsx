@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 import Container from "./Container";
 import Logo_BN from "../Assets/logo_bancoppel_b&w.svg";
