@@ -39,12 +39,26 @@ class Requisitos extends Component {
           ],
         });
         break;
-      case "nominaBancoppel":
+      case "secondaryBulls":
         this.setState({
           section: "Requisitos",
           bullets: [
             "Ser persona moral.",
             "Ser cliente BanCoppel.",
+            "Firma de solicitud y contrato ",
+          ],
+        });
+        break;
+      case "inversionEmpresarial":
+        this.setState({
+          section: "Requisitos",
+          bullets: [
+            "Ser persona moral.",
+            "Acta constitutiva, con el sello de inscripción en el Registro Público de la Propiedad y Comercio.",
+            "Cédula de identificación fiscal de la empresa (RFC).",
+            "Poderes Notariales del Representante(s) Legal(es) de la empresa.",
+            "Comprobante de Domicilio de la empresa (no mayor a 3 meses de vencimiento).",
+            "Identificación de o los Representante(s) Legal(es) o Autorizados que firmarán la cuenta.",
             "Firma de solicitud y contrato ",
           ],
         });

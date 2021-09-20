@@ -9,21 +9,42 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
-  ListBullets,
+  TeInteresa,
 } from "../Components";
 import HeroHome from "../Assets/Her_empresaNet.svg";
 
 class EmpresaNet extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Requisitos":
-        return <Requisitos />;
-      case "Tips de seguridad":
-        return <ListBullets bullets={data.bullets} showdots />;
+        return (
+          <>
+            <Requisitos type="secondaryBulls" />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
+
       default:
         <CardBullets data={data} />;
+    }
+  }
+
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -51,7 +72,13 @@ class EmpresaNet extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
+
         <ListaProductos />
       </>
     );
@@ -99,14 +126,5 @@ const CravSections = [
   },
   {
     section: "Requisitos",
-  },
-  {
-    section: "Tips de seguridad",
-    bullets: [
-      "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
-      "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
-      "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
-      "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial (667)758-9978 en Culiacán o al 800 849-6187 para otras ciudades.",
-    ],
   },
 ];

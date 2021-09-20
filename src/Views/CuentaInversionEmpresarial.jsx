@@ -45,7 +45,7 @@ class EmpresaNet extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="inversionEmpresarial" />
             {mobile ? <TeInteresa /> : null}
           </>
         );

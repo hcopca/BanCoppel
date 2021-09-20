@@ -28,7 +28,7 @@ class NominasBanCoppel extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos type="nominaBancoppel" />
+            <Requisitos type="secondaryBulls" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
