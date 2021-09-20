@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 import Container from "./Container";
 import Logo_BN from "../Assets/logo_bancoppel_b&w.svg";
@@ -10,7 +10,7 @@ const StyledSideDrawer = styled.div`
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   z-index: 100000000000;
   background: rgba(0, 0, 0, 0.7);
   .sideDrawer {
@@ -31,8 +31,12 @@ const StyledSideDrawer = styled.div`
             width: 30px;
             cursor: pointer;
           }
-          img.Logo_BN {
-            width: 70%;
+          a {
+            margin-left: 20px;
+            img.Logo_BN {
+              width: 202px;
+              height: 40px;
+            }
           }
         }
         img.Search {
@@ -109,7 +113,9 @@ export default class SideDrawer extends Component {
                   className="close"
                   onClick={() => this.props.setState({ onOpen: false })}
                 />
-                <img src={Logo_BN} alt="Logo_BN" className="Logo_BN" />
+                <a href="/">
+                  <img src={Logo_BN} alt="Logo_BN" className="Logo_BN" />
+                </a>
               </div>
               <img src={Search} alt="Search" className="Search" />
             </div>
@@ -121,18 +127,22 @@ export default class SideDrawer extends Component {
           </div>
           <Container>
             <div className="navigation">
-              <NavLink to="/soluciones" className="navigation-item ">
+              {/* TODO */}
+              <a href="/soluciones" className="navigation-item ">
                 Cuenta Eje
-              </NavLink>
-              <NavLink to="/soluciones" className="navigation-item ">
+              </a>
+
+              <a href="/empresa_net" className="navigation-item ">
                 EmpresaNet
-              </NavLink>
-              <NavLink to="/soluciones" className="navigation-item ">
+              </a>
+              <a href="/nomina_bancoppel" className="navigation-item ">
                 Nómina BanCoppel
-              </NavLink>
-              <NavLink to="/soluciones" className="navigation-item ">
+              </a>
+
+              {/* TODO */}
+              <a href="/soluciones" className="navigation-item ">
                 BanCoppel Pyme
-              </NavLink>
+              </a>
             </div>
           </Container>
         </div>

@@ -15,6 +15,8 @@ const StyledNav = styled.div`
       color: var(--gray);
       cursor: pointer;
       font-size: 14px;
+
+      font-family: Futura;
     }
   }
 
@@ -31,7 +33,9 @@ export default class SecondaryNav extends Component {
         <div className="secondaryNav">
           <h4>Soluciones</h4>
           <h4>PyMES</h4>
-          <h4>Contáctanos</h4>
+          <a href="/contacto">
+            <h4>Contáctanos</h4>
+          </a>
         </div>
       </StyledNav>
     );

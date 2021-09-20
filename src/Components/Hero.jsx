@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Container from "./Container";
 import BancoppelBtn from "./BancoppelBtn";
-import { Link } from "react-router-dom";
 import Fondo_mujer from "../Assets/Heros/hero_home.png";
 import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.png";
 import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
@@ -77,7 +76,7 @@ const StyledHero = styled.div`
 
 class Hero extends Component {
   render() {
-    const { banner, btnCoppy, imagen, path, responsiveImg } = this.props;
+    const { banner, btnCoppy, imagen, responsiveImg } = this.props;
     return (
       <StyledHero>
         <img
@@ -94,11 +93,12 @@ class Hero extends Component {
           <Container>
             <div className="children">
               <img src={banner ? banner : bannerDeafult} alt="banner" />
-              <Link to={path ? path : "/"}>
+              {/* <a href={path ? path : "/"}> */}
+              <a href={"/contacto"}>
                 <BancoppelBtn amarillo>
                   {btnCoppy ? btnCoppy : "no copy"}
                 </BancoppelBtn>
-              </Link>
+              </a>
             </div>
           </Container>
         </div>

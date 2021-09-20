@@ -24,6 +24,14 @@ const StyledNavbar = styled.div`
       justify-content: space-between;
       flex: 1;
 
+      a {
+        display: flex;
+        img {
+          width: 242px;
+          height: 26px;
+        }
+      }
+
       .hamburger {
         cursor: pointer;
         width: 24px;
@@ -60,8 +68,11 @@ const StyledNavbar = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        img {
-          max-width: 70%;
+        a {
+          img {
+            width: 258px;
+            height: 28px;
+          }
         }
         .hamburger {
           margin-right: 23px;
@@ -105,8 +116,9 @@ class Navbar extends Component {
                 <div className="ham-item center"></div>
                 <div className="ham-item"></div>
               </div>
-
-              <img className="bancoppel_logo" src={Logo} alt="" />
+              <a href="/">
+                <img className="bancoppel_logo" src={Logo} alt="" />
+              </a>
             </div>
             <div className="navigation">
               <NavLink to="/" className="navigation-item">

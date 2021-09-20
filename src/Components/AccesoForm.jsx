@@ -11,6 +11,7 @@ const StyledAcceso = styled.div`
   background: var(--white);
   width: 385px;
   left: -170%;
+  box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
 
   z-index: 1000000;
 
@@ -60,11 +61,21 @@ const StyledForm = styled.div`
       }
       button {
         margin: auto;
+        width: 120px;
+        height: 50px;
       }
       p {
         color: var(--sky-blue);
         text-align: center;
       }
+    }
+    .forgot {
+      font-family: Futura;
+      font-size: 14px;
+      line-height: 130%;
+      text-decoration-line: underline;
+      color: #338cbf;
+      text-align: center;
     }
 
     .captcha {
@@ -112,23 +123,25 @@ export default class AccesoForm extends Component {
           <div className="form_item">
             <InputBancoppel
               type="text"
-              placeholder="RFC"
+              label="RFC"
               name="RFC"
               id="RFC"
               value={this.state.RFC}
               onChange={(e) => this.onChange(e)}
               required
+              secondary
             />
           </div>
           <div className="form_item">
             <InputBancoppel
               type="password"
-              placeholder="Contraseña"
+              label="Contraseña"
               name="Contraseña"
               id="Contraseña"
               value={this.state.Contraseña}
               onChange={(e) => this.onChange(e)}
               required
+              secondary
             />
           </div>
 
@@ -141,7 +154,7 @@ export default class AccesoForm extends Component {
               Entrar
             </BancoppelBtn>
           </div>
-          <div className="form_item">
+          <div className="form_item forgot">
             <p>¿Olvidaste tu contraseña?</p>
           </div>
         </form>

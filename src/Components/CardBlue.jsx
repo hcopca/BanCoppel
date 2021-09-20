@@ -54,7 +54,7 @@ const Card = styled.div`
       display: flex;
       align-items: center;
       text-align: left;
-      color: #FFFFFF;
+      color: #ffffff;
     }
     button {
       margin-top: 10px;
@@ -136,7 +136,9 @@ class CardBlue extends Component {
           </div>
 
           {this.props.card.button ? (
-            <BancoppelBtn>{this.props.card.button}</BancoppelBtn>
+            <a href={this.props.card.path}>
+              <BancoppelBtn>{this.props.card.button}</BancoppelBtn>
+            </a>
           ) : null}
         </div>
       </Card>
