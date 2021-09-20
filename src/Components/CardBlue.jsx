@@ -41,7 +41,7 @@ const Card = styled.div`
       margin-bottom: 10px;
     }
     p {
-      font-family: futura_light; //En algunas se ocupa bold y en otras light
+      font-family: futura_light; 
       color: var(--white);
       font-size: 12px;
     }

@@ -15,7 +15,13 @@ import {
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
 import Hero_responsive from "../../Assets/Heros/Hero_Credito_Simple_Responsive.png";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
+import styled from "styled-components";
 
+const StyledCreditoSimple = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 
 class CreditoSimple extends Component {
 
@@ -54,7 +60,7 @@ class CreditoSimple extends Component {
 
   render() {
     return (
-      <>
+      <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
             <h1>EL CAPITAL PARA</h1>
@@ -66,7 +72,7 @@ class CreditoSimple extends Component {
           </div>
           <div className="copy">
             <h4>
-              Financiamiento a largo plazo
+              Financiamiento a <span>largo plazo</span>
               <br /> para darle vida a tus proyectos
             </h4>
           </div>
@@ -88,7 +94,7 @@ class CreditoSimple extends Component {
         <Switcher items={CreditoSimpleSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledCreditoSimple>
     );
   }
 }
@@ -142,7 +148,7 @@ const CreditoSimpleSections = [
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },

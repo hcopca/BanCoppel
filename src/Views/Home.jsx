@@ -154,7 +154,7 @@ const HomeSections = [
 
         copy: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
         path: "/cuenta_inversion_empresarial",
-        image: require("../Assets/Persons2.png").default,
+        image: require("../Assets/mano_cuenta_empresarial.png").default,
         button: "Me interesa",
       },
     ],
@@ -168,7 +168,7 @@ const HomeSections = [
 
         copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero...",
         path: "/nomina_bancoppel",
-        image: require("../Assets/Persons2.png").default,
+        image: require("../Assets/mano_nomina.png").default,
         button: "Me interesa",
       },
     ],
@@ -251,7 +251,8 @@ const HomeSections = [
     section: "EmpresaNET",
     cards: [
       {
-        titleWhite: "EmpresaNet",
+        titleWhite: "Empresa",
+        titleBlue: "NET",
         copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
         path: "/empresa_net",
         image: require("../Assets/Persons2.png").default,

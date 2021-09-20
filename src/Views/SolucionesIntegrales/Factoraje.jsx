@@ -48,6 +48,9 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
+  .btn{
+  width: 197px;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -122,7 +125,7 @@ class SolucionesCredito extends Component {
                 El manejo de tus cobros está <br /> en buenas manos
               </h4>
             </div>
-            <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
+            <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
           </Container>
         </StyledHeader>
         <Hero

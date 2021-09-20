@@ -29,12 +29,12 @@ const StyledSecondaryCard = styled.div`
     p {
       color: var(--white);
       text-align: left;
-      font-family: lato_light;
-      font-size: 14px;
-      line-height: 16px;
-
+      font-family: Futura;
+      font-size: 12px;
+      line-height: 115%;
+      color: var(--light-blue);
       @media (min-width: 992px) {
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   }
@@ -61,6 +61,7 @@ const StyledSecondaryCard = styled.div`
         text-align: center;
       }
       p {
+        font-size: 14px;
         text-align: center;
       }
     }

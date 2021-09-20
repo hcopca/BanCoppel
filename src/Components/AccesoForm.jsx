@@ -171,13 +171,13 @@ export default class AccesoForm extends Component {
             className={`user ${this.state.selected === 1 ? "selected" : ""}`}
             onClick={() => this.setState({ selected: 1 })}
           >
-            <p className="bold_2">Banca empresarial</p>
+            <p className="bold_2">Empresas</p>
           </div>
           <div
             className={`user ${this.state.selected === 2 ? "selected" : ""}`}
             onClick={() => this.setState({ selected: 2 })}
           >
-            <p className="bold_2">Portal Pyme</p>
+            <p className="bold_2">Pymes</p>
           </div>
         </div>
         {this.renderForm()}
