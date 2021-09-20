@@ -1,114 +1,108 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Container from "./Container";
-
-import Perfil_solicitante from "../Assets/perfil-lineas.png";
 import perfil_solicitante_only from "../Assets/perfil.png";
 
-const TextoBullets = styled.div`
-
+const Styledperfil = styled.div`
+  .container {
     display: flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    height: 147px;
-    margin-top: 30px;
-    margin-left:15px;
-    width:204px;
-    font-family: lato_bold;
-    color: #002A61;
-    font-weight: bold;
-    font-size: 14px;
-`;
-
-const ImagenPerfil = styled.div`
-  display: flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items: center;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const PerfilSolicitanteResponsive = styled.div`
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    font-family: lato_bold;
-    color: #002A61;
-    font-weight: bold;
-    font-size: 14px;
+    justify-content: center;
 
-    img{
-        margin-bottom:63px;
-    }
-    ul {
-        display:block;
-        list-style: none;
-        padding: 0 35px;
-        // list-style-position: outside;
-
-      }
-    li{
-        margin-bottom:63px;
+    img {
+      position: relative;
+      z-index: 10;
     }
 
-    li::before {
-        content: "\\2022";
-        color: #338CBF !important;
-        font-weight: bold;
-        display: inline-block; 
-        width: 7px;
-        height: 7px;
-        // margin-right:1em;
-        //// margin-left: -1em;
+    .bullets {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-        margin-left: -17px;  /* this is to move the icon left */
-        padding-right: 10px; /* to keep some space between icon and text */
+      position: relative;
+      z-index: 9;
+      .line {
+        display: block;
       }
+      p {
+        margin-top: 40px;
+        font-family: lato_bold;
+        font-size: 14px;
+        line-height: 130%;
+        color: #002a61;
+        position: relative;
 
-      @media (min-width: 768px) {
-        display: none;
+        display: flex;
+        align-items: center;
+        br {
+          display: none;
+        }
+
+        span {
+          color: #338cbf;
+          margin-right: 10px;
+        }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+
+      .bullets {
+        margin-left: 60px;
+        p {
+          margin-top: 60px;
+          br {
+            display: block;
+          }
+
+          &:first-child {
+            margin-top: 0px;
+          }
+
+          .line {
+            border-bottom: 1px dotted #338cbf;
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            height: 1px;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+  }
 `;
 
 class PerfilSolicitante extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-
-
-
   render() {
     return (
+      <Styledperfil>
         <Container>
-            <ImagenPerfil>
-                <img src={Perfil_solicitante} alt="" style={{height:'298px'}}/>
-                <TextoBullets>
-                {this.props.primer_bullet? <label style={{marginBottom:'37px'}}>{this.props.primer_bullet}</label> : <label style={{marginTop:'12px'}}>Personas Morales.</label>}
-                {this.props.segundo_bullet? <label style={{marginBottom:'37px'}}>{this.props.segundo_bullet}</label> : <label style={{marginBottom:'37px'}}>Personas Físicas con Actividad Empresarial.</label>}
-                {/* {this.props.tercer_bullet?<label>{this.props.tercer_bullet}</label> : <label>Propietarios de un inmueble que arrienden a Grupo Coppel.</label>} */}
-                </TextoBullets>
-            </ImagenPerfil>
-
-            <PerfilSolicitanteResponsive>
-                <img src={perfil_solicitante_only} alt="" style={{minWidth:'183.72px', maxWidth:'250.72px'}}/>
-                <ul>
-                    {this.props.primer_bullet? <li>{this.props.primer_bullet}</li> : <li style={{marginTop:'-55px'}}>Personas Morales.</li>}
-                    {this.props.segundo_bullet? <li>{this.props.segundo_bullet}</li> : <li>Personas Físicas con Actividad Empresarial.</li>}
-                    {/* {this.props.tercer_bullet? <li>{this.props.tercer_bullet}</li> : <li>Propietarios de un inmueble que arrienden a Grupo Coppel.</li>} */}
-                </ul>          
-            </PerfilSolicitanteResponsive>
+          <img src={perfil_solicitante_only} alt="" />
+          <div className="bullets">
+            {this.props.bullets
+              ? this.props.bullets.map((ele, idx) => (
+                  <p key={idx}>
+                    <span>• </span>
+                    {ele} <div className="line"></div>
+                  </p>
+                ))
+              : null}
+          </div>
         </Container>
+      </Styledperfil>
     );
   }
 }
-export default PerfilSolicitante;
 
+export default PerfilSolicitante;

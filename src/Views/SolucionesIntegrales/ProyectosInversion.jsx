@@ -47,7 +47,9 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
-
+  .btn {
+    width: 197px;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -83,7 +85,16 @@ class ProyectosInversion extends Component {
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante tercer_bullet={"Empresas Proveedoras de bienes y/o servicios a Grandes Empresas."}/>;
+        return (
+          <PerfilSolicitante
+            bullets={[
+              <>
+                Personas Físicas con Actividad
+                <br /> Empresarial.
+              </>,
+            ]}
+          />
+        );
       default:
         console.error("No hay solucion definida", data);
     }
@@ -107,16 +118,17 @@ class ProyectosInversion extends Component {
           <Container>
             <div className="title">
               <h1>
-              Construimos <br/> soluciones a la         
+                Construimos <br /> soluciones a la
               </h1>
-           
+
               <h1>
-              medida de tu <br/>  negocio
+                medida de tu <br /> negocio
               </h1>
             </div>
             <div className="copy">
               <h4>
-              El Financiamiento que necesitas <br /> para darle vida a tus proyectos
+                El Financiamiento que necesitas <br /> para darle vida a tus
+                proyectos
               </h4>
             </div>
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
@@ -132,12 +144,16 @@ class ProyectosInversion extends Component {
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
-            Proyectos <span>de inversión</span>
+              Proyectos <span>de inversión</span>
             </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        <Switcher
+          items={SolucionesCreditoSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
@@ -153,7 +169,8 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../../Assets/mano_proyectos_inversion.png").default,
-      copy2: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+      copy2:
+        "Producto crediticio que te ayuda a financiar proyectos de inversión de largo plazo con fuente de pago propia.",
     },
 
     items: [
@@ -163,18 +180,16 @@ const SolucionesCreditoSections = [
       },
       {
         icon: require("../../Assets/blue_up_coins.svg").default,
-        copy: "Se usa un Vehículo de Propósito Específico sin afectar el balance de la empresa.",
+        copy: "Se usa un vehículo de propósito específico sin afectar el balance de la empresa.",
       },
       {
         icon: require("../../Assets/hand_money_blue.svg").default,
         copy: "Financiamiento hecho de acuerdo a las necesidades de tu proyecto.",
       },
-      
     ],
   },
   {
     section: "Requisitos",
-   
   },
   {
     section: "Perfil del solicitante",
@@ -182,12 +197,10 @@ const SolucionesCreditoSections = [
   {
     section: "Características",
     cards: [
-     
       {
         title: "MONTO DE LÍNEA",
         copy: "En función de las necesidades del proyecto.",
         image: require("../../Assets/hand_coins.svg").default,
-        
       },
       {
         title: "FORMA DE PAGO",

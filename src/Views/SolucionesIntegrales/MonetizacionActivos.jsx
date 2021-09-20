@@ -47,7 +47,9 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
-
+  .btn{
+  width: 197px;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -77,12 +79,27 @@ class MonetizacionActivos extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos
+              push={{ data: "Contrato de Arrendamiento vigente.", idx: 1 }}
+            />
             {mobile ? <TeInteresa /> : null}
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante/>;
+        return (
+          <PerfilSolicitante
+            bullets={[
+              <>
+                Personas Físicas con Actividad
+                <br /> Empresarial.
+              </>,
+              <>
+                Propietarios de un inmueble que <br /> arrienden a Grupo Coppel.
+              </>,
+              "Personas Morales.",
+            ]}
+          />
+        );
       default:
         console.error("No hay solucion definida", data);
     }
@@ -105,17 +122,13 @@ class MonetizacionActivos extends Component {
         <StyledHeader>
           <Container>
             <div className="title">
-              <h1>
-                Arrendamiento 
-              </h1>
-           
-              <h1>
-                a largo plazo
-              </h1>
+              <h1>Arrendamiento</h1>
+
+              <h1>a largo plazo</h1>
             </div>
             <div className="copy">
               <h4>
-              El financiamiento que <br />  estabas buscando
+                El financiamiento que <br /> estabas buscando
               </h4>
             </div>
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
@@ -130,11 +143,17 @@ class MonetizacionActivos extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">Monetización <span>de Activos</span></h1>
+            <h1 className="header_product">
+              Monetización <span>de Activos</span>
+            </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body}  isRequisitos={this.isRequisitos.bind(this)} />
+        <Switcher
+          items={SolucionesCreditoSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
@@ -150,7 +169,8 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../../Assets/Persons3.png").default,
-      copy2: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
+      copy2:
+        "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
 
     items: [
@@ -166,12 +186,10 @@ const SolucionesCreditoSections = [
         icon: require("../../Assets/mano_casa.svg").default,
         copy: "Contrato de Arrendamiento vigente.",
       },
-      
     ],
   },
   {
     section: "Requisitos",
-   
   },
   {
     section: "Perfil del solicitante",
@@ -188,7 +206,6 @@ const SolucionesCreditoSections = [
         title: "MONTO DE LÍNEA",
         copy: "Hasta el 85% del VPN de las rentas remanentes menos 3 meses.",
         image: require("../../Assets/hand_coins.svg").default,
-        
       },
       {
         title: "FORMA DE PAGO",

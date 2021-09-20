@@ -15,6 +15,13 @@ import {
 import Hero_ from "../../Assets/Heros/hero_puente.png";
 import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_puente.svg";
+import styled from "styled-components";
+
+const StyledCreditoPuente = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 
 class CreditoPuente extends Component {
   constructor(props) {
@@ -30,7 +37,7 @@ class CreditoPuente extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -52,7 +59,7 @@ class CreditoPuente extends Component {
 
   render() {
     return (
-      <>
+      <StyledCreditoPuente>
         <ResponsiveHeader>
           <div className="title">
             <h1>
@@ -65,9 +72,9 @@ class CreditoPuente extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Juntos construimos México</h4>
+            <h4><span>Construimos</span> contigo.</h4>
           </div>
-          <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
         <Hero
@@ -83,10 +90,14 @@ class CreditoPuente extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
-        <Switcher items={CreditoPuenteSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        <Switcher
+          items={CreditoPuenteSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledCreditoPuente>
     );
   }
 }
@@ -99,7 +110,8 @@ const CreditoPuenteSections = [
 
     card: {
       image: require("../../Assets/mano_credito_puente.png").default,
-      copy2: "El impulso que necesitas para comenzar a contruir un México mejor.",
+      copy2:
+        "El impulso que necesitas para comenzar a contruir un México mejor.",
     },
 
     items: [

@@ -48,6 +48,9 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
+  .btn{
+  width: 197px;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -83,7 +86,13 @@ class SolucionesCredito extends Component {
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante/>;
+        const item = (
+          <>
+            Personas Físicas con <br />
+            Actividad Empresarial.
+          </>
+        );
+        return <PerfilSolicitante bullets={["Personas Morales", item]} />;
       default:
         console.error("No hay solucion definida", data);
     }
@@ -99,7 +108,6 @@ class SolucionesCredito extends Component {
       });
     }
   }
-
 
   render() {
     return (
@@ -122,7 +130,7 @@ class SolucionesCredito extends Component {
                 El manejo de tus cobros está <br /> en buenas manos
               </h4>
             </div>
-            <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
+            <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
           </Container>
         </StyledHeader>
         <Hero
@@ -138,7 +146,11 @@ class SolucionesCredito extends Component {
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        <Switcher
+          items={SolucionesCreditoSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
@@ -155,7 +167,8 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_factoraje.png").default,
       //Revisar el tamaño de card
-      copy2: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+      copy2:
+        "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
     },
 
     items: [
@@ -175,7 +188,6 @@ const SolucionesCreditoSections = [
   },
   {
     section: "Requisitos",
-   
   },
   {
     section: "Perfil del solicitante",

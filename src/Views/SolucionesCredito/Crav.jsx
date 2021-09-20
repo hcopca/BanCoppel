@@ -15,6 +15,12 @@ import {
 import Hero_ from "../../Assets/Heros/hero_crav.png";
 import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.png";
 import HeroHome from "../../Assets/Heros/crav_banner.svg";
+import styled from "styled-components";
+const StyledCrav = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 
 class Crav extends Component {
   constructor(props) {
@@ -31,7 +37,7 @@ class Crav extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -54,7 +60,7 @@ class Crav extends Component {
 
   render() {
     return (
-      <>
+      <StyledCrav>
         <ResponsiveHeader>
           <div className="title">
             <h1>UN CRÉDITO</h1>
@@ -65,7 +71,7 @@ class Crav extends Component {
           </div>
           <div className="copy">
             <h4>
-              Ajustamos el crédito a tu <br /> capacidad de pago
+              Ajustamos el crédito a tu <br /> <span>capacidad de pago.</span>
             </h4>
           </div>
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
@@ -95,7 +101,7 @@ class Crav extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledCrav>
     );
   }
 }
@@ -108,7 +114,8 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/mano_corriente_crav.png").default,
-      copy2: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy2:
+        "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
     },
 
     items: [

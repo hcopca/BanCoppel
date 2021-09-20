@@ -9,16 +9,19 @@ import {
   Requisitos,
   Switcher,
   ProductHeader,
-  ResponsiveHeader, 
-  TeInteresa, 
+  ResponsiveHeader,
+  TeInteresa,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
 import Hero_responsive from "../../Assets/Heros/Hero_Credito_Simple_Responsive.png";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
-
-
+import styled from "styled-components";
+const StyledCreditoSimple = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 class CreditoSimple extends Component {
-
   constructor(props) {
     super(props);
     this.state = {};
@@ -32,7 +35,7 @@ class CreditoSimple extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -54,7 +57,7 @@ class CreditoSimple extends Component {
 
   render() {
     return (
-      <>
+      <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
             <h1>EL CAPITAL PARA</h1>
@@ -66,29 +69,33 @@ class CreditoSimple extends Component {
           </div>
           <div className="copy">
             <h4>
-              Financiamiento a largo plazo
+              Financiamiento a <span>largo plazo</span>
               <br /> para darle vida a tus proyectos
             </h4>
           </div>
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
-
         <Hero
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
           path="/"
-        />        <ProductHeader>
+        />{" "}
+        <ProductHeader>
           <h1>
             CRÉDITO <span>SIMPLE</span>
           </h1>
         </ProductHeader>
         <Accordion items={CreditoSimpleSections} body={this.body} />
-        <Switcher items={CreditoSimpleSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        <Switcher
+          items={CreditoSimpleSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledCreditoSimple>
     );
   }
 }
@@ -142,7 +149,7 @@ const CreditoSimpleSections = [
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },

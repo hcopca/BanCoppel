@@ -9,27 +9,67 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
-  ListBullets,
+  TeInteresa,
 } from "../Components";
-import HeroHome from "../Assets/Her_empresaNet.svg";
+import Hero_ from "../Assets/Heros/hero_empresanet.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.png";
+import HeroHome from "../Assets/Heros/banner_empresanet.svg";
+import styled from "styled-components";
+const StyledEmpresaNet = styled.div`
+.btn{
+  width: 197px;
+}
+`;
+
 
 class EmpresaNet extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Requisitos":
-        return <Requisitos />;
-      case "Tips de seguridad":
-        return <ListBullets bullets={data.bullets} showdots />;
+        return (
+          <>
+            <Requisitos type="secondaryBulls" />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
+
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
   render() {
     return (
-      <>
+      <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
             <h1>Los beneficios</h1>
@@ -40,20 +80,32 @@ class EmpresaNet extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Maneja tus cuentas desde la comodidad de tu hogar</h4>
+            <h4>Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span></h4>
           </div>
-          <BancoppelBtn amarillo>Únete</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
-        <Hero btnCoppy="Únete" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             Empresa<span>Net</span>
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} />
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
+
         <ListaProductos />
-      </>
+      </StyledEmpresaNet>
     );
   }
 }
@@ -65,48 +117,30 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
+      image: require("../Assets/mano_empresanet.png").default,
       copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     },
 
     items: [
       {
-        icon: require("../Assets/World_card_blue.svg").default,
-        copy: "Operaciones en línea que se pueden aplicar el mismo día o puedes programarlas para cuando tu quieras.",
-        bullet: "Rapidez:",
+        icon: require("../Assets/hoja_empresanet.svg").default,
+        copy: "Administra tu cuenta de negocios.",
       },
       {
-        icon: require("../Assets/blue_cell.svg").default,
-        copy: "Realiza tus operaciones desde cualquier parte del mundo, sólo necesitas tener acceso a internet.",
-        bullet: "Comodidad:",
+        icon: require("../Assets/clock_empresanet.svg").default,
+        copy: "Programa tus operaciones o realízalas en línea.",
       },
       {
-        icon: require("../Assets/blue_watch.svg").default,
-        copy: "para realizar operaciones con horarios extensos.",
-        bullet: "Flexibilidad",
-      },
-
-      {
-        icon: require("../Assets/blue_person.svg").default,
-        copy: "Asigna un usuario para llevar la administración de nuestro servicio.",
-        bullet: "Control:",
+        icon: require("../Assets/pulgar_empresanet.svg").default,
+        copy: "Operaciones rápidas y seguras.",
       },
       {
-        icon: require("../Assets/shield_blue.png").default,
-        copy: "Seguridad para realizar tus operaciones con la tranquilidad de que tu información estará segura en nuestros canales. Contarás con usuario único y contraseña personalizada. Ambos confidenciales e intransferibles. Dispositivo electrónico de seguridad Token.",
+        icon: require("../Assets/ppl_empresanet.svg").default,
+        copy: "Asigna hasta 8 operadores para la administración de tu negocio.",
       },
     ],
   },
   {
     section: "Requisitos",
-  },
-  {
-    section: "Tips de seguridad",
-    bullets: [
-      "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
-      "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
-      "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
-      "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial (667)758-9978 en Culiacán o al 800 849-6187 para otras ciudades.",
-    ],
   },
 ];

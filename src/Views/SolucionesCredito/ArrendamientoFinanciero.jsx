@@ -15,6 +15,13 @@ import {
 import Hero_ from "../../Assets/Heros/hero_arrendamiento.png";
 import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
+import styled from "styled-components";
+const StyledArrendamientoFinanciero = styled.div`
+.btn{
+  width: 197px;
+}
+`;
+
 class ArrendamientoFinanciero extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +36,10 @@ class ArrendamientoFinanciero extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos
+              type="solucionesCredito"
+              push={{ data: "Especificaciones o factura del activo", idx: 1 }}
+            />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -51,7 +61,7 @@ class ArrendamientoFinanciero extends Component {
 
   render() {
     return (
-      <>
+      <StyledArrendamientoFinanciero>
         <ResponsiveHeader>
           <div className="title">
             <h1>
@@ -64,9 +74,9 @@ class ArrendamientoFinanciero extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Encuentra el lugar ideal para desarrollar tu potencial.</h4>
+            <h4>Te damos las herrramientas para <span>crecer tu negocio.</span></h4>
           </div>
-          <BancoppelBtn amarillo>Quiero saber más</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"
@@ -81,10 +91,14 @@ class ArrendamientoFinanciero extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledArrendamientoFinanciero>
     );
   }
 }
@@ -97,7 +111,8 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/mano_arrendamiento.png").default,
-      copy2: "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
+      copy2:
+        "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
     },
 
     items: [

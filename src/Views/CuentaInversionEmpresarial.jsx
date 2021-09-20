@@ -12,7 +12,7 @@ import {
   SecondaryCardBlue,
   SwitcherBullets,
   TeInteresa,
-  Consulta
+  Consulta,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.png";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.png";
@@ -21,7 +21,7 @@ import styled from "styled-components";
 
 const RowCards = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   .SecondaryCardBlue {
     margin: 0;
     justify-content: center;
@@ -31,17 +31,21 @@ const RowCards = styled.div`
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      view: {
+        section: "Beneficios",
+      },
+    };
   }
-  
+
   body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
-        return  <CardBullets data={data} />;
+        return <CardBullets data={data} />;
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="inversionEmpresarial" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -63,27 +67,17 @@ class EmpresaNet extends Component {
     if (elem.section === "Requisitos") {
       this.setState({
         Requisitos: true,
+        view: elem,
       });
     } else {
       this.setState({
         Requisitos: false,
+        view: elem,
       });
     }
   }
-  // isBeneficios(e) {
-  //   if (e.section === "Beneficios") {
-  //     this.setState({
-  //       Beneficios: true,
-  //     });
-  //   } else {
-  //     this.setState({
-  //       Beneficios: false,
-  //     });
-  //   }
-  // }
 
   render() {
-    console.log(this.state.Requisitos)
     return (
       <>
         <ResponsiveHeader>
@@ -113,17 +107,19 @@ class EmpresaNet extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={InversionEmpresarialSections} body={this.body} />
-        <Switcher items={InversionEmpresarialSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} /> 
-        {/* isBeneficios={this.isBeneficios.bind(this)} */}
+        <Switcher
+          items={InversionEmpresarialSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-        {/* {this.state.Beneficios ? <Consulta/> : null} */}
-        <Consulta/>
+        {this.state.view.section === "Beneficios" ? <Consulta /> : null}
       </>
     );
   }
 }
-
 
 export default EmpresaNet;
 
@@ -133,7 +129,8 @@ const InversionEmpresarialSections = [
 
     card: {
       image: require("../Assets/mano_cuenta_empresarial.png").default,
-      copy2: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
+      copy2:
+        "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
     },
 
     items: [
