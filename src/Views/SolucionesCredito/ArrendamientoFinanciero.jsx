@@ -29,7 +29,10 @@ class ArrendamientoFinanciero extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos
+              removeIndex={5}
+              push="Especificaciones o factura del activo"
+            />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -81,7 +84,11 @@ class ArrendamientoFinanciero extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
@@ -97,7 +104,8 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/mano_arrendamiento.png").default,
-      copy2: "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
+      copy2:
+        "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
     },
 
     items: [
