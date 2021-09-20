@@ -39,6 +39,16 @@ class Requisitos extends Component {
           ],
         });
         break;
+      case "nominaBancoppel":
+        this.setState({
+          section: "Requisitos",
+          bullets: [
+            "Ser persona moral.",
+            "Ser cliente BanCoppel.",
+            "Firma de solicitud y contrato ",
+          ],
+        });
+        break;
       default:
         this.setState({
           section: "Requisitos",
