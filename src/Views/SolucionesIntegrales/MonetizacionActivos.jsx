@@ -84,7 +84,20 @@ class MonetizacionActivos extends Component {
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante />;
+        return (
+          <PerfilSolicitante
+            bullets={[
+              <>
+                Personas Físicas con Actividad
+                <br /> Empresarial.
+              </>,
+              <>
+                Propietarios de un inmueble que <br /> arrienden a Grupo Coppel.
+              </>,
+              "Personas Morales.",
+            ]}
+          />
+        );
       default:
         console.error("No hay solucion definida", data);
     }

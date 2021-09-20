@@ -83,7 +83,13 @@ class SolucionesCredito extends Component {
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante />;
+        const item = (
+          <>
+            Personas Físicas con <br />
+            Actividad Empresarial.
+          </>
+        );
+        return <PerfilSolicitante bullets={["Personas Morales", item]} />;
       default:
         console.error("No hay solucion definida", data);
     }

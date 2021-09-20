@@ -10,7 +10,7 @@ import {
   CardBullets,
   ListCardsSecondary,
   Requisitos,
-  PerfilSolicitante, 
+  PerfilSolicitante,
   TeInteresa,
   // ListBullets,
 } from "../../Components";
@@ -82,7 +82,17 @@ class FinanciamientoOrdenesCompra extends Component {
           </>
         );
       case "Perfil del solicitante":
-        return <PerfilSolicitante tercer_bullet={"Empresas Proveedoras de bienes y/o servicios a Grandes Empresas."}/>;
+        return (
+          <PerfilSolicitante
+            bullets={[
+              "Personas Morales.",
+              <>
+                Personas Físicas con Actividad
+                <br /> Empresarial.
+              </>,
+            ]}
+          />
+        );
       default:
         console.error("No hay solucion definida", data);
     }
@@ -99,25 +109,19 @@ class FinanciamientoOrdenesCompra extends Component {
     }
   }
 
-
   render() {
     return (
       <>
         <StyledHeader>
           <Container>
             <div className="title">
-              <h1>
-              Diseñado para               
-              </h1>
-             
-           
-              <h1>
-              resolver tus imprevistos              
-              </h1>
+              <h1>Diseñado para</h1>
+
+              <h1>resolver tus imprevistos</h1>
             </div>
             <div className="copy">
               <h4>
-              No te quedes sin lo <br /> indispensable para tu negocio
+                No te quedes sin lo <br /> indispensable para tu negocio
               </h4>
             </div>
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
@@ -133,12 +137,16 @@ class FinanciamientoOrdenesCompra extends Component {
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
-                Financiamiento de <span>Órdenes de compra</span>
+              Financiamiento de <span>Órdenes de compra</span>
             </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        <Switcher
+          items={SolucionesCreditoSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
@@ -154,7 +162,8 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../../Assets/mano_financiamiento.png").default,
-      copy2: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+      copy2:
+        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
     },
 
     items: [
@@ -170,12 +179,10 @@ const SolucionesCreditoSections = [
         icon: require("../../Assets/lupa_blue.svg").default,
         copy: "Revisiones periódicas al monto de la línea de crédito.",
       },
-      
     ],
   },
   {
     section: "Requisitos",
-   
   },
   {
     section: "Perfil del solicitante",
@@ -192,7 +199,6 @@ const SolucionesCreditoSections = [
         title: "MONTO DE LÍNEA",
         copy: "En función de históricos de ventas y pedidos confirmados.",
         image: require("../../Assets/hand_coins.svg").default,
-        
       },
       {
         title: "FORMA DE PAGO",
