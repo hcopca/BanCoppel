@@ -15,6 +15,13 @@ import {
 import Hero_ from "../../Assets/Heros/hero_corriente.png";
 import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.png";
 import HeroHome from "../../Assets/Heros/banner_corriente.svg";
+import styled from "styled-components";
+
+const StyledCreditoAmortizable = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 class CreditoAmortizable extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +58,7 @@ class CreditoAmortizable extends Component {
 
   render() {
     return (
-      <>
+      <StyledCreditoAmortizable>
         <ResponsiveHeader>
           <div className="title">
             <h1>EL RESPALDO QUE</h1>
@@ -91,7 +98,7 @@ class CreditoAmortizable extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledCreditoAmortizable>
     );
   }
 }

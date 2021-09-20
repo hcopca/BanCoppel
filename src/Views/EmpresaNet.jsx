@@ -11,14 +11,22 @@ import {
   Requisitos,
   TeInteresa,
 } from "../Components";
-import HeroHome from "../Assets/Her_empresaNet.svg";
+import Hero_ from "../Assets/Heros/hero_empresanet.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.png";
+import HeroHome from "../Assets/Heros/banner_empresanet.svg";
+import styled from "styled-components";
+const StyledEmpresaNet = styled.div`
+.btn{
+  width: 197px;
+}
+`;
+
 
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
   body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
@@ -33,6 +41,17 @@ class EmpresaNet extends Component {
 
       default:
         <CardBullets data={data} />;
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -50,7 +69,7 @@ class EmpresaNet extends Component {
 
   render() {
     return (
-      <>
+      <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
             <h1>Los beneficios</h1>
@@ -61,11 +80,17 @@ class EmpresaNet extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Maneja tus cuentas desde la comodidad de tu hogar</h4>
+            <h4>Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span></h4>
           </div>
-          <BancoppelBtn amarillo>Únete</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
-        <Hero btnCoppy="Únete" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             Empresa<span>Net</span>
@@ -80,7 +105,7 @@ class EmpresaNet extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
 
         <ListaProductos />
-      </>
+      </StyledEmpresaNet>
     );
   }
 }
@@ -92,35 +117,26 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
+      image: require("../Assets/mano_empresanet.png").default,
       copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     },
 
     items: [
       {
-        icon: require("../Assets/World_card_blue.svg").default,
-        copy: "Operaciones en línea que se pueden aplicar el mismo día o puedes programarlas para cuando tu quieras.",
-        bullet: "Rapidez:",
+        icon: require("../Assets/hoja_empresanet.svg").default,
+        copy: "Administra tu cuenta de negocios.",
       },
       {
-        icon: require("../Assets/blue_cell.svg").default,
-        copy: "Realiza tus operaciones desde cualquier parte del mundo, sólo necesitas tener acceso a internet.",
-        bullet: "Comodidad:",
+        icon: require("../Assets/clock_empresanet.svg").default,
+        copy: "Programa tus operaciones o realízalas en línea.",
       },
       {
-        icon: require("../Assets/blue_watch.svg").default,
-        copy: "para realizar operaciones con horarios extensos.",
-        bullet: "Flexibilidad",
-      },
-
-      {
-        icon: require("../Assets/blue_person.svg").default,
-        copy: "Asigna un usuario para llevar la administración de nuestro servicio.",
-        bullet: "Control:",
+        icon: require("../Assets/pulgar_empresanet.svg").default,
+        copy: "Operaciones rápidas y seguras.",
       },
       {
-        icon: require("../Assets/shield_blue.png").default,
-        copy: "Seguridad para realizar tus operaciones con la tranquilidad de que tu información estará segura en nuestros canales. Contarás con usuario único y contraseña personalizada. Ambos confidenciales e intransferibles. Dispositivo electrónico de seguridad Token.",
+        icon: require("../Assets/ppl_empresanet.svg").default,
+        copy: "Asigna hasta 8 operadores para la administración de tu negocio.",
       },
     ],
   },

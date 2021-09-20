@@ -15,6 +15,10 @@ const StyledHeader = styled.div`
     margin-bottom: 20px;
     h1 {
       text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 32px;
       color: var(--sky-blue);
       line-height: 35px;
       &:first-child {
@@ -30,6 +34,9 @@ const StyledHeader = styled.div`
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
+    }
+    span{
+      font-family: Futura-bold;
     }
   }
 

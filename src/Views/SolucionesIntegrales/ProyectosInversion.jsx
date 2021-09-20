@@ -47,7 +47,9 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
-
+  .btn {
+    width: 197px;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -168,7 +170,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_proyectos_inversion.png").default,
       copy2:
-        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+        "Producto crediticio que te ayuda a financiar proyectos de inversión de largo plazo con fuente de pago propia.",
     },
 
     items: [
@@ -178,7 +180,7 @@ const SolucionesCreditoSections = [
       },
       {
         icon: require("../../Assets/blue_up_coins.svg").default,
-        copy: "Se usa un Vehículo de Propósito Específico sin afectar el balance de la empresa.",
+        copy: "Se usa un vehículo de propósito específico sin afectar el balance de la empresa.",
       },
       {
         icon: require("../../Assets/hand_money_blue.svg").default,

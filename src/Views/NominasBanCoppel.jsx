@@ -12,7 +12,15 @@ import {
   ProductHeader,
   TeInteresa,
 } from "../Components";
-import HeroHome from "../Assets/Hero_NominaBancoppel.svg";
+import Hero_ from "../Assets/Heros/hero_nomina.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.png";
+import HeroHome from "../Assets/Heros/banner_nomina.svg";
+import styled from "styled-components";
+const StyledNominasBanCoppel = styled.div`
+.btn{
+  width: 197px;
+}
+`;
 
 class NominasBanCoppel extends Component {
   constructor(props) {
@@ -37,6 +45,17 @@ class NominasBanCoppel extends Component {
         <CardBullets data={data} />;
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
 
   isRequisitos(elem) {
     if (elem.section === "Requisitos") {
@@ -52,7 +71,7 @@ class NominasBanCoppel extends Component {
 
   render() {
     return (
-      <>
+      <StyledNominasBanCoppel>
         <ResponsiveHeader>
           <div className="title">
             <h1>EL DINERO DE TUS</h1>
@@ -63,12 +82,18 @@ class NominasBanCoppel extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Transfiere tus fondos cuando quieras</h4>
+            <h4><span>Transfiere tus fondos</span> cuando quieras</h4>
           </div>
           <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
         </ResponsiveHeader>
 
-        <Hero btnCoppy="Haz clic ahora" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             NÓMINA <span>BANCOPPEL</span>
@@ -83,7 +108,7 @@ class NominasBanCoppel extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
 
         <ListaProductos />
-      </>
+      </StyledNominasBanCoppel>
     );
   }
 }
@@ -95,7 +120,7 @@ const CravSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
+      image: require("../Assets/mano_nomina.png").default,
       copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
 
@@ -105,20 +130,20 @@ const CravSections = [
         copy: "Ahorra tiempo al momento de realizar los pagos.",
       },
       {
-        icon: require("../Assets/blue_laptop.svg").default,
-        copy: "Realiza dispersiones en línea o mediante operaciones programadas.",
-      },
-      {
         icon: require("../Assets/blue_person.svg").default,
         copy: "Apertura las cuentas de tus trabajadores de forma individual o masiva.",
       },
       {
-        icon: require("../Assets/blue_phone.svg").default,
-        copy: "Reportes de todas las operaciones realizadas a tus trabajadores.",
+        icon: require("../Assets/celhand.svg").default,
+        copy: "Facilidad en el pago de las prestaciones laborales de tus trabajadores.",
       },
       {
-        icon: require("../Assets/blue_coins.svg").default,
-        copy: "Facilidad en el pago de las prestaciones laborales de tus trabajadores.",
+        icon: require("../Assets/blue_laptop.svg").default,
+        copy: "Realiza dispersiones en línea o mediante operaciones programadas.",
+      },
+      {
+        icon: require("../Assets/blue_phone.svg").default,
+        copy: "Reportes de todas las operaciones realizadas a tus trabajadores.",
       },
       {
         icon: require("../Assets/blue_monitor.svg").default,
