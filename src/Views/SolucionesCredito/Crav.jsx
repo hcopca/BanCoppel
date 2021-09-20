@@ -37,7 +37,7 @@ class Crav extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -114,7 +114,8 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/mano_corriente_crav.png").default,
-      copy2: "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
+      copy2:
+        "Un crédito que ajusta los pagos de capital del financiamiento a tu ciclo operativo.",
     },
 
     items: [

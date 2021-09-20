@@ -9,7 +9,10 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
+<<<<<<< HEAD
   ListBullets,
+=======
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
   TeInteresa,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_empresanet.png";
@@ -28,6 +31,10 @@ class EmpresaNet extends Component {
     super(props);
     this.state = {};
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
   body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
@@ -35,16 +42,36 @@ class EmpresaNet extends Component {
       case "Requisitos":
         return (
           <>
+<<<<<<< HEAD
             <Requisitos />
             {mobile ? <TeInteresa /> : null}
           </>
         );
       case "Tips de seguridad":
         return <ListBullets bullets={data.bullets} showdots />;
+=======
+            <Requisitos type="secondaryBulls" />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
+
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
       default:
         <CardBullets data={data} />;
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+
   isRequisitos(elem) {
     if (elem.section === "Requisitos") {
       this.setState({
@@ -87,8 +114,18 @@ class EmpresaNet extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
+<<<<<<< HEAD
         <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
         {this.state.Requisitos ? <TeInteresa /> : null}
+=======
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
+
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
         <ListaProductos />
       </StyledEmpresaNet>
     );
@@ -128,6 +165,7 @@ const CravSections = [
   {
     section: "Requisitos",
   },
+<<<<<<< HEAD
   // {
   //   section: "Tips de seguridad",
   //   bullets: [
@@ -137,4 +175,6 @@ const CravSections = [
   //     "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial (667)758-9978 en Culiacán o al 800 849-6187 para otras ciudades.",
   //   ],
   // },
+=======
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
 ];

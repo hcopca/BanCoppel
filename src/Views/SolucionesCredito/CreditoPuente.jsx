@@ -37,7 +37,7 @@ class CreditoPuente extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -90,7 +90,11 @@ class CreditoPuente extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
-        <Switcher items={CreditoPuenteSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        <Switcher
+          items={CreditoPuenteSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCreditoPuente>
@@ -106,7 +110,8 @@ const CreditoPuenteSections = [
 
     card: {
       image: require("../../Assets/mano_credito_puente.png").default,
-      copy2: "El impulso que necesitas para comenzar a contruir un México mejor.",
+      copy2:
+        "El impulso que necesitas para comenzar a contruir un México mejor.",
     },
 
     items: [

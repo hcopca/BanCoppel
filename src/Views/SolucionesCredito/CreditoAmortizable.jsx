@@ -36,7 +36,7 @@ class CreditoAmortizable extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
@@ -91,7 +91,11 @@ class CreditoAmortizable extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCreditoAmortizable>
@@ -107,7 +111,8 @@ const CravSections = [
 
     card: {
       image: require("../../Assets/mano_cuenta_amortizable.png").default,
-      copy2: "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
+      copy2:
+        "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
     },
 
     items: [

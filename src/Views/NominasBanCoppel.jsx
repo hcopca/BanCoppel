@@ -10,7 +10,10 @@ import {
   Requisitos,
   Switcher,
   ProductHeader,
+<<<<<<< HEAD
   SwitcherBullets,
+=======
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
   TeInteresa,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_nomina.png";
@@ -37,16 +40,36 @@ class NominasBanCoppel extends Component {
       case "Requisitos":
         return (
           <>
+<<<<<<< HEAD
             <Requisitos />
             {mobile ? <TeInteresa /> : null}
           </>
         );
       case "Tips de seguridad":
         return <SwitcherBullets data={data} />;
+=======
+            <Requisitos type="secondaryBulls" />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
+
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
       default:
         <CardBullets data={data} />;
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+
   isRequisitos(elem) {
     if (elem.section === "Requisitos") {
       this.setState({
@@ -90,8 +113,18 @@ class NominasBanCoppel extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
+<<<<<<< HEAD
         <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
         {this.state.Requisitos ? <TeInteresa /> : null}
+=======
+        <Switcher
+          items={CravSections}
+          body={this.body}
+          isRequisitos={this.isRequisitos.bind(this)}
+        />
+        {this.state.Requisitos ? <TeInteresa /> : null}
+
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
         <ListaProductos />
       </StyledNominasBanCoppel>
     );
@@ -139,6 +172,7 @@ const CravSections = [
   {
     section: "Requisitos",
   },
+<<<<<<< HEAD
   // {
   //   section: "Tips de seguridad",
   //   items: [
@@ -179,4 +213,6 @@ const CravSections = [
   //     },
   //   ],
   // },
+=======
+>>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
 ];
