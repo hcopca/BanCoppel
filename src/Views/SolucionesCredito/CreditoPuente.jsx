@@ -30,7 +30,7 @@ class CreditoPuente extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos removeIndex={5} />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );

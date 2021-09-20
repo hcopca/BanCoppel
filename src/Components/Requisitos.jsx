@@ -2,32 +2,61 @@ import React, { Component } from "react";
 
 import ListBullets from "./ListBullets";
 
-const data = {
-  section: "Requisitos",
-  bullets: [
-    "Solicitud de crédito.",
-    "Autorización para consultar historial crediticio.",
-    "Estados Financieros: Dictaminados, internos y proyectados.",
-    "Información legal del acreditado o del proyecto.",
-    "Contacto con ejecutivo.",
-    "Identificación de o los Representante(s) Legal(es) o Autorizados que firmarán la cuenta.",
-    "Firma de solicitud y contrato",
-  ],
-};
-
 class Requisitos extends Component {
-  componentDidMount() {
-    const { removeIndex, push } = this.props;
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-    if (removeIndex) {
-      data.bullets.splice(removeIndex);
-    }
+  async componentDidMount() {
+    const { type, push } = this.props;
+
+    await this.makingBullets(type);
+
     if (push) {
-      data.bullets.push(push);
+      const { data, idx } = push;
+      const bullets = this.state.bullets;
+      bullets.splice(bullets.length - idx, 0, data);
+
+      this.setState({
+        bullets: bullets,
+      });
+    }
+  }
+
+  makingBullets(type) {
+    switch (type) {
+      case "solucionesCredito":
+        this.setState({
+          section: "Requisitos",
+          bullets: [
+            "Solicitud de crédito.",
+            "Autorización para consultar historial crediticio.",
+            "Estados Financieros: Dictaminados, internos y proyectados.",
+            "Información legal del acreditado o del proyecto.",
+            "Contacto con ejecutivo.",
+            "Firma de solicitud y contrato",
+          ],
+        });
+        break;
+      default:
+        this.setState({
+          section: "Requisitos",
+          bullets: [
+            "Solicitud de crédito.",
+            "Autorización para consultar historial crediticio.",
+            "Estados Financieros: Dictaminados, internos y proyectados.",
+            "Información legal del acreditado o del proyecto.",
+            "Contacto con ejecutivo.",
+            "Firma de solicitud y contrato",
+          ],
+        });
     }
   }
   render() {
-    return <ListBullets bullets={data.bullets} />;
+    return this.state.bullets ? (
+      <ListBullets bullets={this.state.bullets} />
+    ) : null;
   }
 }
 

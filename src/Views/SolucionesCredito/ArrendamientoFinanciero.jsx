@@ -30,8 +30,8 @@ class ArrendamientoFinanciero extends Component {
         return (
           <>
             <Requisitos
-              removeIndex={5}
-              push="Especificaciones o factura del activo"
+              type="solucionesCredito"
+              push={{ data: "Especificaciones o factura del activo", idx: 1 }}
             />
             {mobile ? <TeInteresa /> : null}
           </>

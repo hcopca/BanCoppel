@@ -31,7 +31,7 @@ class Crav extends Component {
       case "Requisitos":
         return (
           <>
-            <Requisitos removeIndex={5} push="Firma de solicitud y contrato " />
+            <Requisitos type="solucionesCredito" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
