@@ -75,7 +75,7 @@ const Card = styled.div`
   }
 
   @media (min-width: 992px) {
-    height: ${(props) => (props.row ? "224px" : "522px")};
+    height: ${(props) => (props.row ? "224px" : "620px")}; //600 estaba en 522
     width: ${(props) => (props.row ? "472px" : "306px")};
 
     br {

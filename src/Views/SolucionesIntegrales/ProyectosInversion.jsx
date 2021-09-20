@@ -10,10 +10,13 @@ import {
   CardBullets,
   ListCardsSecondary,
   Requisitos,
-  PerfilSolicitante
+  PerfilSolicitante,
+  TeInteresa,
   // ListBullets,
 } from "../../Components";
-import HeroHome from "../../Assets/proyectos_inversion.svg";
+import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.png";
+import Hero_responsive from "../../Assets/Heros/hero_responsive_proyectos_inversion.png";
+import HeroHome from "../../Assets/Heros/banner_proyectos_inversion.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -61,18 +64,39 @@ const StyledPruductHeader = styled.div`
 `;
 
 class ProyectosInversion extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos/>;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       case "Perfil del solicitante":
         return <PerfilSolicitante tercer_bullet={"Empresas Proveedoras de bienes y/o servicios a Grandes Empresas."}/>;
       default:
         console.error("No hay solucion definida", data);
+    }
+  }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
     }
   }
 
@@ -98,7 +122,13 @@ class ProyectosInversion extends Component {
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="¡Solícitalo ahora!" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
@@ -107,7 +137,8 @@ class ProyectosInversion extends Component {
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} />
+        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} />
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -121,8 +152,8 @@ const SolucionesCreditoSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/personas4.png").default,
-      copy: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+      image: require("../../Assets/mano_proyectos_inversion.png").default,
+      copy2: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
     },
 
     items: [
@@ -154,33 +185,33 @@ const SolucionesCreditoSections = [
      
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función de las órdenes de compra estimados, sujeto a capacidad de pago.",
+        copy: "En función de las necesidades del proyecto.",
         image: require("../../Assets/hand_coins.svg").default,
         
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Gracia de capital de acuerdo a proyecto. Cobro de capital de acuerdo a la capacidad de flujo del proyecto, e interés mensuales. Balloon paymet.",
+        copy: "Permite estructuración a medida del proyecto.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: " ",
-        copy: "Empresas Proveedoras de bienes y/o servicios a Grandes Empresas.",
+        title: "SUJETOS DE CRÉDITO",
+        copy: "Vehículos de propósito específico, personas morales.",
         image: require("../../Assets/two_servers_and_coin.svg").default,
       },
       {
         title: "TASA",
-        copy: "Variable.",
+        copy: "Variable, permite escalonamiento por etapas.",
         image: require("../../Assets/money_plant.svg").default,
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura y/o anualidad. Por estructuración.",
+        copy: "Por apertura y/o estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Hasta 10 años.",
+        copy: "Hasta 10 años o plazos menores con posibilidades de refinanciamiento.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

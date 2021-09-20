@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Container from "./Container";
 
-import Perfil_solicitante from "../Assets/Perfil_solicitante.png";
-import perfil_solicitante_only from "../Assets/perfil_solicitante_only.png";
+import Perfil_solicitante from "../Assets/perfil-lineas.png";
+import perfil_solicitante_only from "../Assets/perfil.png";
 
 const TextoBullets = styled.div`
 
@@ -12,7 +12,7 @@ const TextoBullets = styled.div`
     justify-content:space-between;
 
     height: 147px;
-    margin-bottom:60px;
+    margin-top: 30px;
     margin-left:15px;
     width:204px;
     font-family: lato_bold;
@@ -92,18 +92,18 @@ class PerfilSolicitante extends Component {
             <ImagenPerfil>
                 <img src={Perfil_solicitante} alt="" style={{height:'298px'}}/>
                 <TextoBullets>
-                {this.props.primer_bullet? <label style={{marginBottom:'37px'}}>{this.props.primer_bullet}</label> : <label style={{marginBottom:'37px'}}>Personas Morales con Actividad Empresarial.</label>}
+                {this.props.primer_bullet? <label style={{marginBottom:'37px'}}>{this.props.primer_bullet}</label> : <label style={{marginTop:'12px'}}>Personas Morales.</label>}
                 {this.props.segundo_bullet? <label style={{marginBottom:'37px'}}>{this.props.segundo_bullet}</label> : <label style={{marginBottom:'37px'}}>Personas Físicas con Actividad Empresarial.</label>}
-                {this.props.tercer_bullet?<label>{this.props.tercer_bullet}</label> : <label>Propietarios de un inmueble que arrienden a Grupo Coppel.</label>}
+                {/* {this.props.tercer_bullet?<label>{this.props.tercer_bullet}</label> : <label>Propietarios de un inmueble que arrienden a Grupo Coppel.</label>} */}
                 </TextoBullets>
             </ImagenPerfil>
 
             <PerfilSolicitanteResponsive>
                 <img src={perfil_solicitante_only} alt="" style={{minWidth:'183.72px', maxWidth:'250.72px'}}/>
                 <ul>
-                    {this.props.primer_bullet? <li>{this.props.primer_bullet}</li> : <li>Personas Morales con Actividad Empresarial.</li>}
+                    {this.props.primer_bullet? <li>{this.props.primer_bullet}</li> : <li style={{marginTop:'-55px'}}>Personas Morales.</li>}
                     {this.props.segundo_bullet? <li>{this.props.segundo_bullet}</li> : <li>Personas Físicas con Actividad Empresarial.</li>}
-                    {this.props.tercer_bullet? <li>{this.props.tercer_bullet}</li> : <li>Propietarios de un inmueble que arrienden a Grupo Coppel.</li>}
+                    {/* {this.props.tercer_bullet? <li>{this.props.tercer_bullet}</li> : <li>Propietarios de un inmueble que arrienden a Grupo Coppel.</li>} */}
                 </ul>          
             </PerfilSolicitanteResponsive>
         </Container>

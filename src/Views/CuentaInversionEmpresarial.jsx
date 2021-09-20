@@ -11,8 +11,12 @@ import {
   Requisitos,
   SecondaryCardBlue,
   SwitcherBullets,
+  TeInteresa,
+  Consulta
 } from "../Components";
-import HeroHome from "../Assets/Hero_CuentaInversionEmpresarial.svg";
+import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.png";
+import HeroHome from "../Assets/Heros/banner_cuenta_empresarial.svg";
 import styled from "styled-components";
 
 const RowCards = styled.div`
@@ -25,12 +29,22 @@ const RowCards = styled.div`
 `;
 
 class EmpresaNet extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
-        return <CardBullets data={data} />;
+        return  <CardBullets data={data} />;
       case "Requisitos":
-        return <Requisitos />;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       case "Caracteristicas":
         return (
           <RowCards>
@@ -45,8 +59,31 @@ class EmpresaNet extends Component {
         <CardBullets data={data} />;
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+  // isBeneficios(e) {
+  //   if (e.section === "Beneficios") {
+  //     this.setState({
+  //       Beneficios: true,
+  //     });
+  //   } else {
+  //     this.setState({
+  //       Beneficios: false,
+  //     });
+  //   }
+  // }
 
   render() {
+    console.log(this.state.Requisitos)
     return (
       <>
         <ResponsiveHeader>
@@ -63,19 +100,30 @@ class EmpresaNet extends Component {
           </div>
           <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
         </ResponsiveHeader>
-        <Hero btnCoppy="Contáctanos" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <h1>
             Cuenta <span>Inversión Empresarial</span>
           </h1>
         </ProductHeader>
         <Accordion items={InversionEmpresarialSections} body={this.body} />
-        <Switcher items={InversionEmpresarialSections} body={this.body} />
+        <Switcher items={InversionEmpresarialSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)} /> 
+        {/* isBeneficios={this.isBeneficios.bind(this)} */}
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
+        {/* {this.state.Beneficios ? <Consulta/> : null} */}
+        <Consulta/>
       </>
     );
   }
 }
+
 
 export default EmpresaNet;
 
@@ -84,29 +132,22 @@ const InversionEmpresarialSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../Assets/Persons2.png").default,
-      copy: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
+      image: require("../Assets/mano_cuenta_empresarial.png").default,
+      copy2: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
     },
 
     items: [
       {
-        icon: require("../Assets/money_plant_blue.svg").default,
-        copy: "Le genera una tasa de rendimiento mensual.",
+        icon: require("../Assets/flecha_arriba.svg").default,
+        copy: "Obtén excelentes rendimientos sobre tu saldo a la vista.",
       },
       {
-        icon: require("../Assets/Sheets_blue.svg").default,
-        copy: " Obtén reportes de tus operaciones.",
-        bullet: "Eficiencia:",
+        icon: require("../Assets/clock.svg").default,
+        copy: "Sin horarios o plazos forzosos.",
       },
       {
-        icon: require("../Assets/calendar_blue.svg").default,
-        copy: " Servicio 365 días de año. Facilita la administración de los recursos al realizar las operaciones por internet.",
-        bullet: "Disponibilidad:",
-      },
-
-      {
-        icon: require("../Assets/blue_monitor.svg").default,
-        copy: "Carga masiva de dispersión para pagar a los trabajadores en línea o programadas.",
+        icon: require("../Assets/bill.svg").default,
+        copy: "Sin costo de contratación.",
       },
     ],
   },
@@ -115,61 +156,53 @@ const InversionEmpresarialSections = [
     section: "Caracteristicas",
     cards: [
       {
-        copy: "Cuenta eje empresarial (1200) se parametriza en tasa y monto.",
-        image: require("../Assets/hand_money.svg").default,
+        copy: "Disponilidad de tu saldo las 24 horas del día.",
+        image: require("../Assets/white_watch.svg").default,
       },
       {
-        copy: "Pagará rendimientos mensuales con base en el Saldo Promedio Mensual de la cuenta.",
-        image: require("../Assets/hand_coins.svg").default,
-      },
-      {
-        copy: "Los rendimientos serán abonados en la misma cuenta.",
-        image: require("../Assets/gear_coin.svg").default,
-      },
-      {
-        copy: "El cambio de tasa se realizará automáticamente.",
-        image: require("../Assets/money_plant.svg").default,
+        copy: "Obtén hasta el 100% de CETES.",
+        image: require("../Assets/white_plant.svg").default,
       },
     ],
   },
   {
     section: "Requisitos",
   },
-  {
-    section: "Tips de seguridad",
-    items: [
-      {
-        title: "Cuenta Inversión Empresarial",
-        bullets: [
-          "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
-          "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
-          "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
-          "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
-        ],
-      },
+  // {
+  //   section: "Tips de seguridad",
+  //   items: [
+  //     {
+  //       title: "Cuenta Inversión Empresarial",
+  //       bullets: [
+  //         "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
+  //         "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
+  //         "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
+  //         "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
+  //       ],
+  //     },
 
-      {
-        title: "Cuenta Eje Empresarial Cheques",
-        bullets: [
-          "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
+  //     {
+  //       title: "Cuenta Eje Empresarial Cheques",
+  //       bullets: [
+  //         "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
 
-          "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
+  //         "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
 
-          "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
+  //         "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com; no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
 
-          "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
+  //         "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial <a href=tel:+(667)758-9978><span>(667)758-9978</span></a> en Culiacán o al <a href=tel:+8008496187>800 849-6187</a>  para otras ciudades.",
 
-          "Revise que el talonario y los cheques no estén dañados y verifique que la numeración de los folios sea consecutiva.",
+  //         "Revise que el talonario y los cheques no estén dañados y verifique que la numeración de los folios sea consecutiva.",
 
-          "Verifique que el número de cheques coincida con la cantidad que acepto recibir al momento de tramitar su chequera.",
+  //         "Verifique que el número de cheques coincida con la cantidad que acepto recibir al momento de tramitar su chequera.",
 
-          "Guarde su chequera en un lugar seguro, no se deje al alcance de terceros y en caso de robo o extravío realice la cancelación en el portal.",
+  //         "Guarde su chequera en un lugar seguro, no se deje al alcance de terceros y en caso de robo o extravío realice la cancelación en el portal.",
 
-          "En caso de robo o extravió puede cancelar sus cheques o chequeras desde EmpresaNet o comuníquese a Contacto Empresarial   en Culiacán o al <a href=tel:+(667)758-9978 >(667)758-9978 </a>para otras ciudades.",
+  //         "En caso de robo o extravió puede cancelar sus cheques o chequeras desde EmpresaNet o comuníquese a Contacto Empresarial   en Culiacán o al <a href=tel:+(667)758-9978 >(667)758-9978 </a>para otras ciudades.",
 
-          "Expide tus cheques a nombre del beneficiario y preferentemente con la leyenda “Para abono a cuenta”.",
-        ],
-      },
-    ],
-  },
+  //         "Expide tus cheques a nombre del beneficiario y preferentemente con la leyenda “Para abono a cuenta”.",
+  //       ],
+  //     },
+  //   ],
+  // },
 ];

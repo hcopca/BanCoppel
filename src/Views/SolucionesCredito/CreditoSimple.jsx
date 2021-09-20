@@ -13,7 +13,7 @@ import {
   TeInteresa, 
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
-import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.png";
+import Hero_responsive from "../../Assets/Heros/Hero_Credito_Simple_Responsive.png";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 
 

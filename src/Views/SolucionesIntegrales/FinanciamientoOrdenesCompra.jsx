@@ -10,10 +10,13 @@ import {
   CardBullets,
   ListCardsSecondary,
   Requisitos,
-  PerfilSolicitante
+  PerfilSolicitante, 
+  TeInteresa,
   // ListBullets,
 } from "../../Components";
-import HeroHome from "../../Assets/FinanciamientoOrdenesCompra.svg";
+import Hero_ from "../../Assets/Heros/hero_financiamiento.png";
+import Hero_responsive from "../../Assets/Heros/hero_responsive_financiamiento.png";
+import HeroHome from "../../Assets/Heros/banner_financiamiento.svg";
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -61,20 +64,41 @@ const StyledPruductHeader = styled.div`
 `;
 
 class FinanciamientoOrdenesCompra extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos/>;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       case "Perfil del solicitante":
         return <PerfilSolicitante tercer_bullet={"Empresas Proveedoras de bienes y/o servicios a Grandes Empresas."}/>;
       default:
         console.error("No hay solucion definida", data);
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+
 
   render() {
     return (
@@ -99,7 +123,13 @@ class FinanciamientoOrdenesCompra extends Component {
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="¡Pídelo ya!" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
@@ -108,7 +138,8 @@ class FinanciamientoOrdenesCompra extends Component {
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} />
+        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -122,8 +153,8 @@ const SolucionesCreditoSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons3.png").default,
-      copy: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+      image: require("../../Assets/mano_financiamiento.png").default,
+      copy2: "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
     },
 
     items: [
@@ -154,23 +185,23 @@ const SolucionesCreditoSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Financiamiento de cuentas por cobrar con Grandes Compradores.",
+        copy: "Capital de trabajo.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función de las órdenes de compra estimados, sujeto a capacidad de pago.",
+        copy: "En función de históricos de ventas y pedidos confirmados.",
         image: require("../../Assets/hand_coins.svg").default,
         
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Pago mensual de capital e intereses.",
+        copy: " Intereses mensuales y pago de capital al vencimiento.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
         title: "MONTO A DISPONER",
-        copy: "Hasta 60% del monto de cada pedido confirmado. Hasta 85% de la factura.",
+        copy: "Hasta el 60% del monto del pedido confirmado. Hasta el 85% de la factura.",
         image: require("../../Assets/hands_circle_money.svg").default,
       },
       {
@@ -185,7 +216,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "PLAZO",
-        copy: "Hasta 12 meses por cada disposición, con base en la fecha de cobro de cada pedido.",
+        copy: "Hasta 360 días por cada disposición en función a la fecha de cobro del pedido.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

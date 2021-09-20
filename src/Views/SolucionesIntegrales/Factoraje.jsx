@@ -10,10 +10,14 @@ import {
   CardBullets,
   ListCardsSecondary,
   Requisitos,
-  PerfilSolicitante
+  PerfilSolicitante,
+  TeInteresa,
   // ListBullets,
 } from "../../Components";
-import HeroHome from "../../Assets/factoreje_home.svg.svg";
+import Hero_ from "../../Assets/Heros/hero_factoraje.png";
+import Hero_responsive from "../../Assets/Heros/hero_responsive_factoraje.png";
+import HeroHome from "../../Assets/Heros/banner_factoraje.svg";
+
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
@@ -61,20 +65,41 @@ const StyledPruductHeader = styled.div`
 `;
 
 class SolucionesCredito extends Component {
-  body(data) {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
         return <CardBullets data={data} />;
       case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Requisitos":
-        return <Requisitos/>;
+        return (
+          <>
+            <Requisitos />
+            {mobile ? <TeInteresa /> : null}
+          </>
+        );
       case "Perfil del solicitante":
         return <PerfilSolicitante/>;
       default:
         console.error("No hay solucion definida", data);
     }
   }
+  isRequisitos(elem) {
+    if (elem.section === "Requisitos") {
+      this.setState({
+        Requisitos: true,
+      });
+    } else {
+      this.setState({
+        Requisitos: false,
+      });
+    }
+  }
+
 
   render() {
     return (
@@ -100,14 +125,21 @@ class SolucionesCredito extends Component {
             <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
-        <Hero btnCoppy="Regístrate" banner={HeroHome} />
+        <Hero
+          btnCoppy="Me interesa"
+          imagen={Hero_}
+          responsiveImg={Hero_responsive}
+          banner={HeroHome}
+          path="/"
+        />
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">FACTORAJE</h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher items={SolucionesCreditoSections} body={this.body} />
+        <Switcher items={SolucionesCreditoSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
+        {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </>
     );
@@ -121,8 +153,9 @@ const SolucionesCreditoSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons2.png").default,
-      copy: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+      image: require("../../Assets/mano_factoraje.png").default,
+      //Revisar el tamaño de card
+      copy2: "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
     },
 
     items: [
@@ -152,21 +185,21 @@ const SolucionesCreditoSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo de corto plazo y/o para cubrir eventualidades de tesorería.",
+        copy: "Capital de trabajo.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función de su facturación y su capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Al vencimiento de la factura.",
+        copy: "Al vencimiento del documento cedido.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
-        title: "TAZA",
+        title: "TASA",
         copy: "Descuento.",
         image: require("../../Assets/money_plant.svg").default,
       },
@@ -177,7 +210,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "PLAZO",
-        copy: "Hasta 180 días.",
+        copy: "Plazo de disposición máxima a 180 días, plazo de la línea a 12 meses.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],
