@@ -9,10 +9,6 @@ import {
   ProductHeader,
   ResponsiveHeader,
   Requisitos,
-<<<<<<< HEAD
-  ListBullets,
-=======
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
   TeInteresa,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_empresanet.png";
@@ -31,10 +27,6 @@ class EmpresaNet extends Component {
     super(props);
     this.state = {};
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
   body(data, mobile) {
     switch (data.section) {
       case "Beneficios":
@@ -42,20 +34,11 @@ class EmpresaNet extends Component {
       case "Requisitos":
         return (
           <>
-<<<<<<< HEAD
-            <Requisitos />
-            {mobile ? <TeInteresa /> : null}
-          </>
-        );
-      case "Tips de seguridad":
-        return <ListBullets bullets={data.bullets} showdots />;
-=======
             <Requisitos type="secondaryBulls" />
             {mobile ? <TeInteresa /> : null}
           </>
         );
 
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
       default:
         <CardBullets data={data} />;
     }
@@ -114,10 +97,6 @@ class EmpresaNet extends Component {
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
-<<<<<<< HEAD
-        <Switcher items={CravSections} body={this.body} isRequisitos={this.isRequisitos.bind(this)}/>
-        {this.state.Requisitos ? <TeInteresa /> : null}
-=======
         <Switcher
           items={CravSections}
           body={this.body}
@@ -125,7 +104,6 @@ class EmpresaNet extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
 
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
         <ListaProductos />
       </StyledEmpresaNet>
     );
@@ -165,16 +143,4 @@ const CravSections = [
   {
     section: "Requisitos",
   },
-<<<<<<< HEAD
-  // {
-  //   section: "Tips de seguridad",
-  //   bullets: [
-  //     "No anote sus claves, intente memorizarlas para que no estén a la vista de alguien más y cámbielas por lo menos cada tres meses.",
-  //     "No proporcione información confidencial por ningún medio, BanCoppel no solicita información personal o financiera por teléfono o por correo electrónico.",
-  //     "Ingrese a EmpresaNet a través de su navegador, tecleando la dirección www.bancoppel.com no lo haga a través de direcciones adjuntas (hipervínculos en correos electrónicos).",
-  //     "El Token es el nivel más alto de seguridad en EmpresaNet, con este se autorizan las transacciones, por lo que es de uso personal y es responsabilidad de los usuarios asignados por la empresa (Administradores y Operadores), si ya es cliente en caso de robo o extravio comuníquese a Contacto Empresarial (667)758-9978 en Culiacán o al 800 849-6187 para otras ciudades.",
-  //   ],
-  // },
-=======
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
 ];
