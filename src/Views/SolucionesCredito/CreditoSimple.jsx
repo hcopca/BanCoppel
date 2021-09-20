@@ -16,16 +16,11 @@ import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
 import Hero_responsive from "../../Assets/Heros/Hero_Credito_Simple_Responsive.png";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 import styled from "styled-components";
-
-<<<<<<< HEAD
 const StyledCreditoSimple = styled.div`
 .btn{
   width: 197px;
 }
 `;
-
-=======
->>>>>>> cefda39dcc4f5b43284aad2aba219599755f9375
 class CreditoSimple extends Component {
   constructor(props) {
     super(props);
