@@ -57,18 +57,6 @@ class NominasBanCoppel extends Component {
     }
   }
 
-  isRequisitos(elem) {
-    if (elem.section === "Requisitos") {
-      this.setState({
-        Requisitos: true,
-      });
-    } else {
-      this.setState({
-        Requisitos: false,
-      });
-    }
-  }
-
   render() {
     return (
       <StyledNominasBanCoppel>
