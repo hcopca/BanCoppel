@@ -117,6 +117,7 @@ class Home extends Component {
           </StyledCardsSlider>
         );
       }
+
       if (Arrays) {
         return <Slider items={Arrays} body={renderCards} />;
       }

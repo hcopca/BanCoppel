@@ -151,7 +151,7 @@ const Card = styled.div`
 class CardBlue extends Component {
   render() {
     const { card, ...rest } = this.props;
-    console.log(card);
+
     return (
       <Card className="CardBlue" {...rest}>
         {card.image ? <img src={card.image} alt="img" /> : null}

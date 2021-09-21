@@ -80,23 +80,22 @@ class Slider extends Component {
     };
   }
 
-  changeSlide(idx) {
-    this.setState({
-      currentSlide: idx,
-    });
+  componentDidUpdate() {
+    if (this.props.items.length === 1 && this.state.currentSlide !== 0) {
+      this.setState({
+        currentSlide: 0,
+      });
+    }
   }
 
   updateCurrentSlide = (idx) => {
-    const { currentSlide } = this.state;
-
-    if (currentSlide !== idx) {
-      this.setState({
-        currentSlide: idx,
-      });
-    }
+    this.setState({
+      currentSlide: idx,
+    });
   };
 
   render() {
+    console.log(this.state);
     return (
       <StylesCarousel
         showHeader={this.state.mostrarEncabezado}
@@ -109,8 +108,8 @@ class Slider extends Component {
           className={`bancoppel_slider ${
             this.props.className ? this.props.className : ""
           }`}
+          onChange={(e) => this.updateCurrentSlide(e)}
           selectedItem={this.state.currentSlide}
-          onChange={this.updateCurrentSlide}
         >
           {this.props.items.map((item, idx) => {
             return (
