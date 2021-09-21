@@ -15,7 +15,7 @@ const StylesCarousel = styled.div`
   .bancoppel_slider {
     margin: auto;
     margin-top: 0;
-    max-width: 1130px;
+    max-width: 1230px;
     .slide {
       flex: 1;
 

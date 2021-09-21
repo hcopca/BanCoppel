@@ -208,6 +208,14 @@ const HomeSections = [
         image: require("../Assets/GirlHand.png").default,
         button: "Me interesa",
       },
+      {
+        titleWhite: "Crédito Cuenta",
+        titleBlue: "Corriente Amortizable",
+        copy: "Apoyamos las necesidades de tu capital de trabajo",
+        path: "/credito_puente",
+        image: require("../Assets/mano_cuenta_amortizable.png").default,
+        button: "Me interesa",
+      },
     ],
   },
   {
@@ -242,7 +250,7 @@ const HomeSections = [
         titleBlue: "de inversión",
         copy: "Financiamiento de activos fijos pensados para tu empresa.",
         path: "/proyectos_inversion",
-        image: require("../Assets/GirlHand.png").default,
+        image: require("../Assets/IpadHands.png").default,
         button: "Me interesa",
       },
     ],

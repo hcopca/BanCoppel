@@ -13,6 +13,7 @@ const Styledperfil = styled.div`
     img {
       position: relative;
       z-index: 10;
+      max-width: 100%;
     }
 
     .bullets {

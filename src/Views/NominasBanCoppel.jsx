@@ -17,9 +17,9 @@ import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.png";
 import HeroHome from "../Assets/Heros/banner_nomina.svg";
 import styled from "styled-components";
 const StyledNominasBanCoppel = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
 
 class NominasBanCoppel extends Component {
@@ -82,7 +82,9 @@ class NominasBanCoppel extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4><span>Transfiere tus fondos</span> cuando quieras</h4>
+            <h4>
+              <span>Transfiere tus fondos</span> cuando quieras
+            </h4>
           </div>
           <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
         </ResponsiveHeader>
@@ -121,7 +123,8 @@ const CravSections = [
 
     card: {
       image: require("../Assets/mano_nomina.png").default,
-      copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
+      copy2:
+        "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
 
     items: [
