@@ -17,6 +17,8 @@ const StyledPructs = styled.div`
     background: var(--white) !important;
   }
   .container {
+    width: 100%;
+    max-width: 1000px !important;
     .rec {
       text-align: center;
       color: var(--storm-blue);

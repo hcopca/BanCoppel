@@ -48,8 +48,8 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
   }
-  .btn{
-  width: 197px;
+  .btn {
+    width: 197px;
   }
 
   @media (min-width: 768px) {
