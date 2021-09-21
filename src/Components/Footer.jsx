@@ -250,9 +250,9 @@ export default class Footer extends Component {
                       <Link href="#">EU. y Canadá: 866 2543790</Link>
                       <br />
                       <div style={{ display: "flex", flexDirection: "row" }}>
-                        <ImgRedesSociales src={Youtube}></ImgRedesSociales>
-                        <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
-                        <ImgRedesSociales src={Facebook}></ImgRedesSociales>
+                      <Link href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank"><ImgRedesSociales src={Youtube}></ImgRedesSociales></Link>
+                        <Link href="#" target="_blank"><ImgRedesSociales src={Linkdln}></ImgRedesSociales></Link>
+                        <Link href="https://www.facebook.com/BanCoppel/" target="_blank"><ImgRedesSociales src={Facebook}></ImgRedesSociales></Link>
                       </div>
                     </AccordionItemPanel>
                   </AccordionItem>
@@ -297,9 +297,9 @@ export default class Footer extends Component {
                 <Link href="tel:+80012267735">Lada sin costo: 800 1 2267735</Link>
                 <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  <ImgRedesSociales src={Facebook}></ImgRedesSociales>
-                  <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
-                  <ImgRedesSociales src={Youtube}></ImgRedesSociales>
+                <Link href="https://www.facebook.com/BanCoppel/" target="_blank"><ImgRedesSociales src={Facebook}></ImgRedesSociales></Link>
+                <Link href="#" target="_blank"><ImgRedesSociales src={Linkdln}></ImgRedesSociales></Link>
+                <Link href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank"><ImgRedesSociales src={Youtube}></ImgRedesSociales></Link>
                  
                   
                 </div>
@@ -308,20 +308,20 @@ export default class Footer extends Component {
                 <Title>Descarga</Title>
 
                 <SimpleColumn>
-                <Link href="#" target="_blank"> <img src={Play_store} alt="" style={{width:'129.21px'}}></img></Link>
+                <Link href="https://play.google.com/store/apps/details?id=mx.com.miapp" target="_blank"> <img src={Play_store} alt="" style={{width:'129.21px'}}></img></Link>
 
-                <Link href="#" target="_blank">  <img src={App_store} alt="" style={{width:'129.21px'}}></img></Link>
+                <Link href="https://apps.apple.com/mx/app/bancoppel-express/id1293933664" target="_blank">  <img src={App_store} alt="" style={{width:'129.21px'}}></img></Link>
                 </SimpleColumn>
               </Column>
             </Row>
             <HrFooter color="#36679A" size="5px" />
             <RowLogotipos>
-              <img src={IPAB} alt="Fondo_mujer" />
-              <img src={El_punto_es_mejorar} alt="Fondo_mujer" />
-              <img src={Afore} alt="Fondo_mujer" />
-              <img src={Fintech_Mexico} alt="Fondo_mujer" />
-              <img src={Buro} alt="Fondo_mujer" />
-              <img src={sello_confianza} alt="Fondo_mujer" />
+            <Link href="https://www.gob.mx/ipab" target="_blank"><img src={IPAB} alt="Fondo_mujer" /></Link>
+            <Link href="https://www.coppel.com/" target="_blank"><img src={El_punto_es_mejorar} alt="Fondo_mujer" /></Link>
+            <Link href="https://www.aforecoppel.com/#/" target="_blank"><img src={Afore} alt="Fondo_mujer" /></Link>
+            <Link href="https://www.fintechmexico.org/" target="_blank"><img src={Fintech_Mexico} alt="Fondo_mujer" /></Link>
+            <Link href="https://www.bancoppel.com/modal_bcopp/buro.html" target="_blank"><img src={Buro} alt="Fondo_mujer" /></Link>
+            <Link href="https://sellosdeconfianza.org.mx/" target="_blank"><img src={sello_confianza} alt="Fondo_mujer" /></Link>
             </RowLogotipos>
             <RowNormal>
               <CopyRight>
