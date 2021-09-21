@@ -124,7 +124,7 @@ class CardBullets extends Component {
     return (
       <StyledBigCard>
         <div className="card">
-          <CardBlue card={this.props.data.card} />
+          <CardBlue card={this.props.data.card} secondary />
         </div>
         <div
           className={`bullets ${this.ClassNameByArrLen(this.props.data.items)}`}

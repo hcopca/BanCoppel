@@ -16,11 +16,10 @@ import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.png";
 import HeroHome from "../Assets/Heros/banner_empresanet.svg";
 import styled from "styled-components";
 const StyledEmpresaNet = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
-
 
 class EmpresaNet extends Component {
   constructor(props) {
@@ -55,18 +54,6 @@ class EmpresaNet extends Component {
     }
   }
 
-  isRequisitos(elem) {
-    if (elem.section === "Requisitos") {
-      this.setState({
-        Requisitos: true,
-      });
-    } else {
-      this.setState({
-        Requisitos: false,
-      });
-    }
-  }
-
   render() {
     return (
       <StyledEmpresaNet>
@@ -80,7 +67,10 @@ class EmpresaNet extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span></h4>
+            <h4>
+              Maneja <span>tus cuentas</span> desde la comodidad de{" "}
+              <span>tu hogar</span>
+            </h4>
           </div>
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
@@ -118,7 +108,8 @@ const CravSections = [
 
     card: {
       image: require("../Assets/mano_empresanet.png").default,
-      copy2: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
+      copy2:
+        "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     },
 
     items: [

@@ -119,51 +119,21 @@ export default ListaProductos;
 
 const Productos = [
   {
-    section: "Cuenta Eje",
-    cards: [
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
-        image: require("../Assets/Persons2.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente Amortizable",
-        copy: "El respaldo que le hacía falta a tu negocio.",
-        path: "/",
-        image: require("../Assets/Persons1.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de Activos fijos pensados para tu empresa.",
-        path: "/",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
-      },
-    ],
-  },
-  {
-    section: "Prueba",
     cards: [
       {
         titleWhite: "Crédito Cuenta",
         titleBlue: "Corriente CRAV",
         copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/",
-        image: require("../Assets/Persons2.png").default,
+        path: "/crav",
+        image: require("../Assets/mano_corriente_crav.png").default,
         button: "Ver más",
       },
       {
         titleWhite: "Crédito Cuenta",
         titleBlue: "Corriente Amortizable",
         copy: "El respaldo que le hacía falta a tu negocio.",
-        path: "/",
-        image: require("../Assets/Persons1.png").default,
+        path: "/credito_amortizable",
+        image: require("../Assets/mano_cuenta_amortizable.png").default,
         button: "Ver más",
       },
       {
