@@ -118,7 +118,7 @@ const CravSections = [
 
     card: {
       image: require("../Assets/mano_empresanet.png").default,
-      copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
+      copy2: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     },
 
     items: [

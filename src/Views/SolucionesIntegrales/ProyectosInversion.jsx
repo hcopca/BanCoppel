@@ -46,6 +46,9 @@ const StyledHeader = styled.div`
       font-family: futura_normal;
       font-weight: 500;
     }
+    span {
+      font-family: futura_bold;
+    }
   }
   .btn {
     width: 197px;
@@ -127,7 +130,7 @@ class ProyectosInversion extends Component {
             </div>
             <div className="copy">
               <h4>
-                El Financiamiento que necesitas <br /> para darle vida a tus
+                <span>El Financiamiento</span> que necesitas <br /> para darle vida a tus
                 proyectos
               </h4>
             </div>
