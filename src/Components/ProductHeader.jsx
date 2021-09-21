@@ -13,15 +13,15 @@ const StyledHead = styled.div`
 
     h1 {
       font-size: 24px;
-      line-height: 24px;
       text-transform: uppercase;
+      font-family: futura;
       span {
         color: var(--sky-blue);
       }
     }
   }
   .item {
-    flex: 3;
+    flex: 2;
     display: none;
     align-items: center;
 
