@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CardBlue from "./CardBlue";
 import Container from "./Container";
 import Slider from "./Slider";
+import Catalogo from "../Catalogo_Productos";
 
 const StyledPructs = styled.div`
   background: var(--white) !important;
@@ -61,14 +62,33 @@ const StyledCardsResponsive = styled.div`
 class ListaProductos extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      Productos: false,
+    };
+  }
+
+  async componentDidMount() {
+    var splitArray = function (arr, size) {
+      var arr2 = arr.slice(0),
+        arrays = [];
+
+      while (arr2.length > 0) {
+        arrays.push(arr2.splice(0, size));
+      }
+
+      return arrays;
+    };
+
+    this.setState({
+      Productos: await splitArray(Catalogo, 3),
+    });
   }
 
   body(data) {
     return (
       <StyledCards>
-        {data.cards ? (
-          data.cards.map((card, idx) => {
+        {data ? (
+          data.map((card, idx) => {
             return <CardBlue card={card} key={idx} />;
           })
         ) : (
@@ -81,8 +101,8 @@ class ListaProductos extends Component {
   bodySlider(data) {
     return (
       <StyledCards>
-        {data.cards ? (
-          data.cards.map((card, idx) => {
+        {data ? (
+          data.map((card, idx) => {
             return <CardBlue card={card} key={idx} />;
           })
         ) : (
@@ -93,57 +113,26 @@ class ListaProductos extends Component {
   }
 
   render() {
-    return (
+    return this.state.Productos ? (
       <StyledPructs>
-        {/* {this.bodySlider(this.props.items)} */}
         <Container>
           <h1 className="rec">Recomendaciones</h1>
           <StyledCardsResponsive>
-            {Productos ? (
-              Productos.map((bloque, idx) => {
-                return bloque.cards.map((item, indx) => {
-                  return <CardBlue card={item} key={indx} />;
-                });
-              })
-            ) : (
-              <p>no hay "cards" para mostrar</p>
-            )}
+            {this.state.Productos.map((bloque, idx) => {
+              return bloque.map((item, indx) => {
+                return <CardBlue card={item} key={indx} />;
+              });
+            })}
           </StyledCardsResponsive>
         </Container>
-        <Slider items={Productos} body={this.bodySlider} showHeader={false} />
+
+        <Slider
+          items={this.state.Productos}
+          body={this.bodySlider}
+          showHeader={false}
+        />
       </StyledPructs>
-    );
+    ) : null;
   }
 }
 export default ListaProductos;
-
-const Productos = [
-  {
-    cards: [
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/crav",
-        image: require("../Assets/mano_corriente_crav.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente Amortizable",
-        copy: "El respaldo que le hacía falta a tu negocio.",
-        path: "/credito_amortizable",
-        image: require("../Assets/mano_cuenta_amortizable.png").default,
-        button: "Ver más",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de Activos fijos pensados para tu empresa.",
-        path: "/",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Ver más",
-      },
-    ],
-  },
-];

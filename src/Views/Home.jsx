@@ -14,6 +14,7 @@ import styled from "styled-components";
 import Hero_ from "../Assets/Heros/hero_home.png";
 import Hero_responsive from "../Assets/Heros/hero_home_responsive.png";
 import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
+import Catalogo from "../Catalogo_Productos";
 
 const StyledCards = styled.div`
   padding: 10px 0;
@@ -56,6 +57,24 @@ const StyledCardsSlider = styled.div`
 `;
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  async componentDidMount() {
+    var sections = await [
+      ...new Set(Catalogo.map((producto) => producto.family)),
+    ].map((item) => ({
+      section: item,
+      cards: Catalogo.filter((producto) => producto.family === item),
+    }));
+
+    this.setState({
+      HomeSections: sections,
+    });
+  }
+
   body(data) {
     return (
       <StyledCards>
@@ -105,7 +124,7 @@ class Home extends Component {
   }
 
   render() {
-    return (
+    return this.state.HomeSections ? (
       <>
         <ResponsiveHeader>
           <div className="title">
@@ -134,138 +153,16 @@ class Home extends Component {
           banner={HeroHome}
           path="/contacto"
         />
-        <Accordion items={HomeSections} body={this.body} />
-        <Switcher items={HomeSections} body={this.bodySlider} noContainer />
+        <Accordion items={this.state.HomeSections} body={this.body} />
+        <Switcher
+          items={this.state.HomeSections}
+          body={this.bodySlider}
+          noContainer
+        />
         <ConoceCredito />
       </>
-    );
+    ) : null;
   }
 }
 
 export default Home;
-
-const HomeSections = [
-  {
-    section: "Cuenta Inversión",
-    cards: [
-      {
-        titleWhite: "Cuenta",
-        titleBlue: "Inversión Empresarial",
-
-        copy: "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
-        path: "/cuenta_inversion_empresarial",
-        image: require("../Assets/mano_cuenta_empresarial.png").default,
-        button: "Me interesa",
-      },
-    ],
-  },
-  {
-    section: "Nómina",
-    cards: [
-      {
-        titleWhite: "Nómina",
-        titleBlue: "Bancoppel",
-
-        copy: "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero...",
-        path: "/nomina_bancoppel",
-        image: require("../Assets/mano_nomina.png").default,
-        button: "Me interesa",
-      },
-    ],
-  },
-  {
-    section: "Soluciones de crédito",
-    cards: [
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Simple",
-        copy: "El capital para impulsar tu negocio.",
-        path: "/credito_simple",
-        image: require("../Assets/Persons2.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente CRAV",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/crav",
-        image: require("../Assets/Persons1.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Arrendamiento",
-        titleBlue: "Financiero",
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/arrendamiento_financiero",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Crédito",
-        titleBlue: "Puente",
-        copy: "Pensado para crear proyectos habitacionales.",
-        path: "/credito_puente",
-        image: require("../Assets/GirlHand.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Crédito Cuenta",
-        titleBlue: "Corriente Amortizable",
-        copy: "Apoyamos las necesidades de tu capital de trabajo",
-        path: "/credito_puente",
-        image: require("../Assets/mano_cuenta_amortizable.png").default,
-        button: "Me interesa",
-      },
-    ],
-  },
-  {
-    section: "Soluciones integrales",
-    cards: [
-      {
-        titleWhite: "Factoraje",
-        copy: "El capital para impulsar tu negocio.",
-        path: "/soluciones_integrales",
-        image: require("../Assets/Persons2.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Monetización",
-        titleBlue: "de Activos",
-        copy: "Un crédito diseñado de acuerdo a tus necesidades.",
-        path: "/monetizacion_activos",
-        image: require("../Assets/Persons1.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Financiamiento de",
-        titleBlue: "órdenes de compra",
-
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/financiamiento_ordenes_compra",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Me interesa",
-      },
-      {
-        titleWhite: "Proyectos",
-        titleBlue: "de inversión",
-        copy: "Financiamiento de activos fijos pensados para tu empresa.",
-        path: "/proyectos_inversion",
-        image: require("../Assets/IpadHands.png").default,
-        button: "Me interesa",
-      },
-    ],
-  },
-  {
-    section: "EmpresaNET",
-    cards: [
-      {
-        titleWhite: "Empresa",
-        titleBlue: "NET",
-        copy: "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
-        path: "/empresa_net",
-        image: require("../Assets/Persons2.png").default,
-        button: "Me interesa",
-      },
-    ],
-  },
-];

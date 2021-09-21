@@ -52,8 +52,8 @@ const Card = styled.div`
       padding: 0;
       button {
         border: 0;
-        width: 157px;
-        height: 50px;
+        width: 150px;
+        height: 45px;
         margin: 0;
       }
     }
@@ -67,8 +67,9 @@ const Card = styled.div`
     }
 
     .card_body {
-      padding: 15px;
+      padding: 20px;
       height: calc(100% - 306px);
+      align-items: flex-start;
 
       .copy {
         h1 {
@@ -135,7 +136,7 @@ const Card = styled.div`
 
     .copy {
       h1 {
-        font-size: ${({ row }) => (row ? "19px" : null)};
+        font-size: ${({ row }) => (row ? "21px" : null)};
         br {
           display: ${({ row }) => (row ? "none" : null)};
         }
@@ -150,6 +151,7 @@ const Card = styled.div`
 class CardBlue extends Component {
   render() {
     const { card, ...rest } = this.props;
+    console.log(card);
     return (
       <Card className="CardBlue" {...rest}>
         {card.image ? <img src={card.image} alt="img" /> : null}
@@ -160,13 +162,15 @@ class CardBlue extends Component {
               <span>{card.titleBlue} </span>
             </h1>
 
-            {card.copy ? <p>{card.copy}</p> : null}
+            {card.homeCopy ? <p>{card.homeCopy}</p> : null}
             {card.copy2 ? <h2>{card.copy2}</h2> : null}
           </div>
 
-          {card.button ? (
+          {card.path ? (
             <a href={card.path}>
-              <BancoppelBtn> {card.button}</BancoppelBtn>
+              <BancoppelBtn>
+                {rest.row ? "Me interesa" : "Ver más"}
+              </BancoppelBtn>
             </a>
           ) : null}
         </div>
