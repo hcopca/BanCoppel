@@ -12,13 +12,23 @@ import {
   Requisitos,
   PerfilSolicitante,
   TeInteresa,
-  // ListBullets,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_financiamiento.png";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_financiamiento.png";
 import HeroHome from "../../Assets/Heros/banner_financiamiento.svg";
 import styled from "styled-components";
-
+const StyledFinanciamiento = styled.div`
+@media (min-width: 992px) {
+  .item{
+  flex: 0.1;
+}
+}
+@media (min-width: 1200px) {
+  .item{
+  flex: 0.3;
+}
+}
+`;
 const StyledHeader = styled.div`
   padding: 20px 0;
   .container {
@@ -29,11 +39,16 @@ const StyledHeader = styled.div`
     text-align: center;
   }
   .title {
+    
     margin-bottom: 20px;
     h1 {
+      font-family: Futura;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
       text-transform: uppercase;
       color: var(--sky-blue);
-      line-height: 35px;
       &:first-child {
         color: var(--night-blue);
       }
@@ -52,6 +67,7 @@ const StyledHeader = styled.div`
   }
   @media (min-width: 768px) {
     display: none;
+    
   }
 `;
 
@@ -113,7 +129,7 @@ class FinanciamientoOrdenesCompra extends Component {
 
   render() {
     return (
-      <>
+      <StyledFinanciamiento>
         <StyledHeader>
           <Container>
             <div className="title">
@@ -151,7 +167,7 @@ class FinanciamientoOrdenesCompra extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
-      </>
+      </StyledFinanciamiento>
     );
   }
 }
