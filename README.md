@@ -1,12 +1,14 @@
-# Getting Started with Create React App
-
 # Bancoppel
 
-Este proyecto was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue desarrollado con el uso de [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 En el directorio del proyecto, se necesita ejecutar:
+
+```bash
+npm install`
+```
 
 ```bash
 npm start`
