@@ -66,7 +66,7 @@ class NominasBanCoppel extends Component {
             <h1>
               TRABAJADORES EN
               <br />
-              BUENAS NECESIDADES
+              BUENAS MANOS
             </h1>
           </div>
           <div className="copy">
@@ -121,20 +121,20 @@ const CravSections = [
         copy: "Ahorra tiempo al momento de realizar los pagos.",
       },
       {
-        icon: require("../Assets/blue_person.svg").default,
-        copy: "Apertura las cuentas de tus trabajadores de forma individual o masiva.",
-      },
-      {
-        icon: require("../Assets/celhand.svg").default,
-        copy: "Facilidad en el pago de las prestaciones laborales de tus trabajadores.",
-      },
-      {
         icon: require("../Assets/blue_laptop.svg").default,
         copy: "Realiza dispersiones en línea o mediante operaciones programadas.",
       },
       {
+        icon: require("../Assets/blue_person.svg").default,
+        copy: "Apertura las cuentas de tus trabajadores de forma individual o masiva.",
+      },
+      {
         icon: require("../Assets/blue_phone.svg").default,
         copy: "Reportes de todas las operaciones realizadas a tus trabajadores.",
+      },
+      {
+        icon: require("../Assets/facilidad_pago.svg").default,
+        copy: "Facilidad en el pago de las prestaciones laborales de tus trabajadores.",
       },
       {
         icon: require("../Assets/blue_monitor.svg").default,
