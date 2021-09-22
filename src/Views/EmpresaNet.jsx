@@ -118,12 +118,12 @@ const CravSections = [
         copy: "Administra tu cuenta de negocios.",
       },
       {
-        icon: require("../Assets/clock_empresanet.svg").default,
-        copy: "Programa tus operaciones o realízalas en línea.",
-      },
-      {
         icon: require("../Assets/pulgar_empresanet.svg").default,
         copy: "Operaciones rápidas y seguras.",
+      },
+      {
+        icon: require("../Assets/clock_empresanet.svg").default,
+        copy: "Programa tus operaciones o realízalas en línea.",
       },
       {
         icon: require("../Assets/ppl_empresanet.svg").default,

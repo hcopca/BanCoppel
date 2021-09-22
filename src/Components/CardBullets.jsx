@@ -21,11 +21,12 @@ const StyledBigCard = styled.div`
         margin-right: 20px;
       }
       p {
-        max-width: 70%;
+        max-width: 100%;
         text-align: left;
         font-size: 16px;
         font-family: futura_light;
-        line-height: 110%;
+        line-height: 18px;
+        display: flex;
 
         span {
           font-family: Futura;

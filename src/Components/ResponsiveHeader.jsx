@@ -18,10 +18,11 @@ const StyledHeader = styled.div`
       text-transform: uppercase;
       font-style: normal;
       font-weight: bold;
-      font-size: 32px;
-      line-height: 32px;
+      font-size: 30px;
+      line-height: 30px;
       color: var(--sky-blue);
       line-height: 35px;
+      font-family: Futura;
       &:first-child {
         color: var(--night-blue);
       }
