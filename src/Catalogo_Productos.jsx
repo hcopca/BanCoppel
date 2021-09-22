@@ -109,7 +109,7 @@ const productos = [
     title_custom: <>Factoraje</>,
     homeCopy: "Apoyamos las necesidades de tu capital de trabajo",
     cardcopy: "El respaldo que le hacía falta a tu negocio.",
-    path: "/soluciones_integrales",
+    path: "/factoraje",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
 

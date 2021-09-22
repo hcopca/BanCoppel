@@ -28,7 +28,7 @@ const StyledSelect = styled.div`
     display: flex;
     align-items: center;
     color: #aaaaaa;
-
+    z-index: 9;
     display: ${({ hasText }) => (hasText ? "none" : null)};
     pointer-events: none;
   }

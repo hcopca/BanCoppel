@@ -122,9 +122,7 @@ class Navbar extends Component {
             </div>
             <div className="navigation">
               <NavLink to="/" className="navigation-item">
-                <BancoppelBtn onClick={() => console.log("Hola")}>
-                  Personas
-                </BancoppelBtn>
+                <BancoppelBtn>Personas</BancoppelBtn>
               </NavLink>
               <NavLink to="/" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
@@ -146,9 +144,11 @@ class Navbar extends Component {
           </div>
         </StyledNavbar>
         <SecondaryNav />
-        {this.state.onOpen ? (
-          <SideDrawer setState={this.setState.bind(this)} />
-        ) : null}
+
+        <SideDrawer
+          setState={this.setState.bind(this)}
+          state={this.state.onOpen}
+        />
       </>
     );
   }

@@ -54,7 +54,7 @@ class App extends Component {
           <Route path="/cuenta_inversion_empresarial">
             <CuentaInversionEmpresarial />
           </Route>
-          <Route path="/soluciones_integrales">
+          <Route path="/factoraje">
             <SolucionesIntegrales />
           </Route>
           <Route path="/monetizacion_activos">
