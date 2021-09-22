@@ -157,11 +157,7 @@ class CardBlue extends Component {
         {card.image ? <img src={card.image} alt="img" /> : null}
         <div className="card_body">
           <div className="copy">
-            <h1>
-              {card.titleWhite} <br />
-              <span>{card.titleBlue} </span>
-            </h1>
-
+            <h1>{card.title_custom}</h1>
             {card.homeCopy ? <p>{card.homeCopy}</p> : null}
             {card.copy2 ? <h2>{card.copy2}</h2> : null}
           </div>

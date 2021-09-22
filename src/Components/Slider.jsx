@@ -95,7 +95,6 @@ class Slider extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <StylesCarousel
         showHeader={this.state.mostrarEncabezado}

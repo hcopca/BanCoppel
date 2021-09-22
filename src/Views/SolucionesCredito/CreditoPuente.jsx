@@ -18,9 +18,9 @@ import HeroHome from "../../Assets/Heros/banner_puente.svg";
 import styled from "styled-components";
 
 const StyledCreditoPuente = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
 
 class CreditoPuente extends Component {
@@ -72,7 +72,9 @@ class CreditoPuente extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4><span>Construimos</span> contigo.</h4>
+            <h4>
+              <span>Construimos</span> contigo.
+            </h4>
           </div>
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
@@ -157,6 +159,11 @@ const CreditoPuenteSections = [
         title: "COMISIONES",
         copy: "Por apertura. \n Por estructuración.",
         image: require("../../Assets/card_coins.svg").default,
+      },
+      {
+        title: "PLAZO",
+        copy: "Hasta cinco años.",
+        image: require("../../Assets/calendar_bill.svg").default,
       },
       {
         title: "PLAZO",

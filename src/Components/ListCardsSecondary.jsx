@@ -3,41 +3,54 @@ import styled from "styled-components";
 import Card from "./SecondaryCardBlue";
 
 const StyledSencdaryCards = styled.div`
-  height: 100%;
-
-  margin: auto;
-
-  .SecondaryCardBlue {
-    margin-bottom: 17px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  .item {
+    margin: 10px auto;
   }
 
-  @media (min-width: 768px) {
-    width: 492px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-
-    .SecondaryCardBlue {
-      margin-bottom: 0px;
+  @media (min-width: 576px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item {
+      max-width: 50%;
+      margin: 0;
+      padding: 10px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
     }
   }
 
   @media (min-width: 992px) {
-    width: 738px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    width: ${({ wid }) => wid}px;
+    max-width: 100%;
+    margin: auto;
+    .item {
+      max-width: ${({ len }) => 100 / len}%;
+      flex: 0;
+    }
   }
 `;
 
 export default function ListCardsSecondary(props) {
+  function getWidth(number) {
+    return Math.ceil(number / 2);
+  }
+  function getWidthCont(number) {
+    if (number >= 4) {
+      return getWidth(number) * 246;
+    }
+  }
+
   return (
-    <StyledSencdaryCards>
+    <StyledSencdaryCards
+      len={getWidth(props.cards.length)}
+      wid={getWidthCont(props.cards.length)}
+    >
       {props.cards.map((card, idx) => (
-        <Card key={idx} card={card} />
+        <div className="item" item={idx}>
+          <Card key={idx} card={card} />
+        </div>
       ))}
     </StyledSencdaryCards>
   );

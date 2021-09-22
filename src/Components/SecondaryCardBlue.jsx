@@ -7,7 +7,10 @@ const StyledSecondaryCard = styled.div`
   border-radius: 16px;
   display: flex;
   align-items: center;
-  height: 150px;
+
+  width: 100%;
+
+  height: 138px;
 
   .img {
     width: 40%;
@@ -41,11 +44,13 @@ const StyledSecondaryCard = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: column;
-    height: 246px;
-    width: 226px;
+
     align-items: center;
     justify-content: flex-start;
-    margin: auto;
+
+    width: 226px;
+    height: 246px;
+
     .img {
       width: 100%;
       margin: 5px 0;
