@@ -12,71 +12,17 @@ import {
   Requisitos,
   PerfilSolicitante,
   TeInteresa,
+  ResponsiveHeader,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_financiamiento.png";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_financiamiento.png";
 import HeroHome from "../../Assets/Heros/banner_financiamiento.svg";
 import styled from "styled-components";
-const StyledFinanciamiento = styled.div`
-@media (min-width: 992px) {
-  .item{
-  flex: 0.1;
-}
-}
-@media (min-width: 1200px) {
-  .item{
-  flex: 0.3;
-}
-}
-`;
-const StyledHeader = styled.div`
-  padding: 20px 0;
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .title {
-    
-    margin-bottom: 20px;
-    h1 {
-      font-family: Futura;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 30px;
-      line-height: 30px;
-      text-transform: uppercase;
-      color: var(--sky-blue);
-      &:first-child {
-        color: var(--night-blue);
-      }
-    }
-  }
-  .copy {
-    margin-bottom: 20px;
-    h4 {
-      color: var(--night-blue);
-      font-family: futura_normal;
-      font-weight: 500;
-    }
-  }
-  .btn{
-  width: 197px;
-  }
-  @media (min-width: 768px) {
-    display: none;
-    
-  }
-`;
 
-const StyledPruductHeader = styled.div`
-  .header_product {
-    text-align: center;
-    color: var(--night-blue);
-    span {
-      color: var(--sky-blue);
+const StyledFinanciamiento = styled.div`
+  @media (min-width: 992px) {
+    .header_body {
+      flex: 7;
     }
   }
 `;
@@ -130,21 +76,19 @@ class FinanciamientoOrdenesCompra extends Component {
   render() {
     return (
       <StyledFinanciamiento>
-        <StyledHeader>
-          <Container>
-            <div className="title">
-              <h1>Diseñado para</h1>
+        <ResponsiveHeader>
+          <div className="title">
+            <h1>Diseñado para</h1>
 
-              <h1>resolver tus imprevistos</h1>
-            </div>
-            <div className="copy">
-              <h4>
-                No te quedes sin lo <br /> indispensable para tu negocio
-              </h4>
-            </div>
-            <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
-          </Container>
-        </StyledHeader>
+            <h1>resolver tus imprevistos</h1>
+          </div>
+          <div className="copy">
+            <h4>
+              No te quedes sin lo <br /> indispensable para tu negocio
+            </h4>
+          </div>
+          <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
+        </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"
           imagen={Hero_}
@@ -153,11 +97,9 @@ class FinanciamientoOrdenesCompra extends Component {
           path="/"
         />
         <ProductHeader>
-          <StyledPruductHeader>
-            <h1 className="header_product">
-              Financiamiento de <span>Órdenes de compra</span>
-            </h1>
-          </StyledPruductHeader>
+          <h1 className="header_product">
+            Financiamiento de <span>Órdenes de compra</span>
+          </h1>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
         <Switcher
@@ -181,7 +123,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_financiamiento.png").default,
       copy2:
-        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a Grandes Empresas.",
+        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a grandes Empresas.",
     },
 
     items: [

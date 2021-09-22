@@ -17,6 +17,15 @@ import {
 import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.png";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.png";
 import HeroHome from "../Assets/Heros/banner_cuenta_empresarial.svg";
+import styled from "styled-components";
+
+const StyledInversionEmpresarial = styled.div`
+  @media (min-width: 992px) {
+    .header_body {
+      flex: 5;
+    }
+  }
+`;
 
 class EmpresaNet extends Component {
   constructor(props) {
@@ -63,7 +72,7 @@ class EmpresaNet extends Component {
 
   render() {
     return (
-      <>
+      <StyledInversionEmpresarial>
         <ResponsiveHeader>
           <div className="title">
             <h1>El dinero de tus</h1>
@@ -100,7 +109,7 @@ class EmpresaNet extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
         {this.state.view.section === "Beneficios" ? <Consulta /> : null}
-      </>
+      </StyledInversionEmpresarial>
     );
   }
 }

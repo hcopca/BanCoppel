@@ -32,7 +32,8 @@ const StyledSecondaryCard = styled.div`
     p {
       color: var(--white);
       text-align: left;
-      font-family: Futura;
+      font-family: futura_light;
+
       font-size: 12px;
       line-height: 115%;
       color: var(--light-blue);
@@ -62,6 +63,7 @@ const StyledSecondaryCard = styled.div`
     .body_secondary {
       width: 100%;
       margin-top: 10px;
+      margin-left: 0px;
       h2 {
         text-align: center;
       }

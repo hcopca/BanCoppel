@@ -14,7 +14,7 @@ const StyledSwitch = styled.div`
     margin-bottom: 50px;
     .section {
       padding-bottom: 20px;
-      flex: 0 1 20%;
+      flex: 0 0 23%;
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
       h3 {

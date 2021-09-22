@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const StyledAcceso = styled.div`
   position: absolute;
-  top: 115px;
+  top: 130px;
   border-radius: 24px;
   padding: 10px 15px;
   background: var(--white);

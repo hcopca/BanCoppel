@@ -7,6 +7,7 @@ const StyledHead = styled.div`
 
   display: flex;
   .header_body {
+    margin: auto;
     flex: 2;
     text-align: center;
     color: var(--night-blue);

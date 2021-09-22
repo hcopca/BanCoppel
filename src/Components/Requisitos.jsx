@@ -25,6 +25,7 @@ class Requisitos extends Component {
   }
 
   makingBullets(type) {
+    console.log(type);
     switch (type) {
       case "solucionesCredito":
         this.setState({
@@ -32,7 +33,7 @@ class Requisitos extends Component {
           bullets: [
             "Solicitud de crédito.",
             "Autorización para consultar historial crediticio.",
-            "Estados Financieros: Dictaminados, internos y proyectados.",
+            "Estados Financieros: dictaminados, internos y proyectados.",
             "Información legal del acreditado o del proyecto.",
             "Contacto con ejecutivo.",
             "Firma de solicitud y contrato",
@@ -69,7 +70,7 @@ class Requisitos extends Component {
           bullets: [
             "Solicitud de crédito.",
             "Autorización para consultar historial crediticio.",
-            "Estados Financieros: Dictaminados, internos y proyectados.",
+            "Estados Financieros: dictaminados, internos y proyectados.",
             "Información legal del acreditado o del proyecto.",
             "Contacto con ejecutivo.",
             "Firma de solicitud y contrato",

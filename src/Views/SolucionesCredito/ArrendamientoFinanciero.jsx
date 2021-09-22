@@ -17,9 +17,15 @@ import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.pn
 import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
 import styled from "styled-components";
 const StyledArrendamientoFinanciero = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
+
+  @media (min-width: 992px) {
+    .header_body {
+      flex: 3;
+    }
+  }
 `;
 
 class ArrendamientoFinanciero extends Component {
@@ -74,7 +80,9 @@ class ArrendamientoFinanciero extends Component {
             </h1>
           </div>
           <div className="copy">
-            <h4>Te damos las herrramientas para <span>crecer tu negocio.</span></h4>
+            <h4>
+              Te damos las herrramientas para <span>crecer tu negocio.</span>
+            </h4>
           </div>
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>

@@ -1,6 +1,6 @@
 const productos = [
   {
-    family: "Cuenta Inversión",
+    family: "Cuenta Inversión Empresarial",
     name: "Cuenta Inversión Empresarial",
     title_custom: (
       <>
@@ -18,8 +18,7 @@ const productos = [
     name: "Nómina Bancoppel",
     title_custom: (
       <>
-        Nómina
-        <br /> <span>Bancoppel</span>
+        Nómina <br /> <span>Bancoppel</span>
       </>
     ),
     homeCopy:
@@ -94,8 +93,7 @@ const productos = [
 
     title_custom: (
       <>
-        Crédito Cuenta
-        <br /> <span>Corriente</span>
+        Crédito Cuenta <span>Corriente Amortizable</span>
       </>
     ),
     homeCopy: "Apoyamos las necesidades de tu capital de trabajo",
@@ -118,8 +116,8 @@ const productos = [
     name: "Monetización de Activos",
     title_custom: (
       <>
-        Monetización
-        <br /> <span>de Activos</span>
+        Monetización <br />
+        <span>de Activos</span>
       </>
     ),
     homeCopy: "Un crédito diseñado de acuerdo a tus necesidades.",

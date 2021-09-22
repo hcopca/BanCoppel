@@ -10,7 +10,7 @@ const StyledBigCard = styled.div`
     .bullet {
       display: flex;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -66,11 +66,12 @@ const StyledBigCard = styled.div`
     .bullets {
       flex: 1.2;
       padding-left: 36px;
+
       .bullet {
         width: 60%;
         img {
-          width: 40px;
-          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
         }
       }
     }
@@ -98,7 +99,7 @@ const StyledBigCard = styled.div`
       .bullet {
         width: auto;
         flex: 1 0 45%;
-        margin-bottom: 28px;
+
         margin-right: 5px;
 
         &:last-child {

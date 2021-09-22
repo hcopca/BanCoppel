@@ -26,6 +26,7 @@ const StyledSencdaryCards = styled.div`
     max-width: 100%;
     margin: auto;
     .item {
+      padding: 20px;
       max-width: ${({ len }) => 100 / len}%;
       flex: 0;
     }
@@ -38,7 +39,7 @@ export default function ListCardsSecondary(props) {
   }
   function getWidthCont(number) {
     if (number >= 4) {
-      return getWidth(number) * 246;
+      return getWidth(number) * 256;
     }
   }
 

@@ -34,8 +34,7 @@ const StyledTeInteresa = styled.div`
     h1 {
       margin-top: 25px;
       font-family: Futura;
-      font-style: normal;
-      font-weight: bold;
+
       font-size: 24px;
       line-height: 110%;
       color: white;
@@ -43,8 +42,8 @@ const StyledTeInteresa = styled.div`
     }
     p {
       text-align: center;
-      margin-top: 10px;
-      font-family: Futura;
+      margin-top: 17px;
+      font-family: Futura_light;
       font-size: 14px;
       line-height: 110%;
       color: white;
@@ -105,7 +104,7 @@ export default function TeInteresa() {
       <Container>
         <div className="header">
           <h1>¿Te interesa?</h1>
-          <p>Consúltalo directamente con un ejectivo</p>
+          <p>Consúltalo directamente con un ejecutivo</p>
           <div className="boton">
             <a href="/contacto">
               <Button amarillo>¡Déjanos tus datos!</Button>

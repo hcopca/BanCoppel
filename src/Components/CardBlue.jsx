@@ -100,6 +100,7 @@ const Card = styled.div`
     height: ${({ secondary }) => (secondary ? "auto" : null)} !important;
 
     .copy {
+      padding: ${({ secondary }) => (secondary ? "10px" : null)};
       h1 {
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
@@ -107,7 +108,7 @@ const Card = styled.div`
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
       h2 {
-        font-family: futura_normal;
+        font-family: futura_heavy;
         font-size: 21px;
         line-height: 125%;
         color: #ffffff;
@@ -136,13 +137,11 @@ const Card = styled.div`
 
     .copy {
       h1 {
-        font-size: ${({ row }) => (row ? "21px" : null)};
-        br {
-          display: ${({ row }) => (row ? "none" : null)};
-        }
+        font-size: ${({ row }) => (row ? "19px" : null)};
       }
       p {
         font-size: ${({ row }) => (row ? "15px" : null)};
+        marg: ${({ row }) => (row ? "15px" : null)};
       }
     }
   }

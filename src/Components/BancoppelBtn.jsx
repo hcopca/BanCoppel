@@ -12,7 +12,8 @@ const BancoppelBtn = styled.button`
   justify-content: center;
   cursor: pointer;
   cursor: ${(props) => (props.disabled ? "default" : "pointer")};
-  font-family: "Futura";
+  font-family: futura_heavy;
+
   font-size: 14px;
   transition: all 0.2s ease-in-out;
   border-radius: 10px;
@@ -30,7 +31,6 @@ const BancoppelBtn = styled.button`
   color: ${(props) => (props.disabled ? "var(--white)" : "")};
   color: ${(props) => (props.amarillo ? "var(--night-blue)" : "")};
   color: ${(props) => (props.tercero ? "var(--white)" : "")};
-
 
   /* &:hover {
     background: var(--morning-blue);

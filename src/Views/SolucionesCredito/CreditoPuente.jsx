@@ -113,7 +113,7 @@ const CreditoPuenteSections = [
     card: {
       image: require("../../Assets/mano_credito_puente.png").default,
       copy2:
-        "El impulso que necesitas para comenzar a contruir un México mejor.",
+        "El impulso que necesitas para comenzar a construir un México mejor.",
     },
 
     items: [
@@ -159,11 +159,6 @@ const CreditoPuenteSections = [
         title: "COMISIONES",
         copy: "Por apertura. \n Por estructuración.",
         image: require("../../Assets/card_coins.svg").default,
-      },
-      {
-        title: "PLAZO",
-        copy: "Hasta cinco años.",
-        image: require("../../Assets/calendar_bill.svg").default,
       },
       {
         title: "PLAZO",

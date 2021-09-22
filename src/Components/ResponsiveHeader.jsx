@@ -4,6 +4,7 @@ import Container from "./Container";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -37,14 +38,13 @@ const StyledHeader = styled.div`
       font-weight: 500;
       font-size: 16px;
     }
-    span{
+    span {
       font-family: Futura-bold;
     }
   }
 
   @media (min-width: 768px) {
     display: none;
-    
   }
 `;
 

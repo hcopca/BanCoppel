@@ -49,7 +49,7 @@ const StyledHero = styled.div`
         display: flex;
         align-items: center;
         .children {
-          width: 60%;
+          width: 70%;
           height: 100%;
           display: flex;
           flex-direction: column;
@@ -61,7 +61,7 @@ const StyledHero = styled.div`
           button {
             margin-left: 30px;
             align-self: flex-start;
-            margin-top: 70px;
+            margin-top: 21px;
             font-family: Futura;
             font-style: normal;
             font-weight: bold;
