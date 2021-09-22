@@ -5,6 +5,8 @@ import Container from "./Container";
 import Logo_BN from "../Assets/logo_bancoppel_b&w.svg";
 import Close from "../Assets/close.svg";
 import Search from "../Assets/search.svg";
+import { NavLink } from "react-router-dom";
+import { Accordion, Switcher } from ".";
 
 const StyledSideDrawer = styled.div`
   position: absolute;
@@ -64,13 +66,13 @@ const StyledSideDrawer = styled.div`
     }
     .navigation {
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
       .navigation-item {
         transition: all 0.2s ease-in-out;
         margin-bottom: 30px;
         color: var(--white);
         font-family: Futura;
+        margin-left: 5px;
         font-size: 14px;
         line-height: 130%;
         &:hover {
@@ -82,6 +84,24 @@ const StyledSideDrawer = styled.div`
 `;
 
 export default class SideDrawer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  // async componentDidMount() {
+  //   var sections = await [
+  //     ...new Set(Catalogo.map((producto) => producto.family)),
+  //   ].map((item) => ({
+  //     section: item,
+  //     cards: Catalogo.filter((producto) => producto.family === item),
+  //   }));
+
+  //   this.setState({
+  //     HomeSections: sections,
+  //   });
+  // }
+  //AQUI IBA A SUSTITUIR EL CATALOGO POR LO DE PERSONA EMPRESA EN UN MINIJSON EN LA PARTE INFERIOR PARA DESPUES LLAMARLO EN EL ACCORDION Y EL SWITCHER
+
   componentWillUnmount() {
     document.body.style.overflow = "scroll";
     document.body.scroll = "yes";
@@ -100,7 +120,9 @@ export default class SideDrawer extends Component {
     }
   }
 
+  
   render() {
+    {console.log(this.state.fetch)}
     return (
       <StyledSideDrawer data-action="close" onClick={(e) => this.setModal(e)}>
         <div className="sideDrawer">
@@ -127,8 +149,25 @@ export default class SideDrawer extends Component {
           </div>
           <Container>
             <div className="navigation">
-              {/* TODO */}
-              <a href="/soluciones" className="navigation-item ">
+              <a className="navigation-item">
+              
+              Personas </a>
+              <a className="navigation-item"> 
+              
+              Empresas</a>
+
+
+          {/* <Accordion items={this.state.HomeSections} body={this.body} />
+        <Switcher
+          items={this.state.HomeSections}
+          body={this.bodySlider}
+          noContainer
+        /> */}
+        {/* AQUI ES DONDE IBA A LLAMAR LO DE COMPONENTDID */}
+
+
+              {/* LO QUE ESTÁ AQUI ABAJO, ES LO QUE ESTABA DESCOMENTADO ANTES DE HACER EL NUEVO NAV */}
+              {/* <a href="/soluciones" className="navigation-item ">
                 Cuenta Eje
               </a>
 
@@ -139,10 +178,9 @@ export default class SideDrawer extends Component {
                 Nómina BanCoppel
               </a>
 
-              {/* TODO */}
               <a href="/soluciones" className="navigation-item ">
                 BanCoppel Pyme
-              </a>
+              </a> */}
             </div>
           </Container>
         </div>
