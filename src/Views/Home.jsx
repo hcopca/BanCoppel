@@ -16,6 +16,12 @@ import Hero_responsive from "../Assets/Heros/hero_home_responsive.png";
 import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
 import Catalogo from "../Catalogo_Productos";
 
+const StyledHome = styled.div`
+  .btn {
+    width: 197px;
+  }
+`;
+
 const StyledCards = styled.div`
   padding: 10px 0;
   display: flex;
@@ -126,7 +132,7 @@ class Home extends Component {
 
   render() {
     return this.state.HomeSections ? (
-      <>
+      <StyledHome>
         <ResponsiveHeader>
           <div className="title">
             <h1>La Banca que</h1>
@@ -161,7 +167,7 @@ class Home extends Component {
           noContainer
         />
         <ConoceCredito />
-      </>
+      </StyledHome>
     ) : null;
   }
 }
