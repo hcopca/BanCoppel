@@ -2,9 +2,9 @@
 
 Este proyecto fue desarrollado con el uso de [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Instalación
 
-En el directorio del proyecto, se necesita ejecutar:
+En el directorio del proyecto, se necesitará ejecutar:
 
 ```bash
 npm install`
@@ -14,8 +14,8 @@ npm install`
 npm start`
 ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El proyecto se ejecutará en el navegador.\
+Abrir [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
