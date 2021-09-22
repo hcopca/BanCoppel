@@ -14,6 +14,7 @@ const StyledHeader = styled.div`
   .title {
     margin-bottom: 20px;
     h1 {
+      font-family: Futura;
       text-transform: uppercase;
       font-style: normal;
       font-weight: bold;
@@ -43,6 +44,7 @@ const StyledHeader = styled.div`
 
   @media (min-width: 768px) {
     display: none;
+    
   }
 `;
 
