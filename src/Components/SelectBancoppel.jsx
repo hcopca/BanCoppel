@@ -41,7 +41,7 @@ const StyledSelect = styled.div`
     font-family: futura_light;
     font-size: 16px;
     line-height: 24px;
-    color: #aaaaaa;
+    color: ${({ hasText }) => (hasText ? "black" : "#aaaaaa")};
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
