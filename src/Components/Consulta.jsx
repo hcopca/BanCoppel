@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from '.'
 import Button from './BancoppelBtn';
 import styled from 'styled-components'
+import IPAB from "../Assets/logo-ipab.png";
 const StyledConsulta = styled.div`
 margin-top: 50px;
 .text{
@@ -10,6 +11,11 @@ margin-top: 50px;
     line-height: 110%;
     color: #636363;
 }
+.llevar{
+    color: #225AA7;
+    text-decoration: underline;
+}
+
 .down {
     margin-top: 30px;
 }
@@ -32,12 +38,24 @@ margin-top: 50px;
         justify-content: flex-start;
     }
 }
+
 `;
+
+const ImgRedesSociales = styled.img`
+  margin-right: 40px;
+  margin-top: 5px;
+`;
+
 export default function Consulta() {
     return (
         <StyledConsulta>
             <Container>
+
                 <div className="text">
+                <ImgRedesSociales src={IPAB}></ImgRedesSociales>
+                    <br/>
+                    <p> Producto garantizado por el IPAB por 400 mil UDI. <a href="https://www.gob.mx/ipab" target="_blank"><span className="llevar">www.ipab.org.mx</span></a></p>
+                    <br />
                     <p>
                     UNE <br />
                     BanCoppel S.A. Institución de Banca Múltiple recibe las consultas, reclamaciones o aclaraciones, en su Unidad Especializada de Atención a Usuarios, ubicada en Insurgentes Sur No. 553 Piso 6, Col. Escandón II, Alcaldía Miguel Hidalgo, C.P. 11800, Ciudad de México y por correo electrónico <a href="mailto:une@bancoppel.com">une@bancoppel.com</a>
