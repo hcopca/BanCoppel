@@ -102,7 +102,6 @@ class Navbar extends Component {
   }
 
   render() {
-    // console.log(this.state);
     return (
       <>
         <StyledNavbar className="bancoppel_nav">

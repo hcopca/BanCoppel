@@ -113,7 +113,6 @@ export default class AccesoForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
   }
 
   renderForm() {
@@ -163,7 +162,6 @@ export default class AccesoForm extends Component {
   }
 
   render() {
-    // console.log(this.state);
     return (
       <StyledAcceso>
         <div className="type_user">

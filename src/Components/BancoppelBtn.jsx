@@ -38,8 +38,6 @@ const BancoppelBtn = styled.button`
   }
   
 
-  } 
-
   @media (min-width: 576px) {
     height: 50px;
     width: 120px;
