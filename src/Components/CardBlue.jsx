@@ -56,6 +56,10 @@ const Card = styled.div`
         height: 45px;
         margin: 0;
       }
+      button:hover{
+          background-color: #FFBE12;
+          color: #002A61;
+      }
     }
   }
 

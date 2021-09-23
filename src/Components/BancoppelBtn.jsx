@@ -32,16 +32,13 @@ const BancoppelBtn = styled.button`
   color: ${(props) => (props.amarillo ? "var(--night-blue)" : "")};
   color: ${(props) => (props.tercero ? "var(--white)" : "")};
 
-  /* &:hover {
-    background: var(--morning-blue);
-
-    background: ${(props) => (props.disabled ? "var(--gray)" : "")};
-    color: ${(props) => (props.disabled ? "var(--white)" : "")};
+   &:hover {
+    background-color: #225AA7;
+    color: white;
   }
+  
 
-  &:active {
-    background: red;
-  } */
+  } 
 
   @media (min-width: 576px) {
     height: 50px;
