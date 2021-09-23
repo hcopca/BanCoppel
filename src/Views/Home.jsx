@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Hero,
-  BancoppelBtn,
   ConoceCredito,
   Accordion,
   CardBlue,
@@ -148,9 +147,6 @@ class Home extends Component {
               a tu <span>empresa</span>
             </h4>
           </div>
-          <a href="/contacto">
-            <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
-          </a>
         </ResponsiveHeader>
 
         <Hero

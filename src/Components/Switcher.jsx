@@ -12,9 +12,10 @@ const StyledSwitch = styled.div`
     justify-content: center;
     margin: auto;
     margin-bottom: 50px;
+
     .section {
-      padding-bottom: 20px;
-      flex: 0 0 23%;
+      padding: 20px;
+
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
       h3 {

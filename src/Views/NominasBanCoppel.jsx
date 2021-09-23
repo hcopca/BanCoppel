@@ -74,7 +74,6 @@ class NominasBanCoppel extends Component {
               <span>Transfiere tus fondos</span> cuando quieras
             </h4>
           </div>
-          <BancoppelBtn amarillo>Haz clic ahora</BancoppelBtn>
         </ResponsiveHeader>
 
         <Hero

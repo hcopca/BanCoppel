@@ -17,9 +17,9 @@ import Hero_responsive from "../../Assets/Heros/Hero_Credito_Simple_Responsive.p
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 import styled from "styled-components";
 const StyledCreditoSimple = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
 class CreditoSimple extends Component {
   constructor(props) {
@@ -73,7 +73,6 @@ class CreditoSimple extends Component {
               <br /> para darle vida a tus proyectos
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

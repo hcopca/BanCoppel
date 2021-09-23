@@ -136,7 +136,6 @@ class ProyectosInversion extends Component {
                 vida a tus proyectos
               </h4>
             </div>
-            <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
           </Container>
         </StyledHeader>
         <Hero

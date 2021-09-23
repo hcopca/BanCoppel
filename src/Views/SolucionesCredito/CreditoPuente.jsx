@@ -76,7 +76,6 @@ class CreditoPuente extends Component {
               <span>Construimos</span> contigo.
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
         <Hero

@@ -22,3 +22,4 @@ export { default as SwitcherBullets } from "./SwitcherBullets";
 export { default as SelectBancoppel } from "./SelectBancoppel";
 export { default as TeInteresa } from "./TeInteresa";
 export { default as Consulta } from "./Consulta";
+export { default as EmpresaSide } from "./EmpresaSide";

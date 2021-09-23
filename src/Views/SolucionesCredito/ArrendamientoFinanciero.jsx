@@ -84,7 +84,6 @@ class ArrendamientoFinanciero extends Component {
               Te damos las herrramientas para <span>crecer tu negocio.</span>
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

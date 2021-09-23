@@ -17,9 +17,9 @@ import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.png";
 import HeroHome from "../../Assets/Heros/crav_banner.svg";
 import styled from "styled-components";
 const StyledCrav = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
 
 class Crav extends Component {
@@ -74,7 +74,6 @@ class Crav extends Component {
               Ajustamos el crédito a tu <br /> <span>capacidad de pago.</span>
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
 
         <Hero

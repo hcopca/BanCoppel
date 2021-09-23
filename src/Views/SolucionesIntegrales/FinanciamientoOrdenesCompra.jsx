@@ -88,7 +88,6 @@ class FinanciamientoOrdenesCompra extends Component {
               No te quedes sin lo <br /> indispensable para tu negocio
             </h4>
           </div>
-          <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

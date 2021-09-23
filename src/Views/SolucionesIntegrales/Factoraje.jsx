@@ -132,7 +132,6 @@ class SolucionesCredito extends Component {
                 El manejo de tus cobros está <br /> en buenas manos
               </h4>
             </div>
-            <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
           </Container>
         </StyledHeader>
         <Hero

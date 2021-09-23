@@ -85,7 +85,6 @@ class EmpresaNet extends Component {
           <div className="copy">
             <h4>La cuenta que tu empresa necesita</h4>
           </div>
-          <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

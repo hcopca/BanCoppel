@@ -72,7 +72,6 @@ class EmpresaNet extends Component {
               <span>tu hogar</span>
             </h4>
           </div>
-          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

@@ -18,9 +18,9 @@ import HeroHome from "../../Assets/Heros/banner_corriente.svg";
 import styled from "styled-components";
 
 const StyledCreditoAmortizable = styled.div`
-.btn{
-  width: 197px;
-}
+  .btn {
+    width: 197px;
+  }
 `;
 class CreditoAmortizable extends Component {
   constructor(props) {
@@ -71,7 +71,6 @@ class CreditoAmortizable extends Component {
               Apoyamos las necesidades de <br /> tu capital de trabajo
             </h4>
           </div>
-          <BancoppelBtn amarillo>Descubre más</BancoppelBtn>
         </ResponsiveHeader>
 
         <Hero

@@ -95,7 +95,6 @@ class MonetizacionActivos extends Component {
               El financiamiento que <br /> estabas buscando
             </h4>
           </div>
-          <BancoppelBtn amarillo>Regístrate</BancoppelBtn>
         </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"

@@ -8,6 +8,7 @@ import {
 } from "../Components";
 import Fondo from "../Assets/fondo_contacto.png";
 import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
+import Catalogo from "../Catalogo_Productos";
 
 const StyledContacto = styled.div`
   /* * {
@@ -178,7 +179,7 @@ class FormularioContacto extends Component {
                 onChange={this.onchange.bind(this)}
                 secondary
               >
-                <option value="0">COMEZON TENEDOR</option>
+                <option value="0">PRUEBA</option>
                 <option value="1">1</option>
               </SelectBancoppel>
             </div>
@@ -192,8 +193,11 @@ class FormularioContacto extends Component {
                 value={this.state.product}
                 onChange={this.onchange.bind(this)}
               >
-                <option value="0">0</option>
-                <option value="1">1</option>
+                {Catalogo.map((ele, idx) => (
+                  <option value={ele.name} key={idx}>
+                    {ele.name}
+                  </option>
+                ))}
               </SelectBancoppel>
             </div>
 

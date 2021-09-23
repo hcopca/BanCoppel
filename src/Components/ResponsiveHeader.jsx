@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "./Container";
+import BancoppelBtn from "./BancoppelBtn";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
@@ -51,7 +52,12 @@ const StyledHeader = styled.div`
 export default function ResponsiveHeader(props) {
   return (
     <StyledHeader>
-      <Container>{props.children}</Container>
+      <Container>
+        {props.children}
+        <a href="/contacto">
+          <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
+        </a>
+      </Container>
     </StyledHeader>
   );
 }
