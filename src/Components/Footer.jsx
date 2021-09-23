@@ -164,6 +164,13 @@ const FinalFooter = styled.p`
 const RowNormal = styled.div`
   color: white;
   text-align: center;
+  p{
+      font-family: Futura_light;
+      font-size: 11px;
+      line-height: 130%;
+      text-align: center;
+      color: #FFFFFF;
+    }
 `;
 
 const ImgRedesSociales = styled.img`
@@ -335,9 +342,7 @@ export default class Footer extends Component {
                   Consulta los costos y las comisiones de nuestros productos.
                 </SubLink>
               </FinalFooter>
-              <CopyRight>
-              BanCoppel S.A. Institución de Banca Múltiple es una persona moral distinta a Coppel S.A. de C.V. y a Afore Coppel S.A. de C.V., así como de cualquiera de sus negocios asociados o vinculados
-              </CopyRight>
+                  <p>BanCoppel S.A. Institución de Banca Múltiple es una persona moral distinta a Coppel S.A. de C.V. y a Afore Coppel S.A. de C.V., así como de cualquiera de sus negocios asociados o vinculados.</p>              
             </RowNormal>
           </Wrapper>
           </Container>
