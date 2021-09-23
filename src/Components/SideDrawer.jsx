@@ -43,6 +43,7 @@ const StyledSide = styled.div`
     max-height: 100vh;
     background: #002a61;
     padding: 32px 16px;
+    padding-bottom: 15vh;
     position: relative;
     z-index: 10;
 
