@@ -335,6 +335,9 @@ export default class Footer extends Component {
                   Consulta los costos y las comisiones de nuestros productos.
                 </SubLink>
               </FinalFooter>
+              <CopyRight>
+              BanCoppel S.A. Institución de Banca Múltiple es una persona moral distinta a Coppel S.A. de C.V. y a Afore Coppel S.A. de C.V., así como de cualquiera de sus negocios asociados o vinculados
+              </CopyRight>
             </RowNormal>
           </Wrapper>
           </Container>
