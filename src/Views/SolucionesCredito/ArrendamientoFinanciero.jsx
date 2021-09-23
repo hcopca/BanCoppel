@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Hero,
-  BancoppelBtn,
   Accordion,
   ListaProductos,
   CardBullets,

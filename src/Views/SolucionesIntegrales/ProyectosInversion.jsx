@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   Container,
   Hero,
-  BancoppelBtn,
   Accordion,
   Switcher,
   ProductHeader,

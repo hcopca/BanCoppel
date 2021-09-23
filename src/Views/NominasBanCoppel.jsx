@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   ResponsiveHeader,
   Hero,
-  BancoppelBtn,
   Accordion,
   ListaProductos,
   CardBullets,
