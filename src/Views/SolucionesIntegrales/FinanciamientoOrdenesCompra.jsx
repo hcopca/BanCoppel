@@ -32,32 +32,34 @@ class FinanciamientoOrdenesCompra extends Component {
     this.state = {};
   }
   body(data, mobile) {
-    switch (data.section) {
-      case "Beneficios":
-        return <CardBullets data={data} />;
-      case "Características":
-        return <ListCardsSecondary cards={data.cards} />;
-      case "Requisitos":
-        return (
-          <>
-            <Requisitos />
-            {mobile ? <TeInteresa /> : null}
-          </>
-        );
-      case "Perfil del solicitante":
-        return (
-          <PerfilSolicitante
-            bullets={[
-              "Personas Morales.",
-              <>
-                Personas Físicas con Actividad
-                <br /> Empresarial.
-              </>,
-            ]}
-          />
-        );
-      default:
-        console.error("No hay solucion definida", data);
+    if (data.section !== null) {
+      switch (data.section) {
+        case "Beneficios":
+          return <CardBullets data={data} />;
+        case "Características":
+          return <ListCardsSecondary cards={data.cards} />;
+        case "Requisitos":
+          return (
+            <>
+              <Requisitos />
+              {mobile ? <TeInteresa /> : null}
+            </>
+          );
+        case "Perfil del solicitante":
+          return (
+            <PerfilSolicitante
+              bullets={[
+                "Personas Morales.",
+                <>
+                  Personas Físicas con Actividad
+                  <br /> Empresarial.
+                </>,
+              ]}
+            />
+          );
+        default:
+          console.error("No hay solucion definida", data);
+      }
     }
   }
   isRequisitos(elem) {

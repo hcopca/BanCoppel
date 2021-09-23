@@ -49,7 +49,7 @@ export default function ListCardsSecondary(props) {
       wid={getWidthCont(props.cards.length)}
     >
       {props.cards.map((card, idx) => (
-        <div className="item" item={idx}>
+        <div className="item" item={idx} key={idx}>
           <Card key={idx} card={card} />
         </div>
       ))}

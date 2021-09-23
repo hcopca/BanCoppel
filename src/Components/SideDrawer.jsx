@@ -12,7 +12,10 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
-import { NavLink, Link } from "react-router-dom";
+import { ReactComponent as Mas } from "../Assets/AddIcon.svg";
+import { ReactComponent as Menos } from "../Assets/rest_icon.svg";
+
+import { NavLink, Link, withRouter } from "react-router-dom";
 
 const StyledSide = styled.div`
   position: fixed;
@@ -187,7 +190,7 @@ class SideDrawer extends Component {
     }
   }
   render() {
-    const { state, setState } = this.props;
+    const { state, setState, location } = this.props;
 
     return (
       <StyledSide state={state}>
@@ -231,9 +234,9 @@ class SideDrawer extends Component {
 
             <div className="body">
               {this.state.view === 2 ? (
-                <Empresas setState={setState} />
+                <Empresas setState={setState} path={location.pathname} />
               ) : (
-                <Personas setState={setState} />
+                <Personas setState={setState} path={location.pathname} />
               )}
             </div>
           </Container>
@@ -243,7 +246,7 @@ class SideDrawer extends Component {
   }
 }
 
-export default SideDrawer;
+export default withRouter(SideDrawer);
 
 const StyledPersonas = styled.div``;
 
@@ -285,6 +288,26 @@ const StyledEmpresas = styled.div`
 
   .selected_link {
     border-bottom: 1.5px solid #81c1ea;
+    font-family: futura_normal;
+  }
+
+  .heading {
+    .acordion_name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      svg {
+        fill: #81c1ea;
+        height: 20px !important;
+        path {
+          height: 20px !important;
+
+          fill: #81c1ea;
+          stroke: #81c1ea;
+        }
+      }
+    }
   }
 
   .accordion-body {
@@ -294,22 +317,64 @@ const StyledEmpresas = styled.div`
       align-items: flex-start;
       margin-bottom: 20px;
       a {
-        margin-left: 25px;
+        margin-left: 30px;
       }
     }
   }
 `;
 
 class Empresas extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      credito: false,
+      integrales: false,
+    };
+  }
+
+  preOpen(path) {
+    const soluciones_credito = [
+      "/credito_simple",
+      "/crav",
+      "/credito_amortizable",
+      "/credito_puente",
+      "/arrendamiento_financiero",
+    ];
+    const soluciones_integrales = [
+      "/proyectos_inversion",
+      "/financiamiento_ordenes_compra",
+      "/monetizacion_activos",
+      "/factoraje",
+    ];
+
+    if (soluciones_credito.includes(path)) {
+      return "soluciones_credito";
+    } else if (soluciones_integrales.includes(path)) {
+      return "soluciones_integrales";
+    } else {
+      return "";
+    }
+  }
+
   render() {
-    const { setState } = this.props;
+    const { setState, path } = this.props;
 
     return (
       <StyledEmpresas>
-        <Accordion allowZeroExpanded={true}>
-          <AccordionItem>
-            <AccordionItemHeading className="heading item_">
-              <AccordionItemButton>Soluciones de crédito</AccordionItemButton>
+        <Accordion
+          allowMultipleExpanded
+          allowZeroExpanded
+          preExpanded={this.preOpen(path)}
+        >
+          <AccordionItem uuid="soluciones_credito">
+            <AccordionItemHeading
+              className="heading item_"
+              onClick={(e) => this.setState({ credito: !this.state.credito })}
+            >
+              <AccordionItemButton className="acordion_name">
+                Soluciones de crédito
+                {this.state.credito ? <Menos /> : <Mas />}
+              </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="accordion-body">
               <div className="body_">
@@ -356,11 +421,18 @@ class Empresas extends Component {
               </div>
             </AccordionItemPanel>
           </AccordionItem>
-        </Accordion>
-        <Accordion allowZeroExpanded={true}>
-          <AccordionItem>
-            <AccordionItemHeading className="heading item_">
-              <AccordionItemButton>Soluciones Integrales</AccordionItemButton>
+
+          <AccordionItem uuid="soluciones_integrales">
+            <AccordionItemHeading
+              className="heading item_"
+              onClick={(e) =>
+                this.setState({ integrales: !this.state.integrales })
+              }
+            >
+              <AccordionItemButton className="acordion_name">
+                Soluciones Integrales
+                {this.state.integrales ? <Menos /> : <Mas />}
+              </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="accordion-body">
               <div className="body_">

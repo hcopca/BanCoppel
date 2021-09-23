@@ -25,7 +25,6 @@ class Requisitos extends Component {
   }
 
   makingBullets(type) {
-    console.log(type);
     switch (type) {
       case "solucionesCredito":
         this.setState({

@@ -141,7 +141,6 @@ const Card = styled.div`
       }
       p {
         font-size: ${({ row }) => (row ? "15px" : null)};
-        marg: ${({ row }) => (row ? "15px" : null)};
       }
     }
   }
