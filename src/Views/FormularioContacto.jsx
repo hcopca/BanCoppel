@@ -11,9 +11,6 @@ import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
 import Catalogo from "../Catalogo_Productos";
 
 const StyledContacto = styled.div`
-  /* * {
-    border: 1px solid red;
-  } */
   padding: 60px 0;
   background-image: url(${({ imgResponsive }) => imgResponsive});
   background-size: cover;

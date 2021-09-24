@@ -11,7 +11,6 @@ import {
   PerfilSolicitante,
   TeInteresa,
   ResponsiveHeader,
-  // ListBullets,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_monetizacion.png";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_monetizacion.png";

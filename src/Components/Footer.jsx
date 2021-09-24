@@ -30,10 +30,7 @@ import {
 
 const ContainerFooter = styled.div`
   padding:60px 0; 
-  //background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112,71,247,1) 100%);
   background: linear-gradient(192.32deg, #225AA7 -2.61%, #002A61 95.1%);
-  //background: radial-gradient(circle, var(--storm-blue), #04316B);
-  // background: var(--storm-blue);
   @media (max-width: 1000px) {
     padding: 70px 30px;
   }
@@ -74,14 +71,10 @@ const ColumnResponsive = styled.div`
 `;
 
 const Row = styled.div`
-  //display: grid;
-  //// grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  // grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  //grid-gap: 20px;
   @media (max-width: 1000px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -131,10 +124,6 @@ const Title = styled.p`
   }
 `;
 
-// const Icon = styled.i`
-//   font-size: 18px;
-//   margin-right: 16px;
-// `;
 
 const RowLogotipos = styled.div`
   display: flex;
@@ -182,16 +171,6 @@ const RowTituloFooter = styled.div`
   margin-bottom: 30px;
 `;
 
-// const styl = styled.section`
-//   .accordion__button {
-//     color: white;
-//     cursor: pointer;
-//     padding: 18px;
-//     width: 100%;
-//     text-align: left;
-//     border: none;
-//   }
-// `;
 
 export default class Footer extends Component {
   render() {

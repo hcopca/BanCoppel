@@ -122,10 +122,6 @@ const CravSections = [
         icon: require("../../Assets/hand_start.svg").default,
         copy: "Capital para apoyar el proceso productivo.",
       },
-      // {
-      //   icon: require("../../Assets/network_blue.svg").default,
-      //   copy: "Disposiciones ágiles al amparo de la línea.",
-      // },
     ],
   },
   {
