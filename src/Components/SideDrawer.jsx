@@ -24,19 +24,6 @@ const StyledSide = styled.div`
     background: rgba(0, 0, 0, 0.7);
   }
 
-  .fade-in {
-    animation: fadeIn 1.8s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .sideDrawer {
     overflow-y: scroll;
     overflow-x: hidden;

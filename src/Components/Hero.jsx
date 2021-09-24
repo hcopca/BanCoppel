@@ -87,7 +87,7 @@ class Hero extends Component {
     const { banner, btnCoppy, imagen, responsiveImg } = this.props;
     return (
       <>
-        <StyledHero>
+        <StyledHero className="fade-in-fast">
           <img
             src={imagen ? imagen : Fondo_mujer}
             alt="Fondo_mujer"
