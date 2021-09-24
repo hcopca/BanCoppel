@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Container from "./Container";
-import BancoppelBtn from "./BancoppelBtn";
+
+import { Container, BancoppelBtn, Spin } from "./index";
 import Fondo_mujer from "../Assets/Heros/hero_home.png";
 import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.png";
 import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
@@ -75,34 +75,50 @@ const StyledHero = styled.div`
 `;
 
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hero: true,
+      copy: true,
+    };
+  }
+
   render() {
     const { banner, btnCoppy, imagen, responsiveImg } = this.props;
     return (
-      <StyledHero>
-        <img
-          src={imagen ? imagen : Fondo_mujer}
-          alt="Fondo_mujer"
-          className="Fondo_mujer"
-        />
-        <img
-          src={responsiveImg ? responsiveImg : Fondo_mujer_res}
-          alt="Fondo_mujer"
-          className="Fondo_mujer_res"
-        />
-        <div className="hero_container">
-          <Container>
-            <div className="children">
-              <img src={banner ? banner : bannerDeafult} alt="banner" />
-              {/* <a href={path ? path : "/"}> */}
-              <a href={"/contacto"}>
-                <BancoppelBtn amarillo>
-                  {btnCoppy ? btnCoppy : "no copy"}
-                </BancoppelBtn>
-              </a>
-            </div>
-          </Container>
-        </div>
-      </StyledHero>
+      <>
+        <StyledHero>
+          <img
+            src={imagen ? imagen : Fondo_mujer}
+            alt="Fondo_mujer"
+            className="Fondo_mujer"
+            onLoad={(e) => this.setState({ hero: false })}
+          />
+          <img
+            src={responsiveImg ? responsiveImg : Fondo_mujer_res}
+            alt="Fondo_mujer"
+            className="Fondo_mujer_res"
+          />
+          <div className="hero_container">
+            <Container>
+              <div className="children">
+                <img
+                  src={banner ? banner : bannerDeafult}
+                  alt="banner"
+                  onLoad={(e) => this.setState({ copy: false })}
+                />
+                {/* <a href={path ? path : "/"}> */}
+                <a href={"/contacto"}>
+                  <BancoppelBtn amarillo>
+                    {btnCoppy ? btnCoppy : "no copy"}
+                  </BancoppelBtn>
+                </a>
+              </div>
+            </Container>
+          </div>
+        </StyledHero>
+        {this.state.hero && this.state.copy && <Spin />}
+      </>
     );
   }
 }
