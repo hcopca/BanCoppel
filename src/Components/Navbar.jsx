@@ -81,6 +81,7 @@ const StyledNavbar = styled.div`
       .navigation {
         display: flex;
         justify-content: flex-end;
+        position: relative;
         .navigation-item {
           margin-right: 27px;
           &:last-child {
@@ -88,7 +89,6 @@ const StyledNavbar = styled.div`
           }
         }
         .acceso {
-          position: relative;
         }
       }
     }
@@ -126,19 +126,19 @@ class Navbar extends Component {
               <NavLink to="/" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink>
-              <div className="acceso">
-                <BancoppelBtn
-                  secundario
-                  onClick={() =>
-                    this.setState({ openAcceso: !this.state.openAcceso })
-                  }
-                >
-                  Acceso
-                </BancoppelBtn>
-                {this.state.openAcceso ? (
-                  <AccesoForm setState={this.setState.bind(this)} />
-                ) : null}
-              </div>
+
+              <BancoppelBtn
+                secundario
+                onClick={() =>
+                  this.setState({ openAcceso: !this.state.openAcceso })
+                }
+              >
+                Acceso
+              </BancoppelBtn>
+
+              {this.state.openAcceso ? (
+                <AccesoForm setState={this.setState.bind(this)} />
+              ) : null}
             </div>
           </div>
         </StyledNavbar>
