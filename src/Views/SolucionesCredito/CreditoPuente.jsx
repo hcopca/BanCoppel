@@ -140,7 +140,7 @@ const CreditoPuenteSections = [
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función del valor de la edificación.",
+        copy: "En función del valor de la edificación, costo de obra y aforo.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
