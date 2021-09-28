@@ -137,7 +137,7 @@ const CravSections = [
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función a las necesidades del capital de trabajo a corto, largo plazo, sujeto a capacidad de pago.",
+        copy: "En función a las necesidades del capital de trabajo a corto y largo plazo, sujeto a capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
