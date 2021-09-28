@@ -47,7 +47,7 @@ class EmpresaNet extends Component {
             {mobile ? <TeInteresa /> : null}
           </>
         );
-      case "Caracteristicas":
+      case "Características":
         return <ListCardsSecondary cards={data.cards} />;
       case "Tips de seguridad":
         return <SwitcherBullets data={data} />;
@@ -141,7 +141,7 @@ const InversionEmpresarialSections = [
   },
 
   {
-    section: "Caracteristicas",
+    section: "Características",
     cards: [
       {
         copy: "Disponilidad de tu saldo las 24 horas del día.",

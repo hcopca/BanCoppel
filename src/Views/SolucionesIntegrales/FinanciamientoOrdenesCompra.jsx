@@ -122,7 +122,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_financiamiento.png").default,
       copy2:
-        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a grandes Empresas.",
+        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a grandes empresas.",
     },
 
     items: [

@@ -35,7 +35,7 @@ class Requisitos extends Component {
             "Estados Financieros: dictaminados, internos y proyectados.",
             "Información legal del acreditado o del proyecto.",
             "Contacto con ejecutivo.",
-            "Firma de solicitud y contrato",
+            "Firma de solicitud y contrato.",
           ],
         });
         break;
@@ -45,7 +45,7 @@ class Requisitos extends Component {
           bullets: [
             "Ser persona moral.",
             "Ser cliente BanCoppel.",
-            "Firma de solicitud y contrato ",
+            "Firma de solicitud y contrato.",
           ],
         });
         break;
@@ -59,7 +59,7 @@ class Requisitos extends Component {
             "Poderes Notariales del Representante(s) Legal(es) de la empresa.",
             "Comprobante de Domicilio de la empresa (no mayor a 3 meses de vencimiento).",
             "Identificación de o los Representante(s) Legal(es) o Autorizados que firmarán la cuenta.",
-            "Firma de solicitud y contrato ",
+            "Firma de solicitud y contrato.",
           ],
         });
         break;
@@ -72,7 +72,7 @@ class Requisitos extends Component {
             "Estados Financieros: dictaminados, internos y proyectados.",
             "Información legal del acreditado o del proyecto.",
             "Contacto con ejecutivo.",
-            "Firma de solicitud y contrato",
+            "Firma de solicitud y contrato.",
           ],
         });
     }

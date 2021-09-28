@@ -168,7 +168,7 @@ const SolucionesCreditoSections = [
       image: require("../../Assets/mano_factoraje.png").default,
       //Revisar el tamaño de card
       copy2:
-        "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa, otorgándote  el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+        "Financiamiento a corto plazo para apoyar el crecimiento de tu Empresa otorgándote el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
     },
 
     items: [

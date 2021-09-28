@@ -18,7 +18,7 @@ const productos = [
     name: "Nómina Bancoppel",
     title_custom: (
       <>
-        Nómina <br /> <span>Bancoppel</span>
+        Nómina <br /> <span>BanCoppel</span>
       </>
     ),
     homeCopy:
@@ -162,9 +162,9 @@ const productos = [
       </>
     ),
     homeCopy:
-      "Servicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
+      "Servicio de Banca Electrónica que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     cardcopy:
-      "FServicio de Banca Electrónica, que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
+      "FServicio de Banca Electrónica que permite controlar, administrar tus cuentas y realizar operaciones financieras de forma segura.",
     path: "/empresa_net",
     image: require("./Assets/mano_empresanet.png").default,
   },
