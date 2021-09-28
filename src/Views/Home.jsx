@@ -18,6 +18,7 @@ import Catalogo from "../Catalogo_Productos";
 const StyledHome = styled.div`
   .btn {
     width: 197px;
+    margin-top: 200px;
   }
 `;
 

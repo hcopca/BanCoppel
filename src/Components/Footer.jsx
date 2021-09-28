@@ -192,7 +192,7 @@ export default class Footer extends Component {
                   <AccordionItem>
                     <AccordionItemHeading>
                       <AccordionItemButton className="accordion__button_CC">
-                        <Title>Acerca de Bancoppel</Title>
+                        <Title>Acerca de BanCoppel</Title>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel className="accordion__panel_CC">
@@ -205,7 +205,7 @@ export default class Footer extends Component {
                       <Link href="#">Plan de apoyo para cuidar tu crédito</Link>
                       <br />
                       <Link href="#">
-                        Unidad especializada Bancoppel Condusef
+                        Unidad especializada BanCoppel Condusef
                       </Link>
                       <br />
                       <Link href="#">Productos protegidos por el IPAB</Link>
@@ -261,12 +261,12 @@ export default class Footer extends Component {
               </ColumnResponsive>
 
               <Column>
-                <Title>Acerca de Bancoppel</Title>
+                <Title>Acerca de BanCoppel</Title>
                 <Link href="#">¿Quiénes somos?</Link>
                 <Link href="#">Preguntas frecuentes</Link>
                 <Link href="#">Información corporativa</Link>
                 <Link href="#">Plan de apoyo para cuidar tu crédito</Link>
-                <Link href="#">Unidad especializada Bancoppel Condusef</Link>
+                <Link href="#">Unidad especializada BanCoppel Condusef</Link>
                 <Link href="#">Productos protegidos por el IPAB</Link>
               </Column>
               <Column>

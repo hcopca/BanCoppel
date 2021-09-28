@@ -70,7 +70,7 @@ class ArrendamientoFinanciero extends Component {
         <ResponsiveHeader>
           <div className="title">
             <h1>
-              Financiamiento <br /> de Activos fijos
+              Financiamiento <br /> de Activo Fijo
             </h1>
             <h1>
               pensados para
@@ -118,7 +118,7 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_arrendamiento.png").default,
       copy2:
-        "Producto de crédito que ayuda a mantener tus Activos Fijos en uso por una renta mensual.",
+        "Producto de crédito que ayuda a mantener tus Activo Fijo en uso por una renta mensual.",
     },
 
     items: [

@@ -68,8 +68,8 @@ const productos = [
         <br /> <span>Financiero</span>
       </>
     ),
-    homeCopy: "Financiamiento de activos fijos pensados para tu empresa.",
-    cardcopy: "Financiamiento de activos fijos pensados para tu empresa.",
+    homeCopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
+    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
     path: "/arrendamiento_financiero",
     image: require("./Assets/IpadHands.png").default,
   },
@@ -134,8 +134,8 @@ const productos = [
         <br /> <span>órdenes de compra</span>
       </>
     ),
-    homeCopy: "Financiamiento de activos fijos pensados para tu empresa.",
-    cardcopy: "Financiamiento de activos fijos pensados para tu empresa.",
+    homeCopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
+    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
     path: "/financiamiento_ordenes_compra",
     image: require("./Assets/mano_financiamiento.png").default,
   },
@@ -148,8 +148,8 @@ const productos = [
         <br /> <span>de inversión</span>
       </>
     ),
-    homeCopy: "Financiamiento de activos fijos pensados para tu empresa.",
-    cardcopy: "Financiamiento de activos fijos pensados para tu empresa.",
+    homeCopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
+    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
     path: "/proyectos_inversion",
     image: require("./Assets/mano_proyectos_inversion.png").default,
   },
