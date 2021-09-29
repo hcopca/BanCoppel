@@ -4,6 +4,7 @@ import CardBlue from "./CardBlue";
 import Container from "./Container";
 import Slider from "./Slider";
 import Catalogo from "../Catalogo_Productos";
+import { withRouter } from "react-router-dom";
 
 const StyledPructs = styled.div`
   background: var(--white) !important;
@@ -35,7 +36,7 @@ const StyledCards = styled.div`
   display: flex;
   overflow-x: scroll;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   .CardBlue {
     margin-right: 10px;
     &:last-child {
@@ -70,6 +71,16 @@ class ListaProductos extends Component {
   }
 
   async componentDidMount() {
+    const location = this.props.location.pathname;
+
+    function arrayRemove(arr, value) {
+      return arr.filter(function (ele) {
+        return ele.path !== value;
+      });
+    }
+
+    // result = [1, 2, 3, 4, 5, 7, 8, 9, 0]
+
     var splitArray = function (arr, size) {
       var arr2 = arr.slice(0),
         arrays = [];
@@ -82,7 +93,7 @@ class ListaProductos extends Component {
     };
 
     this.setState({
-      Productos: await splitArray(Catalogo, 3),
+      Productos: await splitArray(arrayRemove(Catalogo, location), 3),
     });
   }
 
@@ -137,4 +148,4 @@ class ListaProductos extends Component {
     ) : null;
   }
 }
-export default ListaProductos;
+export default withRouter(ListaProductos);

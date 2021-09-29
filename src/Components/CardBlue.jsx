@@ -56,23 +56,23 @@ const Card = styled.div`
         height: 45px;
         margin: 0;
       }
-      button:hover{
-          background-color: #FFBE12;
-          color: #002A61;
+      button:hover {
+        background-color: #ffbe12;
+        color: #002a61;
       }
     }
   }
 
   @media (min-width: 992px) {
-    min-width: 306px;
-    height: 532px;
+    min-width: 315px;
+    height: 555px;
     img {
-      height: 306px;
+      height: 310px;
     }
 
     .card_body {
       padding: 20px;
-      height: calc(100% - 306px);
+      height: calc(100% - 310px);
       align-items: flex-start;
 
       .copy {
