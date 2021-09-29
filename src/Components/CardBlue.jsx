@@ -63,7 +63,7 @@ const Card = styled.div`
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     min-width: 315px;
     height: 555px;
     img {
@@ -123,7 +123,7 @@ const Card = styled.div`
   /* ROW */
   @media (min-width: 992px) {
     display: ${({ row }) => (row ? "flex" : null)};
-    min-width: ${({ row }) => (row ? "472px" : null)};
+
     max-width: ${({ row }) => (row ? "472px" : null)};
     height: ${({ row }) => (row ? "224px" : null)};
 
