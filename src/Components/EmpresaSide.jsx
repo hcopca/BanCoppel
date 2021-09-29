@@ -245,6 +245,14 @@ class EmpresaSide extends Component {
                 >
                   Factoraje
                 </NavLink>
+                <NavLink
+                  className="item_"
+                  to="/contacto"
+                  activeClassName="selected_link"
+                  onClick={() => setState({ onOpen: false })}
+                >
+                  Contáctanos
+                </NavLink>
               </div>
             </AccordionItemPanel>
           </AccordionItem>

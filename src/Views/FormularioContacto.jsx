@@ -36,7 +36,7 @@ const StyledContacto = styled.div`
           font-family: Futura;
           font-style: normal;
           font-weight: bold;
-          font-size: 32px;
+          font-size: 18px;
           line-height: 110%;
           color: #002a61;
           span {
@@ -44,7 +44,7 @@ const StyledContacto = styled.div`
           }
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 110%;
           font-family: futura_light;
           color: #636363;
