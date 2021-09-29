@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  Container,
   Hero,
   Accordion,
   Switcher,
@@ -11,51 +10,13 @@ import {
   Requisitos,
   PerfilSolicitante,
   TeInteresa,
-  // ListBullets,
+  ResponsiveHeader,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_factoraje.png";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_factoraje.png";
 import HeroHome from "../../Assets/Heros/banner_factoraje.svg";
 
 import styled from "styled-components";
-
-const StyledHeader = styled.div`
-  padding: 20px 0;
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .title {
-    margin-bottom: 20px;
-    h1 {
-      font-size: 30px;
-      text-transform: uppercase;
-      color: var(--sky-blue);
-      line-height: 35px;
-      &:first-child {
-        color: var(--night-blue);
-      }
-    }
-  }
-  .copy {
-    margin-bottom: 20px;
-    h4 {
-      color: var(--night-blue);
-      font-family: futura_normal;
-      font-weight: 500;
-    }
-  }
-  .btn {
-    width: 197px;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
 
 const StyledPruductHeader = styled.div`
   .header_product {
@@ -114,26 +75,24 @@ class SolucionesCredito extends Component {
   render() {
     return (
       <>
-        <StyledHeader>
-          <Container>
-            <div className="title">
-              <h1>
-                Producto de <br />
-                financiamiento
-              </h1>
-              <h1>
-                pensado para
-                <br /> hacer crecer a<br />
-                tu empresa
-              </h1>
-            </div>
-            <div className="copy">
-              <h4>
-                El manejo de tus cobros está <br /> en buenas manos
-              </h4>
-            </div>
-          </Container>
-        </StyledHeader>
+        <ResponsiveHeader>
+          <div className="title">
+            <h1>
+              Producto de <br />
+              financiamiento
+            </h1>
+            <h1>
+              pensado para
+              <br /> hacer crecer a<br />
+              tu empresa
+            </h1>
+          </div>
+          <div className="copy">
+            <h4>
+              El manejo de tus cobros está <br /> en buenas manos
+            </h4>
+          </div>
+        </ResponsiveHeader>
         <Hero
           btnCoppy="Me interesa"
           imagen={Hero_}
