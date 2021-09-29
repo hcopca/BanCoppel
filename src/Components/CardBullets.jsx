@@ -84,9 +84,13 @@ const StyledBigCard = styled.div`
       align-content: flex-start;
       .bullet {
         width: auto;
-        flex: 1 0 45%;
+        flex: 1 0 40%;
         margin-bottom: 28px;
-        margin-right: 5px;
+        margin-right: 30px;
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
       }
     }
 
