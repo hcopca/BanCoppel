@@ -23,7 +23,8 @@ const StyledPructs = styled.div`
     .rec {
       text-align: center;
       color: var(--storm-blue);
-      font-family: Futura;
+      font-family: futura_normal;
+      font-weight: bold;
       font-size: 24px;
       @media (min-width: 992px) {
         display: none;
