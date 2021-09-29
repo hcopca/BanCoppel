@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const StyledSecondaryCard = styled.div`
-  * {
-    border: red solid 1px;
-  }
   background: #002a61;
   border-radius: 15px;
   padding: ${({ hasTitle }) => (hasTitle ? "16px" : "20px")};
