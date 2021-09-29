@@ -27,7 +27,7 @@ const StyledNavbar = styled.div`
       a {
         display: flex;
         img {
-          width: 242px;
+          width: 290px;
           height: 26px;
         }
       }

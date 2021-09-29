@@ -26,7 +26,7 @@ const BancoppelBtn = styled.button`
   background: ${(props) => (props.disabled ? "var(--gray)" : "")};
   background: ${(props) => (props.tercero ? "var(--night-blue)" : "")};
 
-  color: var(--storm-blue);
+  color: var(--night-blue);
   color: ${(props) => (props.secundario ? "var(--white)" : "")};
   color: ${(props) => (props.disabled ? "var(--white)" : "")};
   color: ${(props) => (props.amarillo ? "var(--night-blue)" : "")};

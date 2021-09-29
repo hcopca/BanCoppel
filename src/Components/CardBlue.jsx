@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const Card = styled.div`
   background: #002a61;
-  min-width: 212px;
-  max-width: 212px;
+  min-width: 232px;
+  max-width: 232px;
   height: 410px;
   border-radius: 20px;
   position: relative;
   img {
-    border-radius: 20px;
+    border-radius: 22px;
     width: 100%;
     height: 139px;
     object-fit: cover;
@@ -25,11 +25,14 @@ const Card = styled.div`
     height: calc(100% - 145px);
 
     .copy {
+      display: flex;
+      align-items: left;
+      flex-direction: column;
       h1 {
         font-family: Futura;
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         text-align: center;
         color: #ffffff;
         span {
@@ -55,8 +58,7 @@ const Card = styled.div`
         width: 150px;
         height: 45px;
         margin: 0;
-        margin-bottom: 17px;
-        margin-top: 17px;
+        margin-bottom: 20px;
       }
       button:hover {
         background-color: #ffbe12;
@@ -90,6 +92,9 @@ const Card = styled.div`
       }
       a {
         margin-top: 15px;
+      }
+      button {
+        margin-bottom: 10px !important;
       }
     }
   }

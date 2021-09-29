@@ -40,6 +40,7 @@ const StyledSecondaryCard = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: column;
+    justify-content: center;
     height: 246px;
     width: 226px;
 
