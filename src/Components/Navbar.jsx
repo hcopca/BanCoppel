@@ -54,7 +54,6 @@ const StyledNavbar = styled.div`
       }
       img {
         max-width: 95%;
-        
       }
     }
     .navigation {
@@ -88,8 +87,6 @@ const StyledNavbar = styled.div`
           &:last-child {
             margin-right: 0;
           }
-        }
-        .acceso {
         }
       }
     }
