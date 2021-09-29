@@ -5,12 +5,13 @@ import styled from "styled-components";
 
 const StyledAcceso = styled.div`
   position: absolute;
-  top: 130px;
+  top: 120px;
+  right: 0;
   border-radius: 24px;
   padding: 10px 15px;
   background: var(--white);
   width: 385px;
-  left: -170%;
+
   box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
 
   z-index: 1000000;
@@ -38,10 +39,6 @@ const StyledAcceso = styled.div`
         color: var(--sky-blue);
       }
     }
-  }
-
-  @media (min-width: 992px) {
-    left: -200%;
   }
 `;
 

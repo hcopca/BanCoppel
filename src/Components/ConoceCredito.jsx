@@ -7,110 +7,85 @@ import Pymes from "../Assets/pymes.png";
 import BancoppelBtn from "./BancoppelBtn";
 
 const StyledBanner = styled.section`
-  .imgNormal {
-    display: block;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-  .imgResponsivo {
-    display: none;
-    @media (max-width: 768px) {
-      display: block;
-    }
-  }
-
-  .img-holder {
+  .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
     position: relative;
-    display: inline-block;
-
-    padding: 25px 0;
-
-    @media (min-width: 992px) {
-      padding: 50px 0;
-    }
   }
+  .imgNormal {
+    display: none;
+  }
+
   .img-holder {
     img {
       max-width: 100%;
-      object-fit: contain;
     }
   }
-  .img-holder .contenido_sobrepuesto {
+
+  .contenido_sobrepuesto {
     position: absolute;
-    top: 80%;
-    left: 65px;
-    right: 0;
-    transform: translate(0, -50%);
-    text-align: center;
-    color: #fff;
+    width: calc(100% - 30px);
+    height: calc(100% - 50px);
+    top: 25px;
     display: flex;
-    img {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      left: auto;
-      justify-content: center;
-      top: auto;
-      bottom: 17%;
-    }
-  }
+    align-items: flex-end;
+    justify-content: center;
 
-  .img-holder .login-in-banner {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-  }
-
-  .mainTitle {
-    font-style: italic;
-    font-weight: 900;
-    font-size: 3rem !important;
-  }
-
-  .subTitle {
-    font-weight: 500;
-    font-size: 1.5rem !important;
-    margin: -12px 0;
-  }
-
-  @media (min-width: 400px) {
-    .mainTitle {
-      font-size: 4rem !important;
-    }
-
-    .subTitle {
-      font-size: 2.3rem !important;
+    a {
+      margin-bottom: 27px;
+      button {
+        width: 180px;
+        height: 60px;
+      }
     }
   }
 
   @media (min-width: 576px) {
-    .img-holder .contenido_sobrepuesto {
-      img {
-        display: inline-block;
-      }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .imgNormal {
+      display: block;
     }
 
-    @media (min-width: 650px) {
-      .mainTitle {
-        font-size: 5rem !important;
-      }
+    .imgResponsivo {
+      display: none;
+    }
 
-      .subTitle {
-        font-size: 2.8rem !important;
+    .contenido_sobrepuesto {
+      width: calc(100% - 30px);
+      height: calc(100% - 100px);
+      top: 50px;
+      justify-content: flex-start;
+      a {
+        margin-bottom: 10px;
+        margin-left: 41px;
       }
     }
+  }
+
+  @media (min-width: 992px) {
+    .contenido_sobrepuesto {
+      a {
+        margin-bottom: 27px;
+        margin-left: 57px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
   }
 `;
 
 export default class ConoceCredito extends Component {
   render() {
     return (
-      <Container>
-        <StyledBanner>
+      <StyledBanner>
+        <Container>
           <div className="img-holder">
             <img
               className="imgNormal"
@@ -125,15 +100,15 @@ export default class ConoceCredito extends Component {
               alt=""
               draggable="false"
             ></img>
-
-            <div className="contenido_sobrepuesto">
-              <a href="/contacto">
-                <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
-              </a>
-            </div>
           </div>
-        </StyledBanner>
-      </Container>
+
+          <div className="contenido_sobrepuesto">
+            <a href="/contacto">
+              <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
+            </a>
+          </div>
+        </Container>
+      </StyledBanner>
     );
   }
 }

@@ -18,6 +18,7 @@ const StyledSwitch = styled.div`
 
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
+
       h3 {
         font-family: Futura;
         text-align: center;
@@ -39,7 +40,7 @@ const StyledSwitch = styled.div`
       border-bottom: 2px solid var(--yellow);
       h3 {
         text-align: center;
-        color: var(--storm-blue);
+        color: #002a61;
       }
     }
   }

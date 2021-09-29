@@ -58,23 +58,23 @@ const Card = styled.div`
         margin-bottom: 17px;
         margin-top: 17px;
       }
-      button:hover{
-          background-color: #FFBE12;
-          color: #002A61;
+      button:hover {
+        background-color: #ffbe12;
+        color: #002a61;
       }
     }
   }
 
-  @media (min-width: 992px) {
-    min-width: 306px;
-    height: 532px;
+  @media (min-width: 1200px) {
+    min-width: 315px;
+    height: 555px;
     img {
-      height: 306px;
+      height: 310px;
     }
 
     .card_body {
       padding: 20px;
-      height: calc(100% - 306px);
+      height: calc(100% - 310px);
       align-items: flex-start;
 
       .copy {
@@ -125,7 +125,7 @@ const Card = styled.div`
   /* ROW */
   @media (min-width: 992px) {
     display: ${({ row }) => (row ? "flex" : null)};
-    min-width: ${({ row }) => (row ? "472px" : null)};
+
     max-width: ${({ row }) => (row ? "472px" : null)};
     height: ${({ row }) => (row ? "224px" : null)};
 
