@@ -8,9 +8,10 @@ const StyledSecondaryCard = styled.div`
   display: flex;
   align-items: center;
 
+  /* width: 100%; */
   width: 100%;
 
-  height: 138px;
+  height: 200px; //ALTURA
 
   .img {
     width: 40%;
@@ -34,7 +35,7 @@ const StyledSecondaryCard = styled.div`
       text-align: left;
       font-family: futura_light;
 
-      font-size: 12px;
+      font-size: 14px;
       line-height: 115%;
       color: var(--light-blue);
       @media (min-width: 992px) {

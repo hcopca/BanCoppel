@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 const Card = styled.div`
   background: #002a61;
-  min-width: 252px;
-  max-width: 252px;
-  height: 351px;
+  min-width: 212px;
+  max-width: 212px;
+  height: 410px;
   border-radius: 20px;
   position: relative;
   img {
@@ -29,7 +29,7 @@ const Card = styled.div`
         font-family: Futura;
         font-style: normal;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 24px;
         text-align: center;
         color: #ffffff;
         span {
@@ -40,7 +40,7 @@ const Card = styled.div`
         margin: 0;
         margin-top: 7px;
         font-family: futura_light;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 115%;
         text-align: center;
         color: #ffffff;
@@ -55,6 +55,8 @@ const Card = styled.div`
         width: 150px;
         height: 45px;
         margin: 0;
+        margin-bottom: 17px;
+        margin-top: 17px;
       }
       button:hover{
           background-color: #FFBE12;

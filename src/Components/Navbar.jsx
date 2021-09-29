@@ -53,7 +53,8 @@ const StyledNavbar = styled.div`
         }
       }
       img {
-        max-width: 80%;
+        max-width: 95%;
+        
       }
     }
     .navigation {

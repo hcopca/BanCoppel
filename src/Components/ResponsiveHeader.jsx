@@ -12,6 +12,10 @@ const StyledHeader = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    button{
+      width: 197px;
+      height: 47px;
+          }
   }
   .title {
     margin-bottom: 20px;
@@ -55,7 +59,7 @@ export default function ResponsiveHeader(props) {
       <Container>
         {props.children}
         <a href="/contacto">
-          <BancoppelBtn amarillo>Contáctanos</BancoppelBtn>
+          <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </a>
       </Container>
     </StyledHeader>
