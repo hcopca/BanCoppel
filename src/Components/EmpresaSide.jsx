@@ -53,6 +53,9 @@ const StyledEmpresas = styled.div`
   .last {
     color: #81c1ea;
     margin-bottom: 0;
+    :last-child{
+      margin-top: 20px;
+    }
   }
 
   .heading {
@@ -245,14 +248,7 @@ class EmpresaSide extends Component {
                 >
                   Factoraje
                 </NavLink>
-                <NavLink
-                  className="item_"
-                  to="/contacto"
-                  activeClassName="selected_link"
-                  onClick={() => setState({ onOpen: false })}
-                >
-                  Contáctanos
-                </NavLink>
+                
               </div>
             </AccordionItemPanel>
           </AccordionItem>
@@ -281,6 +277,13 @@ class EmpresaSide extends Component {
           onClick={() => setState({ onOpen: false })}
         >
           Cuenta de Inversión empresarial
+        </NavLink>
+        <NavLink
+          className="last item_"
+          to="/contacto"
+          activeClassName="selected_link"
+          onClick={() => setState({ onOpen: false })}>
+          Contáctanos
         </NavLink>
         <NavLink
           exact

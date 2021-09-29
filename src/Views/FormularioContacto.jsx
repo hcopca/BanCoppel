@@ -72,6 +72,16 @@ const StyledContacto = styled.div`
     background-image: url(${({ img }) => img});
     .container {
       justify-content: flex-end;
+      form{
+        .headers{
+          h1{
+            font-size: 32px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
     }
   }
 `;

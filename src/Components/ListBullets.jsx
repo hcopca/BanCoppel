@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import blue_mark from "../Assets/blue_mark.svg";
+import blue_mark from "../Assets/check.svg";
 
 const StyledBullets = styled.ul`
   list-style: ${(props) => (props.showdots ? "none" : "")};
