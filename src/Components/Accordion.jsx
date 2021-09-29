@@ -50,7 +50,7 @@ const StyledAccordion = styled.div`
         color: var(--night-blue);
         font-size: 16px;
         font-weight: bold;
-        line-height: 130%;
+        line-height: 350%;
         font-family: futura_normal;
       }
     }

@@ -51,8 +51,13 @@ const StyledTeInteresa = styled.div`
     .boton {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin-top: 25px;
       margin-bottom: 20px;
+      button{
+        width: 197px;
+        height: 47px;
+      }
     }
   }
 
