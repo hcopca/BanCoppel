@@ -31,6 +31,7 @@ const StyledHeader = styled.div`
   .title {
     margin-bottom: 20px;
     h1 {
+      font-size: 30px;
       text-transform: uppercase;
       color: var(--sky-blue);
       line-height: 35px;
