@@ -16,15 +16,14 @@ const StyledHeader = styled.div`
   .title {
     margin-bottom: 20px;
     h1 {
-      font-family: Futura;
+      font-family: futura_heavy;
       text-transform: uppercase;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 30px;
-      line-height: 30px;
+
       color: var(--sky-blue);
-      line-height: 35px;
-      font-family: Futura;
+
+      font-size: 32px;
+      line-height: 32px;
+
       &:first-child {
         color: var(--night-blue);
       }

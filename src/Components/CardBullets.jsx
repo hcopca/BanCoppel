@@ -9,7 +9,8 @@ const StyledBigCard = styled.div`
   .bullets {
     .bullet {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+
       margin-bottom: 50px;
       &:last-child {
         margin-bottom: 0;
@@ -70,8 +71,8 @@ const StyledBigCard = styled.div`
       .bullet {
         width: 60%;
         img {
-          min-width: 40px;
-          min-height: 40px;
+          width: 40px;
+          height: 40px;
         }
       }
     }
@@ -85,7 +86,7 @@ const StyledBigCard = styled.div`
       .bullet {
         width: auto;
         flex: 1 0 40%;
-        margin-bottom: 28px;
+        margin-bottom: 60px;
         margin-right: 30px;
 
         &:nth-child(even) {
@@ -102,9 +103,8 @@ const StyledBigCard = styled.div`
       align-content: flex-start;
       .bullet {
         width: auto;
-        flex: 1 0 45%;
-
-        margin-right: 5px;
+        flex: 1 0 30%;
+        margin-right: 30px;
 
         &:last-child {
           p {
