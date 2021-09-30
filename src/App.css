@@ -2,3 +2,22 @@
   min-height: 100vh;
   position: relative;
 }
+
+
+
+
+.caritem-enter {
+  opacity: 0;
+}
+.caritem-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.caritem-exit-active, .caritem-exit {
+  display: none!important;
+}
+
+.accordion__panel{
+  animation: fadeIn 500ms;
+}

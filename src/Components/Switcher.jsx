@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Container from "./Container";
 import styled from "styled-components";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const StyledSwitch = styled.div`
   background: var(--light-blue);
@@ -77,6 +78,16 @@ class Switcher extends Component {
     });
   }
 
+  innerRender() {
+    return (
+      this.props.noContainer ? (
+        this.props.body(this.state.currenView)
+      ) : (
+        <Container>{this.props.body(this.state.currenView)}</Container>
+      )
+    )
+  }
+
   render() {
     return this.state.currenView ? (
       <StyledSwitch>
@@ -86,11 +97,10 @@ class Switcher extends Component {
               return (
                 <div
                   key={idx}
-                  className={`section ${
-                    this.state.currenView.section === item.section
-                      ? "current"
-                      : ""
-                  }`}
+                  className={`section ${this.state.currenView.section === item.section
+                    ? "current"
+                    : ""
+                    }`}
                   onClick={() => this.selectedView(item)}
                 >
                   <h3>{item.section}</h3>
@@ -99,11 +109,19 @@ class Switcher extends Component {
             })}
           </div>
         </Container>
-        {this.props.noContainer ? (
-          this.props.body(this.state.currenView)
-        ) : (
-          <Container>{this.props.body(this.state.currenView)}</Container>
-        )}
+        {this.state.currenView.section ?
+          <TransitionGroup className="carousel-anim">
+            <CSSTransition
+              key={this.state.currenView.section}
+              timeout={500}
+              classNames="caritem"
+            >
+              {this.innerRender()}
+            </CSSTransition>
+          </TransitionGroup>
+          :
+          this.innerRender()
+        }
       </StyledSwitch>
     ) : null;
   }
