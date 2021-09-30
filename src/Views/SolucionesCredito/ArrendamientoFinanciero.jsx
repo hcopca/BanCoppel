@@ -132,7 +132,7 @@ const CravSections = [
       },
       {
         icon: require("../../Assets/tickets.svg").default,
-        copy: "No descapitalizar a la empresa para adquirir los activos que necesitas.",
+        copy: "No descapitalizar a la empresa para adquirir los Activos que necesitas.",
       },
     ],
   },

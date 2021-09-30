@@ -92,8 +92,7 @@ class ProyectosInversion extends Component {
             <PerfilSolicitante
               bullets={[
                 <>
-                  Personas Morales con Actividad
-                  <br /> Empresarial.
+                  Personas Morales.
                 </>,
               ]}
             />

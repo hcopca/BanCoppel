@@ -284,7 +284,7 @@ export default class Footer extends Component {
                 <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                 <Link href="https://www.facebook.com/BanCoppel/" target="_blank"><ImgRedesSociales src={Facebook}></ImgRedesSociales></Link>
-                <Link href="#" target="_blank"><ImgRedesSociales src={Linkdln}></ImgRedesSociales></Link>
+                <Link href="https://www.linkedin.com/company/bancoppel/" target="_blank"><ImgRedesSociales src={Linkdln}></ImgRedesSociales></Link>
                 <Link href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank"><ImgRedesSociales src={Youtube}></ImgRedesSociales></Link>
                  
                   
