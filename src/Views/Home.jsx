@@ -15,6 +15,8 @@ import Hero_responsive from "../Assets/Heros/hero_home_responsive.png";
 import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
 import Catalogo from "../Catalogo_Productos";
 
+import "./Animation.css"
+import { CSSTransition, TransitionGroup} from 'react-transition-group';
 const StyledHome = styled.div`
   .btn {
     width: 197px;
@@ -125,7 +127,17 @@ class Home extends Component {
       }
 
       if (Arrays) {
-        return <Slider items={Arrays} body={renderCards} />;
+        return (
+          <TransitionGroup className="carousel-anim">
+            <CSSTransition
+              key={data.section}
+              timeout={500}
+              classNames="caritem"
+            >
+            <Slider items={Arrays} body={renderCards} />
+            </CSSTransition>
+          </TransitionGroup>
+        );
       }
     }
   }
@@ -152,7 +164,7 @@ class Home extends Component {
 
         <Hero
           btnCoppy="Me interesa"
-          imagen={Hero_}
+          imagen={"http://bancoppel.bahia360.mx/static/media/hero_corriente_responsive.21b4dd08.png"}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
           path="/contacto"

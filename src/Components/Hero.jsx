@@ -117,7 +117,7 @@ class Hero extends Component {
             </Container>
           </div>
         </StyledHero>
-        {this.state.hero && this.state.copy && <Spin />}
+        {(this.state.hero || this.state.copy) && <Spin />}
       </>
     );
   }

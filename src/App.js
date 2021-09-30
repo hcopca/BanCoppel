@@ -1,29 +1,31 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import { Navbar, Footer } from "./Components";
+import { Navbar, Footer, Spin } from "./Components";
 
-import Home from "./Views/Home";
-import NominasBanCoppel from "./Views/NominasBanCoppel";
-import EmpresaNet from "./Views/EmpresaNet";
-import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
-import FormularioContacto from "./Views/FormularioContacto";
+  const Home = React.lazy(()=>  import("./Views/Home"));
+  const NominasBanCoppel = React.lazy(()=>  import("./Views/NominasBanCoppel"));
+  const EmpresaNet = React.lazy(()=>  import("./Views/EmpresaNet"));
+  const CuentaInversionEmpresarial = React.lazy(()=>  import("./Views/CuentaInversionEmpresarial"));
+  const FormularioContacto = React.lazy(()=>  import("./Views/FormularioContacto"));
 
-// Soluciones credito
-import Crav from "./Views/SolucionesCredito/Crav";
-import CreditoSimple from "./Views/SolucionesCredito/CreditoSimple";
-import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
-import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
-import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
+  // Soluciones credito
+  const Crav = React.lazy(()=>  import("./Views/SolucionesCredito/Crav"));
+  const CreditoSimple = React.lazy(()=>  import("./Views/SolucionesCredito/CreditoSimple"));
+  const CreditoPuente = React.lazy(()=>  import("./Views/SolucionesCredito/CreditoPuente"));
+  const ArrendamientoFinanciero = React.lazy(()=>  import("./Views/SolucionesCredito/ArrendamientoFinanciero"));
 
-import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
-import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivos";
-import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
-import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
+  const SolucionesIntegrales = React.lazy(()=>  import("./Views/SolucionesIntegrales/Factoraje"));
+  const MonetizacionActivos = React.lazy(()=>  import("./Views/SolucionesIntegrales/MonetizacionActivos"));
+  const FinanciamientoOrdenesCompra = React.lazy(()=>  import("./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra"));
+  const ProyectosInversion = React.lazy(()=>  import("./Views/SolucionesIntegrales/ProyectosInversion"));
+
+const CreditoAmortizable = React.lazy(() => import('./Views/SolucionesCredito/CreditoAmortizable'));
 
 class App extends Component {
   render() {
     return (
+      <Suspense fallback={<Spin/>}>
       <div className="bancoppel">
         <Navbar />
         <Switch>
@@ -72,6 +74,7 @@ class App extends Component {
         </Switch>
         <Footer />
       </div>
+      </Suspense>
     );
   }
 }

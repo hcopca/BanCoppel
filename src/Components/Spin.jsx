@@ -40,7 +40,7 @@ const StyledSpin = styled.div`
     border-top-color: #fcda47;
     border-radius: 50%;
     box-sizing: border-box;
-    animation: spring-spinner-animation 3s ease-in-out infinite;
+    animation: spring-spinner-animation 1.5s ease-in-out infinite;
     transform: rotate(-200deg);
   }
 
