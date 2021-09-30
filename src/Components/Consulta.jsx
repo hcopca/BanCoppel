@@ -3,6 +3,7 @@ import { Container } from ".";
 import Button from "./BancoppelBtn";
 import styled from "styled-components";
 import IPAB from "../Assets/logo-ipab.png";
+import pdf from "../Assets/Tasas_comisiones.pdf";
 const StyledConsulta = styled.div`
   margin-top: 50px;
   .text {
@@ -85,7 +86,7 @@ export default function Consulta() {
         </div>
 
         <div className="boton">
-          <Button tercero>Consulta tasas y comisiones</Button>
+          <Button tercero href={pdf} download target='_blank'>Consulta tasas y comisiones</Button>
         </div>
       </Container>
     </StyledConsulta>

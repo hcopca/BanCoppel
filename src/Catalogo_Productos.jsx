@@ -15,7 +15,7 @@ const productos = [
   },
   {
     family: "Nómina",
-    name: "Nómina Bancoppel",
+    name: "Nómina BanCoppel",
     title_custom: (
       <>
         Nómina <br /> <span>BanCoppel</span>

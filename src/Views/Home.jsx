@@ -19,6 +19,7 @@ const StyledHome = styled.div`
   .btn {
     width: 197px;
   }
+  
 `;
 
 const StyledCards = styled.div`
