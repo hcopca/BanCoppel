@@ -139,7 +139,7 @@ const CravSections = [
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Amortización 36 meses con amortizaciones máximas a 12 meses",
+        copy: "Amortización 36 meses con amortizaciones máximas a 12 meses.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {

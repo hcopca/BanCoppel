@@ -43,7 +43,7 @@ class ArrendamientoFinanciero extends Component {
           <>
             <Requisitos
               type="solucionesCredito"
-              push={{ data: "Especificaciones o factura del activo", idx: 1 }}
+              push={{ data: "Especificaciones o factura del activo.", idx: 1 }}
             />
             {mobile ? <TeInteresa /> : null}
           </>
@@ -128,7 +128,7 @@ const CravSections = [
       },
       {
         icon: require("../../Assets/Financial_Document.svg").default,
-        copy: "Opción de compra al finalizar el contrato",
+        copy: "Opción de compra al finalizar el contrato.",
       },
       {
         icon: require("../../Assets/tickets.svg").default,

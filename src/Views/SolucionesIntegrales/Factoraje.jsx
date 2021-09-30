@@ -54,7 +54,7 @@ class SolucionesCredito extends Component {
               Actividad Empresarial.
             </>
           );
-          return <PerfilSolicitante bullets={["Personas Morales", item]} />;
+          return <PerfilSolicitante bullets={["Personas Morales.", item]} />;
         default:
           console.error("No hay solucion definida", data);
       }

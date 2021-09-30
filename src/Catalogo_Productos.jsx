@@ -96,7 +96,7 @@ const productos = [
         Crédito Cuenta <span>Corriente Amortizable</span>
       </>
     ),
-    homeCopy: "Apoyamos las necesidades de tu capital de trabajo",
+    homeCopy: "Apoyamos las necesidades de tu capital de trabajo.",
     cardcopy: "El respaldo que le hacía falta a tu negocio.",
     path: "/credito_amortizable",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
@@ -105,7 +105,7 @@ const productos = [
     family: "Soluciones integrales",
     name: "Factoraje",
     title_custom: <>Factoraje</>,
-    homeCopy: "Apoyamos las necesidades de tu capital de trabajo",
+    homeCopy: "Apoyamos las necesidades de tu capital de trabajo.",
     cardcopy: "El respaldo que le hacía falta a tu negocio.",
     path: "/factoraje",
     image: require("./Assets/mano_cuenta_amortizable.png").default,

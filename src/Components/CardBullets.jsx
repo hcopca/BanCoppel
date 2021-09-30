@@ -9,7 +9,7 @@ const StyledBigCard = styled.div`
   .bullets {
     .bullet {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
 
       margin-bottom: 50px;
       &:last-child {
