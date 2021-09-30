@@ -4,9 +4,10 @@ import styled from "styled-components";
 const StyledSpin = styled.div`
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: white;
+  z-index:5000;
 
   display: flex;
   justify-content: center;
