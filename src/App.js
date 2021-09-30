@@ -20,7 +20,7 @@ import { Navbar, Footer, Spin } from "./Components";
  import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
  import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
 
-const CreditoAmortizable = React.lazy(() => import('./Views/SolucionesCredito/CreditoAmortizable'));
+import CreditoAmortizable from './Views/SolucionesCredito/CreditoAmortizable';
 
 class App extends Component {
   render() {
