@@ -56,7 +56,7 @@ const StyledHero = styled.div`
           justify-content: center;
 
           img {
-            max-width: 100%;
+            max-width: 90%;
           }
           button {
             margin-left: 30px;
@@ -87,7 +87,7 @@ class Hero extends Component {
     const { banner, btnCoppy, imagen, responsiveImg } = this.props;
     return (
       <>
-        <StyledHero className="fade-in-fast">
+        <StyledHero className="fade-in-fast hero__">
           <img
             src={imagen ? imagen : Fondo_mujer}
             alt="Fondo_mujer"

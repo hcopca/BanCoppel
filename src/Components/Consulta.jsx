@@ -86,7 +86,9 @@ export default function Consulta() {
         </div>
 
         <div className="boton">
-          <Button tercero href={pdf} download target='_blank'>Consulta tasas y comisiones</Button>
+          <a href={pdf} download>
+            <Button tercero>Consulta tasas y comisiones</Button>
+          </a>
         </div>
       </Container>
     </StyledConsulta>

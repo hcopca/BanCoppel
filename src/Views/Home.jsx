@@ -21,7 +21,14 @@ const StyledHome = styled.div`
   .btn {
     width: 197px;
   }
-  
+
+  .hero_container {
+    .children {
+      img {
+        width: 80%;
+      }
+    }
+  }
 `;
 
 const StyledCards = styled.div`
