@@ -1,26 +1,26 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
-import { Navbar, Footer, Spin } from "./Components";
+import { Navbar, Footer } from "./Components";
 
- import Home from "./Views/Home";
- import NominasBanCoppel from "./Views/NominasBanCoppel";
- import EmpresaNet from "./Views/EmpresaNet";
- import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
- import FormularioContacto from "./Views/FormularioContacto";
+import Home from "./Views/Home";
+import NominasBanCoppel from "./Views/NominasBanCoppel";
+import EmpresaNet from "./Views/EmpresaNet";
+import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
+import FormularioContacto from "./Views/FormularioContacto";
 
-  // Soluciones credito
- import Crav from "./Views/SolucionesCredito/Crav";
- import CreditoSimple from "./Views/SolucionesCredito/CreditoSimple";
- import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
- import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
+// Soluciones credito
+import Crav from "./Views/SolucionesCredito/Crav";
+import CreditoSimple from "./Views/SolucionesCredito/CreditoSimple";
+import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
+import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
 
- import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
- import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivos";
- import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
- import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
+import SolucionesIntegrales from "./Views/SolucionesIntegrales/Factoraje";
+import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivos";
+import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
+import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
 
-import CreditoAmortizable from './Views/SolucionesCredito/CreditoAmortizable';
+import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
 
 class App extends Component {
   render() {
