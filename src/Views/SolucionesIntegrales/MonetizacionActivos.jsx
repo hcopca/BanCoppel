@@ -128,7 +128,7 @@ const SolucionesCreditoSections = [
     section: "Beneficios",
 
     card: {
-      image: require("../../Assets/Persons3.png").default,
+      image: require("../../Assets/mano_monetizacion.png").default,
       copy2:
         "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
     },
@@ -174,7 +174,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "TASA",
-        copy: "Variable..",
+        copy: "Variable.",
         image: require("../../Assets/money_plant.svg").default,
       },
       {

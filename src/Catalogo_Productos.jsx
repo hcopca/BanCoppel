@@ -22,7 +22,7 @@ const productos = [
       </>
     ),
     homeCopy:
-      "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero...",
+      "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero.",
     cardcopy:
       "Servicio que brinda la facilidad de transferir de forma masiva...",
     path: "/nomina_bancoppel",
