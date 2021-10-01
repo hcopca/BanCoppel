@@ -106,7 +106,7 @@ const CreditoSimpleSections = [
 
     card: {
       image: require("../../Assets/Persons2.png").default,
-      copy2: "El financiamiento que necesitas para pontencializar tu empresa.",
+      copy2: "El financiamiento que necesitas para potencializar tu empresa.",
     },
 
     items: [
