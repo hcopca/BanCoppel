@@ -34,6 +34,16 @@ body {
   src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
   /* font-display: swap; */
 }
+@font-face {
+  font-family: futura;
+  src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: Futura;
+  src: url("./Assets/Fonts/futura/futura\ medium\ bt.ttf");
+  /* font-display: swap; */
+}
 
 @font-face {
   font-family: futura_light;
