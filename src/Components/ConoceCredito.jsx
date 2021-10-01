@@ -55,6 +55,13 @@ const StyledBanner = styled.section`
     .imgResponsivo {
       display: none;
     }
+    .img-holder {
+      display: flex;
+      justify-content: center;
+    img {
+      max-width: 70%;
+    }
+  }
 
     .contenido_sobrepuesto {
       width: calc(100% - 30px);
@@ -63,7 +70,11 @@ const StyledBanner = styled.section`
       justify-content: flex-start;
       a {
         margin-bottom: 10px;
-        margin-left: 41px;
+        margin-left: 130px;
+        button {
+        width: 140px;
+        height: 30px;
+      }
       }
     }
   }
@@ -72,7 +83,11 @@ const StyledBanner = styled.section`
     .contenido_sobrepuesto {
       a {
         margin-bottom: 27px;
-        margin-left: 57px;
+        margin-left: 185px;
+        button {
+        width: 140px;
+        height: 40px;
+      }
       }
     }
   }
