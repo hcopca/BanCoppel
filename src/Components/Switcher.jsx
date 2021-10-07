@@ -21,7 +21,7 @@ const StyledSwitch = styled.div`
       cursor: pointer;
 
       h3 {
-        font-family: Futura;
+        font-family: futura_bold;
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;

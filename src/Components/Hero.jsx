@@ -62,7 +62,7 @@ const StyledHero = styled.div`
             margin-left: 30px;
             align-self: flex-start;
             margin-top: 21px;
-            font-family: Futura;
+            font-family: futura_bold;
             font-style: normal;
             font-weight: bold;
             font-size: 14px;

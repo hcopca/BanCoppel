@@ -19,11 +19,11 @@ const StyledSecondaryCard = styled.div`
   .body_secondary {
     margin-left: 18px;
     h2 {
-      font-family: Futura;
+      font-family: futura_bold;
       font-style: normal;
       font-weight: bold;
       font-size: 17px;
-      line-height: 21px;
+      line-height: 110%;
       color: #81c1ea;
       margin-bottom: 10px;
     }

@@ -15,7 +15,7 @@ const StyledHead = styled.div`
     h1 {
       font-size: 24px;
       text-transform: uppercase;
-      font-family: futura;
+      font-family: futura_bold;
       span {
         color: var(--sky-blue);
       }

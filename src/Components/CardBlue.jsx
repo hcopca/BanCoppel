@@ -29,7 +29,7 @@ const Card = styled.div`
       align-items: left;
       flex-direction: column;
       h1 {
-        font-family: Futura;
+        font-family: futura_bold;
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
