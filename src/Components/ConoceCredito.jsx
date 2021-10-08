@@ -85,6 +85,9 @@ const StyledBanner = styled.section`
         margin-bottom: 27px;
         margin-left: 185px;
         button {
+        p{
+          padding: 2px;
+        }
         width: 140px;
         height: 40px;
       }
@@ -119,7 +122,7 @@ export default class ConoceCredito extends Component {
 
           <div className="contenido_sobrepuesto">
             <a href="/contacto">
-              <BancoppelBtn amarillo>Solicita tu crédito</BancoppelBtn>
+              <BancoppelBtn amarillo><p>Solicita tu crédito</p></BancoppelBtn>
             </a>
           </div>
         </Container>
