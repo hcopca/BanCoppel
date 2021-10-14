@@ -58,6 +58,7 @@ const Card = styled.div`
         width: 150px;
         height: 45px;
         margin: 0;
+        margin-bottom: 20px;
       }
       button:hover {
         background-color: #ffbe12;
