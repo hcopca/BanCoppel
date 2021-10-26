@@ -62,6 +62,24 @@ const StyledContacto = styled.div`
         height: 50px;
         margin-top: 25px;
       }
+
+      .link_terminos {
+        margin-top: 20px;
+        font-family: Futura;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 110%;
+        a {
+          text-decoration: underline;
+          color: #225aa7;
+        }
+        /* identical to box height, or 18px */
+
+        /* gray */
+
+        color: #636363;
+      }
     }
   }
 
@@ -72,9 +90,9 @@ const StyledContacto = styled.div`
     background-image: url(${({ img }) => img});
     .container {
       justify-content: flex-end;
-      form{
-        .headers{
-          h1{
+      form {
+        .headers {
+          h1 {
             font-size: 32px;
           }
           p {
@@ -211,6 +229,10 @@ class FormularioContacto extends Component {
             <BancoppelBtn type="submit" amarillo>
               Enviar
             </BancoppelBtn>
+
+            <p className="link_terminos">
+              Consulta el aviso de privacidad, <a href="/">aquí</a>
+            </p>
           </form>
         </Container>
       </StyledContacto>
