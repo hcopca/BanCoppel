@@ -97,6 +97,24 @@ const StyledBanner = styled.section`
 
   @media (min-width: 1200px) {
   }
+  @media (min-width: 1366px) {
+
+    .img-holder {
+    img {
+      max-width: 65%;
+    }
+  }
+    .contenido_sobrepuesto {
+      a {
+        margin-bottom: 15px;
+        margin-left: 207px;
+        button {
+        width: 183px;
+        height: 50px;
+      }
+      }
+    }
+  }
 `;
 
 export default class ConoceCredito extends Component {

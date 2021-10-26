@@ -63,12 +63,9 @@ const StyledCardsSlider = styled.div`
 
     .CardBlue {
       width: 100%;
-
-      @media (min-width: 1200px) {
-        width: 472px;
-      }
     }
   }
+  
 `;
 
 class Home extends Component {

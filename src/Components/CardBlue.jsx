@@ -180,9 +180,35 @@ const Card = styled.div`
     .copy {
       h1 {
         font-size: ${({ row }) => (row ? "19px" : null)};
+        text-align: left;
       }
       p {
         font-size: ${({ row }) => (row ? "15px" : null)};
+        text-align: left;
+      }
+    }
+  }
+  @media (min-width: 1366px) {
+    width: 100%;
+    max-width: 423px;
+    max-height: 190px;
+    img {
+      max-width: 180px;
+      max-height: 190px;
+    }
+    .card_body {
+      .copy {
+        width: 130%;
+        max-width: 230px;
+        padding: 0px 22px 0px 0px;
+        h1 {
+          font-size: 18px;
+          line-height: 100%;
+        }
+        p {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }
