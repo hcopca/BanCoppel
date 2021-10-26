@@ -8,7 +8,7 @@ const StyledHead = styled.div`
   display: flex;
   .header_body {
     margin: auto;
-    flex: 2;
+    flex: 1.5;
     text-align: center;
     color: var(--night-blue);
 
@@ -40,24 +40,20 @@ const StyledHead = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding-top: 50px;
+    padding-top: 47px;
     .item {
       display: flex;
     }
+  }
 
+  /* @media (min-width: 1400px) {
     .header_body {
       h1 {
         font-size: 36px;
         line-height: 36px;
       }
     }
-  }
-
-  @media (min-width: 1400px) {
-    .header_body {
-      flex: 1.5;
-    }
-  }
+  } */
 `;
 
 class ProductHeader extends Component {

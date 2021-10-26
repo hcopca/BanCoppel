@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import Container from "./Container";
 import styled from "styled-components";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const StyledSwitch = styled.div`
   background: var(--light-blue);
-  padding: 50px 0;
+  padding: 29px 0;
   display: none;
   .sections {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     .section {
-      padding: 20px;
+      padding: 10px;
 
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
@@ -25,7 +25,7 @@ const StyledSwitch = styled.div`
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;
-        font-size: 14px;
+        font-size: 13px;
       }
 
       &:hover {
@@ -79,13 +79,11 @@ class Switcher extends Component {
   }
 
   innerRender() {
-    return (
-      this.props.noContainer ? (
-        this.props.body(this.state.currenView)
-      ) : (
-        <Container>{this.props.body(this.state.currenView)}</Container>
-      )
-    )
+    return this.props.noContainer ? (
+      this.props.body(this.state.currenView)
+    ) : (
+      <Container>{this.props.body(this.state.currenView)}</Container>
+    );
   }
 
   render() {
@@ -97,10 +95,11 @@ class Switcher extends Component {
               return (
                 <div
                   key={idx}
-                  className={`section ${this.state.currenView.section === item.section
-                    ? "current"
-                    : ""
-                    }`}
+                  className={`section ${
+                    this.state.currenView.section === item.section
+                      ? "current"
+                      : ""
+                  }`}
                   onClick={() => this.selectedView(item)}
                 >
                   <h3>{item.section}</h3>
@@ -109,7 +108,7 @@ class Switcher extends Component {
             })}
           </div>
         </Container>
-        {this.state.currenView.section ?
+        {this.state.currenView.section ? (
           <TransitionGroup className="carousel-anim">
             <CSSTransition
               key={this.state.currenView.section}
@@ -119,9 +118,9 @@ class Switcher extends Component {
               {this.innerRender()}
             </CSSTransition>
           </TransitionGroup>
-          :
+        ) : (
           this.innerRender()
-        }
+        )}
       </StyledSwitch>
     ) : null;
   }

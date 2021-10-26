@@ -62,7 +62,7 @@ const StyledNavbar = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding: 16px 32px;
+    padding: 15px 32px;
     .nav_container {
       .brand {
         display: flex;

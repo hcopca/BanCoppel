@@ -6,6 +6,9 @@ const StyledBullets = styled.ul`
   list-style: ${(props) => (props.showdots ? "none" : "")};
   display: flex;
   flex-direction: column;
+  * {
+    /* border: 1px solid red; */
+  }
 
   li {
     flex: 1;
@@ -23,9 +26,11 @@ const StyledBullets = styled.ul`
       margin-top: 0;
       padding-top: 0;
     }
+    &:last-child {
+      border-bottom: 0px solid var(--shadow-blue);
+    }
     @media (min-width: 992px) {
       padding-bottom: 15px;
-      margin-top: 52px;
       p {
         font-size: 16px;
       }
@@ -33,8 +38,7 @@ const StyledBullets = styled.ul`
 
     &:before {
       // prettier-ignore
-      ${(props) =>
-        props.showdots ? `content:"•";` : `content:url(${blue_mark});`}
+      content: ${({ showdots }) => (showdots ? "•" : `url(${blue_mark})`)};
       color: var(--sky-blue); /* Change the color */
       font-weight: bold; /* If you want it to be bold */
       display: inline-block; /* Needed to add space between the bullet and the text */

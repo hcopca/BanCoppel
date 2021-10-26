@@ -10,8 +10,7 @@ const StyledBigCard = styled.div`
     .bullet {
       display: flex;
       align-items: center;
-
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -24,7 +23,7 @@ const StyledBigCard = styled.div`
       p {
         max-width: 100%;
         text-align: left;
-        font-size: 16px;
+        font-size: 14px;
         font-family: futura_light;
         line-height: 18px;
         display: flex;

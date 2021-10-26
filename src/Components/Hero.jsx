@@ -8,7 +8,7 @@ import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
 
 const StyledHero = styled.div`
   display: flex;
-  height: 60vh;
+  max-height: 400px;
   position: relative;
 
   img {
@@ -33,7 +33,6 @@ const StyledHero = styled.div`
   }
 
   @media (min-width: 992px) {
-    height: 70vh;
     img {
       width: 100vw;
     }
@@ -49,14 +48,14 @@ const StyledHero = styled.div`
         display: flex;
         align-items: center;
         .children {
-          width: 70%;
+          width: 60%;
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
 
           img {
-            max-width: 90%;
+            max-width: 70%;
           }
           button {
             margin-left: 30px;
@@ -67,6 +66,19 @@ const StyledHero = styled.div`
             font-weight: bold;
             font-size: 14px;
             width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1400px) {
+    max-height: 70vh;
+    .hero_container {
+      .container {
+        .children {
+          img {
+            max-width: 80%;
           }
         }
       }

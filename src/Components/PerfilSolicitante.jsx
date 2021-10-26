@@ -14,6 +14,7 @@ const Styledperfil = styled.div`
       position: relative;
       z-index: 10;
       max-width: 100%;
+      max-height: 300px;
     }
 
     .bullets {

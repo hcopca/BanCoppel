@@ -56,7 +56,7 @@ const Card = styled.div`
       button {
         border: 0;
         width: 150px;
-        height: 45px;
+        height: 40px;
         margin: 0;
         margin-bottom: 20px;
       }
@@ -67,7 +67,39 @@ const Card = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
+    min-width: 200px;
+    height: 350px;
+    img {
+      height: 140px;
+    }
+
+    .card_body {
+      padding: 20px;
+      height: calc(100% - 140px);
+      align-items: flex-start;
+
+      .copy {
+        h1 {
+          font-size: 18px;
+          text-align: left;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 15px;
+          text-align: left;
+        }
+      }
+      a {
+        margin-top: 15px;
+      }
+      button {
+        margin-bottom: 00px !important;
+      }
+    }
+  }
+  /* 
+  @media (min-width: 1400px) {
     min-width: 315px;
     height: 555px;
     img {
@@ -82,12 +114,10 @@ const Card = styled.div`
       .copy {
         h1 {
           font-size: 22px;
-          text-align: left;
         }
         p {
           font-size: 16px;
           margin-top: 15px;
-          text-align: left;
         }
       }
       a {
@@ -97,14 +127,15 @@ const Card = styled.div`
         margin-bottom: 10px !important;
       }
     }
-  }
+  } */
 
   /* SECONDARY */
   width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
   max-width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
   height: ${({ secondary }) => (secondary ? "auto" : null)} !important;
+  min-height: ${({ secondary }) => (secondary ? "330px" : null)} !important ;
   img {
-    height: ${({ secondary }) => (secondary ? "330px" : null)} !important;
+    height: ${({ secondary }) => (secondary ? "215px" : null)} !important;
   }
   .card_body {
     padding: ${({ secondary }) => (secondary ? "20px" : null)};
@@ -120,8 +151,8 @@ const Card = styled.div`
       }
       h2 {
         font-family: futura_heavy;
-        font-size: 21px;
-        line-height: 125%;
+        font-size: 18px;
+        line-height: 21px;
         color: #ffffff;
       }
     }

@@ -12,8 +12,8 @@ const StyledSecondaryCard = styled.div`
   width: 100%;
 
   img {
-    width: 48px;
-    height: 48px;
+    height: 40px;
+    width: 40px;
   }
 
   .body_secondary {
@@ -25,24 +25,39 @@ const StyledSecondaryCard = styled.div`
       font-size: 17px;
       line-height: 110%;
       color: #81c1ea;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
     p {
       font-family: futura_light;
       font-size: 14px;
-      line-height: 130%;
+      line-height: 120%;
       color: #f4f6f9;
     }
-  }
-
-  @media (min-width: 576px) {
   }
 
   @media (min-width: 768px) {
     flex-direction: column;
     justify-content: center;
-    height: 246px;
     width: 226px;
+    height: 180px;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    .body_secondary {
+      margin-left: 0px;
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 226px;
+    height: 250px;
 
     img {
       height: 80px;

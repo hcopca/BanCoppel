@@ -26,7 +26,7 @@ const StyledSencdaryCards = styled.div`
     max-width: 100%;
     margin: auto;
     .item {
-      padding: 20px;
+      padding: 10px;
       max-width: ${({ len }) => 100 / len}%;
       flex: 0;
     }

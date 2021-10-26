@@ -5,7 +5,6 @@ import Container from "./Container";
 import styled from "styled-components";
 
 const StyledTeInteresa = styled.div`
-  padding: 30px 0;
   padding-bottom: 0;
   position: relative;
   .container {
@@ -54,7 +53,7 @@ const StyledTeInteresa = styled.div`
       align-items: center;
       margin-top: 25px;
       margin-bottom: 20px;
-      button{
+      button {
         width: 197px;
         height: 47px;
       }
@@ -65,6 +64,39 @@ const StyledTeInteresa = styled.div`
     display: none;
   }
   @media (min-width: 992px) {
+    .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .back {
+      display: block;
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      .gray {
+        background: var(--light-blue);
+
+        height: 50%;
+      }
+      .white {
+        background: white;
+        height: 50%;
+      }
+    }
+
+    .header {
+      h1 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (min-width: 1400px) {
     padding: 30px 0;
 
     .container {
