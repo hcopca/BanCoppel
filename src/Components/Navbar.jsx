@@ -4,7 +4,7 @@ import styled from "styled-components";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
 import AccesoForm from "./AccesoForm";
-import Logo from "../Assets/logo_bancoppel_empresas.svg";
+import Logo from "../Assets/logo_bancoppel_letras_azules.svg";
 import SecondaryNav from "./SecondaryNav";
 
 const StyledNavbar = styled.div`

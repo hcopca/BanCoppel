@@ -17,26 +17,31 @@ const StyledEmpresas = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   .body_ {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-left: 30px;
+    margin-left: 20px;
 
     a {
       &:last-child {
         margin-bottom: 0;
       }
     }
+
+    .item_ {
+      font-size: 14px;
+      font-family: futura_light;
+    }
   }
 
   .item_ {
-    font-family: futura_light;
-    font-size: 18px;
+    font-family: futura_heavy;
+    font-size: 16px;
     line-height: 110%;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     cursor: pointer;
   }
 
@@ -53,7 +58,7 @@ const StyledEmpresas = styled.div`
   .last {
     color: #81c1ea;
     margin-bottom: 0;
-    :last-child{
+    :last-child {
       margin-top: 20px;
     }
   }
@@ -248,7 +253,6 @@ class EmpresaSide extends Component {
                 >
                   Factoraje
                 </NavLink>
-                
               </div>
             </AccordionItemPanel>
           </AccordionItem>
@@ -282,7 +286,8 @@ class EmpresaSide extends Component {
           className="last item_"
           to="/contacto"
           activeClassName="selected_link"
-          onClick={() => setState({ onOpen: false })}>
+          onClick={() => setState({ onOpen: false })}
+        >
           Contáctanos
         </NavLink>
         <NavLink

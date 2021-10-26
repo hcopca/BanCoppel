@@ -100,7 +100,7 @@ const StyledSide = styled.div`
       }
     }
     .body {
-      margin-top: 37px;
+      margin-top: 30px;
     }
   }
 
@@ -111,11 +111,12 @@ const StyledSide = styled.div`
         a {
           svg {
             width: 313.29px !important;
+            height: 30px;
           }
         }
         .close {
-          width: 30px;
-          height: 30px;
+          width: 20px;
+          height: 20px;
           margin-right: 20px;
         }
       }
