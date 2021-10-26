@@ -4,7 +4,7 @@ const productos = [
     name: "Cuenta Inversión Empresarial",
     title_custom: (
       <>
-        Cuenta <br /> <span>Inversión Empresarial</span>
+        Cuenta <span>Inversión Empresarial</span>
       </>
     ),
     homeCopy:
