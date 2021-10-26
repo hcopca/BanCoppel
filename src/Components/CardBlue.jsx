@@ -159,36 +159,41 @@ const Card = styled.div`
   }
 
   /* ROW */
-  @media (min-width: 992px) {
-    display: ${({ row }) => (row ? "flex" : null)};
-
-    max-width: ${({ row }) => (row ? "472px" : null)};
-    height: ${({ row }) => (row ? "224px" : null)};
-
-    img {
-      height: ${({ row }) => (row ? "224px" : null)};
-      max-width: ${({ row }) => (row ? "200px" : null)};
-    }
-  }
-
   .card_body {
-    padding: ${({ row }) => (row ? "20px" : null)};
-    width: ${({ row }) => (row ? "calc(100% - 200px)" : null)};
-    height: ${({ row }) => (row ? "100%" : null)};
+    padding: ${({ row }) => (row ? "10px" : null)};
+    width: ${({ row }) => (row ? "423px" : null)};
+    height: ${({ row }) => (row ? "190px" : null)};
     align-items: ${({ row }) => (row ? "flex-start" : null)};
 
     .copy {
       h1 {
-        font-size: ${({ row }) => (row ? "19px" : null)};
+        font-size: ${({ row }) => (row ? "17px" : null)};
         text-align: left;
       }
       p {
-        font-size: ${({ row }) => (row ? "15px" : null)};
+        font-size: ${({ row }) => (row ? "14px" : null)};
         text-align: left;
       }
     }
   }
-  @media (min-width: 1366px) {
+
+  @media (min-width: 992px) {
+    display: ${({ row }) => (row ? "flex" : null)};
+
+    max-width: ${({ row }) => (row ? "423px" : null)};
+    height: ${({ row }) => (row ? "190px" : null)};
+
+    img {
+      height: ${({ row }) => (row ? "190px" : null)};
+      max-width: ${({ row }) => (row ? "200px" : null)};
+    }
+
+    a {
+      margin-bottom: ${({ row }) => (row ? "10px" : null)};
+    }
+  }
+
+  /* @media (min-width: 1366px) {
     width: 100%;
     max-width: 423px;
     max-height: 190px;
@@ -211,7 +216,7 @@ const Card = styled.div`
         }
       }
     }
-  }
+  } */
 `;
 
 class CardBlue extends Component {
