@@ -148,7 +148,7 @@ const CravSections = [
       {
         title: "TASA",
         copy: "Variable.",
-        image: require("../../Assets/money_plant.svg").default,
+        image: require("../../Assets/porcentaje.svg").default,
       },
       {
         title: "COMISIONES",

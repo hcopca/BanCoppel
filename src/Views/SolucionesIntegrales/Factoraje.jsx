@@ -173,7 +173,7 @@ const SolucionesCreditoSections = [
       {
         title: "TASA",
         copy: "Descuento.",
-        image: require("../../Assets/money_plant.svg").default,
+        image: require("../../Assets/porcentaje.svg").default,
       },
       {
         title: "COMISIONES",

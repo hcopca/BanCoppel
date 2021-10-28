@@ -217,7 +217,7 @@ const SolucionesCreditoSections = [
       {
         title: "TASA",
         copy: "Variable, permite escalonamiento por etapas.",
-        image: require("../../Assets/money_plant.svg").default,
+        image: require("../../Assets/porcentaje.svg").default,
       },
       {
         title: "COMISIONES",

@@ -87,6 +87,8 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
+      max-width: 842px;
+      max-height: 180px;
       h1 {
         font-size: 18px;
       }
@@ -96,7 +98,7 @@ const StyledTeInteresa = styled.div`
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     padding: 30px 0;
 
     .container {
@@ -122,6 +124,20 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
+      max-width: 840px;
+      max-height: 180px;
+      h1 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  /* @media (min-width: 1400px) {
+    .header {
+      max-width: 840px;
+      max-height: 180px;
       h1 {
         font-size: 36px;
       }
@@ -129,7 +145,7 @@ const StyledTeInteresa = styled.div`
         font-size: 24px;
       }
     }
-  }
+  } */
 `;
 export default function TeInteresa() {
   return (

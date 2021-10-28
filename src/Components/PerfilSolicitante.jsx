@@ -81,7 +81,16 @@ const Styledperfil = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1366px) {
+    .container{
+      .bullets {
+        p {
+          font-family: futura;
+          margin-top: 20px;
+        }
+      }
+    }
+   
   }
 `;
 
