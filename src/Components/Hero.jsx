@@ -19,12 +19,23 @@ const StyledHero = styled.div`
     display: none;
   }
 
+  .Fondo_mujer_mid {
+    display: none;
+  }
   .hero_container {
     display: none;
   }
+  @media (min-width: 500px) {
+    .Fondo_mujer_res {
+      display: none;
+    }
+    .Fondo_mujer_mid {
+      display: block;
+    }
+  }
 
   @media (min-width: 768px) {
-    .Fondo_mujer_res {
+    .Fondo_mujer_mid {
       display: none;
     }
     .Fondo_mujer {
@@ -71,7 +82,7 @@ const StyledHero = styled.div`
       }
     }
   }
- 
+
   @media (min-width: 1400px) {
     max-height: 70vh;
     .hero_container {
@@ -96,7 +107,7 @@ class Hero extends Component {
   }
 
   render() {
-    const { banner, btnCoppy, imagen, responsiveImg } = this.props;
+    const { banner, btnCoppy, imagen, responsiveImg, midImg } = this.props;
     return (
       <>
         <StyledHero className="fade-in-fast hero__">
@@ -110,6 +121,11 @@ class Hero extends Component {
             src={responsiveImg ? responsiveImg : Fondo_mujer_res}
             alt="Fondo_mujer"
             className="Fondo_mujer_res"
+          />
+          <img
+            src={midImg ? midImg : Fondo_mujer_res}
+            alt="Fondo_mujer"
+            className="Fondo_mujer_mid"
           />
           <div className="hero_container">
             <Container>
