@@ -31,7 +31,8 @@ const StyledConsulta = styled.div`
     }
   }
   @media (min-width: 992px) {
-    margin-top: 100px;
+    margin-top: 0px;
+    flex: 1;
     .text {
       font-size: 16px;
     }

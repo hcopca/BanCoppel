@@ -42,7 +42,7 @@ const Card = styled.div`
       p {
         margin: 0;
         margin-top: 7px;
-        font-family: futura_light;
+        font-family: futura_book;
         font-size: 16px;
         line-height: 115%;
         text-align: center;
@@ -68,7 +68,9 @@ const Card = styled.div`
   }
 
   @media (min-width: 992px) {
-    min-width: 200px;
+    min-width: 230px;
+    max-width: 230px;
+    width: 100%;
     height: 350px;
     img {
       height: 140px;
@@ -98,36 +100,7 @@ const Card = styled.div`
       }
     }
   }
-  /* 
-  @media (min-width: 1400px) {
-    min-width: 315px;
-    height: 555px;
-    img {
-      height: 310px;
-    }
-
-    .card_body {
-      padding: 20px;
-      height: calc(100% - 310px);
-      align-items: flex-start;
-
-      .copy {
-        h1 {
-          font-size: 22px;
-        }
-        p {
-          font-size: 16px;
-          margin-top: 15px;
-        }
-      }
-      a {
-        margin-top: 15px;
-      }
-      button {
-        margin-bottom: 10px !important;
-      }
-    }
-  } */
+  
 
   /* SECONDARY */
   width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
@@ -150,7 +123,7 @@ const Card = styled.div`
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
       h2 {
-        font-family: futura_heavy;
+        font-family: futura_bold;
         font-size: 18px;
         line-height: 21px;
         color: #ffffff;
@@ -193,27 +166,56 @@ const Card = styled.div`
     }
   }
 
-  /* @media (min-width: 1366px) {
-    width: 100%;
-    max-width: 423px;
-    max-height: 190px;
-    img {
-      max-width: 180px;
-      max-height: 190px;
-    }
+  @media (min-width: 1200px) {
+    min-width: 280px;
+    max-width: 280px;
+    margin: 0 auto;
     .card_body {
       .copy {
         width: 130%;
-        max-width: 230px;
-        padding: 0px 22px 0px 0px;
+        padding: 5px 25px 0px 10px;
         h1 {
           font-size: 18px;
           line-height: 100%;
         }
         p {
+          margin-right: 50px;
           font-size: 14px;
           line-height: 16px;
         }
+      }
+    }
+    
+   
+  }
+
+  /* 
+  @media (min-width: 1400px) {
+    min-width: 315px;
+    height: 555px;
+    img {
+      height: 310px;
+    }
+
+    .card_body {
+      padding: 20px;
+      height: calc(100% - 310px);
+      align-items: flex-start;
+
+      .copy {
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+          margin-top: 15px;
+        }
+      }
+      a {
+        margin-top: 15px;
+      }
+      button {
+        margin-bottom: 10px !important;
       }
     }
   } */

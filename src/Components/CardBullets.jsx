@@ -113,6 +113,21 @@ const StyledBigCard = styled.div`
       }
     }
   }
+  @media (min-width: 1200px) {
+    .card {
+      .CardBlue {
+        min-width: 50% !important;
+        max-width: 363px !important;
+        img {
+          width: 100% !important;
+          max-width: 363px;
+        }
+        .card_body{
+          max-width: 300px;
+        }
+      }
+    }
+  }
 `;
 
 class CardBullets extends Component {

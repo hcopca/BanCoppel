@@ -19,7 +19,7 @@ const StyledBullets = styled.ul`
     /* margin-top: 40px; */
     padding: 15px 0;
     p {
-      font-family: futura_light;
+      font-family: futura_book;
       font-size: 14px;
     }
     &:first-child {
@@ -31,8 +31,10 @@ const StyledBullets = styled.ul`
     }
     @media (min-width: 992px) {
       padding-bottom: 15px;
+      margin-left: 250px;
       p {
         font-size: 16px;
+        
       }
     }
 

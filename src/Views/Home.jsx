@@ -61,8 +61,25 @@ const StyledCardsSlider = styled.div`
       justify-content: flex-end;
     }
 
+
     .CardBlue {
       width: 100%;
+      .card_body{
+        .copy{
+          padding: 0px 0px 10px 10px;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      .CardBlue {
+      width: 100%;
+      min-width: 423px;
+      .card_body{
+        .copy{
+          padding: 0px 10px;
+        }
+      }
+    }
     }
   }
   

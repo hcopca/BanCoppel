@@ -28,7 +28,7 @@ const StyledSecondaryCard = styled.div`
       margin-bottom: 9px;
     }
     p {
-      font-family: futura_light;
+      font-family: futura_book;
       font-size: 14px;
       line-height: 120%;
       color: #f4f6f9;
