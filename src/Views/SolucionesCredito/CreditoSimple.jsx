@@ -11,7 +11,7 @@ import {
   ResponsiveHeader,
   TeInteresa,
 } from "../../Components";
-import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
+import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_credito_simple.jpg";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 import styled from "styled-components";

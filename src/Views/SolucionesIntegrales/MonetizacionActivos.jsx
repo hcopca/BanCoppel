@@ -12,7 +12,7 @@ import {
   TeInteresa,
   ResponsiveHeader,
 } from "../../Components";
-import Hero_ from "../../Assets/Heros/hero_monetizacion.png";
+import Hero_ from "../../Assets/Heros/hero_monetizacion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_monetizacion.jpg";
 import HeroHome from "../../Assets/Heros/banner_monetizacion.svg";
 import styled from "styled-components";

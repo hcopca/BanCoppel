@@ -10,7 +10,7 @@ import {
 } from "../Components";
 
 import styled from "styled-components";
-import Hero_ from "../Assets/Heros/hero_home.png";
+import Hero_ from "../Assets/Heros/hero_home.jpg";
 import Hero_responsive from "../Assets/Heros/hero_home_responsive.jpg";
 import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
 import Catalogo from "../Catalogo_Productos";

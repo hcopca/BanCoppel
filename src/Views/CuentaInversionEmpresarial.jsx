@@ -13,7 +13,7 @@ import {
   Consulta,
   ListCardsSecondary,
 } from "../Components";
-import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.png";
+import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.jpg";
 import HeroHome from "../Assets/Heros/banner_cuenta_empresarial.svg";
 import styled from "styled-components";

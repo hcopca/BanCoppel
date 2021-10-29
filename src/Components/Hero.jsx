@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Container, BancoppelBtn, Spin } from "./index";
-import Fondo_mujer from "../Assets/Heros/hero_home.png";
+import Fondo_mujer from "../Assets/Heros/hero_home.jpg";
 import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.jpg";
 import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
 
@@ -65,13 +65,13 @@ const StyledHero = styled.div`
             font-style: normal;
             font-weight: bold;
             font-size: 14px;
-            width: 200px;
+            width: 150px;
           }
         }
       }
     }
   }
-
+ 
   @media (min-width: 1400px) {
     max-height: 70vh;
     .hero_container {
