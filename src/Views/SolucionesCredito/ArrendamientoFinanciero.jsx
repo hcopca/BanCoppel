@@ -14,6 +14,7 @@ import {
 import Hero_ from "../../Assets/Heros/hero_arrendamiento.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.jpg";
 import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
+import midImg from "../../Assets/Heros/hero_arrendamiento_mid.jpg"
 import styled from "styled-components";
 const StyledArrendamientoFinanciero = styled.div`
   .btn {
@@ -88,6 +89,7 @@ class ArrendamientoFinanciero extends Component {
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
+          midImg={midImg}
           banner={HeroHome}
           path="/"
         />

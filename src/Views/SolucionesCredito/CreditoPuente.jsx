@@ -14,6 +14,7 @@ import {
 import Hero_ from "../../Assets/Heros/hero_puente.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.jpg";
 import HeroHome from "../../Assets/Heros/banner_puente.svg";
+import midImg from "../../Assets/Heros/hero_credito_puente_mid.jpg"
 import styled from "styled-components";
 
 const StyledCreditoPuente = styled.div`
@@ -81,6 +82,7 @@ class CreditoPuente extends Component {
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
+          midImg={midImg}
           banner={HeroHome}
           path="/"
         />
