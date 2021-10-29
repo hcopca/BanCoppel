@@ -14,6 +14,8 @@ import {
 import Hero_ from "../../Assets/Heros/hero_crav.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.jpg";
 import HeroHome from "../../Assets/Heros/crav_banner.svg";
+import Hero_mid from "../../Assets/Heros/img-cuenta-corriente-crav-mid.jpg";
+
 import styled from "styled-components";
 const StyledCrav = styled.div`
   .btn {
@@ -79,6 +81,7 @@ class Crav extends Component {
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
+          midImg={Hero_mid}
           banner={HeroHome}
           path="/"
         />

@@ -13,6 +13,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_credito_simple.jpg";
+import Hero_mid from "../../Assets/Heros/Hero_Credito_Simple_mid.jpg";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 import styled from "styled-components";
 const StyledCreditoSimple = styled.div`
@@ -78,6 +79,7 @@ class CreditoSimple extends Component {
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
+          midImg={Hero_mid}
           path="/"
         />{" "}
         <ProductHeader>

@@ -17,6 +17,7 @@ import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_proyectos_inversion.jpg";
 import HeroHome from "../../Assets/Heros/banner_proyectos_inversion.svg";
 import styled from "styled-components";
+import Hero_mid from "../../Assets/Heros/img-proyectos-mid.jpg";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
@@ -88,15 +89,7 @@ class ProyectosInversion extends Component {
             </>
           );
         case "Perfil del solicitante":
-          return (
-            <PerfilSolicitante
-              bullets={[
-                <>
-                  Personas Morales.
-                </>,
-              ]}
-            />
-          );
+          return <PerfilSolicitante bullets={[<>Personas Morales.</>]} />;
         default:
           console.error("No hay solucion definida", data);
       }
@@ -141,6 +134,7 @@ class ProyectosInversion extends Component {
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
+          midImg={Hero_mid}
           path="/"
         />
         <ProductHeader>

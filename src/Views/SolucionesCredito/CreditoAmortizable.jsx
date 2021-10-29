@@ -14,6 +14,9 @@ import {
 import Hero_ from "../../Assets/Heros/hero_corriente.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.jpg";
 import HeroHome from "../../Assets/Heros/banner_corriente.svg";
+
+import Hero_mid from "../../Assets/Heros/img-cuenta-corriente-amortizable-mid.jpg";
+
 import styled from "styled-components";
 
 const StyledCreditoAmortizable = styled.div`
@@ -78,6 +81,7 @@ class CreditoAmortizable extends Component {
           responsiveImg={Hero_responsive}
           banner={HeroHome}
           path="/"
+          midImg={Hero_mid}
         />
 
         <ProductHeader>

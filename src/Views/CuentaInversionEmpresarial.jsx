@@ -17,6 +17,7 @@ import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.jpg";
 import HeroHome from "../Assets/Heros/banner_cuenta_empresarial.svg";
 import styled from "styled-components";
+import Hero_mid from "../Assets/Heros/img-cuenta-inversion-mid.jpg";
 
 const StyledInversionEmpresarial = styled.div`
   @media (min-width: 992px) {
@@ -90,6 +91,7 @@ class EmpresaNet extends Component {
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
+          midImg={Hero_mid}
           path="/"
         />
         <ProductHeader>

@@ -16,6 +16,7 @@ import Hero_ from "../../Assets/Heros/hero_financiamiento.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_financiamiento.jpg";
 import HeroHome from "../../Assets/Heros/banner_financiamiento.svg";
 import styled from "styled-components";
+import Hero_mid from "../../Assets/Heros/img-financiamiento-mid.jpg";
 
 const StyledFinanciamiento = styled.div`
   @media (min-width: 992px) {
@@ -93,6 +94,7 @@ class FinanciamientoOrdenesCompra extends Component {
           imagen={Hero_}
           responsiveImg={Hero_responsive}
           banner={HeroHome}
+          midImg={Hero_mid}
           path="/"
         />
         <ProductHeader>
