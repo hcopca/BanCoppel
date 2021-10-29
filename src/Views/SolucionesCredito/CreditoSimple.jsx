@@ -12,7 +12,7 @@ import {
   TeInteresa,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.png";
-import Hero_responsive from "../../Assets/Heros/hero_responsive_credito_simple.png";
+import Hero_responsive from "../../Assets/Heros/hero_responsive_credito_simple.jpg";
 import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
 import styled from "styled-components";
 const StyledCreditoSimple = styled.div`

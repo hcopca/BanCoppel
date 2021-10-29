@@ -14,7 +14,7 @@ import {
   // ListBullets,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.png";
-import Hero_responsive from "../../Assets/Heros/hero_responsive_proyectos_inversion.png";
+import Hero_responsive from "../../Assets/Heros/hero_responsive_proyectos_inversion.jpg";
 import HeroHome from "../../Assets/Heros/banner_proyectos_inversion.svg";
 import styled from "styled-components";
 

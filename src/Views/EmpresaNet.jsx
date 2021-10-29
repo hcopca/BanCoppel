@@ -11,7 +11,7 @@ import {
   TeInteresa,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_empresanet.png";
-import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.jpg";
 import HeroHome from "../Assets/Heros/banner_empresanet.svg";
 import styled from "styled-components";
 const StyledEmpresaNet = styled.div`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Container, BancoppelBtn, Spin } from "./index";
 import Fondo_mujer from "../Assets/Heros/hero_home.png";
-import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.png";
+import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.jpg";
 import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
 
 const StyledHero = styled.div`

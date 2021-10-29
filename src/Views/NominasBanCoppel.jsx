@@ -12,7 +12,7 @@ import {
   TeInteresa,
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_nomina.png";
-import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.png";
+import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.jpg";
 import HeroHome from "../Assets/Heros/banner_nomina.svg";
 import styled from "styled-components";
 const StyledNominasBanCoppel = styled.div`
