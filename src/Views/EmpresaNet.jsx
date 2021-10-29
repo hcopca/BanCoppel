@@ -12,6 +12,7 @@ import {
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_empresanet.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.jpg";
+import midImg from "../Assets/Heros/hero_empresanet_mid.jpg"
 import HeroHome from "../Assets/Heros/banner_empresanet.svg";
 import styled from "styled-components";
 const StyledEmpresaNet = styled.div`
@@ -76,6 +77,7 @@ class EmpresaNet extends Component {
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
+          midImg={midImg}
           banner={HeroHome}
           path="/"
         />

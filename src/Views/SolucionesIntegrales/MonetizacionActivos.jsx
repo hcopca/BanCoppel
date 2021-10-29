@@ -14,6 +14,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_monetizacion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_monetizacion.jpg";
+import midImg from "../../Assets/Heros/hero_monetizacion_mid.jpg"
 import HeroHome from "../../Assets/Heros/banner_monetizacion.svg";
 import styled from "styled-components";
 
@@ -98,6 +99,7 @@ class MonetizacionActivos extends Component {
           btnCoppy="Me interesa"
           imagen={Hero_}
           responsiveImg={Hero_responsive}
+          midImg={midImg}
           banner={HeroHome}
           path="/"
         />
