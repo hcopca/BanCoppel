@@ -12,7 +12,7 @@ import {
   TeInteresa,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_crav.jpg";
-import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.png";
+import Hero_responsive from "../../Assets/Heros/hero_crav_responsive.jpg";
 import HeroHome from "../../Assets/Heros/crav_banner.svg";
 import styled from "styled-components";
 const StyledCrav = styled.div`
