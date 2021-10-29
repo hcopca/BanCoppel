@@ -12,7 +12,7 @@ const Card = styled.div`
   img {
     border-radius: 22px;
     width: 100%;
-    height: 262px;
+    height: 255px;
     object-fit: cover;
   }
 
@@ -100,7 +100,6 @@ const Card = styled.div`
       }
     }
   }
-  
 
   /* SECONDARY */
   width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
@@ -185,8 +184,6 @@ const Card = styled.div`
         }
       }
     }
-    
-   
   }
 
   /* 

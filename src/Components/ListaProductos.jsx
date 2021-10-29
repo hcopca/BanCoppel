@@ -35,6 +35,7 @@ const StyledPructs = styled.div`
 
 const StyledCards = styled.div`
   display: flex;
+  overflow-y: hidden;
   overflow-x: scroll;
   width: 100%;
   justify-content: ${({ len }) => (len < 3 ? "flex-start" : "center")};
@@ -45,7 +46,6 @@ const StyledCards = styled.div`
       margin-right: 0px;
     }
   }
-  
 `;
 
 const StyledCardsResponsive = styled.div`
@@ -63,7 +63,6 @@ const StyledCardsResponsive = styled.div`
   @media (min-width: 992px) {
     display: none;
   }
-  
 `;
 
 class ListaProductos extends Component {
@@ -96,10 +95,10 @@ class ListaProductos extends Component {
       return arrays;
     };
 
-  this.setState({
-    Productos: await splitArray(arrayRemove(Catalogo, location), 3),
-  });
-} 
+    this.setState({
+      Productos: await splitArray(arrayRemove(Catalogo, location), 3),
+    });
+  }
 
   bodySlider(data) {
     return (
