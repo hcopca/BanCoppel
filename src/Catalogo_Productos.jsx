@@ -93,7 +93,7 @@ const productos = [
 
     title_custom: (
       <>
-        Crédito Cuenta <span>Corriente Amortizable</span>
+        Crédito Cuenta <br /> <span>Corriente Amortizable</span>
       </>
     ),
     homeCopy: "Apoyamos las necesidades de tu capital de trabajo.",
