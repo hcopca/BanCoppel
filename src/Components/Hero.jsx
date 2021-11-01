@@ -76,20 +76,20 @@ const StyledHero = styled.div`
             font-style: normal;
             font-weight: bold;
             font-size: 14px;
-            width: 150px;
+            width: 156px;
           }
         }
       }
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     max-height: 70vh;
     .hero_container {
       .container {
         .children {
           img {
-            max-width: 80%;
+            max-width: 505px;
           }
         }
       }
