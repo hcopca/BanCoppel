@@ -31,7 +31,7 @@ const Card = styled.div`
       h1 {
         font-family: futura_heavy;
         font-style: normal;
-        font-weight: bold;
+        font-weight: normal;
         font-size: 20px;
         text-align: center;
         color: #ffffff;
@@ -59,6 +59,7 @@ const Card = styled.div`
         height: 40px;
         margin: 0;
         margin-bottom: 20px;
+        margin-left: 10px;
       }
       button:hover {
         background-color: #ffbe12;
@@ -122,7 +123,8 @@ const Card = styled.div`
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
       h2 {
-        font-family: futura_bold;
+        font-family: futura_heavy;
+        font-weight: normal;
         font-size: 18px;
         line-height: 21px;
         color: #ffffff;
@@ -182,6 +184,9 @@ const Card = styled.div`
           font-size: 14px;
           line-height: 16px;
         }
+      }
+      button{
+        margin-left: 90px;
       }
     }
   }

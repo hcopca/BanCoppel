@@ -109,7 +109,7 @@ const StyledBanner = styled.section`
         margin-bottom: 15px;
         margin-left: 207px;
         button {
-        width: 183px;
+        width: 163px;
         height: 50px;
       }
       }
