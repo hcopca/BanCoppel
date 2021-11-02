@@ -174,7 +174,7 @@ const Card = styled.div`
     .card_body {
       .copy {
         width: 130%;
-        padding: 5px 25px 0px 10px;
+        padding: 0px 25px 0px 10px;
         h1 {
           font-size: 18px;
           line-height: 100%;

@@ -76,7 +76,7 @@ const StyledCardsSlider = styled.div`
         min-width: 423px;
         .card_body {
           .copy {
-            padding: 0px 10px;
+            padding: 5px 10px;
           }
         }
       }
