@@ -123,7 +123,7 @@ const InversionEmpresarialSections = [
     card: {
       image: require("../Assets/mano_cuenta_empresarial.png").default,
       copy2:
-        "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
+        "La mejor opción para optimizar tus recursos de la manera mas sencilla.",
     },
 
     items: [

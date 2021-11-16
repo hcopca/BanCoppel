@@ -88,7 +88,7 @@ class CreditoAmortizable extends Component {
           <h1>
             CRÉDITO{" "}
             <span>
-              CUENTA <br /> CORRIENTE AMORTIZABLE
+              CUENTA <br /> CORRIENTE
             </span>
           </h1>
         </ProductHeader>
@@ -120,7 +120,7 @@ const CravSections = [
     items: [
       {
         icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de flujo de capital de trabajo en corto plazo.",
+        copy: "Optimización de flujo de capital de trabajo en corto plazo y largo plazo.",
       },
       {
         icon: require("../../Assets/hand_start.svg").default,
@@ -142,8 +142,8 @@ const CravSections = [
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
-        title: "AMORTIZACIÓN",
-        copy: "Amortización 36 meses con amortizaciones máximas a 12 meses.",
+        title: "FORMA DE PAGO",
+        copy: "Pagos de intereses mensuales y capital al vencimiento de la disposición.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -158,7 +158,7 @@ const CravSections = [
       },
       {
         title: "PLAZO",
-        copy: "Plazo indefinido.",
+        copy: "Hasta 36 meses.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

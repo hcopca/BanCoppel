@@ -120,21 +120,21 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_arrendamiento.png").default,
       copy2:
-        "Producto de crédito que ayuda a mantener tus Activo Fijo en uso por una renta mensual.",
+        "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
     },
 
     items: [
       {
         icon: require("../../Assets/hand_house_blue.svg").default,
-        copy: "Deducción de intereses de las rentas.",
+        copy: "Deducción de los intereses de las rentas.",
       },
       {
         icon: require("../../Assets/Financial_Document.svg").default,
-        copy: "Opción de compra al finalizar el contrato.",
+        copy: "Sin enganche en la adquisición del activo.",
       },
       {
         icon: require("../../Assets/tickets.svg").default,
-        copy: "No descapitalizar a la empresa para adquirir los Activos que necesitas.",
+        copy: "Adquisición de activos fijos con financiamiento hasta del 100%.",
       },
     ],
   },
@@ -153,13 +153,13 @@ const CravSections = [
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
-        title: "AMORTIZACIÓN",
-        copy: "Rentas mensuales compuestas por capital e intereses.",
+        title: "FORMA DE PAGO",
+        copy: "Rentas mensuales compuestas por capital, intereses e IVA.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
         title: "TASA",
-        copy: "Variable.",
+        copy: "Variable y/o fija.",
         image: require("../../Assets/porcentaje.svg").default,
       },
       {
@@ -169,7 +169,7 @@ const CravSections = [
       },
       {
         title: "PLAZO",
-        copy: "Hasta siete años.",
+        copy: "Hasta 5 años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

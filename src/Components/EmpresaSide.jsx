@@ -172,21 +172,21 @@ class EmpresaSide extends Component {
                 >
                   Crédito Simple
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   className="item_"
                   to="/crav"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
                   Crédito Cuenta Corriente CRAV
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   className="item_"
                   to="/credito_amortizable"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
-                  Crédito Cuenta Corriente Amortizable
+                  Crédito Cuenta Corriente
                 </NavLink>
                 <NavLink
                   className="item_"

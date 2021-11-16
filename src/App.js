@@ -31,9 +31,9 @@ class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/crav">
+          {/* <Route path="/crav">
             <Crav />
-          </Route>
+          </Route> */}
           <Route path="/credito_simple">
             <CreditoSimple />
           </Route>

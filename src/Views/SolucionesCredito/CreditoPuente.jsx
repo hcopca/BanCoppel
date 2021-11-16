@@ -113,7 +113,7 @@ const CreditoPuenteSections = [
     card: {
       image: require("../../Assets/mano_credito_puente.png").default,
       copy2:
-        "El impulso que necesitas para comenzar a construir un México mejor.",
+        "El impulso que necesitas para comenzar a construir.",
     },
 
     items: [
@@ -147,7 +147,7 @@ const CreditoPuenteSections = [
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Hasta 12 meses de gracia de capital. Pagos mensuales de interés.",
+        copy: "Amortizaciones mensuales de intereses y capital al vencimiento. Prepagos obligatorios por liberación de unidades.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -157,12 +157,12 @@ const CreditoPuenteSections = [
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura. \n Por estructuración.",
+        copy: "Por apertura y/o anualidad y/o por ministración",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Hasta cinco años.",
+        copy: "Hasta 4 años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

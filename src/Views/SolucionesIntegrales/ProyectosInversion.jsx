@@ -89,7 +89,10 @@ class ProyectosInversion extends Component {
             </>
           );
         case "Perfil del solicitante":
-          return <PerfilSolicitante bullets={[<>Personas Morales.</>]} />;
+          return <PerfilSolicitante bullets={[
+          <>Personas Morales.</>,
+          <>“Vehículos de propósito específico (SPV)"</>
+        ]} />;
         default:
           console.error("No hay solucion definida", data);
       }

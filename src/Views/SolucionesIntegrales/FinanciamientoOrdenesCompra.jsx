@@ -163,7 +163,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "FORMA DE PAGO",
-        copy: " Intereses mensuales y pago de capital al vencimiento.",
+        copy: " Intereses mensuales y pago de capital al cobro del pedido y/o factura.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {

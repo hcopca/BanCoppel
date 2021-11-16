@@ -59,7 +59,7 @@ class MonetizacionActivos extends Component {
                   Propietarios de un inmueble que <br /> arrienden a Grupo
                   Coppel.
                 </>,
-                "Personas Morales.",
+                // "Personas Morales.",
               ]}
             />
           );
@@ -132,7 +132,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_monetizacion.png").default,
       copy2:
-        "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
+        "Te brindamos liquidez sobre tu activo fijo.",
     },
 
     items: [
@@ -166,12 +166,12 @@ const SolucionesCreditoSections = [
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "Hasta el 85% del VPN de las rentas remanentes menos 3 meses.",
+        copy: "Hasta el 85% del Valor Presente Neto de las rentas remanentes menos 3 meses.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Pago mensual de capital e intereses.",
+        copy: "Pago mensual de capital e intereses en fecha de pago de renta.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -181,7 +181,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura.",
+        copy: "Por apertura y/o estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {

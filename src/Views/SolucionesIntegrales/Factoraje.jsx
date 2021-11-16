@@ -55,7 +55,7 @@ class SolucionesCredito extends Component {
               Actividad Empresarial.
             </>
           );
-          return <PerfilSolicitante bullets={["Personas Morales.", item]} />;
+          return <PerfilSolicitante bullets={["Personas Morales.",]} />; //lleva "item" despues de personas morales para mostrar más requisitos en perfil de solicitante
         default:
           console.error("No hay solucion definida", data);
       }
@@ -130,7 +130,7 @@ const SolucionesCreditoSections = [
       image: require("../../Assets/mano_factoraje.png").default,
       //Revisar el tamaño de card
       copy2:
-        "Financiamiento a corto plazo para apoyar el crecimiento de tu empresa, otorgándote el pago anticipado de las cuentas por cobrar sobre las ventas a crédito.",
+        "Financiamiento de corto plazo para apoyar al crecimiento de tu empresa, a través del pago anticipado de las cuentas por pagar.",
     },
 
     items: [
@@ -169,7 +169,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "FORMA DE PAGO",
-        copy: "Al vencimiento del documento cedido.",
+        copy: "Pago único al vencimiento del documento publicado.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -184,7 +184,7 @@ const SolucionesCreditoSections = [
       },
       {
         title: "PLAZO",
-        copy: "Plazo de disposición máxima a 180 días, plazo de la línea a 12 meses.",
+        copy: "Vigencia máxima de la factura de 180 días. Plazo de la línea de 12 meses.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],

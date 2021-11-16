@@ -60,7 +60,7 @@ class CreditoSimple extends Component {
       <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL CAPITAL PARA</h1>
+            <h1>EL FINANCIAMIENTO PARA</h1>
             <h1>
               IMPULSAR TU
               <br />
@@ -114,11 +114,11 @@ const CreditoSimpleSections = [
     items: [
       {
         icon: require("../../Assets/billetes_azul.svg").default,
-        copy: "Optimización de capital de trabajo a largo plazo.",
+        copy: "Optimización de recursos a largo plazo.",
       },
       {
         icon: require("../../Assets/hand_start.svg").default,
-        copy: "Capital para proyectos productivos.",
+        copy: "Recursos para proyectos productivos.",
       },
       {
         icon: require("../../Assets/hand_money_blue.svg").default,
@@ -135,17 +135,17 @@ const CreditoSimpleSections = [
     cards: [
       {
         title: "DESTINO",
-        copy: "Capital de trabajo, equipamiento o compra de Activo Fijo.",
+        copy: "Equipamiento o compra de Activo Fijo.",
         image: require("../../Assets/hand_money.svg").default,
       },
       {
         title: "MONTO DE LÍNEA",
-        copy: "En función al monto de la inversión en capital de trabajo y proyectos de largo plazo, sujeto a capacidad de pago.",
+        copy: "En función al monto de la inversión en activo fijo y proyectos de largo plazo, sujeto a capacidad de pago.",
         image: require("../../Assets/hand_coins.svg").default,
       },
       {
         title: "AMORTIZACIÓN",
-        copy: "Pagos periódicos de capital e intereses.",
+        copy: "Amortizaciones periódicas de capital e intereses.",
         image: require("../../Assets/gear_coin.svg").default,
       },
       {
@@ -155,12 +155,12 @@ const CreditoSimpleSections = [
       },
       {
         title: "COMISIONES",
-        copy: "Por apertura.",
+        copy: "Por apertura y/o estructuración.",
         image: require("../../Assets/card_coins.svg").default,
       },
       {
         title: "PLAZO",
-        copy: "Hasta siete años.",
+        copy: "Hasta 10 años.",
         image: require("../../Assets/calendar_bill.svg").default,
       },
     ],
