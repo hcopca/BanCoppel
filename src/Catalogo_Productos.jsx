@@ -165,7 +165,7 @@ const productos = [
       "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
     cardcopy:
       "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
-    path: "/empresa-net",
+    path: "/empresanet",
     image: require("./Assets/mano_empresanet.png").default,
   },
 ];

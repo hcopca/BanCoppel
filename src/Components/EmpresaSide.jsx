@@ -268,7 +268,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="item_"
-          to="/empresa-net"
+          to="/empresanet"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >

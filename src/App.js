@@ -49,7 +49,7 @@ class App extends Component {
           <Route path="/nomina-bancoppel">
             <NominasBanCoppel />
           </Route>
-          <Route path="/empresa-net">
+          <Route path="/empresanet">
             <EmpresaNet />
           </Route>
           <Route path="/cuenta-inversion-empresarial">
