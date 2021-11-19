@@ -28,7 +28,7 @@ const Card = styled.div`
       display: flex;
       align-items: left;
       flex-direction: column;
-      h1 {
+      h2 {
         font-family: futura_heavy;
         font-style: normal;
         font-weight: normal;
@@ -47,8 +47,6 @@ const Card = styled.div`
         line-height: 115%;
         text-align: center;
         color: #ffffff;
-      }
-      h2 {
       }
     }
     a {
@@ -83,7 +81,7 @@ const Card = styled.div`
       align-items: flex-start;
 
       .copy {
-        h1 {
+        h2 {
           font-size: 18px;
           text-align: left;
         }
@@ -116,13 +114,13 @@ const Card = styled.div`
 
     .copy {
       padding: ${({ secondary }) => (secondary ? "10px" : null)};
-      h1 {
+      h2 {
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
       p {
         display: ${({ secondary }) => (secondary ? "none" : null)};
       }
-      h2 {
+      h3 {
         font-family: futura_heavy;
         font-weight: normal;
         font-size: 18px;
@@ -140,7 +138,7 @@ const Card = styled.div`
     align-items: ${({ row }) => (row ? "flex-start" : null)};
 
     .copy {
-      h1 {
+      h2 {
         font-size: ${({ row }) => (row ? "17px" : null)};
         text-align: left;
       }
@@ -175,7 +173,7 @@ const Card = styled.div`
       .copy {
         width: 130%;
         padding: 0px 25px 0px 10px;
-        h1 {
+        h2 {
           font-size: 18px;
           line-height: 100%;
         }
@@ -205,7 +203,7 @@ const Card = styled.div`
       align-items: flex-start;
 
       .copy {
-        h1 {
+        h2 {
           font-size: 22px;
         }
         p {
@@ -232,9 +230,9 @@ class CardBlue extends Component {
         {card.image ? <img src={card.image} alt="img" /> : null}
         <div className="card_body">
           <div className="copy">
-            <h1>{card.title_custom}</h1>
+            <h2>{card.title_custom}</h2>
             {card.homeCopy ? <p>{card.homeCopy}</p> : null}
-            {card.copy2 ? <h2>{card.copy2}</h2> : null}
+            {card.copy2 ? <h3>{card.copy2}</h3> : null}
           </div>
 
           {card.path ? (

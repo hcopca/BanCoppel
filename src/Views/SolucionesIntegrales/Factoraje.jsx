@@ -78,15 +78,15 @@ class SolucionesCredito extends Component {
       <>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Producto de <br />
               financiamiento
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               pensado para
               <br /> hacer crecer a<br />
               tu empresa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -104,7 +104,7 @@ class SolucionesCredito extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">FACTORAJE</h1>
+            <h2 className="header_product">FACTORAJE FINANCIERO</h2>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

@@ -59,12 +59,12 @@ class EmpresaNet extends Component {
       <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Los beneficios</h1>
-            <h1>
+            <h2>Los beneficios</h2>
+            <h2>
               de la Banca sin
               <br />
               salir de casa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -82,9 +82,9 @@ class EmpresaNet extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             Empresa<span>Net</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

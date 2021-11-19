@@ -63,10 +63,10 @@ class CreditoAmortizable extends Component {
       <StyledCreditoAmortizable>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL RESPALDO QUE</h1>
-            <h1>
+            <h2>EL RESPALDO QUE</h2>
+            <h2>
               LE HACÍA FALTA <br />A TU NEGOCIO
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -85,12 +85,12 @@ class CreditoAmortizable extends Component {
         />
 
         <ProductHeader>
-          <h1>
+          <h2>
             CRÉDITO{" "}
             <span>
               CUENTA <br /> CORRIENTE
             </span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

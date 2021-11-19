@@ -167,10 +167,10 @@ class Home extends Component {
       <StyledHome>
         <ResponsiveHeader>
           <div className="title">
-            <h1>La Banca que</h1>
-            <h1>
+            <h2>La Banca que</h2>
+            <h2>
               tu empresa <br /> necesita
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>

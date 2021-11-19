@@ -107,17 +107,17 @@ class EmpresaSide extends Component {
 
   preOpen(path) {
     const soluciones_credito = [
-      "/credito_simple",
+      "/credito-simple",
       "/crav",
-      "/credito_amortizable",
-      "/credito_puente",
-      "/arrendamiento_financiero",
+      "/credito-amortizable",
+      "/credito-puente",
+      "/arrendamiento-financiero",
     ];
     const soluciones_integrales = [
-      "/proyectos_inversion",
-      "/financiamiento_ordenes_compra",
-      "/monetizacion_activos",
-      "/factoraje",
+      "/proyectos-inversion",
+      "/financiamiento-ordenes-compra",
+      "/monetizacion-activos",
+      "/factoraje-financiero",
     ];
 
     if (soluciones_credito.includes(path)) {
@@ -166,7 +166,7 @@ class EmpresaSide extends Component {
               <div className="body_">
                 <NavLink
                   className="item_"
-                  to="/credito_simple"
+                  to="/credito-simple"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -182,7 +182,7 @@ class EmpresaSide extends Component {
                 </NavLink> */}
                 <NavLink
                   className="item_"
-                  to="/credito_amortizable"
+                  to="/credito-amortizable"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -190,7 +190,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/credito_puente"
+                  to="/credito-puente"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -198,7 +198,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/arrendamiento_financiero"
+                  to="/arrendamiento-financiero"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -223,7 +223,7 @@ class EmpresaSide extends Component {
               <div className="body_">
                 <NavLink
                   className="item_"
-                  to="/proyectos_inversion"
+                  to="/proyectos-inversion"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -231,7 +231,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/financiamiento_ordenes_compra"
+                  to="/financiamiento-ordenes-compra"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -239,7 +239,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/monetizacion_activos"
+                  to="/monetizacion-activos"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -247,11 +247,11 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/factoraje"
+                  to="/factoraje-financiero"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
-                  Factoraje
+                  Factoraje Financiero
                 </NavLink>
               </div>
             </AccordionItemPanel>
@@ -260,7 +260,7 @@ class EmpresaSide extends Component {
 
         <NavLink
           className="item_"
-          to="/nomina_bancoppel"
+          to="/nomina-bancoppel"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >
@@ -268,7 +268,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="item_"
-          to="/empresa_net"
+          to="/empresa-net"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >
@@ -276,7 +276,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="item_"
-          to="/cuenta_inversion_empresarial"
+          to="/cuenta-inversion-empresarial"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >

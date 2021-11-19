@@ -30,7 +30,7 @@ const StyledContacto = styled.div`
 
       .headers {
         margin-bottom: 25px;
-        h1 {
+        h2 {
           margin-bottom: 8px;
 
           font-family: Futura;
@@ -92,7 +92,7 @@ const StyledContacto = styled.div`
       justify-content: flex-end;
       form {
         .headers {
-          h1 {
+          h2 {
             font-size: 32px;
           }
           p {
@@ -141,13 +141,13 @@ class FormularioContacto extends Component {
         <Container>
           <form onSubmit={(e) => this.onSubmit(e)}>
             <div className="headers">
-              <h1>
+              <h2>
                 Estás muy cerca de <br />
                 comenzar{" "}
                 <span>
                   tu historia <br /> con nosotros
                 </span>
-              </h1>
+              </h2>
               <p>Deja tus datos y un asesor se pondrá en contacto contigo.</p>
             </div>
             <div className="input_formulario">

@@ -62,14 +62,14 @@ class CreditoPuente extends Component {
       <StyledCreditoPuente>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Pensado <br /> para crear
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               proyectos
               <br />
               habitacionales
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -87,9 +87,9 @@ class CreditoPuente extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             CRÉDITO <span>PUENTE</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
         <Switcher

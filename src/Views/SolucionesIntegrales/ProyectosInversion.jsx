@@ -11,6 +11,7 @@ import {
   Requisitos,
   PerfilSolicitante,
   TeInteresa,
+  ResponsiveHeader
   // ListBullets,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.jpg";
@@ -30,7 +31,7 @@ const StyledHeader = styled.div`
   }
   .title {
     margin-bottom: 20px;
-    h1 {
+    h2 {
       text-transform: uppercase;
       color: var(--sky-blue);
       line-height: 35px;
@@ -115,14 +116,15 @@ class ProyectosInversion extends Component {
       <>
         <StyledHeader>
           <Container>
+            <ResponsiveHeader>
             <div className="title">
-              <h1>
+              <h2>
                 Construimos <br /> soluciones a la
-              </h1>
+              </h2>
 
-              <h1>
+              <h2>
                 medida de tu <br /> negocio
-              </h1>
+              </h2>
             </div>
             <div className="copy">
               <h4>
@@ -130,6 +132,7 @@ class ProyectosInversion extends Component {
                 vida a tus proyectos
               </h4>
             </div>
+            </ResponsiveHeader>
           </Container>
         </StyledHeader>
         <Hero
@@ -142,9 +145,9 @@ class ProyectosInversion extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">
+            <h2 className="header_product">
               Proyectos <span>de inversión</span>
-            </h1>
+            </h2>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

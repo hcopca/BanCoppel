@@ -62,12 +62,12 @@ class NominasBanCoppel extends Component {
       <StyledNominasBanCoppel>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL DINERO DE TUS</h1>
-            <h1>
+            <h2>EL DINERO DE TUS</h2>
+            <h2>
               TRABAJADORES EN
               <br />
               BUENAS MANOS
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -85,9 +85,9 @@ class NominasBanCoppel extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             NÓMINA <span>BANCOPPEL</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

@@ -79,9 +79,9 @@ class FinanciamientoOrdenesCompra extends Component {
       <StyledFinanciamiento>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Diseñado para</h1>
+            <h2>Diseñado para</h2>
 
-            <h1>resolver tus imprevistos</h1>
+            <h2>resolver tus imprevistos</h2>
           </div>
           <div className="copy">
             <h4>
@@ -98,9 +98,9 @@ class FinanciamientoOrdenesCompra extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1 className="header_product">
+          <h2 className="header_product">
             Financiamiento de <span>Órdenes de compra</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
         <Switcher

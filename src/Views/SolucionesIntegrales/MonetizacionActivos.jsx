@@ -85,9 +85,9 @@ class MonetizacionActivos extends Component {
       <StyledPruductHeader>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Arrendamiento</h1>
+            <h2>Arrendamiento</h2>
 
-            <h1>a largo plazo</h1>
+            <h2>a largo plazo</h2>
           </div>
           <div className="copy">
             <h4>
@@ -105,9 +105,9 @@ class MonetizacionActivos extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h1 className="header_product">
+            <h2 className="header_product">
               Monetización <span>de Activos</span>
-            </h1>
+            </h2>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

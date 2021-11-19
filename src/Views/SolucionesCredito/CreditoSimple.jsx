@@ -60,12 +60,12 @@ class CreditoSimple extends Component {
       <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL FINANCIAMIENTO PARA</h1>
-            <h1>
+            <h2>EL FINANCIAMIENTO PARA</h2>
+            <h2>
               IMPULSAR TU
               <br />
               NEGOCIO
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -83,9 +83,9 @@ class CreditoSimple extends Component {
           path="/"
         />{" "}
         <ProductHeader>
-          <h1>
+          <h2>
             CRÉDITO <span>SIMPLE</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CreditoSimpleSections} body={this.body} />
         <Switcher

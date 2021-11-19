@@ -64,11 +64,11 @@ class Crav extends Component {
       <StyledCrav>
         <ResponsiveHeader>
           <div className="title">
-            <h1>UN CRÉDITO</h1>
-            <h1>
+            <h2>UN CRÉDITO</h2>
+            <h2>
               DE ACUERDO A<br />
               TUS NECESIDADES
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -86,13 +86,13 @@ class Crav extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             CRÉDITO{" "}
             <span>
               CUENTA <br />
               CORRIENTE CRAV
             </span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body.bind(this)} />
         <Switcher

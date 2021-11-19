@@ -75,12 +75,12 @@ class EmpresaNet extends Component {
       <StyledInversionEmpresarial>
         <ResponsiveHeader>
           <div className="title">
-            <h1>El dinero de tus</h1>
-            <h1>
+            <h2>El dinero de tus</h2>
+            <h2>
               trabajadores en
               <br />
               buenas manos
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>La cuenta que tu empresa necesita</h4>
@@ -95,9 +95,9 @@ class EmpresaNet extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             Cuenta <span>Inversión Empresarial</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={InversionEmpresarialSections} body={this.body} />
         <Switcher

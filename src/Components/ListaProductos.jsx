@@ -118,7 +118,7 @@ class ListaProductos extends Component {
     return this.state.Productos ? (
       <StyledPructs>
         <Container>
-          <h1 className="rec">Recomendaciones</h1>
+          <h2 className="rec">Recomendaciones</h2>
           <StyledCardsResponsive>
             {this.state.Productos.map((bloque, idx) => {
               return bloque.map((item, indx) => {

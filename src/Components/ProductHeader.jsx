@@ -12,7 +12,7 @@ const StyledHead = styled.div`
     text-align: center;
     color: var(--night-blue);
 
-    h1 {
+    h2 {
       font-size: 24px;
       text-transform: uppercase;
       font-family: futura_bold;
@@ -48,7 +48,7 @@ const StyledHead = styled.div`
 
   /* @media (min-width: 1400px) {
     .header_body {
-      h1 {
+      h2 {
         font-size: 36px;
         line-height: 36px;
       }

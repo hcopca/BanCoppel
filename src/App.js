@@ -34,37 +34,37 @@ class App extends Component {
           {/* <Route path="/crav">
             <Crav />
           </Route> */}
-          <Route path="/credito_simple">
+          <Route path="/credito-simple">
             <CreditoSimple />
           </Route>
-          <Route path="/credito_amortizable">
+          <Route path="/credito-amortizable">
             <CreditoAmortizable />
           </Route>
-          <Route path="/credito_puente">
+          <Route path="/credito-puente">
             <CreditoPuente />
           </Route>
-          <Route path="/arrendamiento_financiero">
+          <Route path="/arrendamiento-financiero">
             <ArrendamientoFinanciero />
           </Route>
-          <Route path="/nomina_bancoppel">
+          <Route path="/nomina-bancoppel">
             <NominasBanCoppel />
           </Route>
-          <Route path="/empresa_net">
+          <Route path="/empresa-net">
             <EmpresaNet />
           </Route>
-          <Route path="/cuenta_inversion_empresarial">
+          <Route path="/cuenta-inversion-empresarial">
             <CuentaInversionEmpresarial />
           </Route>
-          <Route path="/factoraje">
+          <Route path="/factoraje-financiero">
             <SolucionesIntegrales />
           </Route>
-          <Route path="/monetizacion_activos">
+          <Route path="/monetizacion-activos">
             <MonetizacionActivos />
           </Route>
-          <Route path="/financiamiento_ordenes_compra">
+          <Route path="/financiamiento-ordenes-compra">
             <FinanciamientoOrdenesCompra />
           </Route>
-          <Route path="/proyectos_inversion">
+          <Route path="/proyectos-inversion">
             <ProyectosInversion />
           </Route>
           <Route path="/contacto">

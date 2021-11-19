@@ -30,7 +30,7 @@ const StyledTeInteresa = styled.div`
 
     flex-direction: column;
 
-    h1 {
+    h2 {
       margin-top: 25px;
       font-family: Futura;
 
@@ -89,7 +89,7 @@ const StyledTeInteresa = styled.div`
     .header {
       max-width: 842px;
       max-height: 180px;
-      h1 {
+      h2 {
         font-size: 18px;
       }
       p {
@@ -126,7 +126,7 @@ const StyledTeInteresa = styled.div`
     .header {
       max-width: 930px;
       max-height: 145px;
-      h1 {
+      h2 {
         font-size: 18px;
         margin-bottom: -15px;
       }
@@ -144,7 +144,7 @@ const StyledTeInteresa = styled.div`
     .header {
       max-width: 840px;
       max-height: 180px;
-      h1 {
+      h2 {
         font-size: 36px;
       }
       p {
@@ -162,7 +162,7 @@ export default function TeInteresa() {
       </div>
       <Container>
         <div className="header">
-          <h1>¿Te interesa?</h1>
+          <h2>¿Te interesa?</h2>
           <p>Consúltalo directamente con un ejecutivo</p>
           <div className="boton">
             <a href="/contacto">

@@ -70,14 +70,14 @@ class ArrendamientoFinanciero extends Component {
       <StyledArrendamientoFinanciero>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Financiamiento <br /> de Activo Fijo
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               pensados para
               <br />
               tu empresa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -94,9 +94,9 @@ class ArrendamientoFinanciero extends Component {
           path="/"
         />
         <ProductHeader>
-          <h1>
+          <h2>
             Arrendamiento <span>financiero</span>
-          </h1>
+          </h2>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher
