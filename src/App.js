@@ -34,40 +34,40 @@ class App extends Component {
           {/* <Route path="/crav">
             <Crav />
           </Route> */}
-          <Route path="/credito-simple">
+          <Route path="/empresas/credito-simple">
             <CreditoSimple />
           </Route>
-          <Route path="/credito-amortizable">
+          <Route path="/empresas/credito-amortizable">
             <CreditoAmortizable />
           </Route>
-          <Route path="/credito-puente">
+          <Route path="/empresas/credito-puente">
             <CreditoPuente />
           </Route>
-          <Route path="/arrendamiento-financiero">
+          <Route path="/empresas/arrendamiento-financiero">
             <ArrendamientoFinanciero />
           </Route>
-          <Route path="/nomina-bancoppel">
+          <Route path="/empresas/nomina-bancoppel">
             <NominasBanCoppel />
           </Route>
-          <Route path="/empresanet">
+          <Route path="/empresas/empresanet">
             <EmpresaNet />
           </Route>
-          <Route path="/cuenta-inversion-empresarial">
+          <Route path="/empresas/cuenta-inversion-empresarial">
             <CuentaInversionEmpresarial />
           </Route>
-          <Route path="/factoraje-financiero">
+          <Route path="/empresas/factoraje-financiero">
             <SolucionesIntegrales />
           </Route>
-          <Route path="/monetizacion-activos">
+          <Route path="/empresas/monetizacion-activos">
             <MonetizacionActivos />
           </Route>
-          <Route path="/financiamiento-ordenes-compra">
+          <Route path="/empresas/financiamiento-ordenes-compra">
             <FinanciamientoOrdenesCompra />
           </Route>
-          <Route path="/proyectos-inversion">
+          <Route path="/empresas/proyectos-inversion">
             <ProyectosInversion />
           </Route>
-          <Route path="/contacto">
+          <Route path="/empresas/contacto">
             <FormularioContacto />
           </Route>
         </Switch>

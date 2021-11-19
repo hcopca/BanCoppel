@@ -59,7 +59,7 @@ class MonetizacionActivos extends Component {
                   Propietarios de un inmueble que <br /> arrienden a Grupo
                   Coppel.
                 </>,
-                // "Personas Morales.",
+                "Personas Morales.",
               ]}
             />
           );

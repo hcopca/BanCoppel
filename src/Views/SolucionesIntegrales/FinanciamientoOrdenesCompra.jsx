@@ -79,9 +79,9 @@ class FinanciamientoOrdenesCompra extends Component {
       <StyledFinanciamiento>
         <ResponsiveHeader>
           <div className="title">
-            <h2>Diseñado para</h2>
+            <h1>Diseñado para</h1>
 
-            <h2>resolver tus imprevistos</h2>
+            <h1>resolver tus imprevistos</h1>
           </div>
           <div className="copy">
             <h4>
@@ -124,7 +124,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_financiamiento.png").default,
       copy2:
-        "Producto crediticio que te ayuda a financiar las cuentas que tienes por cobrar a grandes empresas.",
+        "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
     },
 
     items: [

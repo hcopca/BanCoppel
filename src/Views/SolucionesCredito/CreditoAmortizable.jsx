@@ -70,7 +70,7 @@ class CreditoAmortizable extends Component {
           </div>
           <div className="copy">
             <h4>
-              Apoyamos las necesidades de <br /> tu capital de trabajo
+              Apoyamos tus necesidades de <br /> tu capital de trabajo
             </h4>
           </div>
         </ResponsiveHeader>
@@ -114,7 +114,7 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_cuenta_amortizable.png").default,
       copy2:
-        "Un crédito a corto plazo que te ayudará a cubrir las necesidades de tu capital de trabajo.",
+        "Un crédito a corto plazo que te ayudará a cubrir tus necesidades de capital de trabajo.",
     },
 
     items: [

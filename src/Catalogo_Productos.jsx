@@ -10,7 +10,7 @@ const productos = [
     homeCopy:
       "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
     cardcopy: "La nueva forma de administrar los recursos de tu empresa.",
-    path: "/cuenta-inversion-empresarial",
+    path: "/empresas/cuenta-inversion-empresarial",
     image: require("./Assets/mano_cuenta_empresarial.png").default,
   },
   {
@@ -25,7 +25,7 @@ const productos = [
       "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero.",
     cardcopy:
       "Servicio que brinda la facilidad de transferir de forma masiva...",
-    path: "/nomina-bancoppel",
+    path: "/empresas/nomina-bancoppel",
     image: require("./Assets/mano_nomina.png").default,
   },
   {
@@ -39,9 +39,9 @@ const productos = [
       </>
     ),
 
-    homeCopy: "El financiamiento para impulsar tu negocio.",
-    cardcopy: "El financiamiento para impulsar tu negocio.",
-    path: "/credito-simple",
+    homeCopy: "Financiamiento para impulsar tu negocio.",
+    cardcopy: "Financiamiento para impulsar tu negocio",
+    path: "/empresas/credito-simple",
     image: require("./Assets/Persons2.png").default,
   },
   // {
@@ -68,9 +68,9 @@ const productos = [
         <br /> <span>Financiero</span>
       </>
     ),
-    homeCopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
-    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
-    path: "/arrendamiento-financiero",
+    homeCopy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
+    cardcopy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
+    path: "/empresas/arrendamiento-financiero",
     image: require("./Assets/IpadHands.png").default,
   },
   {
@@ -82,9 +82,9 @@ const productos = [
         <br /> <span>Puente</span>
       </>
     ),
-    homeCopy: "Pensado para crear proyectos habitacionales.",
-    cardcopy: "Pensado para crear proyectos habitacionales.",
-    path: "/credito-puente",
+    homeCopy: "El impulso que necesitas para comenzar a construir.",
+    cardcopy: "El impulso que necesitas para comenzar a construir.",
+    path: "/empresas/credito-puente",
     image: require("./Assets/GirlHand.png").default,
   },
   {
@@ -97,8 +97,8 @@ const productos = [
       </>
     ),
     homeCopy: "Apoyamos las necesidades de tu capital de trabajo.",
-    cardcopy: "El respaldo que le hacía falta a tu negocio.",
-    path: "/credito-amortizable",
+    cardcopy: "Apoyamos las necesidades de tu capital de trabajo.",
+    path: "/empresas/credito-amortizable",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
   {
@@ -106,8 +106,8 @@ const productos = [
     name: "Factoraje",
     title_custom: <>Factoraje <br /><span>Financiero</span></>,
     homeCopy: "Financiamiento que impulsa el crecimiento de tus Proveedores.", //
-    cardcopy: "El respaldo que le hacía falta a tu negocio.",
-    path: "/factoraje-financiero",
+    cardcopy: "Financiamiento que impulsa el crecimiento de tus Proveedores.",
+    path: "/empresas/factoraje-financiero",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
 
@@ -120,9 +120,9 @@ const productos = [
         <span>de Activos</span>
       </>
     ),
-    homeCopy: "Liquidez sobre tus activos fijos.",
-    cardcopy: "Un crédito diseñado de acuerdo a tus necesidades.",
-    path: "/monetizacion-activos",
+    homeCopy: "Te brindamos liquidez sobre tu activo fijo.",
+    cardcopy: "Te brindamos liquidez sobre tu activo fijo.",
+    path: "/empresas/monetizacion-activos",
     image: require("./Assets/mano_monetizacion.png").default,
   },
   {
@@ -135,8 +135,8 @@ const productos = [
       </>
     ),
     homeCopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
-    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
-    path: "/financiamiento-ordenes-compra",
+    cardcopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
+    path: "/empresas/financiamiento-ordenes-compra",
     image: require("./Assets/mano_financiamiento.png").default,
   },
   {
@@ -149,8 +149,8 @@ const productos = [
       </>
     ),
     homeCopy: "Financiamiento de largo plazo para tus proyectos.",
-    cardcopy: "Financiamiento de Activo Fijo pensados para tu empresa.",
-    path: "/proyectos-inversion",
+    cardcopy: "Financiamiento de largo plazo para tus proyectos.",
+    path: "/empresas/proyectos-inversion",
     image: require("./Assets/mano_proyectos_inversion.png").default,
   },
   {
@@ -165,7 +165,7 @@ const productos = [
       "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
     cardcopy:
       "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
-    path: "/empresanet",
+    path: "/empresas/empresanet",
     image: require("./Assets/mano_empresanet.png").default,
   },
 ];
