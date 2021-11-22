@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -76,6 +77,20 @@ class FinanciamientoOrdenesCompra extends Component {
 
   render() {
     return (
+      <>
+       <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Financiamiento de ordenes de compra - requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Financiamiento de ordenes de compra - requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/financiamiento-ordenes-de-compra" />
+          <meta 
+          name="keywords"
+          content="ordenes de compra, financiamiento,banca empresarial, bancoppel, credito,requisitos, negocio" />
+      </Helmet>
       <StyledFinanciamiento>
         <ResponsiveHeader>
           <div className="title">
@@ -111,6 +126,7 @@ class FinanciamientoOrdenesCompra extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledFinanciamiento>
+      </>
     );
   }
 }

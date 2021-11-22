@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -72,6 +73,21 @@ class EmpresaNet extends Component {
 
   render() {
     return (
+      <>
+       <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Cuenta inversión empresarial: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Cuenta inversión empresarial: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/cuenta-inversion-empresarial" />
+          <meta 
+          name="keywords"
+          content="banca empresarial, bancoppel, banco, empresa,cuenta de inversion, rendimiento, caracteristicas, requisitos, negocio," />
+
+      </Helmet>
       <StyledInversionEmpresarial>
         <ResponsiveHeader>
           <div className="title">
@@ -110,6 +126,7 @@ class EmpresaNet extends Component {
         <ListaProductos />
         {this.state.view.section === "Beneficios" ? <Consulta /> : null}
       </StyledInversionEmpresarial>
+      </>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -56,6 +57,21 @@ class EmpresaNet extends Component {
 
   render() {
     return (
+      <>
+       <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          EmpresaNet: banca por internet | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="EmpresaNet: banca por internet | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/empresanet" />
+          <meta 
+          name="keywords"
+          content="banca empresarial, bancoppel, banco, cuentas, empresa,operaciones financieras,  negocio,  administrar," />
+
+      </Helmet>
       <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
@@ -96,6 +112,7 @@ class EmpresaNet extends Component {
 
         <ListaProductos />
       </StyledEmpresaNet>
+      </>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -76,6 +77,20 @@ class SolucionesCredito extends Component {
   render() {
     return (
       <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Factoraje financiero: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Factoraje financiero: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href=" https://www.bancoppel.com/empresas/factoraje-financiero" />
+          <meta 
+          name="keywords"
+          content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel" />
+      </Helmet>
+     
         <ResponsiveHeader>
           <div className="title">
             <h2>

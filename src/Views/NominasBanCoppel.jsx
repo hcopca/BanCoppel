@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   ResponsiveHeader,
   Hero,
@@ -59,6 +60,21 @@ class NominasBanCoppel extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Nómina BanCoppel: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Nómina BanCoppel: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/nomina-bancoppel" />
+          <meta 
+          name="keywords"
+          content="nomina, bancoppel, requisitos, beneficios, transferencias bancarias" />
+      </Helmet>
+      
       <StyledNominasBanCoppel>
         <ResponsiveHeader>
           <div className="title">
@@ -99,6 +115,7 @@ class NominasBanCoppel extends Component {
 
         <ListaProductos />
       </StyledNominasBanCoppel>
+      </>
     );
   }
 }

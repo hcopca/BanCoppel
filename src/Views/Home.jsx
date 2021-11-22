@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   ConoceCredito,
@@ -164,6 +165,21 @@ class Home extends Component {
 
   render() {
     return this.state.HomeSections ? (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Banca empresarial BanCoppel | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Banca empresarial BanCoppel | BanCoppel.com" />
+          <link rel="canonical" href="http://bancoppel.mx/empresas" />
+          <meta 
+          name="keywords"
+          content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito" />
+
+      </Helmet>
       <StyledHome>
         <ResponsiveHeader>
           <div className="title">
@@ -198,6 +214,7 @@ class Home extends Component {
         />
         <ConoceCredito />
       </StyledHome>
+      </>
     ) : null;
   }
 }

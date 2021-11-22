@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -67,6 +68,21 @@ class ArrendamientoFinanciero extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Arrendamiento financiero: detalles y requisitos| BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Arrendamiento financiero: detalles y requisitos| BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/arrendamiento-financiero" />
+          <meta 
+          name="keywords"
+          content="arrendamiento financiero, activo fijo, banca empresarial, bancoppel, credito,requisitos, empresa, negocio," />
+      </Helmet>
+      
       <StyledArrendamientoFinanciero>
         <ResponsiveHeader>
           <div className="title">
@@ -107,6 +123,7 @@ class ArrendamientoFinanciero extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledArrendamientoFinanciero>
+      </>
     );
   }
 }

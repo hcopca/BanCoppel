@@ -113,15 +113,15 @@ class Navbar extends Component {
                 <div className="ham-item center"></div>
                 <div className="ham-item"></div>
               </div>
-              <a href="/">
+              <a href="/empresas">
                 <img className="bancoppel_logo" src={Logo} alt="" />
               </a>
             </div>
             <div className="navigation">
-              <NavLink to="/" className="navigation-item">
+              <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Personas</BancoppelBtn>
               </NavLink>
-              <NavLink to="/" className="navigation-item">
+              <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink>
 

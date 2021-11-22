@@ -61,6 +61,21 @@ class Crav extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-cuenta-corriente-crav" />
+          <meta 
+          name="keywords"
+          content="credito cuenta corriente, banca empresarial, bancoppel, capacidad de pago, financiamiento, credito, requisitos," />
+
+      </Helmet>
       <StyledCrav>
         <ResponsiveHeader>
           <div className="title">
@@ -103,6 +118,7 @@ class Crav extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCrav>
+      </>
     );
   }
 }

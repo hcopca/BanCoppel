@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -59,6 +60,21 @@ class CreditoPuente extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Crédito puente: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Crédito puente: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-puente" />
+          <meta 
+          name="keywords"
+          content="credito puente, proyectos habitacionales, banca empresarial, bancoppel, credito,requisitos" />
+
+      </Helmet>
       <StyledCreditoPuente>
         <ResponsiveHeader>
           <div className="title">
@@ -100,6 +116,7 @@ class CreditoPuente extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCreditoPuente>
+      </>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Container,
   Hero,
@@ -114,6 +115,19 @@ class ProyectosInversion extends Component {
   render() {
     return (
       <>
+       <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Proyectos de inversión: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Proyectos de inversión: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/proyectos-de-inversion" />
+          <meta 
+          name="keywords"
+          content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa" />
+      </Helmet>
         <StyledHeader>
           <Container>
             <ResponsiveHeader>

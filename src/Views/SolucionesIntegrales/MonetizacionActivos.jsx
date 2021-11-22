@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -82,6 +83,21 @@ class MonetizacionActivos extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Monetización de activos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Monetización de activos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/monetizacion-de-activos" />
+          <meta 
+          name="keywords"
+          content="monetizacion, activos, bancoppel, financiamiento, credito, requisitos, credito empresarial" />
+      </Helmet>
+     
       <StyledPruductHeader>
         <ResponsiveHeader>
           <div className="title">
@@ -119,6 +135,7 @@ class MonetizacionActivos extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledPruductHeader>
+      </>
     );
   }
 }

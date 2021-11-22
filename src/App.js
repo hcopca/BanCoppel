@@ -10,7 +10,7 @@ import CuentaInversionEmpresarial from "./Views/CuentaInversionEmpresarial";
 import FormularioContacto from "./Views/FormularioContacto";
 
 // Soluciones credito
-import Crav from "./Views/SolucionesCredito/Crav";
+// import Crav from "./Views/SolucionesCredito/Crav";
 import CreditoSimple from "./Views/SolucionesCredito/CreditoSimple";
 import CreditoPuente from "./Views/SolucionesCredito/CreditoPuente";
 import ArrendamientoFinanciero from "./Views/SolucionesCredito/ArrendamientoFinanciero";
@@ -28,7 +28,7 @@ class App extends Component {
       <div className="bancoppel">
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/empresas">
             <Home />
           </Route>
           {/* <Route path="/crav">

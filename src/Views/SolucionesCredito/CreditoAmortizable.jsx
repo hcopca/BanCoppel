@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -60,6 +61,22 @@ class CreditoAmortizable extends Component {
 
   render() {
     return (
+      <>
+       <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Cuenta corriente amortizable: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content=" Cuenta corriente amortizable: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-amortizable" />
+          <meta 
+          name="keywords"
+          content="credito cuenta corriente, amortizable, banca empresarial, bancoppel, credito a corto plazo,requisitos," />
+
+      </Helmet>
+
       <StyledCreditoAmortizable>
         <ResponsiveHeader>
           <div className="title">
@@ -101,6 +118,7 @@ class CreditoAmortizable extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCreditoAmortizable>
+      </>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import {
   Container,
@@ -137,6 +138,20 @@ class FormularioContacto extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Contacto - Portal Empresas| BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Contacto - Portal Empresas| BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/contacto" />
+          <meta 
+          name="keywords"
+          content="contacto, empresas, contactanos, asesor, portal empresas" />
+      </Helmet>
       <StyledContacto img={Fondo} imgResponsive={Fondo_responsive}>
         <Container>
           <form onSubmit={(e) => this.onSubmit(e)}>
@@ -236,6 +251,7 @@ class FormularioContacto extends Component {
           </form>
         </Container>
       </StyledContacto>
+      </>
     );
   }
 }

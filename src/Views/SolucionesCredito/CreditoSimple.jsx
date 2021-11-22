@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import {
   Hero,
   Accordion,
@@ -57,6 +58,21 @@ class CreditoSimple extends Component {
 
   render() {
     return (
+      <>
+      <Helmet>
+          {/* <!-- Primary Meta Tags --> */}
+          <title>
+          Crédito simple: detalles y requisitos | BanCoppel.com
+          </title>
+          <meta 
+          name="title" 
+          content="Crédito simple: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-simple" />
+          <meta 
+          name="keywords"
+          content="credito simple, banca empresarial, bancoppel, financiamiento, credito, requisitos," />
+
+      </Helmet>
       <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
@@ -96,6 +112,7 @@ class CreditoSimple extends Component {
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
       </StyledCreditoSimple>
+      </>
     );
   }
 }
