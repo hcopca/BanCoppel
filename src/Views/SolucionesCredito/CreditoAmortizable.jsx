@@ -33,6 +33,11 @@ const StyledCreditoAmortizable = styled.div`
             width: 300px;
             height: 90px;
            }
+           .subtitle{
+             p{
+               width: 260px;
+             }
+           }
            img{
             margin-top: -160px;
              width: 20px;
