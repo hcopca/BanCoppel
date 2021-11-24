@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Container, BancoppelBtn, Spin } from "./index";
 import Fondo_mujer from "../Assets/Heros/hero_home.jpg";
 import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.jpg";
-import bannerDeafult from "../Assets/Heros/Hero_Home_Text.svg";
+import bannerDeafult from "../Assets/Heros/line1.svg";
 
 const StyledHero = styled.div`
   display: flex;
@@ -64,9 +64,52 @@ const StyledHero = styled.div`
           display: flex;
           flex-direction: column;
           justify-content: center;
-
+          .subchildren{
+            /* border: 1px solid red; */
+          h1{
+            text-transform: uppercase;
+            padding-top: 5px;
+            padding-left: 25px;
+            width: 468px;
+            height: 70px;
+            font-family: Futura;
+            font-size: 38px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+          }
+       
+           .subtitle{
+            padding-left: 25px;
+            padding-bottom: 70px;
+            p{
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background: #002A61;
+                border-radius: 16px;
+                max-width: 400px;
+                height: 64px;
+                font-family: Futura;
+                font-size: 18px;
+                color: #FFFFFF;
+                span{
+                  font-family: futura-bold;
+                  font-weight: bold;
+                  color:white;
+                  font-size: 18px;
+                }
+              }
+           }
+            
+          
           img {
-            max-width: 70%;
+            width: 20px;
+            margin-top: -160px;
+            margin-left: 5px;
+            position: absolute;
           }
           button {
             margin-left: 30px;
@@ -78,6 +121,7 @@ const StyledHero = styled.div`
             font-size: 14px;
             width: 156px;
           }
+         } //
         }
       }
     }
@@ -88,8 +132,18 @@ const StyledHero = styled.div`
     .hero_container {
       .container {
         .children {
+          .subchildren{
+            h1{
+            height: 100px;
+            font-size: 42px;
+            padding-top: 0px;
+          }
           img {
+            width: 25px;
+            margin-top: -190px;
+            margin-left: 0px;
             max-width: 505px;
+           }
           }
         }
       }
@@ -107,7 +161,10 @@ class Hero extends Component {
   }
 
   render() {
-    const { banner, btnCoppy, imagen, responsiveImg, midImg } = this.props;
+    const { banner, btnCoppy, imagen, responsiveImg, midImg, titleBanner, subtitleBanner} = this.props;
+
+    const subBlack = subtitleBanner ? subtitleBanner.split("\n") [0] : null;
+    const subWhite = subtitleBanner ? subtitleBanner.split("\n") [1] : null;
     return (
       <>
         <StyledHero className="fade-in-fast hero__">
@@ -130,17 +187,26 @@ class Hero extends Component {
           <div className="hero_container">
             <Container>
               <div className="children">
+                <div className="subchildren">
+                <h1>{titleBanner}</h1>
+           
+                <div className="subtitle">
+                {/* <p>{subtitleBanner} <span></span></p>  */}
+                <p>{subBlack ? subBlack : ""} {subWhite ? <span>{subWhite}</span> : ""}</p>
+                </div>
+        
                 <img
                   src={banner ? banner : bannerDeafult}
                   alt="banner"
                   onLoad={(e) => this.setState({ copy: false })}
                 />
                 {/* <a href={path ? path : "/"}> */}
-                <a href={"/contacto"}>
+                <a href={"/empresas/contacto"}>
                   <BancoppelBtn amarillo>
                     {btnCoppy ? btnCoppy : "no copy"}
                   </BancoppelBtn>
                 </a>
+                </div>
               </div>
             </Container>
           </div>

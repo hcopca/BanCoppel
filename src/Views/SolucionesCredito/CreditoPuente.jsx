@@ -14,7 +14,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_puente.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.jpg";
-import HeroHome from "../../Assets/Heros/banner_puente.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import midImg from "../../Assets/Heros/hero_credito_puente_mid.jpg"
 import styled from "styled-components";
 
@@ -22,8 +22,54 @@ const StyledCreditoPuente = styled.div`
   .btn {
     width: 197px;
   }
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+             height: 60px;
+            font-size: 28px;
+           }
+           img{
+            margin-top: -150px;
+             width: 17px;
+             margin-left: 10px;
+           }
+           .subtitle{
+             p{
+              height: 44px;
+             }
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 80px;
+           width: 500px;
+            font-size: 32px;
+           }
+           img{
+            margin-top: -170px;
+             width: 20px;
+             margin-left: 5px;
+           }
+         }
+        }
+      }
+    }
+  }
 `;
 
+const titleBanner = "PENSADO PARA CREAR PROYECTOS HABITACIONALES"
+const subtitleBanner = "Construimos contigo"
 class CreditoPuente extends Component {
   constructor(props) {
     super(props);
@@ -78,14 +124,14 @@ class CreditoPuente extends Component {
       <StyledCreditoPuente>
         <ResponsiveHeader>
           <div className="title">
-            <h2>
+            <h1>
               Pensado <br /> para crear
-            </h2>
-            <h2>
+            </h1>
+            <h1>
               proyectos
               <br />
               habitacionales
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -101,6 +147,8 @@ class CreditoPuente extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2>

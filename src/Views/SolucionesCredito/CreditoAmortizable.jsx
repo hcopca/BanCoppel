@@ -14,8 +14,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_corriente.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_corriente_responsive.jpg";
-import HeroHome from "../../Assets/Heros/banner_corriente.svg";
-
+import HeroHome from "../../Assets/Heros/line1.svg";
 import Hero_mid from "../../Assets/Heros/img-cuenta-corriente-amortizable-mid.jpg";
 
 import styled from "styled-components";
@@ -24,7 +23,47 @@ const StyledCreditoAmortizable = styled.div`
   .btn {
     width: 197px;
   }
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            font-size: 28px;
+            width: 300px;
+            height: 90px;
+           }
+           img{
+            margin-top: -160px;
+             width: 20px;
+             
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 100px;
+            font-size: 30px;
+           }
+           img{
+            margin-top: -190px;
+             width: 25px;
+           }
+         }
+        }
+      }
+    }
+  }
 `;
+const titleBanner = "EL RESPALDO QUE LE HACÍA FALTA A TU NEGOCIO."
+const subtitleBanner = " Apoyamos las necesidades de tu capital de trabajo."
 class CreditoAmortizable extends Component {
   constructor(props) {
     super(props);
@@ -80,10 +119,10 @@ class CreditoAmortizable extends Component {
       <StyledCreditoAmortizable>
         <ResponsiveHeader>
           <div className="title">
-            <h2>EL RESPALDO QUE</h2>
-            <h2>
+            <h1>EL RESPALDO QUE</h1>
+            <h1>
               LE HACÍA FALTA <br />A TU NEGOCIO
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -99,6 +138,8 @@ class CreditoAmortizable extends Component {
           banner={HeroHome}
           path="/"
           midImg={Hero_mid}
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
 
         <ProductHeader>
@@ -132,7 +173,7 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_cuenta_amortizable.png").default,
       copy2:
-        "Un crédito a corto plazo que te ayudará a cubrir tus necesidades de capital de trabajo.",
+        "Apoyamos las necesidades de tu capital de trabajo.",
     },
 
     items: [

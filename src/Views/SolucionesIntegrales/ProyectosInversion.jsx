@@ -17,7 +17,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_proyectos_inversion.jpg";
-import HeroHome from "../../Assets/Heros/banner_proyectos_inversion.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import styled from "styled-components";
 import Hero_mid from "../../Assets/Heros/img-proyectos-mid.jpg";
 
@@ -69,7 +69,50 @@ const StyledPruductHeader = styled.div`
     }
   }
 `;
-
+const StyledProyectosInversion = styled.div`
+@media (min-width: 992px) {
+  .hero_container{
+    .container{
+      .children{
+        .subchildren{
+          h1{
+            font-size: 29px;
+            width: 440px;
+            height: 90px;
+          }
+          img{
+            width: 22px;
+            margin-top: -170px;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+  
+@media (min-width: 1200px) {
+  .hero_container {
+    .container {
+      .children {
+       .subchildren{
+         h1{
+          height: 80px;
+          font-size: 34px;
+          width: 520px;
+         }
+         img{
+          margin-top: -175px;
+           width: 23px;
+         }
+       }
+      }
+    }
+  }
+}
+`;
+const titleBanner = "CONSTRUIMOS SOLUCIONES A LA MEDIDA DE TU NEGOCIO"
+const subtitleBanner = "El financiamiento que necesitas para darle vida a tus proyectos"
 class ProyectosInversion extends Component {
   constructor(props) {
     super(props);
@@ -128,17 +171,18 @@ class ProyectosInversion extends Component {
           name="keywords"
           content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa" />
       </Helmet>
+      <StyledProyectosInversion>
         <StyledHeader>
           <Container>
             <ResponsiveHeader>
             <div className="title">
-              <h2>
+              <h1>
                 Construimos <br /> soluciones a la
-              </h2>
+              </h1>
 
-              <h2>
+              <h1>
                 medida de tu <br /> negocio
-              </h2>
+              </h1>
             </div>
             <div className="copy">
               <h4>
@@ -156,6 +200,8 @@ class ProyectosInversion extends Component {
           banner={HeroHome}
           midImg={Hero_mid}
           path="/"
+          titleBanner = {titleBanner}
+          subtitleBanner = {subtitleBanner}
         />
         <ProductHeader>
           <StyledPruductHeader>
@@ -172,6 +218,7 @@ class ProyectosInversion extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
+        </StyledProyectosInversion>
       </>
     );
   }
@@ -186,7 +233,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_proyectos_inversion.png").default,
       copy2:
-        "Producto crediticio que te ayuda a financiar proyectos de inversión de largo plazo con fuente de pago propia.",
+        "Financiamiento de largo plazo para tus proyectos.",
     },
 
     items: [

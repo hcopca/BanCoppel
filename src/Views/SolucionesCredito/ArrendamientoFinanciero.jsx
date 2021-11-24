@@ -14,7 +14,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_arrendamiento.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_arrendamiento_responsive.jpg";
-import HeroHome from "../../Assets/Heros/banner_arrendamiento.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import midImg from "../../Assets/Heros/hero_arrendamiento_mid.jpg"
 import styled from "styled-components";
 const StyledArrendamientoFinanciero = styled.div`
@@ -26,9 +26,49 @@ const StyledArrendamientoFinanciero = styled.div`
     .header_body {
       flex: 3;
     }
+  
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+             width: 405px;
+             height: 85px;
+            font-size: 26px;
+           }
+           img{
+             width: 23px;
+             margin-top: -175px;
+             margin-left: 0px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 110px;
+            font-size: 34px;
+            width: 530px;
+           }
+           img{
+            margin-top: -200px;
+             width: 27px;
+             margin-left: -2px;
+           }
+         }
+        }
+      }
+    }
   }
 `;
-
+const titleBanner = "FINANCIAMIENTO DE ACTIVOS FIJOS PENSADOS PARA TU EMPRESA"
+const subtitleBanner = "Te damos las herramientas para crecer tu negocio"
 class ArrendamientoFinanciero extends Component {
   constructor(props) {
     super(props);
@@ -86,14 +126,14 @@ class ArrendamientoFinanciero extends Component {
       <StyledArrendamientoFinanciero>
         <ResponsiveHeader>
           <div className="title">
-            <h2>
+            <h1>
               Financiamiento <br /> de Activo Fijo
-            </h2>
-            <h2>
+            </h1>
+            <h1>
               pensados para
               <br />
               tu empresa
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -108,6 +148,8 @@ class ArrendamientoFinanciero extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2>

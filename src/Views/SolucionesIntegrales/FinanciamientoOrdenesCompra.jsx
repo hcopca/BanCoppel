@@ -15,7 +15,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_financiamiento.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_financiamiento.jpg";
-import HeroHome from "../../Assets/Heros/banner_financiamiento.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import styled from "styled-components";
 import Hero_mid from "../../Assets/Heros/img-financiamiento-mid.jpg";
 
@@ -24,9 +24,47 @@ const StyledFinanciamiento = styled.div`
     .header_body {
       flex: 7;
     }
-  }
-`;
 
+  .hero_container{
+    .container{
+      .children{
+        .subchildren{
+          h1{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+  
+@media (min-width: 1200px) {
+  .hero_container {
+    .container {
+      .children {
+       .subchildren{
+         h1{
+         height: 80px;
+          font-size: 34px;
+          width: 530px;
+         }
+         img{
+          margin-top: -180px;
+           width: 25px;
+         }
+         .subtitle{
+           p{
+            padding: 20px;
+           }
+         }
+       }
+      }
+    }
+  }
+}
+`;
+const titleBanner = "DISEÑADO PARA RESOLVER TUS IMPREVISTOS"
+const subtitleBanner = "No te quedes sin lo indispensable para tu negocio."
 class FinanciamientoOrdenesCompra extends Component {
   constructor(props) {
     super(props);
@@ -111,6 +149,8 @@ class FinanciamientoOrdenesCompra extends Component {
           banner={HeroHome}
           midImg={Hero_mid}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2 className="header_product">

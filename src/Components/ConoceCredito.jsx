@@ -139,7 +139,7 @@ export default class ConoceCredito extends Component {
           </div>
 
           <div className="contenido_sobrepuesto">
-            <a href="/contacto">
+            <a href="/empresas/contacto">
               <BancoppelBtn amarillo><p>Solicita tu crédito</p></BancoppelBtn>
             </a>
           </div>

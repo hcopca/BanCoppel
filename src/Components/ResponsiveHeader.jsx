@@ -19,7 +19,7 @@ const StyledHeader = styled.div`
   }
   .title {
     margin-bottom: 20px;
-    h2 {
+    h1 {
       font-family: futura_heavy;
       text-transform: uppercase;
 
@@ -64,7 +64,7 @@ export default function ResponsiveHeader(props) {
     <StyledHeader>
       <Container>
         {props.children}
-        <a href="/contacto">
+        <a href="/empresas/contacto">
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </a>
       </Container>

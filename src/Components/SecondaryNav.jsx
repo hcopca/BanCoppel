@@ -33,7 +33,7 @@ export default class SecondaryNav extends Component {
         <div className="secondaryNav">
           <h4>Soluciones</h4>
           <h4>Pymes</h4>
-          <a href="/contacto">
+          <a href="/empresas/contacto">
             <h4>Contáctanos</h4>
           </a>
         </div>

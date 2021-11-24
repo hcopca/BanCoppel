@@ -16,7 +16,7 @@ import {
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_cuenta_empresarial.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresarial.jpg";
-import HeroHome from "../Assets/Heros/banner_cuenta_empresarial.svg";
+import HeroHome from "../Assets/Heros/line1.svg";
 import styled from "styled-components";
 import Hero_mid from "../Assets/Heros/img-cuenta-inversion-mid.jpg";
 
@@ -25,9 +25,54 @@ const StyledInversionEmpresarial = styled.div`
     .header_body {
       flex: 5;
     }
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            height: 70px;
+            width: 320px;
+            font-size: 26px;
+           }
+           .subtitle{
+             p{
+               height: 55px;
+               width: 280px;
+             }
+           }
+           img{
+             width: 20px;
+             margin-top: -160px;
+
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 90px;
+           width: 400px;
+            font-size: 36px;
+           }
+           img{
+            margin-top: -190px;
+             width: 25px;
+             margin-left: 0px;
+           }
+         }
+        }
+      }
+    }
   }
 `;
-
+const titleBanner = "LA CUENTA QUE TU EMPRESA NECESITA"
+const subtitleBanner = "Obtén mejores rendimientos en tu saldo a la vista"
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
@@ -91,12 +136,12 @@ class EmpresaNet extends Component {
       <StyledInversionEmpresarial>
         <ResponsiveHeader>
           <div className="title">
-            <h2>El dinero de tus</h2>
-            <h2>
+            <h1>El dinero de tus</h1>
+            <h1>
               trabajadores en
               <br />
               buenas manos
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>La cuenta que tu empresa necesita</h4>
@@ -109,6 +154,8 @@ class EmpresaNet extends Component {
           banner={HeroHome}
           midImg={Hero_mid}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2>

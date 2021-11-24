@@ -284,7 +284,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="last item_"
-          to="/contacto"
+          to="/empresas/contacto"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >

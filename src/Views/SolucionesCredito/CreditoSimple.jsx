@@ -15,13 +15,54 @@ import {
 import Hero_ from "../../Assets/Heros/Hero_Credito_Simple.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_credito_simple.jpg";
 import Hero_mid from "../../Assets/Heros/Hero_Credito_Simple_mid.jpg";
-import HeroHome from "../../Assets/Heros/Hero_Credito_Simple.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import styled from "styled-components";
 const StyledCreditoSimple = styled.div`
   .btn {
     width: 197px;
   }
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            font-size: 26px;
+            width: 420px;
+            height: 70px;
+           }
+           .subtitle{
+             p{
+               width: 280px;
+             }
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 80px;
+           font-size: 32px;
+           }
+           img{
+            margin-top: -190px;
+             width: 25px;
+             
+           }
+         }
+        }
+      }
+    }
+  }
 `;
+const titleBanner = "FINANCIAMIENTO PARA IMPULSAR TU NEGOCIO."
+const subtitleBanner = " Crédito a largo plazo para darle vida a tus proyectos "
 class CreditoSimple extends Component {
   constructor(props) {
     super(props);
@@ -76,12 +117,12 @@ class CreditoSimple extends Component {
       <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
-            <h2>EL FINANCIAMIENTO PARA</h2>
-            <h2>
+            <h1>EL FINANCIAMIENTO PARA</h1>
+            <h1>
               IMPULSAR TU
               <br />
               NEGOCIO
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -97,6 +138,8 @@ class CreditoSimple extends Component {
           banner={HeroHome}
           midImg={Hero_mid}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />{" "}
         <ProductHeader>
           <h2>

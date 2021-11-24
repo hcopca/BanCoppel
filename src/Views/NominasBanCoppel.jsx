@@ -15,14 +15,60 @@ import {
 import Hero_ from "../Assets/Heros/hero_nomina.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.jpg";
 import midImg from "../Assets/Heros/hero_nomina_mid.jpg"
-import HeroHome from "../Assets/Heros/banner_nomina.svg";
+import HeroHome from "../Assets/Heros/line1.svg";
 import styled from "styled-components";
 const StyledNominasBanCoppel = styled.div`
   .btn {
     width: 197px;
   }
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            height: 90px;
+            width: 320px;
+            font-size: 26px;
+           }
+           .subtitle{
+             p{
+               height: 55px;
+             }
+           }
+           img{
+             width: 23px;
+             margin-top: -180px;
+             margin-left: 1px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 120px;
+           width: 400px;
+            font-size: 36px;
+           }
+           img{
+            margin-top: -220px;
+             width: 30px;
+             margin-left: -5px;
+           }
+         }
+        }
+      }
+    }
+  }
 `;
-
+const titleBanner = "EL DINERO DE TUS TRABAJADORES EN BUENAS MANOS"
+const subtitleBanner = "Transfiere tus fondos cuando quieras"
 class NominasBanCoppel extends Component {
   constructor(props) {
     super(props);
@@ -78,12 +124,12 @@ class NominasBanCoppel extends Component {
       <StyledNominasBanCoppel>
         <ResponsiveHeader>
           <div className="title">
-            <h2>EL DINERO DE TUS</h2>
-            <h2>
+            <h1>EL DINERO DE TUS</h1>
+            <h1>
               TRABAJADORES EN
               <br />
               BUENAS MANOS
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -99,6 +145,8 @@ class NominasBanCoppel extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2>

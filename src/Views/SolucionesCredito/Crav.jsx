@@ -79,11 +79,11 @@ class Crav extends Component {
       <StyledCrav>
         <ResponsiveHeader>
           <div className="title">
-            <h2>UN CRÉDITO</h2>
-            <h2>
+            <h1>UN CRÉDITO</h1>
+            <h1>
               DE ACUERDO A<br />
               TUS NECESIDADES
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>

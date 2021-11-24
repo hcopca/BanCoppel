@@ -14,14 +14,62 @@ import {
 import Hero_ from "../Assets/Heros/hero_empresanet.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.jpg";
 import midImg from "../Assets/Heros/hero_empresanet_mid.jpg"
-import HeroHome from "../Assets/Heros/banner_empresanet.svg";
+import HeroHome from "../Assets/Heros/line1.svg";
 import styled from "styled-components";
 const StyledEmpresaNet = styled.div`
   .btn {
     width: 197px;
   }
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            height: 90px;
+            width: 380px;
+            font-size: 26px;
+           }
+           .subtitle{
+             p{
+               padding: 15px;
+               height: 60px;
+               width: 250px;
+             }
+           }
+           img{
+             width: 23px;
+             margin-top: -180px;
+             margin-left: 1px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 100px;
+           width: 500px;
+            font-size: 36px;
+           }
+           img{
+            margin-top: -190px;
+             width: 25px;
+           }
+         }
+        }
+      }
+    }
+  }
 `;
 
+const titleBanner = "LOS BENEFICIOS DE LA BANCA SIN SALIR DE CASA"
+const subtitleBanner = "Maneja tus cuentas desde la comodidad de tu hogar"
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
@@ -75,12 +123,12 @@ class EmpresaNet extends Component {
       <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
-            <h2>Los beneficios</h2>
-            <h2>
+            <h1>Los beneficios</h1>
+            <h1>
               de la Banca sin
               <br />
               salir de casa
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -96,6 +144,8 @@ class EmpresaNet extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <h2>

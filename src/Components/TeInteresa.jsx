@@ -165,7 +165,7 @@ export default function TeInteresa() {
           <h2>¿Te interesa?</h2>
           <p>Consúltalo directamente con un ejecutivo</p>
           <div className="boton">
-            <a href="/contacto">
+            <a href="/empresas/contacto">
               <Button amarillo>¡Déjanos tus datos!</Button>
             </a>
           </div>

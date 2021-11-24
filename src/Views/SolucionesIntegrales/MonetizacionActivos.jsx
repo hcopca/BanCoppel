@@ -16,7 +16,7 @@ import {
 import Hero_ from "../../Assets/Heros/hero_monetizacion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_monetizacion.jpg";
 import midImg from "../../Assets/Heros/hero_monetizacion_mid.jpg"
-import HeroHome from "../../Assets/Heros/banner_monetizacion.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 import styled from "styled-components";
 
 const StyledPruductHeader = styled.div`
@@ -24,9 +24,47 @@ const StyledPruductHeader = styled.div`
     .header_body {
       flex: 3;
     }
+  .hero_container{
+    .container{
+      .children{
+        .subchildren{
+          h1{
+            font-size: 30px;
+          }
+          .subtitle{
+            p{
+            width: 350px;
+            }
+          }
+        }
+      }
+    }
   }
+}
+  
+@media (min-width: 1200px) {
+  .hero_container {
+    .container {
+      .children {
+       .subchildren{
+         h1{
+          height: 80px;
+          font-size: 34px;
+          width: 400px;
+         }
+         img{
+          margin-top: -180px;
+           width: 25px;
+         }
+       }
+      }
+    }
+  }
+}
 `;
 
+const titleBanner = "CAPITAL DE TRABAJO PARA TU EMPRESA"
+const subtitleBanner = "Te ayudamos a optimizar tus activos"
 class MonetizacionActivos extends Component {
   constructor(props) {
     super(props);
@@ -101,9 +139,9 @@ class MonetizacionActivos extends Component {
       <StyledPruductHeader>
         <ResponsiveHeader>
           <div className="title">
-            <h2>Arrendamiento</h2>
+            <h1>Arrendamiento</h1>
 
-            <h2>a largo plazo</h2>
+            <h1>a largo plazo</h1>
           </div>
           <div className="copy">
             <h4>
@@ -118,6 +156,8 @@ class MonetizacionActivos extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <StyledPruductHeader>

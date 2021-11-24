@@ -16,7 +16,7 @@ import {
 import Hero_ from "../../Assets/Heros/hero_factoraje.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_factoraje.jpg";
 import midImg from "../../Assets/Heros/hero_factoraje_mid.jpg"
-import HeroHome from "../../Assets/Heros/banner_factoraje.svg";
+import HeroHome from "../../Assets/Heros/line1.svg";
 
 import styled from "styled-components";
 
@@ -29,7 +29,55 @@ const StyledPruductHeader = styled.div`
     }
   }
 `;
-
+const StyledFactoraje = styled.div`
+@media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            height: 90px;
+            width: 380px;
+            font-size: 26px;
+           }
+           .subtitle{
+             p{
+               height: 55px;
+             }
+           }
+           img{
+             width: 23px;
+             margin-top: -180px;
+             margin-left: 1px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 120px;
+           width: 500px;
+            font-size: 36px;
+           }
+           img{
+            margin-top: -220px;
+             width: 30px;
+             margin-left: -5px;
+           }
+         }
+        }
+      }
+    }
+  }
+`;
+const titleBanner = "FINANCIMIENTO PENSADO PARA HACER CRECER TU EMPRESA"
+const subtitleBanner = "El manejo de tu dinero está en buenas manos"
 class SolucionesCredito extends Component {
   constructor(props) {
     super(props);
@@ -90,18 +138,18 @@ class SolucionesCredito extends Component {
           name="keywords"
           content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel" />
       </Helmet>
-     
+     <StyledFactoraje>
         <ResponsiveHeader>
           <div className="title">
-            <h2>
+            <h1>
               Producto de <br />
               financiamiento
-            </h2>
-            <h2>
+            </h1>
+            <h1>
               pensado para
               <br /> hacer crecer a<br />
               tu empresa
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -116,6 +164,8 @@ class SolucionesCredito extends Component {
           midImg={midImg}
           banner={HeroHome}
           path="/"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
         />
         <ProductHeader>
           <StyledPruductHeader>
@@ -130,6 +180,7 @@ class SolucionesCredito extends Component {
         />
         {this.state.Requisitos ? <TeInteresa /> : null}
         <ListaProductos />
+        </StyledFactoraje>
       </>
     );
   }
@@ -145,7 +196,7 @@ const SolucionesCreditoSections = [
       image: require("../../Assets/mano_factoraje.png").default,
       //Revisar el tamaño de card
       copy2:
-        "Financiamiento de corto plazo para apoyar al crecimiento de tu empresa, a través del pago anticipado de las cuentas por pagar.",
+        "Financiamiento que impulsa el crecimiento de tus Proveedores.",
     },
 
     items: [

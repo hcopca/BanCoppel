@@ -14,7 +14,7 @@ import styled from "styled-components";
 import Hero_ from "../Assets/Heros/hero_home.jpg";
 import Hero_mid from "../Assets/Heros/hero_home_mid.jpg";
 import Hero_responsive from "../Assets/Heros/hero_home_responsive.jpg";
-import HeroHome from "../Assets/Heros/Hero_Home_Text.svg";
+import HeroHome from "../Assets/Heros/line1.svg";
 import Catalogo from "../Catalogo_Productos";
 
 import "./Animation.css";
@@ -23,11 +23,38 @@ const StyledHome = styled.div`
   .btn {
     width: 197px;
   }
-
-  .hero_container {
-    .children {
-      img {
-        width: 80%;
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+            font-size: 26px;
+            width: 300px;
+            height: 70px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h1{
+           height: 80px;
+           width: 400px;
+            font-size: 34px;
+           }
+           img{
+            margin-top: -170px;
+             width: 22px;
+             
+           }
+         }
+        }
       }
     }
   }
@@ -84,6 +111,8 @@ const StyledCardsSlider = styled.div`
     }
   }
 `;
+const titleBanner = "LA BANCA QUE TU EMPRESA NECESITA"
+const subtitleBanner = "Brindamos soluciones a tu empresa"
 
 class Home extends Component {
   constructor(props) {
@@ -162,7 +191,6 @@ class Home extends Component {
       }
     }
   }
-
   render() {
     return this.state.HomeSections ? (
       <>
@@ -183,10 +211,10 @@ class Home extends Component {
       <StyledHome>
         <ResponsiveHeader>
           <div className="title">
-            <h2>La Banca que</h2>
-            <h2>
+            <h1>La Banca que</h1>
+            <h1>
               tu empresa <br /> necesita
-            </h2>
+            </h1>
           </div>
           <div className="copy">
             <h4>
@@ -204,7 +232,10 @@ class Home extends Component {
           responsiveImg={Hero_responsive}
           midImg={Hero_mid}
           banner={HeroHome}
-          path="/contacto"
+          path="/empresas/contacto"
+          titleBanner={titleBanner}
+          subtitleBanner={subtitleBanner}
+          
         />
         <Accordion items={this.state.HomeSections} body={this.body} />
         <Switcher
