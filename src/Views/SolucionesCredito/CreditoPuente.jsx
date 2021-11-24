@@ -36,10 +36,10 @@ const StyledCreditoPuente = styled.div`
              width: 17px;
              margin-left: 10px;
            }
-           .subtitle{
-             p{
-              height: 44px;
-             }
+           .padresubtitle{
+            .subtitle{
+             height: 44px;
+            }
            }
          }
         }
@@ -69,7 +69,9 @@ const StyledCreditoPuente = styled.div`
 `;
 
 const titleBanner = "PENSADO PARA CREAR PROYECTOS HABITACIONALES"
-const subtitleBanner = "Construimos contigo"
+const subtitle = (
+  <p><span>Construimos{" "}</span>contigo</p>
+)
 class CreditoPuente extends Component {
   constructor(props) {
     super(props);
@@ -148,7 +150,7 @@ class CreditoPuente extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2>

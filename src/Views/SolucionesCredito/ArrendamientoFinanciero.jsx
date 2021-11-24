@@ -68,7 +68,9 @@ const StyledArrendamientoFinanciero = styled.div`
   }
 `;
 const titleBanner = "FINANCIAMIENTO DE ACTIVOS FIJOS PENSADOS PARA TU EMPRESA"
-const subtitleBanner = "Te damos las herramientas para crecer tu negocio"
+const subtitle = (
+  <p>Te damos las herramientas para <br /> <span>{" "}crecer tu negocio</span></p>
+)
 class ArrendamientoFinanciero extends Component {
   constructor(props) {
     super(props);
@@ -149,7 +151,7 @@ class ArrendamientoFinanciero extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2>

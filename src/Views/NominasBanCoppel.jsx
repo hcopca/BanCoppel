@@ -31,10 +31,13 @@ const StyledNominasBanCoppel = styled.div`
             width: 320px;
             font-size: 26px;
            }
-           .subtitle{
-             p{
+           .padresubtitle{
+            .subtitle{
+              display: flex;
+              justify-content: center;
+              align-items: center;
                height: 55px;
-             }
+           }
            }
            img{
              width: 23px;
@@ -68,7 +71,7 @@ const StyledNominasBanCoppel = styled.div`
   }
 `;
 const titleBanner = "EL DINERO DE TUS TRABAJADORES EN BUENAS MANOS"
-const subtitleBanner = "Transfiere tus fondos cuando quieras"
+const subtitle = (<p><span>Transfiere tus fondos{" "}</span> cuando quieras</p>)
 class NominasBanCoppel extends Component {
   constructor(props) {
     super(props);
@@ -146,7 +149,7 @@ class NominasBanCoppel extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2>

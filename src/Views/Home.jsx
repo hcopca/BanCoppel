@@ -29,9 +29,18 @@ const StyledHome = styled.div`
         .children {
          .subchildren{
            h1{
-            font-size: 26px;
-            width: 300px;
-            height: 70px;
+            font-size: 36px;
+            width: 362px;
+            height: 80px;
+           }
+           .padresubtitle{
+            .subtitle{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+               width: 362px;
+               height: 62px;
+            }
            }
          }
         }
@@ -51,7 +60,7 @@ const StyledHome = styled.div`
            img{
             margin-top: -170px;
              width: 22px;
-             
+             margin-left: 2px;
            }
          }
         }
@@ -112,8 +121,9 @@ const StyledCardsSlider = styled.div`
   }
 `;
 const titleBanner = "LA BANCA QUE TU EMPRESA NECESITA"
-const subtitleBanner = "Brindamos soluciones a tu empresa"
-
+const subtitle = (
+  <p>Brindamos{" "}<span> soluciones</span> a tu<span> empresa</span></p>
+);
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -234,8 +244,7 @@ class Home extends Component {
           banner={HeroHome}
           path="/empresas/contacto"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
-          
+          subtitle={subtitle}
         />
         <Accordion items={this.state.HomeSections} body={this.body} />
         <Switcher

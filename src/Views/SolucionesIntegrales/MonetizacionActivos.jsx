@@ -31,8 +31,11 @@ const StyledPruductHeader = styled.div`
           h1{
             font-size: 30px;
           }
-          .subtitle{
-            p{
+          .padresubtitle{
+            .subtitle{
+              display: flex;
+              justify-content: center;
+              align-items: center;
             width: 350px;
             }
           }
@@ -64,7 +67,7 @@ const StyledPruductHeader = styled.div`
 `;
 
 const titleBanner = "CAPITAL DE TRABAJO PARA TU EMPRESA"
-const subtitleBanner = "Te ayudamos a optimizar tus activos"
+const subtitle = (<p><span>Te ayudamos</span> a optimizar tus activos</p>)
 class MonetizacionActivos extends Component {
   constructor(props) {
     super(props);
@@ -157,7 +160,7 @@ class MonetizacionActivos extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <StyledPruductHeader>

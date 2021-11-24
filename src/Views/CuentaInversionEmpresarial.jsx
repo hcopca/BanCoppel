@@ -34,11 +34,14 @@ const StyledInversionEmpresarial = styled.div`
             width: 320px;
             font-size: 26px;
            }
-           .subtitle{
-             p{
-               height: 55px;
-               width: 280px;
-             }
+           .padresubtitle{
+            .subtitle{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+               height: 60px;
+               width: 310px;
+            }
            }
            img{
              width: 20px;
@@ -72,7 +75,7 @@ const StyledInversionEmpresarial = styled.div`
   }
 `;
 const titleBanner = "LA CUENTA QUE TU EMPRESA NECESITA"
-const subtitleBanner = "Obtén mejores rendimientos en tu saldo a la vista"
+const subtitle = (<p>Obtén <span>mejores rendimientos</span> en tu saldo a la vista</p>)
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
@@ -155,7 +158,7 @@ class EmpresaNet extends Component {
           midImg={Hero_mid}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2>

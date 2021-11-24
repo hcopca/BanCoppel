@@ -32,6 +32,11 @@ const StyledFinanciamiento = styled.div`
           h1{
             font-size: 30px;
           }
+          .padresubtitle{
+            .subtitle{
+              width: 330px;
+            }
+          }
         }
       }
     }
@@ -52,11 +57,6 @@ const StyledFinanciamiento = styled.div`
           margin-top: -180px;
            width: 25px;
          }
-         .subtitle{
-           p{
-            padding: 20px;
-           }
-         }
        }
       }
     }
@@ -64,7 +64,9 @@ const StyledFinanciamiento = styled.div`
 }
 `;
 const titleBanner = "DISEÑADO PARA RESOLVER TUS IMPREVISTOS"
-const subtitleBanner = "No te quedes sin lo indispensable para tu negocio."
+const subtitle = (
+  <p>No te quedes sin lo <span>{" "}indispensable</span> para tu <span>{" "}negocio</span></p>
+)
 class FinanciamientoOrdenesCompra extends Component {
   constructor(props) {
     super(props);
@@ -150,7 +152,7 @@ class FinanciamientoOrdenesCompra extends Component {
           midImg={Hero_mid}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2 className="header_product">

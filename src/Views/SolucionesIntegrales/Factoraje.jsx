@@ -40,10 +40,14 @@ const StyledFactoraje = styled.div`
             width: 380px;
             font-size: 26px;
            }
-           .subtitle{
-             p{
-               height: 55px;
-             }
+           .padresubtitle{
+              .subtitle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 500px;
+                height: 55px;
+            }
            }
            img{
              width: 23px;
@@ -77,7 +81,7 @@ const StyledFactoraje = styled.div`
   }
 `;
 const titleBanner = "FINANCIMIENTO PENSADO PARA HACER CRECER TU EMPRESA"
-const subtitleBanner = "El manejo de tu dinero está en buenas manos"
+const subtitle = (<p>El manejo de <span>tu dinero</span> está en buenas manos</p>)
 class SolucionesCredito extends Component {
   constructor(props) {
     super(props);
@@ -165,7 +169,7 @@ class SolucionesCredito extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <StyledPruductHeader>

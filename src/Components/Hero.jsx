@@ -64,47 +64,44 @@ const StyledHero = styled.div`
           display: flex;
           flex-direction: column;
           justify-content: center;
-          .subchildren{
-            /* border: 1px solid red; */
-          h1{
-            text-transform: uppercase;
-            padding-top: 5px;
-            padding-left: 25px;
-            width: 468px;
-            height: 70px;
-            font-family: Futura;
-            font-size: 38px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-          }
-       
-           .subtitle{
-            padding-left: 25px;
-            padding-bottom: 70px;
-            p{
-                padding: 10px;
+          .subchildren{  
+            h1{
+              text-transform: uppercase;
+              padding-top: 5px;
+              padding-left: 25px;
+              width: 468px;
+              height: 70px;
+              font-family: Futura;
+              font-size: 38px;
+              margin-bottom: 30px;
+              text-transform: uppercase;
+              color: #FFFFFF;
+            }
+            .padresubtitle{
+              padding-left: 25px;
+              padding-bottom: 70px;
+                .subtitle{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: absolute;
                 background: #002A61;
-                border-radius: 16px;
                 max-width: 400px;
                 height: 64px;
+                padding: 10px;
+                border-radius: 16px;
                 font-family: Futura;
                 font-size: 18px;
                 color: #FFFFFF;
+              p{
                 span{
                   font-family: futura-bold;
-                  font-weight: bold;
                   color:white;
                   font-size: 18px;
+                    }
+                  }
                 }
               }
-           }
-            
-          
           img {
             width: 20px;
             margin-top: -160px;
@@ -121,7 +118,7 @@ const StyledHero = styled.div`
             font-size: 14px;
             width: 156px;
           }
-         } //
+         }
         }
       }
     }
@@ -161,10 +158,8 @@ class Hero extends Component {
   }
 
   render() {
-    const { banner, btnCoppy, imagen, responsiveImg, midImg, titleBanner, subtitleBanner} = this.props;
+    const { banner, btnCoppy, imagen, responsiveImg, midImg, titleBanner, subtitle,} = this.props;
 
-    const subBlack = subtitleBanner ? subtitleBanner.split("\n") [0] : null;
-    const subWhite = subtitleBanner ? subtitleBanner.split("\n") [1] : null;
     return (
       <>
         <StyledHero className="fade-in-fast hero__">
@@ -190,10 +185,12 @@ class Hero extends Component {
                 <div className="subchildren">
                 <h1>{titleBanner}</h1>
            
-                <div className="subtitle">
-                {/* <p>{subtitleBanner} <span></span></p>  */}
-                <p>{subBlack ? subBlack : ""} {subWhite ? <span>{subWhite}</span> : ""}</p>
+                <div className="padresubtitle">
+                  <div className="subtitle">
+                  {subtitle}
                 </div>
+                </div>
+               
         
                 <img
                   src={banner ? banner : bannerDeafult}

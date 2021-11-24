@@ -31,10 +31,10 @@ const StyledCreditoSimple = styled.div`
             width: 420px;
             height: 70px;
            }
-           .subtitle{
-             p{
-               width: 280px;
-             }
+           .padresubtitle{
+            .subtitle{
+               max-width: 280px;
+           }
            }
          }
         }
@@ -51,18 +51,21 @@ const StyledCreditoSimple = styled.div`
            font-size: 32px;
            }
            img{
-            margin-top: -190px;
-             width: 25px;
-             
+            margin-top: -170px;
+             width: 23px;
+             margin-left: 2px;
            }
-         }
+          }
         }
       }
     }
   }
 `;
 const titleBanner = "FINANCIAMIENTO PARA IMPULSAR TU NEGOCIO."
-const subtitleBanner = " Crédito a largo plazo para darle vida a tus proyectos "
+const subtitle = (
+  <p>Crédito a <span>largo plazo</span>  para darle vida a tus proyectos</p>
+)
+
 class CreditoSimple extends Component {
   constructor(props) {
     super(props);
@@ -139,7 +142,7 @@ class CreditoSimple extends Component {
           midImg={Hero_mid}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />{" "}
         <ProductHeader>
           <h2>

@@ -75,8 +75,15 @@ const StyledProyectosInversion = styled.div`
     .container{
       .children{
         .subchildren{
+          .padresubtitle{
+            .subtitle{display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 330px; //CUADRO AZUL
+            }
+          }
           h1{
-            font-size: 29px;
+            font-size: 29px; //TITULO BANNER
             width: 440px;
             height: 90px;
           }
@@ -112,7 +119,9 @@ const StyledProyectosInversion = styled.div`
 }
 `;
 const titleBanner = "CONSTRUIMOS SOLUCIONES A LA MEDIDA DE TU NEGOCIO"
-const subtitleBanner = "El financiamiento que necesitas para darle vida a tus proyectos"
+const subtitle = (
+  <p><span>El financiamiento{" "}</span> que necesitas para darle vida a tus proyectos</p>
+)
 class ProyectosInversion extends Component {
   constructor(props) {
     super(props);
@@ -201,7 +210,7 @@ class ProyectosInversion extends Component {
           midImg={Hero_mid}
           path="/"
           titleBanner = {titleBanner}
-          subtitleBanner = {subtitleBanner}
+          subtitle = {subtitle}
         />
         <ProductHeader>
           <StyledPruductHeader>

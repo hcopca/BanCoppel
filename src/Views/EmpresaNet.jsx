@@ -26,21 +26,21 @@ const StyledEmpresaNet = styled.div`
         .children {
          .subchildren{
            h1{
-            height: 90px;
+            height: 70px;
             width: 380px;
             font-size: 26px;
            }
-           .subtitle{
-             p{
-               padding: 15px;
+           .padresubtitle{
+            .subtitle{
                height: 60px;
-               width: 250px;
-             }
+               width: 260px;
+               padding-top: 5px;
+            }
            }
            img{
-             width: 23px;
-             margin-top: -180px;
-             margin-left: 1px;
+             width: 20px;
+             margin-top: -160px;
+             margin-left: 5px;
            }
          }
         }
@@ -69,7 +69,7 @@ const StyledEmpresaNet = styled.div`
 `;
 
 const titleBanner = "LOS BENEFICIOS DE LA BANCA SIN SALIR DE CASA"
-const subtitleBanner = "Maneja tus cuentas desde la comodidad de tu hogar"
+const subtitle = (<p>Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span></p>)
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
@@ -145,7 +145,7 @@ class EmpresaNet extends Component {
           banner={HeroHome}
           path="/"
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
         <ProductHeader>
           <h2>

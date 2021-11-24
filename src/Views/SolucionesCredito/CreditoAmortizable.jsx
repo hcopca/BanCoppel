@@ -33,14 +33,15 @@ const StyledCreditoAmortizable = styled.div`
             width: 300px;
             height: 90px;
            }
-           .subtitle{
-             p{
+           .padresubtitle{
+            .subtitle{
                width: 260px;
-             }
+               height: 70px;
+            }
            }
            img{
-            margin-top: -160px;
-             width: 20px;
+            margin-top: -180px;
+             width: 24px;
              
            }
          }
@@ -68,7 +69,8 @@ const StyledCreditoAmortizable = styled.div`
   }
 `;
 const titleBanner = "EL RESPALDO QUE LE HACÍA FALTA A TU NEGOCIO."
-const subtitleBanner = " Apoyamos las necesidades de tu capital de trabajo."
+const subtitle = (
+  <p>Apoyamos tus <span>necesidades de capital</span> de trabajo</p>)
 class CreditoAmortizable extends Component {
   constructor(props) {
     super(props);
@@ -144,7 +146,7 @@ class CreditoAmortizable extends Component {
           path="/"
           midImg={Hero_mid}
           titleBanner={titleBanner}
-          subtitleBanner={subtitleBanner}
+          subtitle={subtitle}
         />
 
         <ProductHeader>
