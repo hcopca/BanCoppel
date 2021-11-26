@@ -114,9 +114,9 @@ class EmpresaSide extends Component {
       "/empresas/arrendamiento-financiero",
     ];
     const soluciones_integrales = [
-      "/empresas/proyectos-inversion",
-      "/empresas/financiamiento-ordenes-compra",
-      "/empresas/monetizacion-activos",
+      "/empresas/proyectos-de-inversion",
+      "/empresas/financiamiento-ordenes-de-compra",
+      "/empresas/monetizacion-de-activos",
       "/empresas/factoraje-financiero",
     ];
 
@@ -223,7 +223,7 @@ class EmpresaSide extends Component {
               <div className="body_">
                 <NavLink
                   className="item_"
-                  to="/empresas/proyectos-inversion"
+                  to="/empresas/proyectos-de-inversion"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -231,7 +231,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/financiamiento-ordenes-compra"
+                  to="/empresas/financiamiento-ordenes-de-compra"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -239,7 +239,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/monetizacion-activos"
+                  to="/empresas/monetizacion-de-activos"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >

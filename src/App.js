@@ -58,13 +58,13 @@ class App extends Component {
           <Route path="/empresas/factoraje-financiero">
             <SolucionesIntegrales />
           </Route>
-          <Route path="/empresas/monetizacion-activos">
+          <Route path="/empresas/monetizacion-de-activos">
             <MonetizacionActivos />
           </Route>
-          <Route path="/empresas/financiamiento-ordenes-compra">
+          <Route path="/empresas/financiamiento-ordenes-de-compra">
             <FinanciamientoOrdenesCompra />
           </Route>
-          <Route path="/empresas/proyectos-inversion">
+          <Route path="/empresas/proyectos-de-inversion">
             <ProyectosInversion />
           </Route>
           <Route path="/empresas/contacto">

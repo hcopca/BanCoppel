@@ -128,7 +128,7 @@ class MonetizacionActivos extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Monetización de activos | BanCoppel.com
+          Monetización de activos: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
@@ -192,7 +192,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_monetizacion.png").default,
       copy2:
-        "Te brindamos liquidez sobre tu activo fijo.",
+        "Te brindamos liquidez sobre tu Activo Fijo.",
     },
 
     items: [

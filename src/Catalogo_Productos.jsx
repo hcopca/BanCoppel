@@ -96,8 +96,8 @@ const productos = [
         Crédito Cuenta <br /> <span>Corriente</span>
       </>
     ),
-    homeCopy: "Apoyamos las necesidades de tu capital de trabajo.",
-    cardcopy: "Apoyamos las necesidades de tu capital de trabajo.",
+    homeCopy: "Apoyamos tus necesidades de capital de trabajo.",
+    cardcopy: "Apoyamos tus necesidades de capital de trabajo.",
     path: "/empresas/credito-amortizable",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
@@ -120,9 +120,9 @@ const productos = [
         <span>de Activos</span>
       </>
     ),
-    homeCopy: "Te brindamos liquidez sobre tu activo fijo.",
-    cardcopy: "Te brindamos liquidez sobre tu activo fijo.",
-    path: "/empresas/monetizacion-activos",
+    homeCopy: "Te brindamos liquidez sobre tu Activo Fijo.",
+    cardcopy: "Te brindamos liquidez sobre tu Activo Fijo.",
+    path: "/empresas/monetizacion-de-activos",
     image: require("./Assets/mano_monetizacion.png").default,
   },
   {
@@ -136,7 +136,7 @@ const productos = [
     ),
     homeCopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
     cardcopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
-    path: "/empresas/financiamiento-ordenes-compra",
+    path: "/empresas/financiamiento-ordenes-de-compra",
     image: require("./Assets/mano_financiamiento.png").default,
   },
   {
@@ -150,7 +150,7 @@ const productos = [
     ),
     homeCopy: "Financiamiento de largo plazo para tus proyectos.",
     cardcopy: "Financiamiento de largo plazo para tus proyectos.",
-    path: "/empresas/proyectos-inversion",
+    path: "/empresas/proyectos-de-inversion",
     image: require("./Assets/mano_proyectos_inversion.png").default,
   },
   {

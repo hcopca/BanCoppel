@@ -180,7 +180,7 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_cuenta_amortizable.png").default,
       copy2:
-        "Apoyamos las necesidades de tu capital de trabajo.",
+        "Apoyamos tus necesidades de capital de trabajo.",
     },
 
     items: [
