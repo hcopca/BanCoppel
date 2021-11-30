@@ -65,7 +65,7 @@ const StyledHero = styled.div`
           flex-direction: column;
           justify-content: center;
           .subchildren{  
-            h1{
+            h2{
               text-transform: uppercase;
               padding-top: 5px;
               padding-left: 25px;
@@ -130,7 +130,7 @@ const StyledHero = styled.div`
       .container {
         .children {
           .subchildren{
-            h1{
+            h2{
             height: 100px;
             font-size: 42px;
             padding-top: 0px;
@@ -183,7 +183,7 @@ class Hero extends Component {
             <Container>
               <div className="children">
                 <div className="subchildren">
-                <h1>{titleBanner}</h1>
+                <h2>{titleBanner}</h2>
            
                 <div className="padresubtitle">
                   <div className="subtitle">

@@ -28,7 +28,7 @@ const StyledPruductHeader = styled.div`
     .container{
       .children{
         .subchildren{
-          h1{
+          h2{
             font-size: 30px;
           }
           .padresubtitle{
@@ -50,7 +50,7 @@ const StyledPruductHeader = styled.div`
     .container {
       .children {
        .subchildren{
-         h1{
+         h2{
           height: 80px;
           font-size: 34px;
           width: 400px;
@@ -137,14 +137,19 @@ class MonetizacionActivos extends Component {
           <meta 
           name="keywords"
           content="monetizacion, activos, bancoppel, financiamiento, credito, requisitos, credito empresarial" />
+           <meta
+            name="description"
+            content="Conoce los detalles y requisitos para Monetización de activos y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
      
       <StyledPruductHeader>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Arrendamiento</h1>
+            <h2>Arrendamiento</h2>
 
-            <h1>a largo plazo</h1>
+            <h2>a largo plazo</h2>
           </div>
           <div className="copy">
             <h4>
@@ -164,9 +169,9 @@ class MonetizacionActivos extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h2 className="header_product">
+            <h1 className="header_product">
               Monetización <span>de Activos</span>
-            </h2>
+            </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

@@ -31,7 +31,7 @@ const StyledArrendamientoFinanciero = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
              width: 405px;
              height: 85px;
             font-size: 26px;
@@ -45,13 +45,16 @@ const StyledArrendamientoFinanciero = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 3;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 110px;
             font-size: 34px;
             width: 530px;
@@ -123,19 +126,24 @@ class ArrendamientoFinanciero extends Component {
           <meta 
           name="keywords"
           content="arrendamiento financiero, activo fijo, banca empresarial, bancoppel, credito,requisitos, empresa, negocio," />
+          <meta
+            name="description"
+            content="Conoce los detalles y requisitos de arrendamiento financiero y disfruta los beneficios de Banca empresarial BanCoppel"
+            data-react-helmet="true"
+          />
       </Helmet>
       
       <StyledArrendamientoFinanciero>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Financiamiento <br /> de Activo Fijo
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               pensados para
               <br />
               tu empresa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -154,9 +162,9 @@ class ArrendamientoFinanciero extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2>
+          <h1>
             Arrendamiento <span>financiero</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

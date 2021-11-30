@@ -87,13 +87,13 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
-      max-width: 842px;
-      max-height: 180px;
+      width: 930px;
+      height: 247px;
       h2 {
-        font-size: 18px;
+        font-size: 36px;
       }
       p {
-        font-size: 16px;
+        font-size: 24px;
       }
     }
   }
@@ -124,14 +124,14 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
-      max-width: 930px;
-      max-height: 145px;
+      width: 930px;
+      height: 247px;
       h2 {
-        font-size: 18px;
+        font-size: 36px;
         margin-bottom: -15px;
       }
       p {
-        font-size: 16px;
+        font-size: 24px;
       }
       .boton{
         button{

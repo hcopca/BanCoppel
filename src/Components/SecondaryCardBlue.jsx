@@ -22,7 +22,7 @@ const StyledSecondaryCard = styled.div`
       font-family: futura_bold;
       font-style: normal;
       font-weight: bold;
-      font-size: 17px;
+      font-size: 18px;
       line-height: 110%;
       color: #81c1ea;
       margin-bottom: 9px;
@@ -53,12 +53,12 @@ const StyledSecondaryCard = styled.div`
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     flex-direction: column;
     justify-content: center;
     width: 226px;
     height: 250px;
-
+    margin: 10px;
     img {
       height: 80px;
       width: 80px;

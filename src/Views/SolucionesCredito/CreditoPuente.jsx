@@ -27,7 +27,7 @@ const StyledCreditoPuente = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
              height: 60px;
             font-size: 28px;
            }
@@ -45,13 +45,16 @@ const StyledCreditoPuente = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 2;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 80px;
            width: 500px;
             font-size: 32px;
@@ -121,19 +124,23 @@ class CreditoPuente extends Component {
           <meta 
           name="keywords"
           content="credito puente, proyectos habitacionales, banca empresarial, bancoppel, credito,requisitos" />
-
+           <meta
+            name="description"
+            content="Conoce los detalles y requisitos para tu Crédito puente y disfruta los beneficios para proyectos habitaciones de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
       <StyledCreditoPuente>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Pensado <br /> para crear
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               proyectos
               <br />
               habitacionales
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -153,9 +160,9 @@ class CreditoPuente extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2>
+          <h1>
             CRÉDITO <span>PUENTE</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CreditoPuenteSections} body={this.body} />
         <Switcher

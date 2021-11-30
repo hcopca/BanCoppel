@@ -151,6 +151,9 @@ class FormularioContacto extends Component {
           <meta 
           name="keywords"
           content="contacto, empresas, contactanos, asesor, portal empresas" />
+          <meta name="description" 
+           content="Contacta con un asesor en este portal y resuelve tus dudas sobre Banca empresarial BanCoppel." 
+           />
       </Helmet>
       <StyledContacto img={Fondo} imgResponsive={Fondo_responsive}>
         <Container>

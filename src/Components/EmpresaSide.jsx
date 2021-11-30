@@ -28,6 +28,9 @@ const StyledEmpresas = styled.div`
       &:last-child {
         margin-bottom: 0;
       }
+      &:hover {
+      font-family: futura_bold;
+    }
     }
 
     .item_ {

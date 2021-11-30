@@ -24,7 +24,7 @@ const StyledBigCard = styled.div`
         max-width: 100%;
         text-align: left;
         font-size: 14px;
-        font-family: futura_light;
+        font-family: futura;
         line-height: 18px;
         display: flex;
 
@@ -117,10 +117,10 @@ const StyledBigCard = styled.div`
     .card {
       .CardBlue {
         min-width: 50% !important;
-        max-width: 363px !important;
+        max-width: 449px !important;
         img {
           width: 100% !important;
-          max-width: 363px;
+          max-width: 449px;
         }
         .card_body{
           max-width: 300px;

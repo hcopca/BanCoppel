@@ -28,7 +28,7 @@ const StyledHome = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             font-size: 36px;
             width: 362px;
             height: 80px;
@@ -52,7 +52,7 @@ const StyledHome = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 80px;
            width: 400px;
             font-size: 34px;
@@ -88,14 +88,20 @@ const StyledCardsSlider = styled.div`
     ${(props) => (props.length === 1 ? 1 : 2)},
     1fr
   );
-  grid-gap: 23px;
+  grid-gap: 20px;
+  .center{
+    margin: auto !important;
+  }
 
   .item_card {
     display: flex;
-
     justify-content: flex-start;
     margin: auto;
+    &:nth-child(odd){
+      margin-right: 0;
+    }
     &:nth-child(even) {
+      margin-left: 0;
       justify-content: flex-end;
     }
 
@@ -173,8 +179,9 @@ class Home extends Component {
           <StyledCardsSlider length={cards.length}>
             {cards ? (
               cards.map((card, idx) => {
+                console.log(cards.length)
                 return (
-                  <div className="item_card" key={idx}>
+                  <div className={`item_card ${cards.length === 1 ? "center" : ""}`}  key={idx}>
                     <CardBlue card={card} row />
                   </div>
                 );
@@ -216,15 +223,20 @@ class Home extends Component {
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito" />
+           <meta
+            name="description"
+            content="Conoce más sobre Banca empresarial BanCoppel, cuentas de nóminca, cuentas de inversión, crédito y muchos más beneficios para tu negocio."
+            data-react-helmet="true"
+          />
 
       </Helmet>
       <StyledHome>
         <ResponsiveHeader>
           <div className="title">
-            <h1>La Banca que</h1>
-            <h1>
+            <h2>La Banca que</h2>
+            <h2>
               tu empresa <br /> necesita
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>

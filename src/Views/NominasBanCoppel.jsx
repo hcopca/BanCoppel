@@ -26,7 +26,7 @@ const StyledNominasBanCoppel = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             height: 90px;
             width: 320px;
             font-size: 26px;
@@ -54,7 +54,7 @@ const StyledNominasBanCoppel = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 120px;
            width: 400px;
             font-size: 36px;
@@ -122,17 +122,20 @@ class NominasBanCoppel extends Component {
           <meta 
           name="keywords"
           content="nomina, bancoppel, requisitos, beneficios, transferencias bancarias" />
+           <meta name="description" 
+           content="Conoce los detalles y requisitos para Nómina BanCoppel y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel." 
+           />
       </Helmet>
       
       <StyledNominasBanCoppel>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL DINERO DE TUS</h1>
-            <h1>
+            <h2>EL DINERO DE TUS</h2>
+            <h2>
               TRABAJADORES EN
               <br />
               BUENAS MANOS
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -152,9 +155,9 @@ class NominasBanCoppel extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2>
+          <h1>
             NÓMINA <span>BANCOPPEL</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

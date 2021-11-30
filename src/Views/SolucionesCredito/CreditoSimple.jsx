@@ -40,13 +40,16 @@ const StyledCreditoSimple = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 2;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 80px;
            font-size: 32px;
            }
@@ -115,17 +118,22 @@ class CreditoSimple extends Component {
           <meta 
           name="keywords"
           content="credito simple, banca empresarial, bancoppel, financiamiento, credito, requisitos," />
+           <meta
+            name="description"
+            content="Conoce los detalles y requisitos para tu Crédito Simple y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
 
       </Helmet>
       <StyledCreditoSimple>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL FINANCIAMIENTO PARA</h1>
-            <h1>
+            <h2>EL FINANCIAMIENTO PARA</h2>
+            <h2>
               IMPULSAR TU
               <br />
               NEGOCIO
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -145,9 +153,9 @@ class CreditoSimple extends Component {
           subtitle={subtitle}
         />{" "}
         <ProductHeader>
-          <h2>
+          <h1>
             CRÉDITO <span>SIMPLE</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CreditoSimpleSections} body={this.body} />
         <Switcher

@@ -19,7 +19,7 @@ const StyledHeader = styled.div`
   }
   .title {
     margin-bottom: 20px;
-    h1 {
+    h2 {
       font-family: futura_heavy;
       text-transform: uppercase;
 

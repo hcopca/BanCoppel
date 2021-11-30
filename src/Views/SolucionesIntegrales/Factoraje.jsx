@@ -35,7 +35,7 @@ const StyledFactoraje = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             height: 90px;
             width: 380px;
             font-size: 26px;
@@ -58,13 +58,16 @@ const StyledFactoraje = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 2;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 120px;
            width: 500px;
             font-size: 36px;
@@ -141,19 +144,24 @@ class SolucionesCredito extends Component {
           <meta 
           name="keywords"
           content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel" />
+          <meta
+            name="description"
+            content="Conoce los detalles y requisitos para Factoraje financiero y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
      <StyledFactoraje>
         <ResponsiveHeader>
           <div className="title">
-            <h1>
+            <h2>
               Producto de <br />
               financiamiento
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               pensado para
               <br /> hacer crecer a<br />
               tu empresa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -173,7 +181,7 @@ class SolucionesCredito extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h2 className="header_product">FACTORAJE <span>FINANCIERO</span></h2>
+            <h1 className="header_product">FACTORAJE <span>FINANCIERO</span></h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

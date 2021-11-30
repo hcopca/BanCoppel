@@ -28,7 +28,7 @@ const StyledCreditoAmortizable = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             font-size: 28px;
             width: 300px;
             height: 90px;
@@ -48,13 +48,16 @@ const StyledCreditoAmortizable = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 2;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 100px;
             font-size: 30px;
            }
@@ -120,16 +123,20 @@ class CreditoAmortizable extends Component {
           <meta 
           name="keywords"
           content="credito cuenta corriente, amortizable, banca empresarial, bancoppel, credito a corto plazo,requisitos," />
-
+          <meta
+            name="description"
+            content="Conoce los detalles y requisitos para tu Cuenta corriente amortizable y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
 
       <StyledCreditoAmortizable>
         <ResponsiveHeader>
           <div className="title">
-            <h1>EL RESPALDO QUE</h1>
-            <h1>
+            <h2>EL RESPALDO QUE</h2>
+            <h2>
               LE HACÍA FALTA <br />A TU NEGOCIO
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -150,12 +157,12 @@ class CreditoAmortizable extends Component {
         />
 
         <ProductHeader>
-          <h2>
+          <h1>
             CRÉDITO{" "}
             <span>
               CUENTA <br /> CORRIENTE
             </span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

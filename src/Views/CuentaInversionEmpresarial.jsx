@@ -29,7 +29,7 @@ const StyledInversionEmpresarial = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             height: 70px;
             width: 320px;
             font-size: 26px;
@@ -52,13 +52,16 @@ const StyledInversionEmpresarial = styled.div`
         }
       }
     }
+    .header_body {
+      flex: 4;
+    }
   }
   @media (min-width: 1200px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 90px;
            width: 400px;
             font-size: 36px;
@@ -134,17 +137,21 @@ class EmpresaNet extends Component {
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, empresa,cuenta de inversion, rendimiento, caracteristicas, requisitos, negocio," />
-
+           <meta
+            name="description"
+            content="Conoce más sobre los detalles, características y requisitos para tu cuenta de inversión empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
       <StyledInversionEmpresarial>
         <ResponsiveHeader>
           <div className="title">
-            <h1>El dinero de tus</h1>
-            <h1>
+            <h2>El dinero de tus</h2>
+            <h2>
               trabajadores en
               <br />
               buenas manos
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>La cuenta que tu empresa necesita</h4>
@@ -161,9 +168,9 @@ class EmpresaNet extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2>
+          <h1>
             Cuenta <span>Inversión Empresarial</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={InversionEmpresarialSections} body={this.body} />
         <Switcher

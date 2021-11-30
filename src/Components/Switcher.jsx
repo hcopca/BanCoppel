@@ -16,7 +16,7 @@ const StyledSwitch = styled.div`
 
     .section {
       padding: 10px;
-border-bottom: 2px solid var(--shadow-blue);
+      border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
 
       h3 {
@@ -24,7 +24,7 @@ border-bottom: 2px solid var(--shadow-blue);
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;
-        font-size: 13px;
+        font-size: 14px;
         margin-left: 10px;
       }
 

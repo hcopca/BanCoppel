@@ -82,7 +82,7 @@ const StyledProyectosInversion = styled.div`
               width: 330px; //CUADRO AZUL
             }
           }
-          h1{
+          h2{
             font-size: 29px; //TITULO BANNER
             width: 440px;
             height: 90px;
@@ -96,6 +96,9 @@ const StyledProyectosInversion = styled.div`
       }
     }
   }
+  .header_body {
+      flex: 4;
+    }
 }
   
 @media (min-width: 1200px) {
@@ -103,7 +106,7 @@ const StyledProyectosInversion = styled.div`
     .container {
       .children {
        .subchildren{
-         h1{
+         h2{
           height: 80px;
           font-size: 34px;
           width: 520px;
@@ -179,19 +182,24 @@ class ProyectosInversion extends Component {
           <meta 
           name="keywords"
           content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa" />
+          <meta
+            name="description"
+            content="Conoce los detalles y requisitos para Proyectos de inversión y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
       <StyledProyectosInversion>
         <StyledHeader>
           <Container>
             <ResponsiveHeader>
             <div className="title">
-              <h1>
+              <h2>
                 Construimos <br /> soluciones a la
-              </h1>
+              </h2>
 
-              <h1>
+              <h2>
                 medida de tu <br /> negocio
-              </h1>
+              </h2>
             </div>
             <div className="copy">
               <h4>
@@ -214,9 +222,9 @@ class ProyectosInversion extends Component {
         />
         <ProductHeader>
           <StyledPruductHeader>
-            <h2 className="header_product">
+            <h1 className="header_product">
               Proyectos <span>de inversión</span>
-            </h2>
+            </h1>
           </StyledPruductHeader>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />

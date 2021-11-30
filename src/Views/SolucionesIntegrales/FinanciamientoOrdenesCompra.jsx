@@ -29,7 +29,7 @@ const StyledFinanciamiento = styled.div`
     .container{
       .children{
         .subchildren{
-          h1{
+          h2{
             font-size: 30px;
           }
           .padresubtitle{
@@ -48,7 +48,7 @@ const StyledFinanciamiento = styled.div`
     .container {
       .children {
        .subchildren{
-         h1{
+         h2{
          height: 80px;
           font-size: 34px;
           width: 530px;
@@ -130,13 +130,18 @@ class FinanciamientoOrdenesCompra extends Component {
           <meta 
           name="keywords"
           content="ordenes de compra, financiamiento,banca empresarial, bancoppel, credito,requisitos, negocio" />
+           <meta
+            name="description"
+            content="Conoce los detalles y requisitos para Financiamiento de ordenes de compra y disfruta los beneficios de Banca empresarial BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
       <StyledFinanciamiento>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Diseñado para</h1>
+            <h2>Diseñado para</h2>
 
-            <h1>resolver tus imprevistos</h1>
+            <h2>resolver tus imprevistos</h2>
           </div>
           <div className="copy">
             <h4>
@@ -155,9 +160,9 @@ class FinanciamientoOrdenesCompra extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2 className="header_product">
+          <h1 className="header_product">
             Financiamiento de <span>Órdenes de compra</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={SolucionesCreditoSections} body={this.body} />
         <Switcher

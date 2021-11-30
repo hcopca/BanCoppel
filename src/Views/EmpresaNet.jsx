@@ -25,7 +25,7 @@ const StyledEmpresaNet = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
             height: 70px;
             width: 380px;
             font-size: 26px;
@@ -52,7 +52,7 @@ const StyledEmpresaNet = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
+           h2{
            height: 100px;
            width: 500px;
             font-size: 36px;
@@ -118,17 +118,21 @@ class EmpresaNet extends Component {
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, cuentas, empresa,operaciones financieras,  negocio,  administrar," />
-
+           <meta
+            name="description"
+            content="Descubre las facilidades que te da la banca por internet para tu negocio. Administra, realiza operaciones financieras en línea con BanCoppel."
+            data-react-helmet="true"
+          />
       </Helmet>
       <StyledEmpresaNet>
         <ResponsiveHeader>
           <div className="title">
-            <h1>Los beneficios</h1>
-            <h1>
+            <h2>Los beneficios</h2>
+            <h2>
               de la Banca sin
               <br />
               salir de casa
-            </h1>
+            </h2>
           </div>
           <div className="copy">
             <h4>
@@ -148,9 +152,9 @@ class EmpresaNet extends Component {
           subtitle={subtitle}
         />
         <ProductHeader>
-          <h2>
+          <h1>
             Empresa<span>Net</span>
-          </h2>
+          </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
         <Switcher

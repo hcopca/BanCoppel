@@ -12,7 +12,7 @@ const StyledHead = styled.div`
     text-align: center;
     color: var(--night-blue);
 
-    h2 {
+    h1 {
       font-size: 24px;
       text-transform: uppercase;
       font-family: futura_bold;
@@ -45,15 +45,17 @@ const StyledHead = styled.div`
       display: flex;
     }
   }
+  
 
-  /* @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     .header_body {
-      h2 {
+      flex: 2;
+      h1 {
         font-size: 36px;
         line-height: 36px;
       }
     }
-  } */
+  }
 `;
 
 class ProductHeader extends Component {
