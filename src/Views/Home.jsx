@@ -219,7 +219,7 @@ class Home extends Component {
           <meta 
           name="title" 
           content="Banca empresarial BanCoppel | BanCoppel.com" />
-          <link rel="canonical" href="http://bancoppel.mx/empresas" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas" />
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito" />
