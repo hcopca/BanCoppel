@@ -76,21 +76,18 @@ const StyledProyectosInversion = styled.div`
       .children{
         .subchildren{
           .padresubtitle{
-            .subtitle{display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 330px; //CUADRO AZUL
+            .subtitle{
+              width: 310px; //CUADRO AZUL
             }
           }
           h2{
-            font-size: 29px; //TITULO BANNER
-            width: 440px;
-            height: 90px;
+            width: 500px;
+            height: 100px;
           }
           img{
-            width: 22px;
-            margin-top: -170px;
-            margin-left: 3px;
+            width: 24px;
+            margin-top: -180px;
+            margin-left: 1px;
           }
         }
       }
@@ -106,20 +103,35 @@ const StyledProyectosInversion = styled.div`
     .container {
       .children {
        .subchildren{
-         h2{
-          height: 80px;
-          font-size: 34px;
-          width: 520px;
-         }
          img{
-          margin-top: -175px;
-           width: 23px;
+          margin-top: -180px;
+           width: 24px;
          }
        }
       }
     }
   }
 }
+@media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        margin-left: 100px;
+        .children {
+         .subchildren{
+           h2{
+           height: 140px;
+            width: 657px;
+           }
+           img{
+            margin-top: -227px;
+             width: 32px;
+             margin-left: -7px;
+           }
+         }
+        }
+      }
+    }
+  }
 `;
 const titleBanner = "CONSTRUIMOS SOLUCIONES A LA MEDIDA DE TU NEGOCIO"
 const subtitle = (

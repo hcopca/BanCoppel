@@ -27,21 +27,17 @@ const StyledNominasBanCoppel = styled.div`
         .children {
          .subchildren{
            h2{
-            height: 90px;
-            width: 320px;
-            font-size: 26px;
+            height: 100px;
+            width: 330px;
            }
            .padresubtitle{
             .subtitle{
-              display: flex;
-              justify-content: center;
-              align-items: center;
                height: 55px;
-           }
+            }
            }
            img{
-             width: 23px;
-             margin-top: -180px;
+             width: 24px;
+             margin-top: -185px;
              margin-left: 1px;
            }
          }
@@ -49,15 +45,14 @@ const StyledNominasBanCoppel = styled.div`
       }
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     .hero_container {
       .container {
         .children {
          .subchildren{
            h2{
-           height: 120px;
-           width: 400px;
-            font-size: 36px;
+           height: 140px;
+           width: 500px;
            }
            img{
             margin-top: -220px;

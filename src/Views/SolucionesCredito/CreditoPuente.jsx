@@ -28,17 +28,16 @@ const StyledCreditoPuente = styled.div`
         .children {
          .subchildren{
            h2{
-             height: 60px;
-            font-size: 28px;
+             width: 550px;
            }
            img{
-            margin-top: -150px;
-             width: 17px;
-             margin-left: 10px;
+            margin-top: -155px;
+             width: 19px;
+             margin-left: 6px;
            }
            .padresubtitle{
             .subtitle{
-             height: 44px;
+             height: 55px;
             }
            }
          }
@@ -54,15 +53,33 @@ const StyledCreditoPuente = styled.div`
       .container {
         .children {
          .subchildren{
-           h2{
-           height: 80px;
-           width: 500px;
-            font-size: 32px;
-           }
-           img{
-            margin-top: -170px;
+         h2{
+           height: 70px;
+          }
+          img{
+            margin-top: -160px;
              width: 20px;
              margin-left: 5px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        .children {
+        margin-left: -150px;
+         .subchildren{
+         h2{
+           width: 700px;
+           height: 95px;
+          }
+          img{
+            margin-top: -185px;
+             width: 24px;
+             margin-left: 1px;
            }
          }
         }

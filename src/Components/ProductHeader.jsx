@@ -40,7 +40,7 @@ const StyledHead = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding-top: 47px;
+    padding-top: 44px;
     .item {
       display: flex;
     }
@@ -55,6 +55,9 @@ const StyledHead = styled.div`
         line-height: 36px;
       }
     }
+  }
+  @media (min-width: 1400px) {
+    padding-top: 82px;
   }
 `;
 

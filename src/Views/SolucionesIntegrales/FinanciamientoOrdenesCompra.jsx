@@ -30,7 +30,6 @@ const StyledFinanciamiento = styled.div`
       .children{
         .subchildren{
           h2{
-            font-size: 30px;
           }
           .padresubtitle{
             .subtitle{
@@ -49,13 +48,33 @@ const StyledFinanciamiento = styled.div`
       .children {
        .subchildren{
          h2{
-         height: 80px;
-          font-size: 34px;
-          width: 530px;
+           height: 70px;
+          width: 520px;
+         }
+         img{
+          margin-top: -160px;
+           width: 20px;
+           margin-left: 5px;
+         }
+       }
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .hero_container {
+    .container {
+      margin-left: 120px;
+      .children {
+       .subchildren{
+         h2{
+          width: 620px;
+          height: 90px;
          }
          img{
           margin-top: -180px;
-           width: 25px;
+           width: 24px;
+           margin-left: 1px;
          }
        }
       }

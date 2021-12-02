@@ -36,15 +36,11 @@ const StyledFactoraje = styled.div`
         .children {
          .subchildren{
            h2{
-            height: 90px;
-            width: 380px;
-            font-size: 26px;
+            height: 100px;
+            width: 454px;
            }
            .padresubtitle{
               .subtitle{
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 max-width: 500px;
                 height: 55px;
             }
@@ -52,7 +48,10 @@ const StyledFactoraje = styled.div`
            img{
              width: 23px;
              margin-top: -180px;
-             margin-left: 1px;
+             margin-left: 2px;
+           }
+           button{
+             margin-top: 0px;
            }
          }
         }
@@ -68,14 +67,40 @@ const StyledFactoraje = styled.div`
         .children {
          .subchildren{
            h2{
-           height: 120px;
-           width: 500px;
-            font-size: 36px;
+           height: 110px;
+           }
+           img{
+            margin-top: -200px;
+             width: 26px;
+             margin-left: -1px;
+           }
+           button{
+             margin-top: 13px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h2{
+             width: 530px;
+             height: 140px;
            }
            img{
             margin-top: -220px;
              width: 30px;
              margin-left: -5px;
+           }
+           .padresubtitle{
+              .subtitle{
+                max-width: 600px;
+                height: 55px;
+            }
            }
          }
         }

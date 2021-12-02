@@ -29,16 +29,15 @@ const StyledHome = styled.div`
         .children {
          .subchildren{
            h2{
-            font-size: 36px;
             width: 362px;
-            height: 80px;
+            height: 75px;
+           }
+           img{
+            margin-top: -157px;
            }
            .padresubtitle{
             .subtitle{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-               width: 362px;
+               width: 350px;
                height: 62px;
             }
            }
@@ -52,15 +51,29 @@ const StyledHome = styled.div`
       .container {
         .children {
          .subchildren{
-           h2{
-           height: 80px;
-           width: 400px;
-            font-size: 34px;
-           }
            img{
             margin-top: -170px;
              width: 22px;
-             margin-left: 2px;
+             margin-left: 3px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+          h2{
+            width: 500px;
+            height: 90px;
+           }
+           img{
+            margin-top: -180px;
+             width: 24px;
+             margin-left: 1px;
            }
          }
         }
@@ -92,7 +105,6 @@ const StyledCardsSlider = styled.div`
   .center{
     margin: auto !important;
   }
-
   .item_card {
     display: flex;
     justify-content: flex-start;

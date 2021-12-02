@@ -27,8 +27,7 @@ const StyledEmpresaNet = styled.div`
          .subchildren{
            h2{
             height: 70px;
-            width: 380px;
-            font-size: 26px;
+            width: 450px;
            }
            .padresubtitle{
             .subtitle{
@@ -38,28 +37,35 @@ const StyledEmpresaNet = styled.div`
             }
            }
            img{
-             width: 20px;
-             margin-top: -160px;
-             margin-left: 5px;
+             width: 19px;
+             margin-top: -155px;
+             margin-left: 6px;
            }
          }
         }
       }
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     .hero_container {
       .container {
+        margin-left: 90px;
         .children {
          .subchildren{
            h2{
-           height: 100px;
-           width: 500px;
-            font-size: 36px;
+            height: 90px;
+            width: 650px;
+           }
+           .padresubtitle{
+            .subtitle{
+              height: 69px;
+               width: 378px;
+            }
            }
            img{
-            margin-top: -190px;
-             width: 25px;
+            margin-top: -175px;
+             width: 23px;
+             margin-left: 2px;
            }
          }
         }

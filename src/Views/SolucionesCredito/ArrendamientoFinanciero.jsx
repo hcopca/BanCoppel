@@ -32,13 +32,12 @@ const StyledArrendamientoFinanciero = styled.div`
         .children {
          .subchildren{
            h2{
-             width: 405px;
-             height: 85px;
-            font-size: 26px;
+             width: 450px;
+             height: 100px;
            }
            img{
-             width: 23px;
-             margin-top: -175px;
+             width: 25px;
+             margin-top: -185px;
              margin-left: 0px;
            }
          }
@@ -56,13 +55,32 @@ const StyledArrendamientoFinanciero = styled.div`
          .subchildren{
            h2{
            height: 110px;
-            font-size: 34px;
-            width: 530px;
+            width: 500px;
            }
            img{
             margin-top: -200px;
              width: 27px;
              margin-left: -2px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        margin-left: 100px;
+        .children {
+         .subchildren{
+           h2{
+           height: 140px;
+            width: 650px;
+           }
+           img{
+            margin-top: -230px;
+             width: 32px;
+             margin-left: -7px;
            }
          }
         }

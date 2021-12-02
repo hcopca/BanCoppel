@@ -29,20 +29,17 @@ const StyledCreditoAmortizable = styled.div`
         .children {
          .subchildren{
            h2{
-            font-size: 28px;
-            width: 300px;
-            height: 90px;
+            width: 500px;
            }
            .padresubtitle{
             .subtitle{
-               width: 260px;
+               width: 297px;
                height: 70px;
             }
            }
            img{
-            margin-top: -180px;
-             width: 24px;
-             
+            margin-top: -155px;
+             width: 20px;
            }
          }
         }
@@ -57,13 +54,33 @@ const StyledCreditoAmortizable = styled.div`
       .container {
         .children {
          .subchildren{
-           h2{
-           height: 100px;
-            font-size: 30px;
+          .padresubtitle{
+            .subtitle{
+               width: 320px;
+            }
            }
            img{
-            margin-top: -190px;
-             width: 25px;
+            margin-top: -170px;
+            width: 22px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        .children {
+         .subchildren{
+           h2{
+             width: 430px;
+             height: 150px;
+            }
+           img{
+            margin-top: -230px;
+            width: 33px;
+            margin-left: -8px;
            }
          }
         }
@@ -71,9 +88,9 @@ const StyledCreditoAmortizable = styled.div`
     }
   }
 `;
-const titleBanner = "EL RESPALDO QUE LE HACÍA FALTA A TU NEGOCIO."
+const titleBanner = "EL RESPALDO QUE LE HACÍA FALTA A TU NEGOCIO"
 const subtitle = (
-  <p>Apoyamos tus <span>necesidades de capital</span> de trabajo</p>)
+  <p>Apoyamos tus <span>necesidades de tu capital</span> de trabajo</p>)
 class CreditoAmortizable extends Component {
   constructor(props) {
     super(props);

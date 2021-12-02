@@ -31,22 +31,17 @@ const StyledInversionEmpresarial = styled.div`
          .subchildren{
            h2{
             height: 70px;
-            width: 320px;
-            font-size: 26px;
+            width: 420px;
            }
            .padresubtitle{
             .subtitle{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-               height: 60px;
                width: 310px;
             }
            }
            img{
-             width: 20px;
-             margin-top: -160px;
-
+             width: 19px;
+             margin-top: -150px;
+            margin-left: 6px;
            }
          }
         }
@@ -62,14 +57,33 @@ const StyledInversionEmpresarial = styled.div`
         .children {
          .subchildren{
            h2{
-           height: 90px;
+           height: 70px;
            width: 400px;
-            font-size: 36px;
            }
            img{
-            margin-top: -190px;
-             width: 25px;
-             margin-left: 0px;
+            margin-top: -160px;
+             width: 20px;
+             margin-left: 5px;
+           }
+         }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        margin-left: 100px;
+        .children {
+         .subchildren{
+           h2{
+           height: 90px;
+           width: 500px;
+           }
+           img{
+            margin-top: -175px;
+             width: 23px;
+             margin-left: 2px;
            }
          }
         }

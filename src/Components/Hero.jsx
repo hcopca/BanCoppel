@@ -71,8 +71,8 @@ const StyledHero = styled.div`
               padding-left: 25px;
               width: 468px;
               height: 70px;
-              font-family: Futura;
-              font-size: 38px;
+              font-family: futura_heavy;
+              font-size: 32px;
               margin-bottom: 30px;
               text-transform: uppercase;
               color: #FFFFFF;
@@ -90,7 +90,7 @@ const StyledHero = styled.div`
                 height: 64px;
                 padding: 10px;
                 border-radius: 16px;
-                font-family: Futura;
+                font-family: futura_heavy;
                 font-size: 18px;
                 color: #FFFFFF;
               p{
@@ -111,8 +111,8 @@ const StyledHero = styled.div`
           button {
             margin-left: 30px;
             align-self: flex-start;
-            margin-top: 21px;
-            font-family: futura_bold;
+            margin-top: 13px;
+            font-family: futura_heavy;
             font-style: normal;
             font-weight: bold;
             font-size: 14px;
@@ -131,14 +131,14 @@ const StyledHero = styled.div`
         .children {
           .subchildren{
             h2{
-            height: 100px;
-            font-size: 42px;
+            height: 80px;
+            font-size: 32px;
             padding-top: 0px;
-          }
+              }
           img {
-            width: 25px;
-            margin-top: -190px;
-            margin-left: 0px;
+            width: 22px;
+            margin-top: -170px;
+            margin-left: 3px;
             max-width: 505px;
            }
           }
@@ -146,6 +146,19 @@ const StyledHero = styled.div`
       }
     }
   }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        .children {
+          .subchildren{
+            h2{
+              font-size: 44px;
+               }
+             }
+           }
+        }
+      }
+    }
 `;
 
 class Hero extends Component {
@@ -183,26 +196,23 @@ class Hero extends Component {
             <Container>
               <div className="children">
                 <div className="subchildren">
-                <h2>{titleBanner}</h2>
-           
-                <div className="padresubtitle">
-                  <div className="subtitle">
-                  {subtitle}
-                </div>
-                </div>
-               
-        
-                <img
-                  src={banner ? banner : bannerDeafult}
-                  alt="banner"
-                  onLoad={(e) => this.setState({ copy: false })}
-                />
-                {/* <a href={path ? path : "/"}> */}
-                <a href={"/empresas/contacto"}>
-                  <BancoppelBtn amarillo>
-                    {btnCoppy ? btnCoppy : "no copy"}
-                  </BancoppelBtn>
-                </a>
+                  <h2>{titleBanner}</h2>
+            
+                  <div className="padresubtitle">
+                    <div className="subtitle">
+                    {subtitle}
+                    </div>
+                  </div>
+                  <img
+                    src={banner ? banner : bannerDeafult}
+                    alt="banner"
+                    onLoad={(e) => this.setState({ copy: false })}
+                  />
+                  <a href={"/empresas/contacto"}>
+                    <BancoppelBtn amarillo>
+                      {btnCoppy ? btnCoppy : "no copy"}
+                    </BancoppelBtn>
+                  </a>
                 </div>
               </div>
             </Container>

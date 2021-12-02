@@ -29,14 +29,11 @@ const StyledPruductHeader = styled.div`
       .children{
         .subchildren{
           h2{
-            font-size: 30px;
+            width: 400px;
           }
           .padresubtitle{
             .subtitle{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            width: 350px;
+              width: 350px;
             }
           }
         }
@@ -51,13 +48,31 @@ const StyledPruductHeader = styled.div`
       .children {
        .subchildren{
          h2{
-          height: 80px;
-          font-size: 34px;
-          width: 400px;
+          height: 70px;
          }
          img{
-          margin-top: -180px;
-           width: 25px;
+          margin-top: -160px;
+           width: 20px;
+           margin-left: 5px;
+         }
+       }
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .hero_container {
+    .container {
+      .children {
+       .subchildren{
+         h2{
+           width: 600px;
+          height: 90px;
+         }
+         img{
+          margin-top: -170px;
+           width: 22px;
+           margin-left: 3px;
          }
        }
       }

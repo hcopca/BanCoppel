@@ -26,10 +26,9 @@ const StyledCreditoSimple = styled.div`
       .container {
         .children {
          .subchildren{
-           h1{
-            font-size: 26px;
-            width: 420px;
-            height: 70px;
+          img{
+            margin-top: -155px;
+             margin-left: 5px;
            }
            .padresubtitle{
             .subtitle{
@@ -50,11 +49,11 @@ const StyledCreditoSimple = styled.div`
         .children {
          .subchildren{
            h2{
-           height: 80px;
+             height: 80px;
            font-size: 32px;
            }
            img{
-            margin-top: -170px;
+            margin-top: -173px;
              width: 23px;
              margin-left: 2px;
            }
@@ -62,6 +61,28 @@ const StyledCreditoSimple = styled.div`
         }
       }
     }
+  }
+  @media (min-width: 1400px) {
+    .hero_container {
+      .container {
+        margin-right: 300px;
+        .children {
+          .subchildren{
+            h2{
+              width: 650px;
+              height: 90px;
+              font-size: 44px;
+               }
+               img {
+                width: 24px;
+                margin-top: -180px;
+                margin-left: 1px;
+                max-width: 505px;
+              }
+             }
+           }
+        }
+      }
   }
 `;
 const titleBanner = "FINANCIAMIENTO PARA IMPULSAR TU NEGOCIO."

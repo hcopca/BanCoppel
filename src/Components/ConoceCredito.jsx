@@ -96,14 +96,17 @@ const StyledBanner = styled.section`
   }
 
   @media (min-width: 1200px) {
+    .container {
+      padding-top: 44px;
+    }
   }
   @media (min-width: 1366px) {
 
     .img-holder {
-    img {
-      max-width: 65%;
-    }
-  }
+      img {
+        max-width: 100%;
+          }
+       }
     .contenido_sobrepuesto {
       a {
         margin-bottom: 15px;
