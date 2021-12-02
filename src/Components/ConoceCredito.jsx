@@ -45,7 +45,7 @@ const StyledBanner = styled.section`
 
   @media (min-width: 768px) {
     .container {
-      padding-top: 50px;
+      padding-top: 44px;
       padding-bottom: 50px;
     }
     .imgNormal {
@@ -114,6 +114,11 @@ const StyledBanner = styled.section`
       }
       }
     }
+    @media (min-width: 1400px) {
+    .container {
+      padding-top: 63px;
+    }
+   }
   }
 `;
 

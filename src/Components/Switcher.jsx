@@ -46,10 +46,15 @@ const StyledSwitch = styled.div`
     }
   }
   @media (min-width: 992px) {
+    padding-bottom: 44px;
     display: block;
   }
   .bancoppel__slider {
     padding: 0 !important;
+  }
+  @media (min-width: 1400px) {
+    padding-bottom: 63px;
+    display: block;
   }
 `;
 

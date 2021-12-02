@@ -58,6 +58,7 @@ const StylesCarousel = styled.div`
   }
 
   @media (min-width: 992px) {
+    padding: 63px 0px 50px 0;
     display: block;
   }
 

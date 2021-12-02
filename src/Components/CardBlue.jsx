@@ -19,12 +19,13 @@ const Card = styled.div`
   .card_body {
     display: flex;
     flex-direction: column;
-    padding: 12px;
+   
     align-items: center;
     justify-content: space-between;
     height: calc(100% - 262px);
 
     .copy {
+      padding: 25px 15px 0 25px;  //mobile
       display: flex;
       align-items: left;
       flex-direction: column;
@@ -53,8 +54,8 @@ const Card = styled.div`
       padding: 0;
       button {
         border: 0;
-        width: 150px;
-        height: 40px;
+        width: 152px;
+        height: 50px;
         margin: 0;
         margin-bottom: 20px;
         margin-left: 10px;
@@ -70,29 +71,30 @@ const Card = styled.div`
     min-width: 230px;
     max-width: 230px;
     width: 100%;
-    height: 360px; //MISMO PROBLEMA QUE CARD FINANCIAMIENTO ORDENES DE COMPRA
+    height: 360px;
     img {
       height: 140px;
     }
 
     .card_body {
-      padding: 10px;
       height: calc(100% - 140px);
       align-items: flex-start;
-
+      margin-left: 25px;
       .copy {
+   
+       /* margin-bottom: -25px; */ //ajustar el botón con el bottom
         h2 {
+          margin-top: 20px; //TOP tiulo
           font-size: 18px;
           text-align: left;
         }
         p {
+          width: 105%;
           font-size: 14px;
-          margin-top: 15px;
+          margin-top: 9px;
+          padding-right: 25px;
           text-align: left;
         }
-      }
-      a {
-        margin-top: 15px;
       }
       button {
         margin-bottom: 00px !important;
@@ -101,16 +103,16 @@ const Card = styled.div`
   }
 
   /* SECONDARY */
-  width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
-  max-width: ${({ secondary }) => (secondary ? "449px" : null)} !important;
-  height: ${({ secondary }) => (secondary ? "auto" : null)} !important;
-  min-height: ${({ secondary }) => (secondary ? "330px" : null)} !important ;
+  width: ${({ secondary }) => (secondary ? "362px" : null)} !important;
+  max-width: ${({ secondary }) => (secondary ? "362px" : null)} !important;
+  height: ${({ secondary }) => (secondary ? "330px" : null)} !important;
+  min-height: ${({ secondary }) => (secondary ? "215px" : null)} !important ;
   img {
-    height: ${({ secondary }) => (secondary ? "330px" : null)} !important;
+    height: ${({ secondary }) => (secondary ? "215px" : null)} !important;
   }
   .card_body {
-    padding: ${({ secondary }) => (secondary ? "20px" : null)};
-    height: ${({ secondary }) => (secondary ? "auto" : null)} !important;
+    padding: ${({ secondary }) => (secondary ? "10px" : null)};
+    height: ${({ secondary }) => (secondary ? "115px" : null)} !important;
 
     .copy {
       padding: ${({ secondary }) => (secondary ? "10px" : null)};
@@ -132,7 +134,7 @@ const Card = styled.div`
 
   /* ROW */
   .card_body {
-    padding: ${({ row }) => (row ? "10px" : null)};
+    padding: ${({ row }) => (row ? "25px 0 0 25 !important" : null)};
     width: ${({ row }) => (row ? "472px" : null)};
     height: ${({ row }) => (row ? "224px" : null)};
     align-items: ${({ row }) => (row ? "flex-start" : null)};
@@ -152,40 +154,40 @@ const Card = styled.div`
   @media (min-width: 992px) {
     display: ${({ row }) => (row ? "flex" : null)};
 
-    max-width: ${({ row }) => (row ? "423px" : null)};
-    height: ${({ row }) => (row ? "224px" : null)};
+    max-width: ${({ row }) => (row ? "423px" : null)};//Ya no se mueve CARDS 4x4
+    height: ${({ row }) => (row ? "190px" : null)};
 
     img {
-      height: ${({ row }) => (row ? "224px" : null)};
-      max-width: ${({ row }) => (row ? "200px" : null)};
+      height: ${({ row }) => (row ? "190px" : null)};
+      max-width: ${({ row }) => (row ? "180px" : null)};
     }
 
     a {
-      margin-bottom: ${({ row }) => (row ? "10px" : null)};
+      margin-bottom: ${({ row }) => (row ? "55px" : null)};
     }
   }
 
   @media (min-width: 1200px) {
-    min-width: 306px;
-    width: 306px;
-    margin: 0 auto;
+    min-width: 220px;
+    width: 220px;
+
     .card_body {
       .copy {
-        width: 130%;
-        padding: 0px 25px 0px 10px;
+        
         h2 {
-          font-size: 20px; //DEBE SER 24 PERO SE SALE
+          font-size: 18px;
           line-height: 100%;
           max-width: 211px; //TEXTO FINANCIAMIENTO ORDENES COMPRA MÁS PEQUEÑO
         }
         p {
-          padding: 0 6px 0;
-          margin-right: 50px;
-          font-size: 16px;
+          margin-right: 0px;
+          font-size: 14px;
           line-height: 16px;
         }
       }
       button{
+        width: 156px !important;
+        height: 50px !important;
         margin-left: 90px;
       }
     }

@@ -189,7 +189,7 @@ const CravSections = [
     card: {
       image: require("../../Assets/mano_arrendamiento.png").default,
       copy2:
-        "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
+        "Financiamiento de Activos Fijos pensados para tu empresa.",
     },
 
     items: [

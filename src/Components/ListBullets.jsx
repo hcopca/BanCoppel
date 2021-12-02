@@ -12,6 +12,7 @@ const StyledBullets = styled.ul`
 
   li {
     flex: 1;
+    max-width: 840px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--shadow-blue);
@@ -31,7 +32,7 @@ const StyledBullets = styled.ul`
     }
     @media (min-width: 992px) {
       padding-bottom: 15px;
-      margin-left: 250px;
+      margin-left: 75px;
       p {
         font-size: 16px;
         

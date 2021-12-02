@@ -150,6 +150,13 @@ class EmpresaSide extends Component {
     const { setState, path } = this.props;
     return (
       <StyledEmpresas>
+        <NavLink
+          className="item_"
+          to="/empresas"
+          onClick={() => setState({ onOpen: false })}
+        >
+          Inicio
+        </NavLink>
         <Accordion
           allowMultipleExpanded
           allowZeroExpanded

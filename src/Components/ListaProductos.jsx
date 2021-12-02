@@ -46,6 +46,38 @@ const StyledCards = styled.div`
       margin-right: 0px;
     }
   }
+  @media (min-width: 992px) {
+    .CardBlue {
+    height: 362px;
+    img{
+      border-radius: 10px;
+    }
+    .copy{
+      padding: 0px;
+      h2{
+        margin-top: 14px;
+      }
+      p{
+        margin-top: 9px;
+      }
+    }
+    .card_body{
+      button{
+        margin: 0;
+        margin-bottom: 27px !important;
+      }
+    }
+  }
+  }
+  @media (min-width: 1200px) {
+    .CardBlue {
+    .card_body{
+      button{
+        margin-bottom: 27px !important;
+      }
+    }
+  }
+  }
 `;
 
 const StyledCardsResponsive = styled.div`

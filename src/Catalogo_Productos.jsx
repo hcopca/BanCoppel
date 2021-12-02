@@ -68,8 +68,8 @@ const productos = [
         <br /> <span>Financiero</span>
       </>
     ),
-    homeCopy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
-    cardcopy: "Producto de crédito que ayuda a mantener tus activos fijos en uso por una renta mensual.",
+    homeCopy: "Financiamiento de Activos Fijos pensados para tu empresa.",
+    cardcopy: "Financiamiento de Activos Fijos pensados para tu empresa.",
     path: "/empresas/arrendamiento-financiero",
     image: require("./Assets/IpadHands.png").default,
   },

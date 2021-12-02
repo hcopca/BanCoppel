@@ -52,7 +52,7 @@ const StyledTeInteresa = styled.div`
       justify-content: center;
       align-items: center;
       margin-top: 25px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       button {
         width: 197px;
         height: 47px;
@@ -87,13 +87,19 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
-      width: 930px;
-      height: 247px;
+      width: 840px;
+      height: 145px;
       h2 {
-        font-size: 36px;
+        margin-bottom: -15px;
+        font-size: 18px;
       }
       p {
-        font-size: 24px;
+        font-size: 16px;
+      }
+      .boton{
+        button{
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -124,20 +130,16 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
-      width: 930px;
-      height: 247px;
+      width: 840px;
+      height: 145px;
       h2 {
-        font-size: 36px;
+        font-size: 18px;
         margin-bottom: -15px;
       }
       p {
-        font-size: 24px;
+        font-size: 16px;
       }
-      .boton{
-        button{
-          margin-bottom: 10px;
-        }
-      }
+      
     }
   }
   /* @media (min-width: 1400px) {

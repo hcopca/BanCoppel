@@ -88,7 +88,7 @@ const StyledCardsSlider = styled.div`
     ${(props) => (props.length === 1 ? 1 : 2)},
     1fr
   );
-  grid-gap: 20px;
+  grid-gap: 26px;
   .center{
     margin: auto !important;
   }
@@ -117,11 +117,6 @@ const StyledCardsSlider = styled.div`
       .CardBlue {
         width: 100%;
         min-width: 423px;
-        .card_body {
-          .copy {
-            padding: 5px 10px;
-          }
-        }
       }
     }
   }
