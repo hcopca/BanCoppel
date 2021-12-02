@@ -98,6 +98,7 @@ const StyledBanner = styled.section`
   @media (min-width: 1200px) {
     .container {
       padding-top: 44px;
+      padding-bottom: 44px;
     }
   }
   @media (min-width: 1366px) {
@@ -120,6 +121,7 @@ const StyledBanner = styled.section`
     @media (min-width: 1400px) {
     .container {
       padding-top: 63px;
+      padding-bottom: 63px;
     }
    }
   }
