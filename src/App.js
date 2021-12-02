@@ -24,6 +24,7 @@ import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
 
 class App extends Component {
   render() {
+    throw new Error ("PRUEBA ERROR");
     return (
       <div className="bancoppel">
         <Navbar />
