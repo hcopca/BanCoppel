@@ -23,7 +23,7 @@ import Hero_mid from "../Assets/Heros/img-cuenta-inversion-mid.jpg";
 const StyledInversionEmpresarial = styled.div`
   @media (min-width: 992px) {
     .header_body {
-      flex: 5;
+      flex: 2;
     }
     .hero_container {
       .container {
@@ -46,9 +46,6 @@ const StyledInversionEmpresarial = styled.div`
          }
         }
       }
-    }
-    .header_body {
-      flex: 4;
     }
   }
   @media (min-width: 1200px) {
@@ -93,7 +90,7 @@ const StyledInversionEmpresarial = styled.div`
 `;
 const titleBanner = "LA CUENTA QUE TU EMPRESA NECESITA"
 const subtitle = (<p>Obtén <span>mejores rendimientos</span> en tu saldo a la vista</p>)
-class EmpresaNet extends Component {
+class CuentaInversionEmpresarial extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -202,7 +199,7 @@ class EmpresaNet extends Component {
   }
 }
 
-export default EmpresaNet;
+export default CuentaInversionEmpresarial;
 
 const InversionEmpresarialSections = [
   {

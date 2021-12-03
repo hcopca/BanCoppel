@@ -94,7 +94,7 @@ const StyledProyectosInversion = styled.div`
     }
   }
   .header_body {
-      flex: 4;
+      flex: 2;
     }
 }
   

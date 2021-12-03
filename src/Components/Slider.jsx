@@ -58,7 +58,7 @@ const StylesCarousel = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding: 44px 0px 44px 0;
+    padding: 63px 0px 44px 0; //Padding de la card en te interesa
     display: block;
   }
 
@@ -72,7 +72,7 @@ const StylesCarousel = styled.div`
     }
   }
   @media (min-width: 1400px) {
-    padding: 82px 0px 50px 82px;
+    padding: 63px 0px 50px 63px;
   }
 `;
 

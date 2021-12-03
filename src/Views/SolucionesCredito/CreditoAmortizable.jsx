@@ -46,7 +46,7 @@ const StyledCreditoAmortizable = styled.div`
       }
     }
     .header_body {
-      flex: 2;
+      flex: 2; //Tamaño de la linea azul con puntito en el titulo del header
     }
   }
   @media (min-width: 1200px) {

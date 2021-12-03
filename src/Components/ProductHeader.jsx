@@ -51,6 +51,7 @@ const StyledHead = styled.div`
     .header_body {
       flex: 2;
       h1 {
+        width: 500px;
         font-size: 36px;
         line-height: 36px;
       }

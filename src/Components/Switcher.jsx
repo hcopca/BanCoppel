@@ -47,7 +47,7 @@ const StyledSwitch = styled.div`
   }
   @media (min-width: 992px) {
     padding-top: 44px;
-    padding-bottom: 44px;
+    padding-bottom: 63px;
     display: block;
   }
   .bancoppel__slider {

@@ -45,7 +45,7 @@ const StyledArrendamientoFinanciero = styled.div`
       }
     }
     .header_body {
-      flex: 3;
+      flex: 2;
     }
   }
   @media (min-width: 1200px) {

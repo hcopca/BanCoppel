@@ -22,6 +22,9 @@ const StyledNominasBanCoppel = styled.div`
     width: 197px;
   }
   @media (min-width: 992px) {
+    .header_body {
+      flex: 2;
+    }
     .hero_container {
       .container {
         .children {
