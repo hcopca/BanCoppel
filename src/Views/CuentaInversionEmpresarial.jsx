@@ -58,8 +58,9 @@ const StyledInversionEmpresarial = styled.div`
            width: 400px;
            }
            img{
-            margin-top: -160px;
+             margin-top: -160px;
              width: 20px;
+             height: 124px;
              margin-left: 5px;
            }
          }
@@ -78,8 +79,9 @@ const StyledInversionEmpresarial = styled.div`
            width: 500px;
            }
            img{
-            margin-top: -175px;
+             margin-top: -175px;
              width: 23px;
+             height: 140px;
              margin-left: 2px;
            }
          }

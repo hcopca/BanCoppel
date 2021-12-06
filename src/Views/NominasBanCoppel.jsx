@@ -39,9 +39,10 @@ const StyledNominasBanCoppel = styled.div`
             }
            }
            img{
-             width: 24px;
-             margin-top: -185px;
-             margin-left: 1px;
+             width: 25px;
+             height: 151px;
+             margin-top: -192px;
+             margin-left: 0px;
            }
          }
         }
@@ -58,9 +59,10 @@ const StyledNominasBanCoppel = styled.div`
            width: 500px;
            }
            img{
-            margin-top: -220px;
-             width: 30px;
-             margin-left: -5px;
+             margin-top: -230px;
+             height: 189px;
+             width: 31px;
+             margin-left: -6px;
            }
          }
         }

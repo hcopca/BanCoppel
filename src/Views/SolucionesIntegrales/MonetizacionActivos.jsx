@@ -51,8 +51,9 @@ const StyledPruductHeader = styled.div`
           height: 70px;
          }
          img{
-          margin-top: -160px;
+           margin-top: -159px;
            width: 20px;
+           height: 123px;
            margin-left: 5px;
          }
        }
@@ -70,9 +71,10 @@ const StyledPruductHeader = styled.div`
           height: 90px;
          }
          img{
-          margin-top: -170px;
-           width: 22px;
-           margin-left: 3px;
+           margin-top: -178px;
+           width: 23px;
+           height: 141px;
+           margin-left: 2px;
          }
        }
       }

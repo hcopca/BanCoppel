@@ -24,7 +24,7 @@ const StyledBigCard = styled.div`
         max-width: 100%;
         text-align: left;
         font-size: 14px;
-        font-family: futura_heavy;
+        font-family: futura_book;
         line-height: 18px;
         display: flex;
 

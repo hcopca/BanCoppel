@@ -90,12 +90,12 @@ const StyledHero = styled.div`
                 height: 64px;
                 padding: 10px;
                 border-radius: 16px;
-                font-family: futura_heavy;
+                font-family: futura_book;
                 font-size: 18px;
                 color: #FFFFFF;
               p{
                 span{
-                  font-family: futura-bold;
+                  font-family: futura_heavy;
                   color:white;
                   font-size: 18px;
                     }

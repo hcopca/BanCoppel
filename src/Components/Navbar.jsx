@@ -118,9 +118,9 @@ class Navbar extends Component {
               </a>
             </div>
             <div className="navigation">
-              <NavLink to="/empresas" className="navigation-item">
+              {/* <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Personas</BancoppelBtn>
-              </NavLink>
+              </NavLink> */}
               <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink>

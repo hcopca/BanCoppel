@@ -52,8 +52,9 @@ const StyledFinanciamiento = styled.div`
           width: 520px;
          }
          img{
-          margin-top: -160px;
+           margin-top: -160px;
            width: 20px;
+           height: 125px;
            margin-left: 5px;
          }
        }
@@ -72,8 +73,9 @@ const StyledFinanciamiento = styled.div`
           height: 90px;
          }
          img{
-          margin-top: -180px;
+           margin-top: -180px;
            width: 24px;
+           height: 146px;
            margin-left: 1px;
          }
        }

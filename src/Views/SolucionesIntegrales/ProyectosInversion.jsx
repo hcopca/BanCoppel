@@ -127,7 +127,7 @@ const StyledProyectosInversion = styled.div`
            img{
              margin-top: -227px;
              width: 32px;
-            
+            height: 192px;
              margin-left: -7px;
            }
          }
