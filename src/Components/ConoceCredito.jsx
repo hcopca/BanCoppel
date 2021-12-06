@@ -111,7 +111,7 @@ const StyledBanner = styled.section`
     .contenido_sobrepuesto {
       a {
         margin-bottom: 20px;
-        margin-left: 160px;
+        margin-left: 60px;
         button {
         width: 183px;
         height: 50px;
