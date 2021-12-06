@@ -104,9 +104,39 @@ const StyledBigCard = styled.div`
         img {
           width: 100% !important;
           max-width: 362px;
+          /* height: 215px !important; */
         }
         .card_body{
           max-width: 300px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .bullets{
+        margin-left: 50px;
+      }
+    .card {
+      padding-left: 0px;
+      .CardBlue {
+        min-width: 431px !important;
+        max-width: 431px !important;
+        height: 398px !important;
+        img {
+          width: 100% !important;
+          max-width: 431px;
+          height: 272px !important;
+        }
+        .card_body{
+          width: 400px !important;
+          padding: 0px;
+          .copy {
+            width: 400px !important;
+            h3 {
+              margin-top: 10px;
+              font-size: 21px;
+            }
+          }
         }
       }
     }
