@@ -75,7 +75,16 @@ const StylesCarousel = styled.div`
     }
   }
   @media (min-width: 1400px) {
-    padding: 82px 0px 50px 82px;
+    .bancoppel_slider {
+    .carousel .control-next.control-arrow:before {
+      margin-right: 42px;
+    }
+
+    .carousel .control-prev.control-arrow:before {
+     
+      margin-left: 42px;
+    }
+  }
   }
 `;
 
