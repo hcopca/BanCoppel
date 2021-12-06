@@ -26,7 +26,7 @@ const StyledSwitcher = styled.div`
         font-family: futura_light !important;
       }
       span {
-        font-family: futura_bold;
+        font-family: futura_heavy; //Era bold
         color: var(--gray) !important;
         letter-spacing: 1px;
       }
@@ -68,7 +68,7 @@ const StyledDeskHeaders = styled.div`
 
       .desk_header {
         cursor: pointer;
-        font-family: futura_bold;
+        font-family: futura_heavy; //Era bold
         font-weight: bold;
         font-size: 14px;
         line-height: 18px;
@@ -107,7 +107,7 @@ const StyledAccordions = styled.div`
 
 const StyledAccordion = styled.div`
   .mobile_heading {
-    font-family: futura_bold;
+    font-family: futura_heavy; //Era bold
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;

@@ -16,11 +16,12 @@ const StyledSwitch = styled.div`
 
     .section {
       padding: 10px;
+      /* margin-left: 46px; */
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
 
       h3 {
-        font-family: futura_bold;
+        font-family: futura_heavy; //Era bold
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;
@@ -46,15 +47,19 @@ const StyledSwitch = styled.div`
     }
   }
   @media (min-width: 992px) {
-    padding-top: 44px;
-    padding-bottom: 63px;
+    padding-top: 14px; //Espacio de Beneficios, caracteristicas, requisitos
+    padding-bottom: 44px;
     display: block;
   }
   .bancoppel__slider {
     padding: 0 !important;
   }
+  @media (min-width: 1200px) {
+    padding-bottom: 44px;
+    display: block;
+  }
   @media (min-width: 1400px) {
-    padding-bottom: 63px;
+    padding-bottom: 82px;
     display: block;
   }
 `;

@@ -15,7 +15,10 @@ const StyledNav = styled.div`
       color: var(--gray);
       cursor: pointer;
       font-size: 14px;
-
+      margin-left: 8px;
+      :first-child{
+        margin-left: 0px;
+      } //Espacio entre botones del secondary nav
       font-family: Futura;
     }
   }

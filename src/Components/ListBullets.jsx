@@ -18,7 +18,11 @@ const StyledBullets = styled.ul`
     border-bottom: 1px solid var(--shadow-blue);
     /* padding-bottom: 10px; */
     /* margin-top: 40px; */
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    margin-top: 15px;
+    :last-child{
+      margin-bottom: -24px; //ESPACIO TE INTERESA ULTIMO BULLET
+    }
     p {
       font-family: futura_book;
       font-size: 14px;

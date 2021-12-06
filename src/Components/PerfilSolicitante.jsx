@@ -30,7 +30,7 @@ const Styledperfil = styled.div`
       }
       p {
         margin-top: 40px;
-        font-family: lato_bold;
+        font-family: futura_book;
         font-size: 14px;
         line-height: 130%;
         color: #002a61;
@@ -85,12 +85,21 @@ const Styledperfil = styled.div`
     .container{
       .bullets {
         p {
-          font-family: futura;
+          font-family: futura_book;
           margin-top: 20px;
         }
       }
     }
-   
+  }
+  @media (min-width: 1400px) {
+    margin-top: 20px;
+    .container{
+      .bullets {
+        p {
+        font-size: 16px;
+        }
+      }
+    }
   }
 `;
 

@@ -7,10 +7,10 @@ const Card = styled.div`
   min-width: 262px;
   max-width: 262px;
   height: 500px;
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   img {
-    border-radius: 22px;
+    border-radius: 10px;
     width: 100%;
     height: 255px;
     object-fit: cover;
@@ -71,17 +71,17 @@ const Card = styled.div`
     min-width: 230px;
     max-width: 230px;
     width: 100%;
-    height: 360px;
+    height: 362px;
     img {
-      height: 140px;
+      height: 160px;
     }
 
     .card_body {
       height: calc(100% - 140px);
       align-items: flex-start;
       margin-left: 25px;
+      display: flex;
       .copy {
-   
        /* margin-bottom: -25px; */ //ajustar el botón con el bottom
         h2 {
           margin-top: 20px; //TOP tiulo
@@ -97,6 +97,7 @@ const Card = styled.div`
         }
       }
       button {
+        margin-left: 6px !important; //Alineación del botón
         margin-bottom: 00px !important;
       }
     }
@@ -193,36 +194,31 @@ const Card = styled.div`
     }
   }
 
-  /* 
   @media (min-width: 1400px) {
-    min-width: 315px;
-    height: 555px;
+
+    max-width: ${({ row }) => (row ? "472px" : null)};//Ya no se mueve CARDS 4x4
+    height: ${({ row }) => (row ? "224px" : null)};
+
     img {
-      height: 310px;
+      height: ${({ row }) => (row ? "224px" : null)};
+      max-width: ${({ row }) => (row ? "200px" : null)};
     }
 
+    a {
+      margin-bottom: ${({ row }) => (row ? "40px" : null)};
+    }
     .card_body {
-      padding: 20px;
-      height: calc(100% - 310px);
-      align-items: flex-start;
-
       .copy {
+        
         h2 {
-          font-size: 22px;
+          font-size: 24px;
         }
         p {
           font-size: 16px;
-          margin-top: 15px;
         }
       }
-      a {
-        margin-top: 15px;
-      }
-      button {
-        margin-bottom: 10px !important;
-      }
     }
-  } */
+  }
 `;
 
 class CardBlue extends Component {

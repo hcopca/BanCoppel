@@ -24,7 +24,7 @@ const StyledBigCard = styled.div`
         max-width: 100%;
         text-align: left;
         font-size: 14px;
-        font-family: futura;
+        font-family: futura_heavy;
         line-height: 18px;
         display: flex;
 
@@ -48,7 +48,6 @@ const StyledBigCard = styled.div`
     }
     .bullets {
       flex: 1.2;
-      padding-left: 36px;
 
       .bullet {
         width: 60%;

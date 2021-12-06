@@ -49,7 +49,7 @@ const StyledHeader = styled.div`
       font-weight: 500;
     }
     span {
-      font-family: futura_bold;
+      font-family: futura_heavy; //Era bold
     }
   }
   .btn {

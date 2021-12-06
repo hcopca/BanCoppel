@@ -58,7 +58,7 @@ const StyledSecondaryCard = styled.div`
     justify-content: center;
     width: 212px;
     height: 180px;
-    margin: 10px;
+    margin: 5px;
     img {
       height: 39px;
       width: 36px;
@@ -68,6 +68,14 @@ const StyledSecondaryCard = styled.div`
       margin-left: 0px;
       text-align: center;
       margin-top: 14px;
+    }
+  }
+  @media (min-width: 1400px) {
+    width: 246px;
+    height: 226px;
+    img {
+      height: 66px;
+      width: 66px;
     }
   }
 `;

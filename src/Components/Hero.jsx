@@ -125,7 +125,8 @@ const StyledHero = styled.div`
   }
 
   @media (min-width: 1200px) {
-    max-height: 70vh;
+    /* max-height: 70vh; */
+    height: 475px !important;
     .hero_container {
       .container {
         .children {

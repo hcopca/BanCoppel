@@ -35,6 +35,8 @@ const StyledSelect = styled.div`
 
   select {
     width: 100%;
+    max-width: 354px;
+    max-height: 50px;
     padding: 6px 0;
     border: 0;
     border-bottom: 1.5px solid #338cbf;

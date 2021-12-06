@@ -29,7 +29,7 @@ const StyledEmpresas = styled.div`
         margin-bottom: 0;
       }
       &:hover {
-      font-family: futura_bold;
+      font-family: futura_heavy; //Era bold
     }
     }
 

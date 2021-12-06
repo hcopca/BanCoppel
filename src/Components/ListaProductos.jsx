@@ -64,19 +64,41 @@ const StyledCards = styled.div`
     .card_body{
       button{
         margin: 0;
-        margin-bottom: 27px !important;
+        margin-bottom: 40px !important;
       }
     }
-  }
+   }
   }
   @media (min-width: 1200px) {
     .CardBlue {
     .card_body{
       button{
-        margin-bottom: 27px !important;
+        margin-bottom: 40px !important;
       }
     }
+   }
   }
+  @media (min-width: 1400px) {
+    .CardBlue {
+    max-height: 522px;
+    height: 522px;
+    max-width: 306px;
+    width: 306px; 
+    img{
+      height: 306px;
+    }
+    .copy{
+      padding: 0px;
+      h2{
+        margin-top: 24px;
+      }
+    }
+    .card_body{
+      button{
+        margin-bottom: 191px !important;
+      }
+    }
+   }
   }
 `;
 

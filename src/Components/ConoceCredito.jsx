@@ -110,21 +110,31 @@ const StyledBanner = styled.section`
        }
     .contenido_sobrepuesto {
       a {
-        margin-bottom: 15px;
-        margin-left: 207px;
+        margin-bottom: 20px;
+        margin-left: 160px;
         button {
-        width: 163px;
+        width: 183px;
         height: 50px;
       }
       }
     }
+  }
     @media (min-width: 1400px) {
     .container {
       padding-top: 63px;
       padding-bottom: 63px;
     }
+    .contenido_sobrepuesto {
+      a {
+        margin-bottom: 40px;
+      }
+    }
+    img {
+      width: 848px;
+      height: 354px;
+    }
    }
-  }
+  
 `;
 
 export default class ConoceCredito extends Component {

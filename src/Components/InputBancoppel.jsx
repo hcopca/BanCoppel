@@ -24,6 +24,9 @@ const StyledInput = styled.div`
   input {
     transition: all 0.3s ease-in-out;
     width: 100%;
+    max-width: 354px;
+    height: 100%;
+    max-height: 50px;
     padding: 27px 12px 7px 12px;
     border: 1.5px solid #225aa7;
     border-radius: 10px;

@@ -29,6 +29,7 @@ const StylesCarousel = styled.div`
       content: "";
       border: solid transparent;
       padding: 18px;
+      margin-right: 156px;
       background-image: url(${ActiveBtn});
       background-repeat: no-repeat;
       background-size: contain;
@@ -38,6 +39,7 @@ const StylesCarousel = styled.div`
       content: "";
       border: solid transparent;
       padding: 18px;
+      margin-left: 156px;
       background-image: url(${ActiveBtn});
       background-repeat: no-repeat;
       background-size: contain;
@@ -58,11 +60,12 @@ const StylesCarousel = styled.div`
   }
 
   @media (min-width: 992px) {
-    padding: 63px 0px 44px 0; //Padding de la card en te interesa
+    padding: 44px 0px 44px 0; //Padding de la card en te interesa
     display: block;
   }
 
   @media (min-width: 1200px) {
+    padding: 44px 0px 50px 44px;
     .bancoppel_slider {
       .slide {
         .container {
@@ -72,7 +75,7 @@ const StylesCarousel = styled.div`
     }
   }
   @media (min-width: 1400px) {
-    padding: 63px 0px 50px 63px;
+    padding: 82px 0px 50px 82px;
   }
 `;
 

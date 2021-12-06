@@ -23,7 +23,9 @@ const StyledContacto = styled.div`
     justify-content: center;
     form {
       width: 100%;
-      max-width: 497px;
+      max-width: 436px;
+      height: 100%;
+      /* max-height: 634px; */
       background: #ffffff;
       box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
       border-radius: 8.68966px;
@@ -31,10 +33,10 @@ const StyledContacto = styled.div`
 
       .headers {
         margin-bottom: 25px;
+        text-align: center;
         h2 {
           margin-bottom: 8px;
-
-          font-family: Futura;
+          font-family: futura_heavy;
           font-style: normal;
           font-weight: bold;
           font-size: 24px;
@@ -45,9 +47,9 @@ const StyledContacto = styled.div`
           }
         }
         p {
-          font-size: 18px;
+          font-size: 14px;
           line-height: 110%;
-          font-family: futura_light;
+          font-family: futura_book;
           color: #636363;
         }
       }
@@ -57,14 +59,21 @@ const StyledContacto = styled.div`
       .input_formulario {
         margin-bottom: 15px;
       }
-
-      button {
-        width: 200px;
-        height: 50px;
-        margin-top: 25px;
+      .boton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          button {
+          width: 156px;
+          height: 50px;
+          margin-top: 25px;
+          }
       }
+    
 
       .link_terminos {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
         font-family: Futura;
         font-style: normal;
@@ -75,10 +84,6 @@ const StyledContacto = styled.div`
           text-decoration: underline;
           color: #225aa7;
         }
-        /* identical to box height, or 18px */
-
-        /* gray */
-
         color: #636363;
       }
     }
@@ -91,13 +96,30 @@ const StyledContacto = styled.div`
     background-image: url(${({ img }) => img});
     .container {
       justify-content: flex-end;
-      form {
-        .headers {
-          h2 {
-            font-size: 32px;
+      form{
+        .headers{
+          h2{
+            font-size: 24px;
           }
-          p {
-            font-size: 18px;
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .container {
+      form{
+        max-width: 482px;
+        .headers{
+          h2{
+            margin: 0px;
+            margin-bottom: 9px;
+            font-size: 28px;
+          }
+          p{
+            font-size: 16px;
           }
         }
       }
@@ -243,11 +265,12 @@ class FormularioContacto extends Component {
                 ))}
               </SelectBancoppel>
             </div>
-
-            <BancoppelBtn type="submit" amarillo>
-              Enviar
-            </BancoppelBtn>
-
+            
+            <div className="boton">
+              <BancoppelBtn type="submit" amarillo>
+                Enviar
+              </BancoppelBtn>
+            </div>
             <p className="link_terminos">
               Consulta el aviso de privacidad, <a href="/">aquí</a>
             </p>

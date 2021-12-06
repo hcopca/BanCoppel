@@ -15,7 +15,7 @@ const StyledHead = styled.div`
     h1 {
       font-size: 24px;
       text-transform: uppercase;
-      font-family: futura_bold;
+      font-family: futura_heavy; //Era bold
       span {
         color: var(--sky-blue);
       }
@@ -52,7 +52,7 @@ const StyledHead = styled.div`
       flex: 2;
       h1 {
         width: 500px;
-        font-size: 36px;
+        font-size: 24px;
         line-height: 36px;
       }
     }
