@@ -50,10 +50,11 @@ const StyledCreditoSimple = styled.div`
          .subchildren{
            h2{
              height: 80px;
-           font-size: 32px;
+             font-size: 32px;
            }
            img{
-            margin-top: -173px;
+             margin-top: -177px;
+             height: 142px;
              width: 23px;
              margin-left: 2px;
            }
@@ -74,8 +75,9 @@ const StyledCreditoSimple = styled.div`
               font-size: 44px;
                }
                img {
-                width: 24px;
-                margin-top: -180px;
+                width: 25px;
+                height: 152px;
+                margin-top: -187px;
                 margin-left: 1px;
                 max-width: 505px;
               }

@@ -59,8 +59,9 @@ const StyledArrendamientoFinanciero = styled.div`
            }
            img{
             margin-top: -200px;
-             width: 27px;
-             margin-left: -2px;
+            width: 27px;
+            margin-left: -2px;
+            height: 164px;
            }
          }
         }
@@ -78,8 +79,9 @@ const StyledArrendamientoFinanciero = styled.div`
             width: 650px;
            }
            img{
-            margin-top: -230px;
+             margin-top: -230px;
              width: 32px;
+             height: 195px;
              margin-left: -7px;
            }
          }

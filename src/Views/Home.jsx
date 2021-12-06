@@ -52,7 +52,8 @@ const StyledHome = styled.div`
         .children {
          .subchildren{
            img{
-            margin-top: -170px;
+             margin-top: -170px;
+            
              width: 22px;
              margin-left: 3px;
            }
@@ -71,6 +72,7 @@ const StyledHome = styled.div`
             height: 90px;
            }
            img{
+            height: 144px;
             margin-top: -180px;
              width: 24px;
              margin-left: 1px;

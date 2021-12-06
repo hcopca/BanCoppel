@@ -104,7 +104,7 @@ const StyledTeInteresa = styled.div`
   }
 
   @media (min-width: 1200px) {
-    margin-top: 44px;
+    /* margin-top: 44px; */
     /* padding: 30px 0; */
 
     .container {
@@ -121,7 +121,7 @@ const StyledTeInteresa = styled.div`
       .gray {
         background: var(--light-blue);
 
-        height: 0%;
+        height: 50%;
       }
       .white {
         background: white;
@@ -142,7 +142,7 @@ const StyledTeInteresa = styled.div`
     }
   }
   @media (min-width: 1400px) {
-    margin-top: 82px;
+    /* margin-top: 82px; */
     .header {
       width: 958px;
       height: 178px;

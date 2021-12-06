@@ -13,20 +13,23 @@ const StyledSwitch = styled.div`
     justify-content: center;
     margin: auto;
     margin-bottom: 40px;
+    max-width: 970px;
 
     .section {
-      padding: 10px;
-      /* margin-left: 46px; */
+      /* width: 557px; */
+      padding: 20px;
       border-bottom: 2px solid var(--shadow-blue);
       cursor: pointer;
 
       h3 {
+        width: 100%;
+        max-width: 241px;
         font-family: futura_heavy; //Era bold
         text-align: center;
         color: var(--light-gray);
         font-weight: bold;
         font-size: 14px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
       }
 
       &:hover {

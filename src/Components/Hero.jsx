@@ -125,8 +125,11 @@ const StyledHero = styled.div`
   }
 
   @media (min-width: 1200px) {
-    /* max-height: 70vh; */
-    height: 475px !important;
+
+    max-height: 475px;
+    img{
+      height: 475px;
+    }
     .hero_container {
       .container {
         .children {
@@ -138,9 +141,13 @@ const StyledHero = styled.div`
               }
           img {
             width: 22px;
+            height: 133px;
             margin-top: -170px;
             margin-left: 3px;
             max-width: 505px;
+           }
+           button{
+             margin-top: 32px;
            }
           }
         }
@@ -155,6 +162,13 @@ const StyledHero = styled.div`
             h2{
               font-size: 44px;
                }
+               img {
+                width: 23px;
+                height: 142px;
+                margin-top: -170px;
+                margin-left: 3px;
+                max-width: 505px;
+              }
              }
            }
         }

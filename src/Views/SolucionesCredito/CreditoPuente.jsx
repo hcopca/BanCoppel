@@ -57,9 +57,11 @@ const StyledCreditoPuente = styled.div`
            height: 70px;
           }
           img{
-            margin-top: -160px;
+             margin-top: -160px;
              width: 20px;
+             height: 121px;
              margin-left: 5px;
+             
            }
          }
         }
@@ -77,8 +79,9 @@ const StyledCreditoPuente = styled.div`
            height: 95px;
           }
           img{
-            margin-top: -185px;
+             margin-top: -185px;
              width: 24px;
+             height: 145px;
              margin-left: 1px;
            }
          }

@@ -60,8 +60,9 @@ const StyledCreditoAmortizable = styled.div`
             }
            }
            img{
+             height: 140px;
             margin-top: -170px;
-            width: 22px;
+            width: 23px;
            }
          }
         }
@@ -75,12 +76,13 @@ const StyledCreditoAmortizable = styled.div`
          .subchildren{
            h2{
              width: 430px;
-             height: 150px;
+             height: 160px;
             }
            img{
-            margin-top: -230px;
-            width: 33px;
-            margin-left: -8px;
+            margin-top: -251px;
+            width: 36px;
+            height: 219px;
+            margin-left: -11px;
            }
          }
         }
