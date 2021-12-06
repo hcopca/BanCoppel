@@ -147,7 +147,7 @@ const StyledHero = styled.div`
             max-width: 505px;
            }
            button{
-             margin-top: 32px;
+             margin-top: 35px;
            }
           }
         }

@@ -53,7 +53,6 @@ const StyledHome = styled.div`
          .subchildren{
            img{
              margin-top: -170px;
-            
              width: 22px;
              margin-left: 3px;
            }
@@ -223,18 +222,18 @@ class Home extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Banca empresarial BanCoppel | BanCoppel.com
+          Banca Empresarial BanCoppel | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Banca empresarial BanCoppel | BanCoppel.com" />
+          content="Banca Empresarial BanCoppel | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas" />
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito" />
            <meta
             name="description"
-            content="Conoce más sobre Banca empresarial BanCoppel, cuentas de nóminca, cuentas de inversión, crédito y muchos más beneficios para tu negocio."
+            content="Conoce más sobre Banca Empresarial BanCoppel, cuentas de nómina, cuentas de inversión, crédito y muchos más beneficios para tu negocio."
             data-react-helmet="true"
           />
 

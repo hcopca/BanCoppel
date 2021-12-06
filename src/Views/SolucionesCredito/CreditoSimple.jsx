@@ -132,18 +132,18 @@ class CreditoSimple extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Crédito simple: detalles y requisitos | BanCoppel.com
+          Crédito Simple: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Crédito simple: detalles y requisitos | BanCoppel.com" />
+          content="Crédito Simple: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-simple" />
           <meta 
           name="keywords"
           content="credito simple, banca empresarial, bancoppel, financiamiento, credito, requisitos," />
            <meta
             name="description"
-            content="Conoce los detalles y requisitos para tu Crédito Simple y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            content="Conoce las características y requisitos del Crédito Simple y disfruta de los beneficios que el financiamiento de Banca empresarial BanCoppel te ofrece."
             data-react-helmet="true"
           />
 

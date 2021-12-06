@@ -135,18 +135,18 @@ class CreditoPuente extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Crédito puente: detalles y requisitos | BanCoppel.com
+          Crédito Puente: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Crédito puente: detalles y requisitos | BanCoppel.com" />
+          content="Crédito Puente: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-puente" />
           <meta 
           name="keywords"
           content="credito puente, proyectos habitacionales, banca empresarial, bancoppel, credito,requisitos" />
            <meta
             name="description"
-            content="Conoce los detalles y requisitos para tu Crédito puente y disfruta los beneficios para proyectos habitaciones de Banca empresarial BanCoppel."
+            content="Conoce los detalles y requisitos para tu Crédito Puente y disfruta los beneficios para proyectos habitaciones de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

@@ -141,18 +141,18 @@ class CuentaInversionEmpresarial extends Component {
        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Cuenta inversión empresarial: detalles y requisitos | BanCoppel.com
+          Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Cuenta inversión empresarial: detalles y requisitos | BanCoppel.com" />
+          content="Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/cuenta-inversion-empresarial" />
           <meta 
           name="keywords"
           content="banca empresarial, bancoppel, banco, empresa,cuenta de inversion, rendimiento, caracteristicas, requisitos, negocio," />
            <meta
             name="description"
-            content="Conoce más sobre los detalles, características y requisitos para tu cuenta de inversión empresarial BanCoppel."
+            content="Conoce más sobre características y requisitos de la Cuenta de Inversión Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

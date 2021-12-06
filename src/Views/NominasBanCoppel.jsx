@@ -123,7 +123,7 @@ class NominasBanCoppel extends Component {
           name="keywords"
           content="nomina, bancoppel, requisitos, beneficios, transferencias bancarias" />
            <meta name="description" 
-           content="Conoce los detalles y requisitos para Nómina BanCoppel y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel." 
+           content="Conoce las características y requisitos de Nómina BanCoppel y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel." 
            />
       </Helmet>
       

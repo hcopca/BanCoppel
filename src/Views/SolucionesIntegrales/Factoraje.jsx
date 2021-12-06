@@ -76,7 +76,7 @@ const StyledFactoraje = styled.div`
              margin-left: -2px;
            }
            button{
-             margin-top: 13px;
+             margin-top: 35px;
            }
          }
         }
@@ -162,18 +162,18 @@ class SolucionesCredito extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Factoraje financiero: detalles y requisitos | BanCoppel.com
+          Factoraje Financiero: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Factoraje financiero: detalles y requisitos | BanCoppel.com" />
+          content="Factoraje Financiero: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href=" https://www.bancoppel.com/empresas/factoraje-financiero" />
           <meta 
           name="keywords"
           content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel" />
           <meta
             name="description"
-            content="Conoce los detalles y requisitos para Factoraje financiero y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            content="Conoce las características y requisitos del Factoraje Financiero y disfruta de los beneficios de financiamiento de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

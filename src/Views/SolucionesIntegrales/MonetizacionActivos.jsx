@@ -145,18 +145,18 @@ class MonetizacionActivos extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Monetización de activos: detalles y requisitos | BanCoppel.com
+          Monetización de Activos: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Monetización de activos | BanCoppel.com" />
+          content="Monetización de Activos: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/monetizacion-de-activos" />
           <meta 
           name="keywords"
           content="monetizacion, activos, bancoppel, financiamiento, credito, requisitos, credito empresarial" />
            <meta
             name="description"
-            content="Conoce los detalles y requisitos para Monetización de activos y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            content="Conoce las características y requisitos de la Monetización de Activos y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

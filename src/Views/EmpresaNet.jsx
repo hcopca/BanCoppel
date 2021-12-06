@@ -131,7 +131,7 @@ class EmpresaNet extends Component {
           content="banca empresarial, bancoppel, banco, cuentas, empresa,operaciones financieras,  negocio,  administrar," />
            <meta
             name="description"
-            content="Descubre las facilidades que te da la banca por internet para tu negocio. Administra, realiza operaciones financieras en línea con BanCoppel."
+            content="Conoce todas las operaciones que puedes realizar desde EmpresaNet para tu negocio."
             data-react-helmet="true"
           />
       </Helmet>

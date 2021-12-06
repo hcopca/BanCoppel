@@ -188,18 +188,18 @@ class ProyectosInversion extends Component {
        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Proyectos de inversión: detalles y requisitos | BanCoppel.com
+          Proyectos de Inversión: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Proyectos de inversión: detalles y requisitos | BanCoppel.com" />
+          content="Proyectos de Inversión: detalles y requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/proyectos-de-inversion" />
           <meta 
           name="keywords"
           content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa" />
           <meta
             name="description"
-            content="Conoce los detalles y requisitos para Proyectos de inversión y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            content="Conoce las características de los Proyectos de Inversión que tenemos en Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

@@ -137,18 +137,18 @@ class ArrendamientoFinanciero extends Component {
       <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Arrendamiento financiero: detalles y requisitos| BanCoppel.com
+          Arrendamiento Financiero: detalles y requisitos| BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Arrendamiento financiero: detalles y requisitos| BanCoppel.com" />
+          content="Arrendamiento Financiero: detalles y requisitos| BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/arrendamiento-financiero" />
           <meta 
           name="keywords"
           content="arrendamiento financiero, activo fijo, banca empresarial, bancoppel, credito,requisitos, empresa, negocio," />
           <meta
             name="description"
-            content="Conoce los detalles y requisitos de arrendamiento financiero y disfruta los beneficios de Banca empresarial BanCoppel"
+            content="Conoce las características y requisitos de Arrendamiento Financiero que te ofrecemos a través de la Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

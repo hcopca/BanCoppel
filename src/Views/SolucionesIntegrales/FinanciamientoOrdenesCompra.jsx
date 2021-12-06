@@ -142,18 +142,18 @@ class FinanciamientoOrdenesCompra extends Component {
        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Financiamiento de ordenes de compra - requisitos | BanCoppel.com
+          Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content="Financiamiento de ordenes de compra - requisitos | BanCoppel.com" />
+          content="Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com" />
           <link rel="canonical" href="https://www.bancoppel.com/empresas/financiamiento-ordenes-de-compra" />
           <meta 
           name="keywords"
           content="ordenes de compra, financiamiento,banca empresarial, bancoppel, credito,requisitos, negocio" />
            <meta
             name="description"
-            content="Conoce los detalles y requisitos para Financiamiento de ordenes de compra y disfruta los beneficios de Banca empresarial BanCoppel."
+            content="Conoce las características y requisitos del Financiamiento de Órdenes de compra y disfruta los beneficios de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>
