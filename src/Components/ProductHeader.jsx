@@ -59,6 +59,11 @@ const StyledHead = styled.div`
   }
   @media (min-width: 1400px) {
     padding-top: 82px;
+    .header_body {
+      h1 {
+        font-size: 34px;
+      }
+    }
   }
 `;
 

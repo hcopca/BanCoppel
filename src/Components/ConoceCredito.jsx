@@ -127,6 +127,7 @@ const StyledBanner = styled.section`
     .contenido_sobrepuesto {
       a {
         margin-bottom: 40px;
+       margin-left: 113px;
       }
     }
     img {

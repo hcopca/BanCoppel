@@ -187,7 +187,7 @@ class MonetizacionActivos extends Component {
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
-              Monetización <span>de Activos</span>
+              Monetización <br /><span>de Activos</span>
             </h1>
           </StyledPruductHeader>
         </ProductHeader>

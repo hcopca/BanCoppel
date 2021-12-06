@@ -153,21 +153,21 @@ const productos = [
     path: "/empresas/proyectos-de-inversion",
     image: require("./Assets/mano_proyectos_inversion.png").default,
   },
-  {
-    family: "EmpresaNET",
-    name: "EmpresaNET",
-    title_custom: (
-      <>
-        Empresa <span>Net</span>
-      </>
-    ),
-    homeCopy:
-      "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
-    cardcopy:
-      "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
-    path: "/empresas/empresanet",
-    image: require("./Assets/mano_empresanet.png").default,
-  },
+  // {
+  //   family: "EmpresaNET",
+  //   name: "EmpresaNET",
+  //   title_custom: (
+  //     <>
+  //       Empresa <span>Net</span>
+  //     </>
+  //   ),
+  //   homeCopy:
+  //     "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
+  //   cardcopy:
+  //     "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
+  //   path: "/empresas/empresanet",
+  //   image: require("./Assets/mano_empresanet.png").default,
+  // },
 ];
 
 export default productos;

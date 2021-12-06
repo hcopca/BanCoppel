@@ -44,7 +44,7 @@ const StyledBigCard = styled.div`
     .card {
       display: block;
       flex: 1;
-      
+      padding-left: 70px;
     }
     .bullets {
       flex: 1.2;
@@ -97,6 +97,7 @@ const StyledBigCard = styled.div`
   }
   @media (min-width: 1200px) {
     .card {
+      padding-left: 100px;
       .CardBlue {
         min-width: 50% !important;
         max-width: 362px !important;

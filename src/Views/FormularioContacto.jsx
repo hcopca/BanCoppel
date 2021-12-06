@@ -29,7 +29,7 @@ const StyledContacto = styled.div`
       background: #ffffff;
       box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
       border-radius: 8.68966px;
-      padding: 30px;
+      padding: 30px 30px 30px 40px;
 
       .headers {
         margin-bottom: 25px;
@@ -75,10 +75,10 @@ const StyledContacto = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 20px;
-        font-family: Futura;
+        font-family: futura_book;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 110%;
         a {
           text-decoration: underline;
@@ -112,6 +112,7 @@ const StyledContacto = styled.div`
     .container {
       form{
         max-width: 482px;
+        padding: 30px 30px 30px 66px;
         .headers{
           h2{
             margin: 0px;
@@ -121,6 +122,9 @@ const StyledContacto = styled.div`
           p{
             font-size: 16px;
           }
+        }
+        .link_terminos{
+          font-size: 16px;
         }
       }
     }
@@ -271,9 +275,9 @@ class FormularioContacto extends Component {
                 Enviar
               </BancoppelBtn>
             </div>
-            <p className="link_terminos">
+            <pre><p className="link_terminos">
               Consulta el aviso de privacidad, <a href="/">aquí</a>
-            </p>
+            </p></pre>
           </form>
         </Container>
       </StyledContacto>

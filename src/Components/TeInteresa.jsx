@@ -130,7 +130,7 @@ const StyledTeInteresa = styled.div`
     }
 
     .header {
-      width: 844px;
+      width: 840px;
       height: 145px;
       h2 {
         font-size: 18px;

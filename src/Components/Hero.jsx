@@ -155,6 +155,10 @@ const StyledHero = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    max-height: 500px;
+    img{
+      height: 500px;
+    }
     .hero_container {
       .container {
         .children {
