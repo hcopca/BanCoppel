@@ -184,6 +184,7 @@ class ArrendamientoFinanciero extends Component {
         <ProductHeader>
           <h1>
             Arrendamiento <span>financiero</span>
+            
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />
