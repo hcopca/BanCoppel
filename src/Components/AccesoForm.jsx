@@ -87,7 +87,7 @@ export default class AccesoForm extends Component {
     super(props);
     this.state = {
       selected: 1,
-      RFC: "",
+      Usuario: "",
       Contraseña: "",
     };
   }
@@ -119,10 +119,10 @@ export default class AccesoForm extends Component {
           <div className="form_item">
             <InputBancoppel
               type="text"
-              label="RFC"
-              name="RFC"
-              id="RFC"
-              value={this.state.RFC}
+              label="Usuario"
+              name="Usuario"
+              id="Usuario"
+              value={this.state.Usuario}
               onChange={(e) => this.onChange(e)}
               required
               secondary

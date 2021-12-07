@@ -171,12 +171,12 @@ class SideDrawer extends Component {
             <Search className="search" />
           </div>
           <div className="kindUser">
-            <button
+            {/* <button
               onClick={() => this.setState({ view: 1 })}
               className={`personas ${this.state.view === 1 ? "current" : ""}`}
             >
               Personas
-            </button>
+            </button> */}
             <button
               onClick={() => this.setState({ view: 2 })}
               className={`empresas ${this.state.view === 2 ? "current" : ""}`}
@@ -190,7 +190,7 @@ class SideDrawer extends Component {
             {this.state.view === 2 ? (
               <EmpresaSide setState={setState} path={location.pathname} />
             ) : (
-              <h1>Hola Persona</h1>
+              <h1>Hola persona</h1>
             )}
           </div>
         </div>

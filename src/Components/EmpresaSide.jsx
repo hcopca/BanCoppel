@@ -307,7 +307,7 @@ class EmpresaSide extends Component {
           onClick={() => setState({ onOpen: false })}
           className="last item_"
         >
-          BanCoppel Pyme
+          BanCoppel Pymes
         </NavLink>
       </StyledEmpresas>
     );

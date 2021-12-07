@@ -46,7 +46,7 @@ const StyledCreditoAmortizable = styled.div`
       }
     }
     .header_body {
-      flex: 2; //Tamaño de la linea azul con puntito en el titulo del header
+      flex: 3.5; //Tamaño de la linea azul con puntito en el titulo del header
     }
   }
   @media (min-width: 1200px) {
@@ -179,7 +179,7 @@ class CreditoAmortizable extends Component {
           <h1>
             CRÉDITO{" "}
             <span>
-              CUENTA <br /> CORRIENTE
+              CUENTA CORRIENTE
             </span>
           </h1>
         </ProductHeader>

@@ -178,7 +178,7 @@ const Card = styled.div`
         h2 {
           font-size: 18px;
           line-height: 100%;
-          max-width: 211px; //TEXTO FINANCIAMIENTO ORDENES COMPRA MÁS PEQUEÑO
+          max-width: 212px; //TEXTO FINANCIAMIENTO ORDENES COMPRA MÁS PEQUEÑO
         }
         p {
           margin-right: 0px;

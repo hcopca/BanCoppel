@@ -22,7 +22,7 @@ import styled from "styled-components";
 const StyledPruductHeader = styled.div`
   @media (min-width: 992px) {
     .header_body {
-      flex: 2;
+      flex: 3.5;
     }
   .hero_container{
     .container{
@@ -187,7 +187,7 @@ class MonetizacionActivos extends Component {
         <ProductHeader>
           <StyledPruductHeader>
             <h1 className="header_product">
-              Monetización <br /><span>de Activos</span>
+              Monetización <span>de Activos</span>
             </h1>
           </StyledPruductHeader>
         </ProductHeader>

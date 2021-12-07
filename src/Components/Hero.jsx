@@ -126,9 +126,9 @@ const StyledHero = styled.div`
 
   @media (min-width: 1200px) {
 
-    max-height: 475px;
+    max-height: 400px;
     img{
-      height: 475px;
+      height: 400px;
     }
     .hero_container {
       .container {

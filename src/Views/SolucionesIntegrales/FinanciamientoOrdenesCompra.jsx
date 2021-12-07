@@ -22,7 +22,7 @@ import Hero_mid from "../../Assets/Heros/img-financiamiento-mid.jpg";
 const StyledFinanciamiento = styled.div`
   @media (min-width: 992px) {
     .header_body {
-      flex: 2;
+      flex: 5.6;
     }
 
   .hero_container{
