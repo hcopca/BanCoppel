@@ -96,6 +96,7 @@ const StyledCards = styled.div`
     .card_body{
       button{
         margin-bottom: 191px !important;
+        margin-left: 46px !important;
       }
     }
    }

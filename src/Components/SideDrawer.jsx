@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { ReactComponent as Close } from "../Assets/close.svg";
 import { ReactComponent as LogoBN } from "../Assets/logo_bancoppel_empresas_b&w.svg";
-import { ReactComponent as Search } from "../Assets/search.svg";
+// import { ReactComponent as Search } from "../Assets/search.svg";
 import { Link, withRouter } from "react-router-dom";
 import { EmpresaSide } from "./index";
 
@@ -168,7 +168,8 @@ class SideDrawer extends Component {
                 <LogoBN className="logo" />
               </Link>
             </div>
-            <Search className="search" />
+            {/* LUPA */}
+            {/* <Search className="search" /> */} 
           </div>
           <div className="kindUser">
             {/* <button

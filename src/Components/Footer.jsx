@@ -196,21 +196,21 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <Link href="#">¿Quiénes somos?</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html">¿Quiénes somos?</Link>
                         <br />
-                        <Link href="#">Preguntas frecuentes</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/faq.html">Preguntas frecuentes</Link>
                         <br />
-                        <Link href="#">Información corporativa</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html">Información corporativa</Link>
                         <br />
-                        <Link href="#">
+                        <Link href="https://bancoppel.com/plandeapoyo/index.html">
                           Plan de apoyo para cuidar tu crédito
                         </Link>
                         <br />
-                        <Link href="#">
+                        <Link href="https://bancoppel.com/modal_bcopp/condusef.htm">
                           Unidad especializada BanCoppel Condusef
                         </Link>
                         <br />
-                        <Link href="#">Productos protegidos por el IPAB</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html">Productos protegidos por el IPAB</Link>
                         <br />
                         <Link href="#">Aviso de privacidad</Link>
                         <br />
@@ -284,12 +284,12 @@ export default class Footer extends Component {
 
                 <Column>
                   <Title>Acerca de BanCoppel</Title>
-                  <Link href="#">¿Quiénes somos?</Link>
-                  <Link href="#">Preguntas frecuentes</Link>
-                  <Link href="#">Información corporativa</Link>
-                  <Link href="#">Plan de apoyo para cuidar tu crédito</Link>
-                  <Link href="#">Unidad especializada BanCoppel Condusef</Link>
-                  <Link href="#">Productos protegidos por el IPAB</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html">¿Quiénes somos?</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/faq.html">Preguntas frecuentes</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html">Información corporativa</Link>
+                  <Link href="https://bancoppel.com/plandeapoyo/index.html">Plan de apoyo para cuidar tu crédito</Link>
+                  <Link href="https://bancoppel.com/modal_bcopp/condusef.htm">Unidad especializada BanCoppel Condusef</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html">Productos protegidos por el IPAB</Link>
                 </Column>
                 <Column>
                   <Title>&nbsp;</Title>
