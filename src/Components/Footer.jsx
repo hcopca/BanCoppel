@@ -212,17 +212,17 @@ export default class Footer extends Component {
                         <br />
                         <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html">Productos protegidos por el IPAB</Link>
                         <br />
-                        <Link href="#">Aviso de privacidad</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de privacidad</Link>
                         <br />
-                        <Link href="#">Robo de identidad</Link>
+                        <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
                         <br />
                         <Link href="#">Tarifas y comisiones</Link>
                         <br />
-                        <Link href="#">Corresponsales</Link>
+                        <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
                         <br />
-                        <Link href="#">Despachos de cobranza </Link>
+                        <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf">Despachos de cobranza </Link>
                         <br />
-                        <Link href="#">Tips de seguridad</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/tips.html">Tips de seguridad</Link>
                       </AccordionItemPanel>
                     </AccordionItem>
 
@@ -293,12 +293,12 @@ export default class Footer extends Component {
                 </Column>
                 <Column>
                   <Title>&nbsp;</Title>
-                  <Link href="#">Aviso de privacidad</Link>
-                  <Link href="#">Robo de identidad</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de privacidad</Link>
+                  <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
                   <Link href="#">Tarifas y comisiones</Link>
-                  <Link href="#">Corresponsales</Link>
-                  <Link href="#">Despachos de cobranza </Link>
-                  <Link href="#">Tips de seguridad</Link>
+                  <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
+                  <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf">Despachos de cobranza </Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/tips.html">Tips de seguridad</Link>
                 </Column>
                 <Column>
                   <Title>Contacto</Title>
