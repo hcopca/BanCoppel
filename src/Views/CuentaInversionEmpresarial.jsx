@@ -23,7 +23,7 @@ import Hero_mid from "../Assets/Heros/img-cuenta-inversion-mid.jpg";
 const StyledInversionEmpresarial = styled.div`
   @media (min-width: 992px) {
     .header_body {
-      flex: 4;
+      flex: 3.2;
     }
     .hero_container {
       .container {
@@ -69,6 +69,9 @@ const StyledInversionEmpresarial = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.2;
+    }
     .hero_container {
       .container {
         margin-left: 100px;

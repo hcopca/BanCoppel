@@ -24,7 +24,7 @@ const StyledArrendamientoFinanciero = styled.div`
 
   @media (min-width: 992px) {
     .header_body {
-      flex: 3;
+      flex: 3.1;
     }
   
     .hero_container {
@@ -69,6 +69,9 @@ const StyledArrendamientoFinanciero = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.18;
+    }
     .hero_container {
       .container {
         margin-left: 100px;
@@ -184,7 +187,7 @@ class ArrendamientoFinanciero extends Component {
         <ProductHeader>
           <h1>
             Arrendamiento <span>financiero</span>
-            
+
           </h1>
         </ProductHeader>
         <Accordion items={CravSections} body={this.body} />

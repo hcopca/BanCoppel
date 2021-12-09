@@ -94,7 +94,7 @@ const StyledProyectosInversion = styled.div`
     }
   }
   .header_body {
-      flex: 3.5;
+      flex: 3.7;
     }
 }
   
@@ -115,6 +115,9 @@ const StyledProyectosInversion = styled.div`
   }
 }
 @media (min-width: 1400px) {
+  .header_body {
+      flex: 2.7;
+    }
     .hero_container {
       .container {
         margin-left: 100px;

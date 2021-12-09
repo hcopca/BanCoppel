@@ -40,7 +40,7 @@ const StyledCreditoSimple = styled.div`
       }
     }
     .header_body {
-      flex: 2;
+      flex: 3.4;
     }
   }
   @media (min-width: 1200px) {
@@ -64,6 +64,9 @@ const StyledCreditoSimple = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.7;
+    }
     .hero_container {
       .container {
         margin-right: 300px;

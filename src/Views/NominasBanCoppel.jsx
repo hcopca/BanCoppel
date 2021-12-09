@@ -23,7 +23,7 @@ const StyledNominasBanCoppel = styled.div`
   }
   @media (min-width: 992px) {
     .header_body {
-      flex: 2.5;
+      flex: 3.3;
     }
     .hero_container {
       .container {
@@ -50,6 +50,9 @@ const StyledNominasBanCoppel = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.5;
+    }
     .hero_container {
       .container {
         .children {

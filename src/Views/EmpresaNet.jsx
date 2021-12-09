@@ -22,7 +22,7 @@ const StyledEmpresaNet = styled.div`
   }
   @media (min-width: 992px) {
     .header_body {
-      flex: 2;
+      flex: 4;
     }
     .hero_container {
       .container {
@@ -51,6 +51,9 @@ const StyledEmpresaNet = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 3.3;
+    }
     .hero_container {
       .container {
         margin-left: 90px;

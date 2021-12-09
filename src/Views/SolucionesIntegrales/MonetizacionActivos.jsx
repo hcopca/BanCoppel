@@ -22,7 +22,7 @@ import styled from "styled-components";
 const StyledPruductHeader = styled.div`
   @media (min-width: 992px) {
     .header_body {
-      flex: 3.5;
+      flex: 3.4;
     }
   .hero_container{
     .container{
@@ -62,6 +62,9 @@ const StyledPruductHeader = styled.div`
   }
 }
 @media (min-width: 1400px) {
+  .header_body {
+      flex: 2.4;
+    }
   .hero_container {
     .container {
       .children {

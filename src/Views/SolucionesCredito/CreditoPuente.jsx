@@ -45,7 +45,7 @@ const StyledCreditoPuente = styled.div`
       }
     }
     .header_body {
-      flex: 2;
+      flex: 3.2;
     }
   }
   @media (min-width: 1200px) {
@@ -69,6 +69,9 @@ const StyledCreditoPuente = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.58;
+    }
     .hero_container {
       .container {
         .children {

@@ -58,7 +58,7 @@ const StyledFactoraje = styled.div`
       }
     }
     .header_body {
-      flex: 3;
+      flex: 3.5;
     }
   }
   @media (min-width: 1200px) {
@@ -84,6 +84,9 @@ const StyledFactoraje = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.57;
+    }
     .hero_container {
       .container {
         .children {

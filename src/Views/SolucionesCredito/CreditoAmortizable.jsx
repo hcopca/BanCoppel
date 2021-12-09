@@ -46,7 +46,7 @@ const StyledCreditoAmortizable = styled.div`
       }
     }
     .header_body {
-      flex: 3.5; //Tamaño de la linea azul con puntito en el titulo del header
+      flex: 3.4; //Tamaño de la linea azul con puntito en el titulo del header
     }
   }
   @media (min-width: 1200px) {
@@ -70,6 +70,9 @@ const StyledCreditoAmortizable = styled.div`
     }
   }
   @media (min-width: 1400px) {
+    .header_body {
+      flex: 2.35;
+    }
     .hero_container {
       .container {
         .children {
