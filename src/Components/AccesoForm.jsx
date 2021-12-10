@@ -73,6 +73,7 @@ const StyledForm = styled.div`
       text-decoration-line: underline;
       color: #338cbf;
       text-align: center;
+      cursor: pointer;
     }
 
     .captcha {
