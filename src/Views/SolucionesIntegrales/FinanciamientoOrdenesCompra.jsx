@@ -64,7 +64,7 @@ const StyledFinanciamiento = styled.div`
 }
 @media (min-width: 1400px) {
   .header_body {
-      flex: 1.9;
+      flex: 9.6;
     }
   .hero_container {
     .container {

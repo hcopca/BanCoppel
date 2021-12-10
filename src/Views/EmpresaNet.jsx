@@ -52,7 +52,7 @@ const StyledEmpresaNet = styled.div`
   }
   @media (min-width: 1400px) {
     .header_body {
-      flex: 3.3;
+      flex: 2.2;
     }
     .hero_container {
       .container {

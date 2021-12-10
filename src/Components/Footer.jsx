@@ -216,7 +216,7 @@ export default class Footer extends Component {
                         <br />
                         <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
                         <br />
-                        <Link href="#">Tarifas y comisiones</Link>
+                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5">Tarifas y comisiones</Link>
                         <br />
                         <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
                         <br />
@@ -295,7 +295,7 @@ export default class Footer extends Component {
                   <Title>&nbsp;</Title>
                   <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de privacidad</Link>
                   <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
-                  <Link href="#">Tarifas y comisiones</Link>
+                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5">Tarifas y comisiones</Link>
                   <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
                   <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf">Despachos de cobranza </Link>
                   <Link href="https://bancoppel.com/acerca_bancoppel/tips.html">Tips de seguridad</Link>
@@ -388,7 +388,7 @@ export default class Footer extends Component {
                 </CopyRight>
                 <FinalFooter>
                   <SubLink href="#">Términos y Condiciones de Uso</SubLink> |{" "}
-                  <SubLink href="#">Aviso de Privacidad</SubLink> |{" "}
+                  <SubLink href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de Privacidad</SubLink> |{" "}
                   <SubLink href="#">
                     Consulta los costos y las comisiones de nuestros productos.
                   </SubLink>

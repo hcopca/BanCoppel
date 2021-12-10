@@ -71,7 +71,7 @@ const StyledCreditoAmortizable = styled.div`
   }
   @media (min-width: 1400px) {
     .header_body {
-      flex: 2.35;
+      flex: 5; //
     }
     .hero_container {
       .container {
@@ -136,18 +136,18 @@ class CreditoAmortizable extends Component {
        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Cuenta corriente amortizable: detalles y requisitos | BanCoppel.com
+          Crédito Cuenta Corriente: detalles y requisitos | BanCoppel.com
           </title>
           <meta 
           name="title" 
-          content=" Cuenta corriente amortizable: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-amortizable" />
+          content="Crédito Cuenta Corriente: detalles y requisitos | BanCoppel.com" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-cuenta-corriente" />
           <meta 
           name="keywords"
-          content="credito cuenta corriente, amortizable, banca empresarial, bancoppel, credito a corto plazo,requisitos," />
+          content="" />
           <meta
             name="description"
-            content="Conoce los detalles y requisitos para tu Cuenta corriente amortizable y disfruta los beneficios de financiamiento de Banca empresarial BanCoppel."
+            content="Conoce las características y requisitos de la Cuenta Corriente  y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
       </Helmet>

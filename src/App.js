@@ -37,7 +37,7 @@ class App extends Component {
           <Route path="/empresas/credito-simple">
             <CreditoSimple />
           </Route>
-          <Route path="/empresas/credito-amortizable">
+          <Route path="/empresas/credito-cuenta-corriente">
             <CreditoAmortizable />
           </Route>
           <Route path="/empresas/credito-puente">

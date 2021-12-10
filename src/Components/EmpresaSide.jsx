@@ -112,7 +112,7 @@ class EmpresaSide extends Component {
     const soluciones_credito = [
       "/empresas/credito-simple",
       "/crav",
-      "/empresas/credito-amortizable",
+      "/empresas/credito-cuenta-corriente",
       "/empresas/credito-puente",
       "/empresas/arrendamiento-financiero",
     ];
@@ -192,7 +192,7 @@ class EmpresaSide extends Component {
                 </NavLink> */}
                 <NavLink
                   className="item_"
-                  to="/empresas/credito-amortizable"
+                  to="/empresas/credito-cuenta-corriente"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >

@@ -98,7 +98,7 @@ const productos = [
     ),
     homeCopy: "Apoyamos tus necesidades de capital de trabajo.",
     cardcopy: "Apoyamos tus necesidades de capital de trabajo.",
-    path: "/empresas/credito-amortizable",
+    path: "/empresas/credito-cuenta-corriente",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
   {

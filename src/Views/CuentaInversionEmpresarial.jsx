@@ -70,7 +70,7 @@ const StyledInversionEmpresarial = styled.div`
   }
   @media (min-width: 1400px) {
     .header_body {
-      flex: 2.2;
+      flex: 6.2;
     }
     .hero_container {
       .container {

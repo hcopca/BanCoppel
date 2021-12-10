@@ -63,7 +63,7 @@ const StyledPruductHeader = styled.div`
 }
 @media (min-width: 1400px) {
   .header_body {
-      flex: 2.4;
+      flex: 5;
     }
   .hero_container {
     .container {

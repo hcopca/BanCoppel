@@ -85,7 +85,7 @@ const StyledFactoraje = styled.div`
   }
   @media (min-width: 1400px) {
     .header_body {
-      flex: 2.57;
+      flex: 4;
     }
     .hero_container {
       .container {

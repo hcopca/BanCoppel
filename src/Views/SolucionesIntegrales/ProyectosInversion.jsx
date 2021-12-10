@@ -116,7 +116,7 @@ const StyledProyectosInversion = styled.div`
 }
 @media (min-width: 1400px) {
   .header_body {
-      flex: 2.7;
+      flex: 4.5; //
     }
     .hero_container {
       .container {
