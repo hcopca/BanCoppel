@@ -39,7 +39,7 @@ La siguiente carpeta tiene el nombre de **Components** dentro de ella podremos e
 
 La siguiente es la carpeta llamada **Views** donde es posible visualizar cada una de las pantallas del proyecto y tiene la siguiente estructura.
 
-**Soluciones del credito** > Arrendamiento financiero, Crav, Credito Amortizable, Credito Puente, Credito Simple.
+**Soluciones del credito** > Arrendamiento financiero, Credito Cuenta Corriente, Credito Puente, Credito Simple.
 **Soluciones integrales ** > Factoraje, Financiamiento Ordenes Compra, Monetizacion Activos, Proyectos Inversión, es importante mencionar que los nombres fueron otorgados de esa manera para localizarlos más fácilmente.
 
 Debajo de las carpetas anteriores se tiene acceso a las vistas "Principales" tales como, Home, EmpresaNet, CuentaInversionEmpresarial, Nomina Bancoppel y el formulario de contacto.

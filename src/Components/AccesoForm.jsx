@@ -128,7 +128,7 @@ export default class AccesoForm extends Component {
               secondary
             />
           </div>
-          <div className="form_item">
+          {/* <div className="form_item">
             <InputBancoppel
               type="password"
               label="Contraseña"
@@ -139,11 +139,11 @@ export default class AccesoForm extends Component {
               required
               secondary
             />
-          </div>
+          </div> */}
 
-          <div className="form_item captcha">
+          {/* <div className="form_item captcha">
             <p>re captcha</p>
-          </div>
+          </div> */}
 
           <div className="form_item">
             <BancoppelBtn secundario type="submit">
