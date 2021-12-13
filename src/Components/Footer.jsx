@@ -2,17 +2,16 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Afore from "../Assets/Afore.svg";
 import Buro from "../Assets/Buro.svg";
-import El_punto_es_mejorar from "../Assets/El_punto_es_mejorar.svg";
 import Fintech_Mexico from "../Assets/Fintech_Mexico.svg";
 import IPAB from "../Assets/IPAB.svg";
-import sello_confianza from "../Assets/sello_confianza.svg";
-
+import El_punto_es_mejorar from "../Assets/el_punto_es_mejorar.svg"
 import Youtube from "../Assets/Youtube.png";
 import Linkdln from "../Assets/In.png";
 import Facebook from "../Assets/facebook.png";
 import Logo_bancoppel from "../Assets/logo_bancoppel.svg";
 import Play_store from "../Assets/play_store.svg";
 import App_store from "../Assets/app_store.svg";
+import sello_confianza from "../Assets/sello_confianza.svg"
 
 import Container from "./Container";
 
@@ -332,7 +331,6 @@ export default class Footer extends Component {
                 </Column>
                 <Column>
                   <Title>Descarga</Title>
-
                   <SimpleColumn>
                     <Link
                       href="https://play.google.com/store/apps/details?id=mx.com.miapp"
