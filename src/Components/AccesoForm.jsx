@@ -154,6 +154,9 @@ export default class AccesoForm extends Component {
           <div className="form_item forgot">
             <p>¿Olvidaste tu contraseña?</p>
           </div>
+          <div className="form_item forgot">
+            <p>Regístrate</p>
+          </div>
         </form>
       </StyledForm>
     );
