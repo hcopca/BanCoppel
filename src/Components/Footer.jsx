@@ -4,7 +4,7 @@ import Afore from "../Assets/Afore.svg";
 import Buro from "../Assets/Buro.svg";
 import Fintech_Mexico from "../Assets/Fintech_Mexico.svg";
 import IPAB from "../Assets/IPAB.svg";
-import el_punto_es_mejorar from "../Assets/el_punto_es_mejorar.svg"
+import el_punto_es_mejorar from "../Assets/el_punto_es_mejorar.svg";
 import Youtube from "../Assets/Youtube.png";
 import Linkdln from "../Assets/In.png";
 import Facebook from "../Assets/facebook.png";
