@@ -268,13 +268,13 @@ export default class Footer extends Component {
                         <SimpleColumn>
                           <img
                             src={Play_store}
-                            alt=""
+                            alt="logo_playstore"
                             style={{ width: "129.21px" }}
                           ></img>
                           <br></br>
                           <img
                             src={App_store}
-                            alt=""
+                            alt="logo_appstore"
                             style={{ width: "129.21px" }}
                           ></img>
                         </SimpleColumn>
@@ -339,7 +339,7 @@ export default class Footer extends Component {
                       {" "}
                       <img
                         src={Play_store}
-                        alt=""
+                        alt="logo_playstore"
                         style={{ width: "129.21px" }}
                       ></img>
                     </Link>
@@ -351,7 +351,7 @@ export default class Footer extends Component {
                       {" "}
                       <img
                         src={App_store}
-                        alt=""
+                        alt="logo_appstore"
                         style={{ width: "129.21px" }}
                       ></img>
                     </Link>
@@ -361,25 +361,25 @@ export default class Footer extends Component {
               <HrFooter color="#36679A" size="5px" />
               <RowLogotipos>
                 <Link href="https://www.gob.mx/ipab" target="_blank">
-                  <img src={IPAB} alt="Fondo_mujer" />
+                  <img src={IPAB} alt="logo_ipab" />
                 </Link>
                 <Link href="https://www.coppel.com/" target="_blank">
-                  <img src={El_punto_es_mejorar} alt="Fondo_mujer" />
+                  <img src={El_punto_es_mejorar} alt="logo_coppel" />
                 </Link>
                 <Link href="https://www.aforecoppel.com/#/" target="_blank">
-                  <img src={Afore} alt="Fondo_mujer" />
+                  <img src={Afore} alt="logo_afore" />
                 </Link>
                 <Link href="https://www.fintechmexico.org/" target="_blank">
-                  <img src={Fintech_Mexico} alt="Fondo_mujer" />
+                  <img src={Fintech_Mexico} alt="logo_fintech" />
                 </Link>
                 <Link
                   href="https://www.bancoppel.com/modal_bcopp/buro.html"
                   target="_blank"
                 >
-                  <img src={Buro} alt="Fondo_mujer" />
+                  <img src={Buro} alt="logo_buro" />
                 </Link>
                 <Link href="https://sellosdeconfianza.org.mx/" target="_blank">
-                  <img src={sello_confianza} alt="Fondo_mujer" />
+                  <img src={sello_confianza} alt="logo_sello" />
                 </Link>
               </RowLogotipos>
               <RowNormal>

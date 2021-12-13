@@ -107,7 +107,9 @@ const StyledBigCard = styled.div`
           /* height: 215px !important; */
         }
         .card_body{
-          max-width: 300px;
+          padding: 0px
+          padding-top: 10px;
+          max-width: 320px;
         }
       }
     }

@@ -186,7 +186,7 @@ const CravSections = [
     card: {
       image: require("../Assets/mano_nomina.png").default,
       copy2:
-        "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero que quieras cuando quieras.",
+        "Servicio que permite transferir de forma masiva o individual tu dinero cuando quieras.",
     },
 
     items: [

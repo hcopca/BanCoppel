@@ -194,7 +194,7 @@ const CravSections = [
     card: {
       image: require("../Assets/mano_empresanet.png").default,
       copy2:
-        "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
+        "Servicio que controla, administra y realiza operaciones financieras de tus cuentas de forma segura.",
     },
 
     items: [
