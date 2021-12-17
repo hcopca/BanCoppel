@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Container from "./Container";
 import BancoppelBtn from "./BancoppelBtn";
+import { Link } from "react-router-dom";
 
 const StyledHeader = styled.div`
   padding: 20px 0;
@@ -64,9 +65,9 @@ export default function ResponsiveHeader(props) {
     <StyledHeader>
       <Container>
         {props.children}
-        <a href="/empresas/contacto">
+        <Link to="/empresas/contacto">
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
-        </a>
+        </Link>
       </Container>
     </StyledHeader>
   );

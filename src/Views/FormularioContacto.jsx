@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   Container,
   InputBancoppel,
@@ -10,7 +11,7 @@ import {
 import Fondo from "../Assets/fondo_contacto.png";
 import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
 import Catalogo from "../Catalogo_Productos";
-
+import estados from "../EstadosCatalogo"
 const StyledContacto = styled.div`
   padding: 60px 0;
   background-image: url(${({ imgResponsive }) => imgResponsive});
@@ -218,7 +219,7 @@ class FormularioContacto extends Component {
             </div>
             <div className="input_formulario">
               <InputBancoppel
-                type="text"
+                type="number"
                 required
                 name="phone"
                 label="Teléfono"
@@ -248,8 +249,10 @@ class FormularioContacto extends Component {
                 onChange={this.onchange.bind(this)}
                 secondary
               >
-                <option value="0">PRUEBA</option>
-                <option value="1">1</option>
+          
+                {estados.map((e, idx)=>(
+                  <option value={e.name} key={idx}>{e.name}</option>
+                ))}
               </SelectBancoppel>
             </div>
 
@@ -276,7 +279,7 @@ class FormularioContacto extends Component {
               </BancoppelBtn>
             </div>
             <pre><p className="link_terminos">
-              Consulta el aviso de privacidad, <a href="/">aquí</a>
+              Consulta el aviso de privacidad, <Link href="/">aquí</Link>
             </p></pre>
           </form>
         </Container>
@@ -287,3 +290,4 @@ class FormularioContacto extends Component {
 }
 
 export default FormularioContacto;
+

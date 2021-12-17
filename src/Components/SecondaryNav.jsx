@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const StyledNav = styled.div`
   background: var(--white);
   padding: 16px 0;
@@ -34,14 +34,14 @@ export default class SecondaryNav extends Component {
     return (
       <StyledNav>
         <div className="secondaryNav">
-        <a href="/empresas">
+        <Link to="/empresas">
             <h4>Inicio</h4>
-          </a>
-          <h4>Soluciones</h4>
-          <h4>Pymes</h4>
-          <a href="/empresas/contacto">
+          </Link>
+          {/* <h4>Soluciones</h4>
+          <h4>Pymes</h4> */}
+          <Link to="/empresas/contacto">
             <h4>Contáctanos</h4>
-          </a>
+          </Link>
         </div>
       </StyledNav>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
@@ -113,9 +113,9 @@ class Navbar extends Component {
                 <div className="ham-item center"></div>
                 <div className="ham-item"></div>
               </div>
-              <a href="/empresas">
+              <Link to="/empresas">
                 <img className="bancoppel_logo" src={Logo} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="navigation">
               <NavLink to="/empresas" className="navigation-item">

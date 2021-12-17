@@ -187,7 +187,6 @@ class Home extends Component {
           <StyledCardsSlider length={cards.length}>
             {cards ? (
               cards.map((card, idx) => {
-                console.log(cards.length)
                 return (
                   <div className={`item_card ${cards.length === 1 ? "center" : ""}`}  key={idx}>
                     <CardBlue card={card} row />

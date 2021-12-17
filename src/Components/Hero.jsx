@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 import { Container, BancoppelBtn, Spin } from "./index";
 import Fondo_mujer from "../Assets/Heros/hero_home.jpg";
 import Fondo_mujer_res from "../Assets/Heros/hero_home_responsive.jpg";
@@ -227,11 +227,11 @@ class Hero extends Component {
                     alt="banner"
                     onLoad={(e) => this.setState({ copy: false })}
                   />
-                  <a href={"/empresas/contacto"}>
+                  <Link to={"/empresas/contacto"}>
                     <BancoppelBtn amarillo>
                       {btnCoppy ? btnCoppy : "no copy"}
                     </BancoppelBtn>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Container>

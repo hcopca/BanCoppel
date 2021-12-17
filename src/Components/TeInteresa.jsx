@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import Button from "./BancoppelBtn";
 import Container from "./Container";
 import styled from "styled-components";
@@ -167,9 +167,9 @@ export default function TeInteresa() {
           <h2>¿Te interesa?</h2>
           <p>Consúltalo directamente con un ejecutivo</p>
           <div className="boton">
-            <a href="/empresas/contacto">
+            <Link to="/empresas/contacto">
               <Button amarillo>¡Déjanos tus datos!</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

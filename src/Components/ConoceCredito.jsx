@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Container from "./Container";
-
+import { Link } from "react-router-dom";
 import PymesMobile from "../Assets/pymes_last_mobile.png";
 import Pymes from "../Assets/pymes.png";
 import BancoppelBtn from "./BancoppelBtn";
@@ -160,9 +160,9 @@ export default class ConoceCredito extends Component {
           </div>
 
           <div className="contenido_sobrepuesto">
-            <a href="/empresas/contacto">
+            <Link to="/empresas/contacto">
               <BancoppelBtn amarillo><p>Solicita tu crédito</p></BancoppelBtn>
-            </a>
+            </Link>
           </div>
         </Container>
       </StyledBanner>

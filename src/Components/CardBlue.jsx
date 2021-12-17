@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BancoppelBtn from "./BancoppelBtn";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Card = styled.div`
   background: #002a61;
@@ -236,11 +237,11 @@ class CardBlue extends Component {
           </div>
 
           {card.path ? (
-            <a href={card.path}>
+            <Link to={card.path}>
               <BancoppelBtn>
                 {rest.row ? "Me interesa" : "Ver más"}
               </BancoppelBtn>
-            </a>
+            </Link>
           ) : null}
         </div>
       </Card>
