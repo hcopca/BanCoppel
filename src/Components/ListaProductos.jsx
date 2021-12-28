@@ -47,6 +47,9 @@ const StyledCards = styled.div`
     }
   }
   @media (min-width: 992px) {
+    ::-webkit-scrollbar {
+    display: none;
+}
     .CardBlue {
     height: 362px;
     img{

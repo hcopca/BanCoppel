@@ -300,7 +300,7 @@ class EmpresaSide extends Component {
         >
           Contáctanos
         </NavLink>
-        <NavLink
+        {/* <NavLink
           exact
           to="/#"
           activeClassName="selected_link"
@@ -308,7 +308,7 @@ class EmpresaSide extends Component {
           className="last item_"
         >
           BanCoppel Pymes
-        </NavLink>
+        </NavLink> */}
       </StyledEmpresas>
     );
   }

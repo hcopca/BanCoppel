@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import {
   Container,
   InputBancoppel,
@@ -60,14 +59,14 @@ const StyledContacto = styled.div`
       .input_formulario {
         margin-bottom: 15px;
       }
-      .boton{
+      .boton {
         display: flex;
         justify-content: center;
         align-items: center;
           button {
-          width: 156px;
-          height: 50px;
-          margin-top: 25px;
+            width: 156px;
+            height: 50px;
+            margin-top: 25px;
           }
       }
     
@@ -143,6 +142,22 @@ class FormularioContacto extends Component {
       entity: "-1",
       product: "-1",
     };
+    this.handleChangeInput = this.handleChangeInput.bind(this);
+  }
+  //Función para evitar caracteres especiales
+  handleChangeInput(evento){
+    const {name, value} = evento.target;//destructurin de los valores enviados por el metodo onchange de cada input
+    let regex = new RegExp("^[íóáéú a-zA-Z ]+$");
+
+    for(let i = 0; i <= value.length -1; i++){
+         let letra = value[i]
+        if(!regex.test(letra ) || !letra === " "){
+          return;
+         }
+    }
+    this.setState({
+        [name] : value //al elemento dentro de [] es una key de cada parametro dentro del estado.
+    }); 
   }
 
   onchange(e) {
@@ -150,6 +165,7 @@ class FormularioContacto extends Component {
       [e.target.name]: e.target.value,
     });
   }
+
 
   onSubmit(e) {
     e.preventDefault();
@@ -202,8 +218,10 @@ class FormularioContacto extends Component {
                 name="name"
                 label="Nombre Completo"
                 placeholder="Ej. Alexander Ramírez Rodriguez"
+                maxLength="50"
                 value={this.state.name}
-                onChange={this.onchange.bind(this)}
+                // onChange={this.onchange.bind(this)}
+                onChange={this.handleChangeInput}
               />
             </div>
             <div className="input_formulario">
@@ -224,6 +242,9 @@ class FormularioContacto extends Component {
                 name="phone"
                 label="Teléfono"
                 placeholder="Ej. 55 1234 5678"
+                onInput = {(e) =>{
+                  e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,10)
+                }}
                 value={this.state.phone}
                 onChange={this.onchange.bind(this)}
               />
@@ -234,9 +255,11 @@ class FormularioContacto extends Component {
                 required
                 name="job"
                 label="Puesto"
+                maxlength="50"
                 placeholder="Ej. Ejecutivo"
                 value={this.state.job}
-                onChange={this.onchange.bind(this)}
+                // onChange={this.onchange.bind(this)}
+                onChange={this.handleChangeInput}
               />
             </div>
             <div className="input_formulario ">
@@ -274,12 +297,17 @@ class FormularioContacto extends Component {
             </div>
             
             <div className="boton">
-              <BancoppelBtn type="submit" amarillo>
+              <BancoppelBtn type="submit"
+              className="g-recaptcha"
+              data-sitekey="6LdHB8AdAAAAAOwebHIPUJH3WTbty5dkGwOAFvAi" 
+              data-callback='onSubmit' 
+              data-action='submit'
+              amarillo>
                 Enviar
               </BancoppelBtn>
             </div>
             <pre><p className="link_terminos">
-              Consulta el aviso de privacidad, <Link href="/">aquí</Link>
+              Consulta el aviso de privacidad, <a href="https://bancoppel.com/acerca_bancoppel/aviso.html">aquí</a>
             </p></pre>
           </form>
         </Container>

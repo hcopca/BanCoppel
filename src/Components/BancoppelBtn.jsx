@@ -13,7 +13,6 @@ const BancoppelBtn = styled.button`
   cursor: pointer;
   cursor: ${(props) => (props.disabled ? "default" : "pointer")};
   font-family: futura_heavy;
-
   font-size: 14px;
   transition: all 0.2s ease-in-out;
   border-radius: 10px;

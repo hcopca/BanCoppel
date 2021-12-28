@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
@@ -92,13 +92,14 @@ const StyledNavbar = styled.div`
     }
   }
 `;
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { onOpen: false, openAcceso: false };
   }
-
+  handleClick() {
+    window.location.assign("https://bancoppel.com/empresas/index.html");
+  }
   render() {
     return (
       <>
@@ -118,22 +119,22 @@ class Navbar extends Component {
               </Link>
             </div>
             <div className="navigation">
-              <NavLink to="/empresas" className="navigation-item">
+              {/* <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Personas</BancoppelBtn>
               </NavLink>
               <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
-              </NavLink>
-
+              </NavLink> */}
               <BancoppelBtn
                 secundario
-                onClick={() =>
-                  this.setState({ openAcceso: !this.state.openAcceso })
-                }
+                onClick={this.handleClick.bind(this)}
+                // onClick={() =>
+                //   this.setState({ openAcceso: !this.state.openAcceso })
+                // }
+              
               >
-                Acceso
+               Acceso 
               </BancoppelBtn>
-
               {this.state.openAcceso ? (
                 <AccesoForm setState={this.setState.bind(this)} />
               ) : null}
