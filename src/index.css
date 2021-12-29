@@ -25,29 +25,43 @@ body {
 
 @font-face {
   font-family: futura_bold;
-  src: url("./Assets/Fonts/futura/Futura_Bold.eot");
-  src: url("./Assets/Fonts/futura/Futura_Bold.ttf") format('truetype'); 
+  src: url("./Assets/Fonts/futura/Futura_Bold.eot"),
+  url("./Assets/Fonts/futura/Futura_Bold.woff") format('woff'),
+  url("./Assets/Fonts/futura/Futura_Bold.woff2")format('woff2'),
+  url("./Assets/Fonts/futura/Futura_Bold.ttf") format('truetype'); 
   /* font-display: swap; */
 }
 @font-face {
   font-family: futura_normal;
-  src: url("./Assets/Fonts/futura/futura_medium_bt.ttf");
+  src: url("./Assets/Fonts/futura/Futura_medium.eot"),
+  url("./Assets/Fonts/futura/Futura_medium.woff") format('woff'),
+  url("./Assets/Fonts/futura/Futura_medium.woff2")format('woff2'),
+  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
   /* font-display: swap; */
 }
 @font-face {
   font-family: futura;
-  src: url("./Assets/Fonts/futura/futura_medium_bt.ttf");
+  src: url("./Assets/Fonts/futura/Futura_medium.eot"),
+  url("./Assets/Fonts/futura/Futura_medium.woff") format('woff'),
+  url("./Assets/Fonts/futura/Futura_medium.woff2") format('woff2'),
+  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
   /* font-display: swap; */
 }
 @font-face {
   font-family: Futura;
-  src: url("./Assets/Fonts/futura/futura_medium_bt.ttf");
+  src: url("./Assets/Fonts/futura/Futura_medium.eot"),
+  url("./Assets/Fonts/futura/Futura_medium.woff"), format('woff')
+  url("./Assets/Fonts/futura/Futura_medium.woff2") format('woff2'),
+  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
   /* font-display: swap; */
 }
 
 @font-face {
   font-family: futura_light;
-  src: url("./Assets/Fonts/futura/futura_light_bt.ttf");
+  src: url("./Assets/Fonts/futura/Futura_Light_bt.eot"),
+  url("./Assets/Fonts/futura/Futura_light_bt.woff") format('woff'),
+  url("./Assets/Fonts/futura/Futura_light_bt.woff2") format('woff2'),
+  url("./Assets/Fonts/futura/futura_light_bt.ttf")format('truetype');
   /* font-display: swap; */
 }
 
@@ -64,8 +78,10 @@ body {
 
 @font-face {
   font-family: futura_book;
-  src: url("./Assets/Fonts/futura/Futura_Book.eot");
-  src: url("./Assets/Fonts/futura/Futura_Book_font.ttf");
+  src: url("./Assets/Fonts/futura/Futura_Book.eot"),
+  url("./Assets/Fonts/futura/Futura_Book.woff")format('woff'),
+  url("./Assets/Fonts/futura/Futura_Book.woff2")format('woff2'),
+  url("./Assets/Fonts/futura/Futura_Book_font.ttf")format('truetype');
   /* font-display: swap; */
 }
 
