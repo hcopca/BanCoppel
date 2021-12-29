@@ -7,6 +7,7 @@ import {
   BancoppelBtn,
   SelectBancoppel,
 } from "../Components";
+import { Link } from "react-router-dom";
 import Fondo from "../Assets/fondo_contacto.png";
 import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
 import Catalogo from "../Catalogo_Productos";
@@ -130,7 +131,10 @@ const StyledContacto = styled.div`
     }
   }
 `;
-
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
 class FormularioContacto extends Component {
   constructor(props) {
     super(props);
@@ -229,6 +233,7 @@ class FormularioContacto extends Component {
                 type="email"
                 required
                 name="email"
+                maxLength="50"
                 label="Email"
                 placeholder="Ej. tucorreo@email.com"
                 value={this.state.email}
@@ -307,7 +312,7 @@ class FormularioContacto extends Component {
               </BancoppelBtn>
             </div>
             <pre><p className="link_terminos">
-              Consulta el aviso de privacidad, <a href="https://bancoppel.com/acerca_bancoppel/aviso.html">aquí</a>
+              Consulta el aviso de privacidad, <Link onClick={() => openInNewTab("https://bancoppel.com/acerca_bancoppel/aviso.html")}>aquí</Link>
             </p></pre>
           </form>
         </Container>
@@ -318,4 +323,3 @@ class FormularioContacto extends Component {
 }
 
 export default FormularioContacto;
-

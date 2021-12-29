@@ -195,35 +195,35 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html">¿Quiénes somos?</Link>
+                        <a href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank">¿Quiénes somos?</a>
                         <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/faq.html">Preguntas frecuentes</Link>
+                        <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
                         <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html">Información corporativa</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html" target="_blank">Información corporativa</Link>
                         <br />
-                        <Link href="https://bancoppel.com/plandeapoyo/index.html">
+                        <Link href="https://bancoppel.com/plandeapoyo/index.html" target="_blank">
                           Plan de apoyo para cuidar tu crédito
                         </Link>
                         <br />
-                        <Link href="https://bancoppel.com/modal_bcopp/condusef.htm">
+                        <Link href="https://bancoppel.com/modal_bcopp/condusef.htm" target="_blank">
                           Unidad especializada BanCoppel Condusef
                         </Link>
                         <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html">Productos protegidos por el IPAB</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html" target="_blank">Productos protegidos por el IPAB</Link>
                         <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de privacidad</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de privacidad</Link>
                         <br />
-                        <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
+                        <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf" target="_blank">Robo de identidad</Link>
                         <br />
-                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5">Tarifas y comisiones</Link>
+                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6" target="_blank">Tarifas y comisiones</Link>
                         <br />
-                        <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
+                        <Link href="https://bancoppel.com/corresponsales/index.html" target="_blank">Corresponsales</Link>
                         <br />
-                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f">Despachos de cobranza internos</Link>
+                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f" target="_blank">Despachos de cobranza internos</Link>
                         <br />
-                        <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf">Despachos de cobranza externos</Link>
+                        <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf" target="_blank">Despachos de cobranza externos</Link>
                         <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/tips.html">Tips de seguridad</Link>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/tips.html" target="_blank">Tips de seguridad</Link>
                       </AccordionItemPanel>
                     </AccordionItem>
 
@@ -285,29 +285,29 @@ export default class Footer extends Component {
 
                 <Column>
                   <Title>Acerca de BanCoppel</Title>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html">¿Quiénes somos?</Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/faq.html">Preguntas frecuentes</Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html">Información corporativa</Link>
-                  <Link href="https://bancoppel.com/plandeapoyo/index.html">Plan de apoyo para cuidar tu crédito</Link>
-                  <Link href="https://bancoppel.com/modal_bcopp/condusef.htm">Unidad especializada BanCoppel Condusef</Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html">Productos protegidos por el IPAB</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank">¿Quiénes somos?</Link>
+                  <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html" target="_blank">Información corporativa</Link>
+                  <Link href="https://bancoppel.com/plandeapoyo/index.html" target="_blank">Plan de apoyo para cuidar tu crédito</Link>
+                  <Link href="https://bancoppel.com/modal_bcopp/condusef.htm" target="_blank">Unidad especializada BanCoppel Condusef</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html" target="_blank">Productos protegidos por el IPAB</Link>
                 </Column>
                 <Column>
                   {/* <Title>&nbsp;</Title> */}
-                  <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de privacidad</Link>
-                  <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf">Robo de identidad</Link>
-                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5">Tarifas y comisiones</Link>
-                  <Link href="https://bancoppel.com/corresponsales/index.html">Corresponsales</Link>
-                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f">Despachos de cobranza internos </Link>
-                  <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf">Despachos de cobranza externos </Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/tips.html">Tips de seguridad</Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de privacidad</Link>
+                  <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf" target="_blank">Robo de identidad</Link>
+                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6" target="_blank">Tarifas y comisiones</Link>
+                  <Link href="https://bancoppel.com/corresponsales/index.html" target="_blank">Corresponsales</Link>
+                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f" target="_blank">Despachos de cobranza internos </Link>
+                  <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf" target="_blank">Despachos de cobranza externos </Link>
+                  <Link href="https://bancoppel.com/acerca_bancoppel/tips.html" target="_blank">Tips de seguridad</Link>
                 </Column>
                 <Column>
                   <Title>Contacto</Title>
-                  <Link href="tel:+80012267735">
-                    Lada sin costo: 800 1 2267735
+                  <Link href="tel:+8008496187">
+                    Lada sin costo: 800 849 6187
                   </Link>
-                  <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link>
+                  {/* <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link> */}
                   <div style={{ display: "flex", flexDirection: "row" }}>
                     <Link
                       href="https://www.facebook.com/BanCoppel/"
@@ -388,9 +388,9 @@ export default class Footer extends Component {
                   Institución de Banca Múltiple - Todos los derechos reservados
                 </CopyRight>
                 <FinalFooter>
-                  <SubLink href="https://www.bancoppel.com/acerca_bancoppel/terminos.html">Términos y Condiciones de Uso</SubLink> |{" "}
-                  <SubLink href="https://bancoppel.com/acerca_bancoppel/aviso.html">Aviso de Privacidad</SubLink> |{" "}
-                  <SubLink href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5">
+                  <SubLink href="https://www.bancoppel.com/acerca_bancoppel/terminos.html" target="_blank">Términos y Condiciones de Uso</SubLink> |{" "}
+                  <SubLink href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de Privacidad</SubLink> |{" "}
+                  <SubLink href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5" target="_blank">
                     Consulta los costos y las comisiones de nuestros productos.
                   </SubLink>
                 </FinalFooter>

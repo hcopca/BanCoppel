@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link, useHistory } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import styled from "styled-components";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
@@ -92,14 +92,16 @@ const StyledNavbar = styled.div`
     }
   }
 `;
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { onOpen: false, openAcceso: false };
   }
-  handleClick() {
-    window.location.assign("https://bancoppel.com/empresas/index.html");
-  }
+  
   render() {
     return (
       <>
@@ -119,15 +121,15 @@ class Navbar extends Component {
               </Link>
             </div>
             <div className="navigation">
-              {/* <NavLink to="/empresas" className="navigation-item">
+              <a href="https://www.bancoppel.com/main/index.html" target="_blank" className="navigation-item">
                 <BancoppelBtn>Personas</BancoppelBtn>
-              </NavLink>
-              <NavLink to="/empresas" className="navigation-item">
+              </a>
+              {/* <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink> */}
               <BancoppelBtn
                 secundario
-                onClick={this.handleClick.bind(this)}
+                onClick={() => openInNewTab("https://bancoppel.com/empresas/index.html")}
                 // onClick={() =>
                 //   this.setState({ openAcceso: !this.state.openAcceso })
                 // }

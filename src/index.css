@@ -25,10 +25,10 @@ body {
 
 @font-face {
   font-family: futura_bold;
-  src: url("./Assets/Fonts/futura/Futura_Bold.ttf");
+  src: url("./Assets/Fonts/futura/Futura_Bold.eot");
+  src: url("./Assets/Fonts/futura/Futura_Bold.ttf") format('truetype'); 
   /* font-display: swap; */
 }
-
 @font-face {
   font-family: futura_normal;
   src: url("./Assets/Fonts/futura/futura_medium_bt.ttf");
@@ -53,13 +53,19 @@ body {
 
 @font-face {
   font-family: futura_heavy;
-  src: url("./Assets/Fonts/futura/Futura_Heavy_font.ttf");
+  src: url("./Assets/Fonts/futura/Futura_Heavy.eot"),
+  url("./Assets/Fonts/futura/Futura_Heavy.woff") format('woff'),
+  url("./Assets/Fonts/futura/Futura_Heavy.woff2") format('woff2'),
+  url("./Assets/Fonts/futura/Futura_Heavy_font.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
   /* font-display: swap; */
 }
 
 @font-face {
   font-family: futura_book;
-  src: url("./Assets/Fonts/futura/Futura\ Book\ font.ttf");
+  src: url("./Assets/Fonts/futura/Futura_Book.eot");
+  src: url("./Assets/Fonts/futura/Futura_Book_font.ttf");
   /* font-display: swap; */
 }
 
@@ -159,3 +165,4 @@ a {
 /* .bancoppel * {
   border: 1px solid red;
 } */
+
