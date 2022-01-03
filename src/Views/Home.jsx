@@ -117,7 +117,7 @@ const StyledCardsSlider = styled.div`
       margin-left: 0;
       justify-content: flex-end;
     }
-
+  }
     .CardBlue {
       width: 100%;
       .card_body {
@@ -132,7 +132,7 @@ const StyledCardsSlider = styled.div`
         min-width: 423px;
       }
     }
-  }
+  
 `;
 const titleBanner = "LA BANCA QUE TU EMPRESA NECESITA"
 const subtitle = (

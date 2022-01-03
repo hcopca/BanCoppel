@@ -4,8 +4,11 @@ import Mostrar from "../Assets/Mostrar.svg";
 
 const StyledInput = styled.div`
   position: relative;
-
+display: flex;
+justify-content: center;
+align-items: center;
   label {
+    margin-left: 10px;
     transition: all 0.3s ease-in-out;
     position: absolute;
     font-family: futura_light;
@@ -48,7 +51,7 @@ const StyledInput = styled.div`
   .mostrar {
     position: absolute;
     top: 10px;
-    right: 0;
+    right: 27px; //ojito
     cursor: pointer;
   }
 
@@ -79,6 +82,14 @@ const StyledInput = styled.div`
     &::placeholder {
       color: ${({ secondary }) => (secondary ? "transparent" : null)};
     }
+  }
+  @media (min-width: 576px) { 
+    label{
+      margin-left: 40px;
+    }
+    .mostrar {
+      right: 57px;
+     }
   }
 `;
 // ${({secondary}) => secondary ? "" : null};

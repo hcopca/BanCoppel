@@ -24,3 +24,5 @@ export { default as TeInteresa } from "./TeInteresa";
 export { default as Consulta } from "./Consulta";
 export { default as EmpresaSide } from "./EmpresaSide";
 export { default as Spin } from "./Spin";
+export { default as AccesoFormulario } from "./AccesoFormulario";
+export { default as TwoProductsAccess } from "./TwoProductsAccess"

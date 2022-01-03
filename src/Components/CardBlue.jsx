@@ -234,12 +234,30 @@ class CardBlue extends Component {
             <h2>{card.title_custom}</h2>
             {card.homeCopy ? <p>{card.homeCopy}</p> : null}
             {card.copy2 ? <h3>{card.copy2}</h3> : null}
+            {card.access ? <h2>{card.access}</h2> : null}
           </div>
 
           {card.path ? (
             <Link to={card.path}>
               <BancoppelBtn>
                 {rest.row ? "Me interesa" : "Ver más"}
+              </BancoppelBtn>
+            </Link>
+          ) : null}
+
+          {/* BOTONES PARA LA VISTA DE ACCESO */}
+          {card.accessLlama ? (
+            <a href="tel:+8008496187">
+              <BancoppelBtn>
+                {rest.row ? "¡Llámanos!" : "¡Llámanos!"}
+              </BancoppelBtn>
+            </a>
+          ) : null}
+
+          {card.accessVisitala ? (
+            <Link to={card.accessVisitala}>
+              <BancoppelBtn>
+                {rest.row ? "¡Visítala!" : "¡Visítala!"}
               </BancoppelBtn>
             </Link>
           ) : null}

@@ -15,7 +15,7 @@ const StyledAcceso = styled.div`
   box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
 
   z-index: 1000000;
-
+/* 
   .type_user {
     display: flex;
     .user {
@@ -39,7 +39,7 @@ const StyledAcceso = styled.div`
         color: var(--sky-blue);
       }
     }
-  }
+  } */
 `;
 
 const StyledForm = styled.div`
@@ -87,7 +87,7 @@ export default class AccesoForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 1,
+      // selected: 1,
       Usuario: "",
       Contraseña: "",
     };
@@ -113,7 +113,7 @@ export default class AccesoForm extends Component {
     e.preventDefault();
   }
 
-  renderForm() {
+  render(){
     return (
       <StyledForm>
         <form onSubmit={(e) => this.onSubmit(e)}>
@@ -126,10 +126,10 @@ export default class AccesoForm extends Component {
               value={this.state.Usuario}
               onChange={(e) => this.onChange(e)}
               required
-              secondary
+              
             />
           </div>
-          {/* <div className="form_item">
+          <div className="form_item">
             <InputBancoppel
               type="password"
               label="Contraseña"
@@ -138,16 +138,16 @@ export default class AccesoForm extends Component {
               value={this.state.Contraseña}
               onChange={(e) => this.onChange(e)}
               required
-              secondary
+            
             />
-          </div> */}
+          </div>
 
           {/* <div className="form_item captcha">
             <p>re captcha</p>
           </div> */}
 
           <div className="form_item">
-            <BancoppelBtn secundario type="submit">
+            <BancoppelBtn amarillo type="submit">
               Entrar
             </BancoppelBtn>
           </div>
@@ -162,25 +162,25 @@ export default class AccesoForm extends Component {
     );
   }
 
-  render() {
-    return (
-      <StyledAcceso>
-        <div className="type_user">
-          <div
-            className={`user ${this.state.selected === 1 ? "selected" : ""}`}
-            onClick={() => this.setState({ selected: 1 })}
-          >
-            <p className="bold_2">Empresas</p>
-          </div>
-          <div
-            className={`user ${this.state.selected === 2 ? "selected" : ""}`}
-            onClick={() => this.setState({ selected: 2 })}
-          >
-            <p className="bold_2">Pymes</p>
-          </div>
-        </div>
-        {this.renderForm()}
-      </StyledAcceso>
-    );
-  }
+  // render() {
+  //   return (
+  //     <StyledAcceso>
+  //       <div className="type_user">
+  //         <div
+  //           className={`user ${this.state.selected === 1 ? "selected" : ""}`}
+  //           onClick={() => this.setState({ selected: 1 })}
+  //         >
+  //           <p className="bold_2">Empresas</p>
+  //         </div>
+  //         <div
+  //           className={`user ${this.state.selected === 2 ? "selected" : ""}`}
+  //           onClick={() => this.setState({ selected: 2 })}
+  //         >
+  //           <p className="bold_2">Pymes</p>
+  //         </div>
+  //       </div>
+  //       {/* {this.renderForm()} */}
+  //     </StyledAcceso>
+  //   );
+  // }
 }
