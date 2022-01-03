@@ -2,12 +2,26 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import AccesoFormulario from '../Components/AccesoFormulario';
 import { TwoProductsAccess } from '../Components';
+import Iframe from 'react-iframe'
 const StyledAcceso = styled.div`
  position: relative;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ iframe{
+        border-radius: 10px;
+        border-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 300px;
+        overflow-y:hidden;
+        overflow-x:hidden;
+ }
  .back {
       position: absolute;
       top: 0;
@@ -39,6 +53,7 @@ const StyledAcceso = styled.div`
             }
         }
     }
+  
 `;
 
 export default class Acceso extends Component {
@@ -53,7 +68,14 @@ export default class Acceso extends Component {
             <div className="title">
                 <h2>ACCESO A <br/> <span>EMPRESANET</span></h2>
             </div>
-            <AccesoFormulario/>
+            <Iframe url="https://bancoppel.com/empresas/loggin"
+                // width="436px"
+                // height="378px"
+                id="myId"
+                className="myClassname"
+                display="initial"
+                position="relative"/>
+            {/* <AccesoFormulario/> */}
             <TwoProductsAccess/>
         </StyledAcceso>
         )

@@ -20,7 +20,7 @@ import MonetizacionActivos from "./Views/SolucionesIntegrales/MonetizacionActivo
 import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/FinanciamientoOrdenesCompra";
 import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
 import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
-// import Acceso from "./Views/Acceso";
+import Acceso from "./Views/Acceso";
 
 class App extends Component {
   render() {
@@ -70,9 +70,9 @@ class App extends Component {
           <Route path="/empresas/contacto">
             <FormularioContacto />
           </Route>
-          {/* <Route path="/empresas/acceso">
+          <Route path="/empresas/acceso">
             <Acceso />
-          </Route> */}
+          </Route>
         </Switch>
         <Footer />
       </div>

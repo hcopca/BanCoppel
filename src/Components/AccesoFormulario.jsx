@@ -148,7 +148,7 @@ export default class AccesoFormulario extends Component {
                     data-action='submit'
                     // onClick={() => this.gtHLEmp()}
                     >
-                    Entrar
+                        Entrar
                     </BancoppelBtn>
                 </div>
                 <div className="form_item forgot">

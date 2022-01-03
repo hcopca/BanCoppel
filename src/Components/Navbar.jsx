@@ -127,8 +127,8 @@ class Navbar extends Component {
               {/* <NavLink to="/empresas" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink> */}
-              {/* <NavLink to="/empresas/acceso"> */}
-              <a href="https://dodobypaco.com/prueba/login_empresas.html">
+              <NavLink to="/empresas/acceso">
+              {/* <a href="https://dodobypaco.com/prueba/login_empresas.html"> */}
               <BancoppelBtn
                 secundario
                 // onClick={() => openInNewTab("https://bancoppel.com/empresas/index.html")}
@@ -139,7 +139,8 @@ class Navbar extends Component {
               >
                Acceso 
               </BancoppelBtn>
-              </a>
+              </NavLink>
+              {/* </a> */}
               {this.state.openAcceso ? (
                 <AccesoForm setState={this.setState.bind(this)} />
               ) : null}
