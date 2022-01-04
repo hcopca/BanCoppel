@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import AccesoFormulario from '../Components/AccesoFormulario';
+// import AccesoFormulario from '../Components/AccesoFormulario';
 import { TwoProductsAccess } from '../Components';
 import Iframe from 'react-iframe'
 const StyledAcceso = styled.div`
@@ -68,6 +68,7 @@ export default class Acceso extends Component {
             <div className="title">
                 <h2>ACCESO A <br/> <span>EMPRESANET</span></h2>
             </div>
+            {/* <AccesoFormulario/> */}
             <Iframe url="https://bancoppel.com/empresas/loggin"
                 // width="436px"
                 // height="378px"
@@ -75,7 +76,7 @@ export default class Acceso extends Component {
                 className="myClassname"
                 display="initial"
                 position="relative"/>
-            {/* <AccesoFormulario/> */}
+            
             <TwoProductsAccess/>
         </StyledAcceso>
         )

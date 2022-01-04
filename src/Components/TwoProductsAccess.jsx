@@ -156,7 +156,7 @@ const twoProducts = [
           </>
         ),
         homeCopy: "Ponemos a tu disposición nuestra la línea telefónica",
-        image: require("../Assets/mano_empresanet.png").default,
+        image: require("../Assets/girl_access_form.png").default,
         accessLlama: "800 849 6187"
       },
       {
@@ -166,7 +166,7 @@ const twoProducts = [
           </>
         ),
         homeCopy: "Controla, administra y realiza operaciones financieras de tus cuentas de forma segura.",
-        image: require("../Assets/girl_access_form.png").default,
+        image: require("../Assets/mano_empresanet.png").default,
         accessVisitala: "/empresas/empresanet"
       },
 ]

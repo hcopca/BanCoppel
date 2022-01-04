@@ -195,7 +195,7 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <a href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank">¿Quiénes somos?</a>
+                        <a href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank" rel="noreferrer">¿Quiénes somos?</a>
                         <br />
                         <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
                         <br />

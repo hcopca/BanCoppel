@@ -92,10 +92,10 @@ const StyledNavbar = styled.div`
     }
   }
 `;
-const openInNewTab = (url) => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
+// const openInNewTab = (url) => {
+//   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+//   if (newWindow) newWindow.opener = null
+// }
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -121,7 +121,7 @@ class Navbar extends Component {
               </Link>
             </div>
             <div className="navigation">
-              <a href="https://www.bancoppel.com/main/index.html" target="_blank" className="navigation-item">
+              <a href="https://www.bancoppel.com/main/index.html" target="_blank" rel="noreferrer" className="navigation-item">
                 <BancoppelBtn>Personas</BancoppelBtn>
               </a>
               {/* <NavLink to="/empresas" className="navigation-item">
