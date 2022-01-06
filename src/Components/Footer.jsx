@@ -12,9 +12,7 @@ import Logo_bancoppel from "../Assets/logo_bancoppel.svg";
 import Play_store from "../Assets/play_store.svg";
 import App_store from "../Assets/app_store.svg";
 import sello_confianza from "../Assets/sello_confianza.svg"
-
 import Container from "./Container";
-
 import "./styles/custom_accordion_conoceCredito.css";
 
 import {
@@ -24,7 +22,6 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-
 // import 'react-accessible-accordion/dist/fancy-example.css';
 
 const ContainerFooter = styled.div`
@@ -171,9 +168,9 @@ const RowTituloFooter = styled.div`
     height: 28px;
   }
 `;
-
 export default class Footer extends Component {
   render() {
+    
     return (
       <>
         <ContainerFooter>
@@ -195,7 +192,7 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <a href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank" rel="noreferrer">¿Quiénes somos?</a>
+                        <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank" rel="noreferrer">¿Quiénes somos?</Link>
                         <br />
                         <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
                         <br />
@@ -234,10 +231,10 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <Link href="#">Lada sin costo: 800 1 2267735</Link>
+                        <Link href="tel:+8008496187">  Lada sin costo: 800 849 6187</Link>
                         <br />
-                        <Link href="#">EU. y Canadá: 866 2543790</Link>
-                        <br />
+                        {/* <Link href="#">EU. y Canadá: 866 2543790</Link>
+                        <br /> */}
                         <div style={{ display: "flex", flexDirection: "row" }}>
                           <Link
                             href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg"
@@ -245,7 +242,7 @@ export default class Footer extends Component {
                           >
                             <ImgRedesSociales src={Youtube}></ImgRedesSociales>
                           </Link>
-                          <Link href="#" target="_blank">
+                          <Link href="https://www.linkedin.com/company/bancoppel/" target="_blank">
                             <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
                           </Link>
                           <Link
@@ -378,9 +375,11 @@ export default class Footer extends Component {
                 >
                   <img src={Buro} alt="logo_buro" />
                 </Link>
-                <Link href="https://sellosdeconfianza.org.mx/" target="_blank">
+                {/* <Link href="https://sellosdeconfianza.org.mx/" target="_blank"> */}
+                <Link onClick={() => window.open("https://sellosdeconfianza.org.mx/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={sello_confianza} alt="logo_sello" />
                 </Link>
+                {/* <a href="javascript:window.open('http://norfipc.com/','','width=600,height=400,left=50,top=50,toolbar=yes');void 0">Nueva nueva ventana</a><br /> */}
               </RowLogotipos>
               <RowNormal>
                 <CopyRight>
