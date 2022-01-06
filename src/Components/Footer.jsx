@@ -83,7 +83,7 @@ const Link = styled.a`
   font-size: 14px;
   line-height: 21px;
   font-family: futura_book;
-
+  cursor: pointer;
   text-decoration: none;
   &:last-child {
     margin-bottom: 0;
@@ -101,7 +101,7 @@ const SubLink = styled.a`
   line-height: 21px;
   font-family: futura_book;
   color: #81c1ea;
-
+cursor: pointer;
   text-decoration: none;
   &:hover {
     color: #ffbe12;
@@ -192,35 +192,45 @@ export default class Footer extends Component {
                         </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
-                        <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank" rel="noreferrer">¿Quiénes somos?</Link>
+                      <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/quienes_somos.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30," )} target="_blank">
+                          ¿Quiénes somos?</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://www.bancoppel.com/servicios_empresas/faq.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Preguntas frecuentes</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/info_corp.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Información corporativa</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/plandeapoyo/index.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Plan de apoyo para cuidar tu crédito</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/modal_bcopp/condusef.htm", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Unidad especializada BanCoppel Condusef</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/ipab.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Productos protegidos por el IPAB</Link>
                         <br />
-                        <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html" target="_blank">Información corporativa</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/plandeapoyo/index.html" target="_blank">
-                          Plan de apoyo para cuidar tu crédito
-                        </Link>
-                        <br />
-                        <Link href="https://bancoppel.com/modal_bcopp/condusef.htm" target="_blank">
-                          Unidad especializada BanCoppel Condusef
-                        </Link>
-                        <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html" target="_blank">Productos protegidos por el IPAB</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de privacidad</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf" target="_blank">Robo de identidad</Link>
-                        <br />
-                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6" target="_blank">Tarifas y comisiones</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/corresponsales/index.html" target="_blank">Corresponsales</Link>
-                        <br />
-                        <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f" target="_blank">Despachos de cobranza internos</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf" target="_blank">Despachos de cobranza externos</Link>
-                        <br />
-                        <Link href="https://bancoppel.com/acerca_bancoppel/tips.html" target="_blank">Tips de seguridad</Link>
+                        <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/aviso.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Aviso de privacidad</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Robo de identidad</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Tarifas y comisiones</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/corresponsales/index.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Corresponsales</Link>
+                          <br />
+                        <Link onClick={() => window.open("https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Despachos de cobranza internos </Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Despachos de cobranza externos </Link>
+                          <br />
+                        <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/tips.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                          Tips de seguridad</Link>
+
                       </AccordionItemPanel>
                     </AccordionItem>
 
@@ -237,16 +247,17 @@ export default class Footer extends Component {
                         <br /> */}
                         <div style={{ display: "flex", flexDirection: "row" }}>
                           <Link
-                            href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg"
+                            onClick={() => window.open("https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
                             target="_blank"
                           >
                             <ImgRedesSociales src={Youtube}></ImgRedesSociales>
                           </Link>
-                          <Link href="https://www.linkedin.com/company/bancoppel/" target="_blank">
+                          <Link onClick={() => window.open("https://www.linkedin.com/company/bancoppel/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
+                           target="_blank">
                             <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
                           </Link>
                           <Link
-                            href="https://www.facebook.com/BanCoppel/"
+                            onClick={() => window.open("https://www.facebook.com/BanCoppel/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
                             target="_blank"
                           >
                             <ImgRedesSociales src={Facebook}></ImgRedesSociales>
@@ -263,41 +274,79 @@ export default class Footer extends Component {
                       </AccordionItemHeading>
                       <AccordionItemPanel className="accordion__panel_CC">
                         <SimpleColumn>
+                        <Link
+                          href="https://play.google.com/store/apps/details?id=mx.com.miapp"
+                          target="_blank"
+                        >
                           <img
                             src={Play_store}
                             alt="logo_playstore"
                             style={{ width: "129.21px" }}
                           ></img>
+                          </Link>
                           <br></br>
+
+                          <Link
+                            href="https://apps.apple.com/mx/app/bancoppel-express/id1293933664"
+                            target="_blank"
+                          >
                           <img
                             src={App_store}
                             alt="logo_appstore"
                             style={{ width: "129.21px" }}
                           ></img>
+                          </Link>
                         </SimpleColumn>
                       </AccordionItemPanel>
                     </AccordionItem>
                   </Accordion>
                 </ColumnResponsive>
-
+{/* DESKTOP */}
                 <Column>
                   <Title>Acerca de BanCoppel</Title>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/quienes_somos.html" target="_blank">¿Quiénes somos?</Link>
-                  <Link href="https://www.bancoppel.com/servicios_empresas/faq.html" target="_blank">Preguntas frecuentes</Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/info_corp.html" target="_blank">Información corporativa</Link>
-                  <Link href="https://bancoppel.com/plandeapoyo/index.html" target="_blank">Plan de apoyo para cuidar tu crédito</Link>
-                  <Link href="https://bancoppel.com/modal_bcopp/condusef.htm" target="_blank">Unidad especializada BanCoppel Condusef</Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/ipab.html" target="_blank">Productos protegidos por el IPAB</Link>
+                   
+                  <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/quienes_somos.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30," )} target="_blank">
+                    ¿Quiénes somos?</Link>
+
+                  <Link onClick={() => window.open("https://www.bancoppel.com/servicios_empresas/faq.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Preguntas frecuentes</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/info_corp.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Información corporativa</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/plandeapoyo/index.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Plan de apoyo para cuidar tu crédito</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/modal_bcopp/condusef.htm", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Unidad especializada BanCoppel Condusef</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/ipab.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Productos protegidos por el IPAB</Link>
                 </Column>
                 <Column>
                   {/* <Title>&nbsp;</Title> */}
-                  <Link href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de privacidad</Link>
-                  <Link href="https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf" target="_blank">Robo de identidad</Link>
-                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6" target="_blank">Tarifas y comisiones</Link>
-                  <Link href="https://bancoppel.com/corresponsales/index.html" target="_blank">Corresponsales</Link>
-                  <Link href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f" target="_blank">Despachos de cobranza internos </Link>
-                  <Link href="https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf" target="_blank">Despachos de cobranza externos </Link>
-                  <Link href="https://bancoppel.com/acerca_bancoppel/tips.html" target="_blank">Tips de seguridad</Link>
+                  {/* Link onClick={() => window.open("", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank"*/}
+                  <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/aviso.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Aviso de privacidad</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/pdf/aviso_robo_de_identidad.pdf", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Robo de identidad</Link>
+
+                  <Link onClick={() => window.open("https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a5a6", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Tarifas y comisiones</Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/corresponsales/index.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Corresponsales</Link>
+
+                  <Link onClick={() => window.open("https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a41f", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Despachos de cobranza internos </Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/pdf/Despacho_de_Cobranza_Externos.pdf", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Despachos de cobranza externos </Link>
+
+                  <Link onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/tips.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Tips de seguridad</Link>
+
                 </Column>
                 <Column>
                   <Title>Contacto</Title>
@@ -307,20 +356,20 @@ export default class Footer extends Component {
                   {/* <Link href="tel:+8662543790">EU. y Canadá: 866 2543790</Link> */}
                   <div style={{ display: "flex", flexDirection: "row" }}>
                     <Link
-                      href="https://www.facebook.com/BanCoppel/"
-                      target="_blank"
+                    onClick={() => window.open("https://www.facebook.com/BanCoppel/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
+                    target="_blank"
                     >
                       <ImgRedesSociales src={Facebook}></ImgRedesSociales>
                     </Link>
                     <Link
-                      href="https://www.linkedin.com/company/bancoppel/"
-                      target="_blank"
+                    onClick={() => window.open("https://www.linkedin.com/company/bancoppel/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
+                    target="_blank"
                     >
                       <ImgRedesSociales src={Linkdln}></ImgRedesSociales>
                     </Link>
                     <Link
-                      href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg"
-                      target="_blank"
+                     onClick={() => window.open("https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} 
+                     target="_blank"
                     >
                       <ImgRedesSociales src={Youtube}></ImgRedesSociales>
                     </Link>
@@ -357,29 +406,27 @@ export default class Footer extends Component {
               </Row>
               <HrFooter color="#36679A" size="5px" />
               <RowLogotipos>
-                <Link href="https://www.gob.mx/ipab" target="_blank">
+                <Link onClick={() => window.open("https://www.gob.mx/ipab", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={IPAB} alt="logo_ipab" />
                 </Link>
-                <Link href="https://www.coppel.com/" target="_blank">
+                <Link onClick={() => window.open("https://www.coppel.com/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={mejorar} alt="logo_coppel" />
                 </Link>
-                <Link href="https://www.aforecoppel.com/#/" target="_blank">
+                <Link onClick={() => window.open("https://www.aforecoppel.com/#/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={Afore} alt="logo_afore" />
                 </Link>
-                <Link href="https://www.fintechmexico.org/" target="_blank">
+                <Link onClick={() => window.open("https://www.fintechmexico.org/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={Fintech_Mexico} alt="logo_fintech" />
                 </Link>
                 <Link
-                  href="https://www.bancoppel.com/modal_bcopp/buro.html"
-                  target="_blank"
-                >
+                  onClick={() => window.open("https://www.bancoppel.com/modal_bcopp/buro.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={Buro} alt="logo_buro" />
                 </Link>
                 {/* <Link href="https://sellosdeconfianza.org.mx/" target="_blank"> */}
                 <Link onClick={() => window.open("https://sellosdeconfianza.org.mx/", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                   <img src={sello_confianza} alt="logo_sello" />
                 </Link>
-                {/* <a href="javascript:window.open('http://norfipc.com/','','width=600,height=400,left=50,top=50,toolbar=yes');void 0">Nueva nueva ventana</a><br /> */}
+               
               </RowLogotipos>
               <RowNormal>
                 <CopyRight>
@@ -387,9 +434,14 @@ export default class Footer extends Component {
                   Institución de Banca Múltiple - Todos los derechos reservados
                 </CopyRight>
                 <FinalFooter>
-                  <SubLink href="https://www.bancoppel.com/acerca_bancoppel/terminos.html" target="_blank">Términos y Condiciones de Uso</SubLink> |{" "}
-                  <SubLink href="https://bancoppel.com/acerca_bancoppel/aviso.html" target="_blank">Aviso de Privacidad</SubLink> |{" "}
-                  <SubLink href="https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5" target="_blank">
+               
+                  <SubLink onClick={() => window.open("https://www.bancoppel.com/acerca_bancoppel/terminos.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
+                    Términos y Condiciones de Uso</SubLink> |{" "}
+
+                  <SubLink onClick={() => window.open("https://bancoppel.com/acerca_bancoppel/aviso.html", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank" target="_blank">
+                    Aviso de Privacidad</SubLink> |{" "}
+                    
+                  <SubLink  onClick={() => window.open("https://www.bancoppel.com/imagenes/1001/pdf.php?id=4836a6a5", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")} target="_blank">
                     Consulta los costos y las comisiones de nuestros productos.
                   </SubLink>
                 </FinalFooter>
