@@ -59,6 +59,7 @@ const StyledContacto = styled.div`
       }
       .input_formulario {
         margin-bottom: 15px;
+        margin-left: 10px;
       }
       .boton {
         display: flex;
