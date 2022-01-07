@@ -75,7 +75,7 @@ display: none;
             margin: 0;
             padding: 0 !important;
             max-width: 164px;
-            text-align: justify !important;
+            text-align: left !important;
             :last-child{
               margin-top: 10px;
             }
@@ -127,6 +127,21 @@ display: none;
         }
     }
   }
+}
+@media (min-width: 1400px) { 
+  .CardBlue{
+    .card_body{
+      .copy{
+        h2{
+          font-size: 20px;
+        }
+        p{
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
 }
 `;
 export default class TwoProductsAccess extends Component {

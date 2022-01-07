@@ -18,7 +18,7 @@ const StyledAcceso = styled.div`
         bottom: 0;
         right: 0;
         width: 100%;
-        height: 300px;
+        height: 350px;
         overflow-y:hidden;
         overflow-x:hidden;
  }
