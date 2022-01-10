@@ -236,10 +236,10 @@ class CardBlue extends Component {
             {card.copy2 ? <h3>{card.copy2}</h3> : null}
             {card.access ? <h2>{card.access}</h2> : null}
           </div>
-
+          
           {card.path ? (
             <Link to={card.path}>
-              <BancoppelBtn>
+              <BancoppelBtn onClick={ () => window.scrollTo(0,0)  }>
                 {rest.row ? "Me interesa" : "Ver más"}
               </BancoppelBtn>
             </Link>
@@ -256,7 +256,7 @@ class CardBlue extends Component {
 
           {card.accessVisitala ? (
             <Link to={card.accessVisitala}>
-              <BancoppelBtn>
+              <BancoppelBtn onClick={()=>{window.scrollTo(0,0)}}>
                 {rest.row ? "¡Visítala!" : "¡Visítala!"}
               </BancoppelBtn>
             </Link>
