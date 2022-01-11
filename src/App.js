@@ -70,7 +70,7 @@ class App extends Component {
           <Route path="/empresas/contacto">
             <FormularioContacto />
           </Route>
-          <Route path="/empresas/acceso">
+          <Route path="/empresas/login">
             <Acceso />
           </Route>
         </Switch>

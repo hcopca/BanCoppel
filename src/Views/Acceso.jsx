@@ -71,7 +71,7 @@ export default class Acceso extends Component {
             {/* <AccesoFormulario/> */}
             
             {/* <Iframe url="10.26.211.118/acceso/include/login_empresas.html" */}
-            <Iframe url="http://localhost:8888/acceso/include/login_empresas.html"
+            <Iframe url="https://bancoppel.com/empresas/acceso/"
                 // width="436px"
                 // height="378px"
                 id="myId"
