@@ -8,10 +8,12 @@ import {
   SelectBancoppel,
 } from "../Components";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Fondo from "../Assets/fondo_contacto.png";
 import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
 import Catalogo from "../Catalogo_Productos";
-import estados from "../EstadosCatalogo"
+import estados from "../EstadosCatalogo";
 const StyledContacto = styled.div`
   padding: 60px 0;
   background-image: url(${({ imgResponsive }) => imgResponsive});
@@ -65,13 +67,12 @@ const StyledContacto = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-          button {
-            width: 156px;
-            height: 50px;
-            margin-top: 25px;
-          }
+        button {
+          width: 156px;
+          height: 50px;
+          margin-top: 25px;
+        }
       }
-    
 
       .link_terminos {
         display: flex;
@@ -98,12 +99,12 @@ const StyledContacto = styled.div`
     background-image: url(${({ img }) => img});
     .container {
       justify-content: flex-end;
-      form{
-        .headers{
-          h2{
+      form {
+        .headers {
+          h2 {
             font-size: 24px;
           }
-          p{
+          p {
             font-size: 14px;
           }
         }
@@ -112,9 +113,13 @@ const StyledContacto = styled.div`
   }
   @media (min-width: 1400px) {
     .container {
-      form{
+      form {
         max-width: 482px;
         padding: 30px 30px 30px 66px;
+<<<<<<< HEAD
+        .headers {
+          h2 {
+=======
         input{
           margin-left: 0px;
           margin-right: 20px;
@@ -122,15 +127,16 @@ const StyledContacto = styled.div`
         }
         .headers{
           h2{
+>>>>>>> 64f8c038bae081356dfa1c61c7b54a96bfffae91
             margin: 0px;
             margin-bottom: 9px;
             font-size: 28px;
           }
-          p{
+          p {
             font-size: 16px;
           }
         }
-        .link_terminos{
+        .link_terminos {
           font-size: 16px;
         }
       }
@@ -138,9 +144,9 @@ const StyledContacto = styled.div`
   }
 `;
 const openInNewTab = (url) => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+  if (newWindow) newWindow.opener = null;
+};
 class FormularioContacto extends Component {
   constructor(props) {
     super(props);
@@ -155,19 +161,19 @@ class FormularioContacto extends Component {
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
   //Función para evitar caracteres especiales
-  handleChangeInput(evento){
-    const {name, value} = evento.target;//destructurin de los valores enviados por el metodo onchange de cada input
+  handleChangeInput(evento) {
+    const { name, value } = evento.target; //destructurin de los valores enviados por el metodo onchange de cada input
     let regex = new RegExp("^[íóáéú a-zA-Z ]+$");
 
-    for(let i = 0; i <= value.length -1; i++){
-         let letra = value[i]
-        if(!regex.test(letra ) || !letra === " "){
-          return;
-         }
+    for (let i = 0; i <= value.length - 1; i++) {
+      let letra = value[i];
+      if (!regex.test(letra) || !letra === " ") {
+        return;
+      }
     }
     this.setState({
-        [name] : value //al elemento dentro de [] es una key de cada parametro dentro del estado.
-    }); 
+      [name]: value, //al elemento dentro de [] es una key de cada parametro dentro del estado.
+    });
   }
 
   onchange(e) {
@@ -176,153 +182,209 @@ class FormularioContacto extends Component {
     });
   }
 
+  showAlert({error, message}){
+    if( !error ){
+      toast.success(message, {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }else{
+      toast.error(message, {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }
+  }
 
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
-    this.setState({
-      name: "",
-      email: "",
-      phone: "",
-      job: "",
-      entity: "-1",
-      product: "-1",
-    });
+    try{
+      const url = "http://localhost:8888/index.php"; //ADM Cambiar a la URL Final
+      //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
+      const dataToSend = {
+        name: this.state.name,
+        email: this.state.email,
+        phone: this.state.phone,
+        job: this.state.job,
+        entity: this.state.entity,
+        product: this.state.product
+      };
+  
+      const res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(dataToSend),
+        headers: {
+          "Content-Type": "application/json",
+          "access-control-allow-origin": "*"
+        },
+      });
+      const responseJson = await res.json();
+      if ( responseJson && responseJson.code === 200 && !responseJson.error  ){
+        this.showAlert({ error: false, message: responseJson.message  })
+      }
+      this.setState({
+        name: "",
+        email: "",
+        phone: "",
+        job: "",
+        entity: "-1",
+        product: "-1",
+      });
+    }catch(err){
+      this.showAlert({ error: true, message: err.message.includes("unexpected") ? "Ocurrió un error al procesar tu solicitud" : err.message  })
+    }
   }
 
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          Contacto - Portal Empresas| BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="Contacto - Portal Empresas| BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/contacto" />
-          <meta 
-          name="keywords"
-          content="contacto, empresas, contactanos, asesor, portal empresas" />
-          <meta name="description" 
-           content="Contacta a un asesor en línea para resolver cualquier duda sobre la Banca Empresarial BanCoppel." 
-           />
-      </Helmet>
-      <StyledContacto img={Fondo} imgResponsive={Fondo_responsive}>
-        <Container>
-          <form onSubmit={(e) => this.onSubmit(e)}>
-            <div className="headers">
-              <h2>
-                Estás muy cerca de <br />
-                comenzar{" "}
-                <span>
-                  tu historia <br /> con nosotros
-                </span>
-              </h2>
-              <p>Deja tus datos y un asesor se pondrá en contacto contigo.</p>
-            </div>
-            <div className="input_formulario">
-              <InputBancoppel
-                type="text"
-                required
-                name="name"
-                label="Nombre Completo"
-                placeholder="Ej. Alexander Ramírez Rodriguez"
-                maxLength="50"
-                value={this.state.name}
-                // onChange={this.onchange.bind(this)}
-                onChange={this.handleChangeInput}
-              />
-            </div>
-            <div className="input_formulario">
-              <InputBancoppel
-                type="email"
-                required
-                name="email"
-                maxLength="50"
-                label="Email"
-                placeholder="Ej. tucorreo@email.com"
-                value={this.state.email}
-                onChange={this.onchange.bind(this)}
-              />
-            </div>
-            <div className="input_formulario">
-              <InputBancoppel
-                type="number"
-                required
-                name="phone"
-                label="Teléfono"
-                placeholder="Ej. 55 1234 5678"
-                onInput = {(e) =>{
-                  e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,10)
-                }}
-                value={this.state.phone}
-                onChange={this.onchange.bind(this)}
-              />
-            </div>
-            <div className="input_formulario">
-              <InputBancoppel
-                type="text"
-                required
-                name="job"
-                label="Puesto"
-                maxlength="50"
-                placeholder="Ej. Ejecutivo"
-                value={this.state.job}
-                // onChange={this.onchange.bind(this)}
-                onChange={this.handleChangeInput}
-              />
-            </div>
-            <div className="input_formulario ">
-              <SelectBancoppel
-                required
-                name="entity"
-                label="Entidad"
-                placeholder="Ej. Ciudad de México"
-                value={this.state.entity}
-                onChange={this.onchange.bind(this)}
-                secondary
-              >
-          
-                {estados.map((e, idx)=>(
-                  <option value={e.name} key={idx}>{e.name}</option>
-                ))}
-              </SelectBancoppel>
-            </div>
+          <title>Contacto - Portal Empresas| BanCoppel.com</title>
+          <meta
+            name="title"
+            content="Contacto - Portal Empresas| BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/empresas/contacto"
+          />
+          <meta
+            name="keywords"
+            content="contacto, empresas, contactanos, asesor, portal empresas"
+          />
+          <meta
+            name="description"
+            content="Contacta a un asesor en línea para resolver cualquier duda sobre la Banca Empresarial BanCoppel."
+          />
+        </Helmet>
+        <StyledContacto img={Fondo} imgResponsive={Fondo_responsive}>
+          <Container>
+            <form onSubmit={(e) => this.onSubmit(e)}>
+              <div className="headers">
+                <h2>
+                  Estás muy cerca de <br />
+                  comenzar{" "}
+                  <span>
+                    tu historia <br /> con nosotros
+                  </span>
+                </h2>
+                <p>Deja tus datos y un asesor se pondrá en contacto contigo.</p>
+              </div>
+              <div className="input_formulario">
+                <InputBancoppel
+                  type="text"
+                  required
+                  name="name"
+                  label="Nombre Completo"
+                  placeholder="Ej. Alexander Ramírez Rodriguez"
+                  maxLength="50"
+                  value={this.state.name}
+                  // onChange={this.onchange.bind(this)}
+                  onChange={this.handleChangeInput}
+                />
+              </div>
+              <div className="input_formulario">
+                <InputBancoppel
+                  type="email"
+                  required
+                  name="email"
+                  maxLength="50"
+                  label="Email"
+                  placeholder="Ej. tucorreo@email.com"
+                  value={this.state.email}
+                  onChange={this.onchange.bind(this)}
+                />
+              </div>
+              <div className="input_formulario">
+                <InputBancoppel
+                  type="number"
+                  required
+                  name="phone"
+                  label="Teléfono"
+                  placeholder="Ej. 55 1234 5678"
+                  onInput={(e) => {
+                    e.target.value = Math.max(0, parseInt(e.target.value))
+                      .toString()
+                      .slice(0, 10);
+                  }}
+                  value={this.state.phone}
+                  onChange={this.onchange.bind(this)}
+                />
+              </div>
+              <div className="input_formulario">
+                <InputBancoppel
+                  type="text"
+                  required
+                  name="job"
+                  label="Puesto"
+                  maxlength="50"
+                  placeholder="Ej. Ejecutivo"
+                  value={this.state.job}
+                  // onChange={this.onchange.bind(this)}
+                  onChange={this.handleChangeInput}
+                />
+              </div>
+              <div className="input_formulario ">
+                <SelectBancoppel
+                  required
+                  name="entity"
+                  label="Entidad"
+                  placeholder="Ej. Ciudad de México"
+                  value={this.state.entity}
+                  onChange={this.onchange.bind(this)}
+                  secondary
+                >
+                  {estados.map((e, idx) => (
+                    <option value={e.name} key={idx}>
+                      {e.name}
+                    </option>
+                  ))}
+                </SelectBancoppel>
+              </div>
 
-            <div className="input_formulario productos">
-              <SelectBancoppel
-                required
-                name="product"
-                label="Selecciona el producto"
-                placeholder="Selecciona el producto"
-                value={this.state.product}
-                onChange={this.onchange.bind(this)}
-              >
-                {Catalogo.map((ele, idx) => (
-                  <option value={ele.name} key={idx}>
-                    {ele.name}
-                  </option>
-                ))}
-              </SelectBancoppel>
-            </div>
-            
-            <div className="boton">
-              <BancoppelBtn type="submit"
-              className="g-recaptcha"
-              data-sitekey="6LdHB8AdAAAAAOwebHIPUJH3WTbty5dkGwOAFvAi" 
-              data-callback='onSubmit' 
-              data-action='submit'
-              amarillo>
-                Enviar
-              </BancoppelBtn>
-            </div>
-            <pre><p className="link_terminos">
-              Consulta el aviso de privacidad, <Link onClick={() => openInNewTab("https://bancoppel.com/acerca_bancoppel/aviso.html")}>aquí</Link>
-            </p></pre>
-          </form>
-        </Container>
-      </StyledContacto>
+              <div className="input_formulario productos">
+                <SelectBancoppel
+                  required
+                  name="product"
+                  label="Selecciona el producto"
+                  placeholder="Selecciona el producto"
+                  value={this.state.product}
+                  onChange={this.onchange.bind(this)}
+                >
+                  {Catalogo.map((ele, idx) => (
+                    <option value={ele.name} key={idx}>
+                      {ele.name}
+                    </option>
+                  ))}
+                </SelectBancoppel>
+              </div>
+
+              <div className="boton">
+                <BancoppelBtn
+                  type="submit"
+                  
+                  amarillo
+                >
+                  Enviar
+                </BancoppelBtn>
+              </div>
+              <ToastContainer />
+              <pre>
+                <p className="link_terminos">
+                  Consulta el aviso de privacidad,{" "}
+                  <Link
+                    onClick={() =>
+                      openInNewTab(
+                        "https://bancoppel.com/acerca_bancoppel/aviso.html"
+                      )
+                    }
+                  >
+                    aquí
+                  </Link>
+                </p>
+              </pre>
+            </form>
+          </Container>
+        </StyledContacto>
       </>
     );
   }
