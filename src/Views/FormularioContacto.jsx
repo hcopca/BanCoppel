@@ -192,6 +192,7 @@ class FormularioContacto extends Component {
   async onSubmit(e) {
     e.preventDefault();
     try{
+      //const url = "https://dodobypaco.com/mail"; //ADM Cambiar a la URL Final
       const url = "http://localhost:8888/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
       const dataToSend = {
@@ -224,7 +225,7 @@ class FormularioContacto extends Component {
         product: "-1",
       });
     }catch(err){
-      this.showAlert({ error: true, message: err.message.includes("unexpected") ? "Ocurrió un error al procesar tu solicitud" : err.message  })
+      this.showAlert({ error: true, message: err.message.includes("Unexpected") || err.message.includes("Failed") ? "Ocurrió un error al procesar tu solicitud" : err.message  }) //ADM Refactorizar para un mejor manejo de errores
     }
   }
 
