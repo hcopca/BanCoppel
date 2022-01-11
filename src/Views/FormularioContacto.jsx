@@ -115,6 +115,11 @@ const StyledContacto = styled.div`
       form{
         max-width: 482px;
         padding: 30px 30px 30px 66px;
+        input{
+          margin-left: 0px;
+          margin-right: 20px;
+          width: 100%;
+        }
         .headers{
           h2{
             margin: 0px;
