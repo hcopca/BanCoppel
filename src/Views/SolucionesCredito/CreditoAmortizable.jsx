@@ -60,9 +60,10 @@ const StyledCreditoAmortizable = styled.div`
             }
            }
            img{
-             height: 140px;
+             height: 138px;
             margin-top: -170px;
             width: 23px;
+            margin-left: 2px;
            }
          }
         }

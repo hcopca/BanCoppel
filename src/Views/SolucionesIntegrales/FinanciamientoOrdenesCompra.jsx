@@ -53,9 +53,9 @@ const StyledFinanciamiento = styled.div`
          }
          img{
            margin-top: -160px;
-           width: 20px;
-           height: 125px;
-           margin-left: 5px;
+           width: 21px;
+           height: 126px;
+           margin-left: 4px;
          }
        }
       }

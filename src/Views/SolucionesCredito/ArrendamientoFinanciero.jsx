@@ -58,7 +58,7 @@ const StyledArrendamientoFinanciero = styled.div`
             margin-top: -200px;
             width: 27px;
             margin-left: -2px;
-            height: 164px;
+            height: 162px;
            }
          }
         }
@@ -75,14 +75,14 @@ const StyledArrendamientoFinanciero = styled.div`
         .children {
          .subchildren{
            h2{
-           height: 140px;
+           height: 159px;
             width: 650px;
            }
            img{
-             margin-top: -230px;
-             width: 32px;
-             height: 195px;
-             margin-left: -7px;
+             margin-top: -241px;
+             width: 33px;
+             height: 202px;
+             margin-left: -8px;
            }
          }
         }

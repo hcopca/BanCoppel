@@ -59,7 +59,7 @@ const StyledCreditoPuente = styled.div`
           img{
              margin-top: -160px;
              width: 20px;
-             height: 121px;
+             height: 120px;
              margin-left: 5px;
              
            }

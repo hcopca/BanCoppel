@@ -51,9 +51,9 @@ const StyledPruductHeader = styled.div`
           height: 70px;
          }
          img{
-           margin-top: -159px;
+           margin-top: -157px;
            width: 20px;
-           height: 123px;
+           height: 120px;
            margin-left: 5px;
          }
        }

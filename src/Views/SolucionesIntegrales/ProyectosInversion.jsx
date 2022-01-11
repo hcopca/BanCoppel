@@ -104,9 +104,9 @@ const StyledProyectosInversion = styled.div`
       .children {
        .subchildren{
          img{
-           margin-top: -189px;
+           margin-top: -186px;
            width: 25px;
-           height: 155px;
+           height: 150px;
            margin-left: 0px;
          }
        }
@@ -124,14 +124,14 @@ const StyledProyectosInversion = styled.div`
         .children {
          .subchildren{
            h2{
-            height: 140px;
+            height: 100px;
             width: 657px;
            }
            img{
-             margin-top: -227px;
-             width: 32px;
-            height: 192px;
-             margin-left: -7px;
+             margin-top: -188px;
+             width: 25px;
+            height: 152px;
+             margin-left: -0px;
            }
          }
         }

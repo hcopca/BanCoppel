@@ -73,7 +73,7 @@ const StyledFactoraje = styled.div`
              margin-top: -198px;
              width: 26px;
              height: 156px;
-             margin-left: -2px;
+             margin-left: -1px;
            }
            button{
              margin-top: 35px;
@@ -93,13 +93,13 @@ const StyledFactoraje = styled.div`
          .subchildren{
            h2{
              width: 530px;
-             height: 140px;
+             height: 153px;
            }
            img{
-             margin-top: -225px;
-             width: 30px;
-             height: 183px;
-             margin-left: -5px;
+             margin-top: -231px;
+             width: 31px;
+             height: 192px;
+             margin-left: -6px;
            }
            .padresubtitle{
               .subtitle{

@@ -58,14 +58,14 @@ const StyledNominasBanCoppel = styled.div`
         .children {
          .subchildren{
            h2{
-           height: 140px;
+           height: 170px;
            width: 500px;
            }
            img{
-             margin-top: -230px;
-             height: 189px;
-             width: 31px;
-             margin-left: -6px;
+             margin-top: -251px;
+             height: 210px;
+             width: 35px;
+             margin-left: -10px;
            }
          }
         }

@@ -40,10 +40,10 @@ const StyledEmpresaNet = styled.div`
             }
            }
            img{
-             width: 20px;
-             height: 123px;
-             margin-top: -161px;
-             margin-left: 5px;
+             width: 19px;
+             height: 114px;
+             margin-top: -157px;
+             margin-left: 6px;
            }
          }
         }
