@@ -200,7 +200,7 @@ class FormularioContacto extends Component {
       const url = "http://localhost:8888/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
       const dataToSend = {
-        completeName: this.state.name,
+        name: this.state.name,
         email: this.state.email,
         phone: this.state.phone,
         job: this.state.job,
@@ -229,7 +229,7 @@ class FormularioContacto extends Component {
         product: "-1",
       });
     }catch(err){
-      this.showAlert({ error: true, message: err.message  })
+      this.showAlert({ error: true, message: err.message.includes("unexpected") ? "Ocurrió un error al procesar tu solicitud" : err.message  })
     }
   }
 
