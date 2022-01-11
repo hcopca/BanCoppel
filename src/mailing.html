@@ -203,6 +203,33 @@
     .title-blue{
       margin-left: 35%;
     }
+    .contain-two{
+        margin-right: 12%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+    .mini-footer{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .cate{
+        margin-left: 5%;
+    }
+    .cate span{
+        margin-left: 0px;
+    }
+    .icns-rs{
+        margin-right: 5%;
+    }
+}
+@media only screen and (min-width:700px){
+    .contain-two{
+        margin-right: 16%;
+    }
+
 }
 @media only screen and (min-width:974px){
     .space-gray h3{
@@ -221,7 +248,30 @@
     flex-wrap: wrap !important;
     justify-content: space-evenly;
     margin-left: 20%;
-    
+    }
+
+    .contain-two{
+        margin-right: 12%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap !important;
+        justify-content: space-evenly;
+    }
+    .first-fecha{
+        margin-right: 8%;
+    }
+    .second-fecha{
+        margin-left: 6.6%;
+    }
+    .footer-logo-bncpl{
+        width: 182px;
+        height: 18px;
+    }
+    .space-white-down{
+        margin-top: 20px; 
+        margin-bottom: -20px;
+        max-width: 70%;
+        padding: 0 450px;
     }
 }
     </style> 
@@ -282,7 +332,7 @@
                     <p>04-01-2022</p>
                 </div>
                 
-                <div class="fecha">
+                <div class="fecha second-fecha">
                     <img src="./Assets/icn_hora.svg" alt="hora-logo">
                     <span>Hora de operación:</span>
                     <p>04-01-2022</p>
@@ -305,12 +355,18 @@
                 </p>
             </div>
             <div class="footer-logo-bncpl">
-                <img src="./Assets/logo_bancoppel_letras_azules.svg" alt="bancoppel-logo">
+                <a href="https://www.bancoppel.com/empresas" target="_blank">
+                    <img src="./Assets/logo_bancoppel_letras_azules.svg" alt="bancoppel-logo">
+                </a>
             </div>
             
             <div class="icns-rs">
-                <img class="fb" src="./Assets/facebook.svg" alt="bancoppel-logo">
-                <img clas="yt" src="./Assets/yt.svg" alt="bancoppel-logo">
+                <a href="https://www.facebook.com/BanCoppel/" target="_blank">
+                    <img class="fb" src="./Assets/facebook.svg" alt="bancoppel-logo">
+                 </a>
+                 <a href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank">
+                     <img clas="yt" src="./Assets/yt.svg" alt="bancoppel-logo">
+                 </a>
             </div>
         </div>
     </div>
