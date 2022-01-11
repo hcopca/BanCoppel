@@ -70,8 +70,8 @@ export default class Acceso extends Component {
             </div>
             {/* <AccesoFormulario/> */}
             
-            {/* <Iframe url="10.26.211.118/empresas/loggin" */}
-            <Iframe url="http://localhost:8888/login2/include/login_empresas.html"
+            {/* <Iframe url="10.26.211.118/acceso/include/login_empresas.html" */}
+            <Iframe url="http://localhost:8888/acceso/include/login_empresas.html"
                 // width="436px"
                 // height="378px"
                 id="myId"
