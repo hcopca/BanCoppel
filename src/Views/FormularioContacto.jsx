@@ -150,8 +150,8 @@ class FormularioContacto extends Component {
       email: "",
       phone: "",
       job: "",
-      entity: 0,
-      product: 0,
+      entity: -1,
+      product: -1,
       passForm: false,
     };
     this.handleChangeInput = this.handleChangeInput.bind(this);
@@ -191,27 +191,26 @@ class FormularioContacto extends Component {
   }
 
   validateForm() {
-    if (
-      !this.state.entity ||
-      this.state.entity == "" ||
-      this.state.entity < 0 ||
-      !this.state.product ||
-      this.state.product == "" ||
-      this.state.product < 0
-    ) {
-      this.showAlert({ error: true, message: "Completa los campos faltantes" });
-      this.setState({ passForm: false });
-    } else {
-      this.setState({ passForm: true });
+    debugger
+    if ((!this.state.entity || this.state.entity == "" || this.state.entity < 0) && this.state.entityAlertId !== 0 ) {
+       toast.error("Completa los campos faltantes", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return false
     }
+    if ((this.state.product < 0 || !this.state.product || this.state.product == "") ) {
+      toast.error("Completa los campos faltantes", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return false
+    }
+    return true
   }
 
   async onSubmit(e) {
     e.preventDefault();
-    const isComplete = this.validateForm();
-    debugger;
-    if (!this.state.passForm) {
-      this.setState({ passForm: true });
+    //this.validateForm();
+    if ( !this.validateForm() ) {
       return;
     }
     try {
