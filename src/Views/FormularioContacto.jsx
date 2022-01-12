@@ -8,8 +8,8 @@ import {
   SelectBancoppel,
 } from "../Components";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Fondo from "../Assets/fondo_contacto.png";
 import Fondo_responsive from "../Assets/formulario_fondo_responsive.png";
 import Catalogo from "../Catalogo_Productos";
@@ -116,13 +116,13 @@ const StyledContacto = styled.div`
       form {
         max-width: 482px;
         padding: 30px 30px 30px 66px;
-        input{
+        input {
           margin-left: 0px;
           margin-right: 20px;
           width: 100%;
         }
-        .headers{
-          h2{
+        .headers {
+          h2 {
             margin: 0px;
             margin-bottom: 9px;
             font-size: 28px;
@@ -152,6 +152,7 @@ class FormularioContacto extends Component {
       job: "",
       entity: 0,
       product: 0,
+      passForm: false,
     };
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
@@ -177,32 +178,43 @@ class FormularioContacto extends Component {
     });
   }
 
-  showAlert({error, message}){
-    if( !error ){
+  showAlert({ error, message }) {
+    if (!error) {
       toast.success(message, {
-        position: toast.POSITION.TOP_RIGHT
+        position: toast.POSITION.TOP_RIGHT,
       });
-    }else{
+    } else {
       toast.error(message, {
-        position: toast.POSITION.TOP_RIGHT
+        position: toast.POSITION.TOP_RIGHT,
       });
     }
   }
 
-  validateForm(){
-    if( (!this.state.entity || this.state.entity == "" || this.state.entity < 0 ) || ( !this.state.product || this.state.product == "" || this.state.product < 0 ) ){
-      this.showAlert({ error: true, message: "Es necesario que completes todos los campos" })
-      return false;
+  validateForm() {
+    if (
+      !this.state.entity ||
+      this.state.entity == "" ||
+      this.state.entity < 0 ||
+      !this.state.product ||
+      this.state.product == "" ||
+      this.state.product < 0
+    ) {
+      this.showAlert({ error: true, message: "Completa los campos faltantes" });
+      this.setState({ passForm: false });
+    } else {
+      this.setState({ passForm: true });
     }
   }
 
   async onSubmit(e) {
     e.preventDefault();
-    const isComplete = this.validateForm()
-    if( !isComplete || isComplete === "" || isComplete === null || isComplete === undefined ){
-      return
+    const isComplete = this.validateForm();
+    debugger;
+    if (!this.state.passForm) {
+      this.setState({ passForm: true });
+      return;
     }
-    try{
+    try {
       const url = "http://localhost:8888/mail/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
       const dataToSend = {
@@ -211,20 +223,20 @@ class FormularioContacto extends Component {
         phone: this.state.phone,
         job: this.state.job,
         entity: this.state.entity,
-        product: this.state.product
+        product: this.state.product,
       };
-  
+
       const res = await fetch(url, {
         method: "POST",
         body: JSON.stringify(dataToSend),
         headers: {
           "Content-Type": "application/json",
-          "access-control-allow-origin": "*"
+          "access-control-allow-origin": "*",
         },
       });
       const responseJson = await res.json();
-      if ( responseJson && responseJson.code === 200 && !responseJson.error  ){
-        this.showAlert({ error: false, message: responseJson.message  })
+      if (responseJson && responseJson.code === 200 && !responseJson.error) {
+        this.showAlert({ error: false, message: responseJson.message });
       }
       this.setState({
         name: "",
@@ -234,9 +246,15 @@ class FormularioContacto extends Component {
         entity: "-1",
         product: "-1",
       });
-    }catch(err){
-      debugger
-      this.showAlert({ error: true, message: err.message.includes("Unexpected") || err.message.includes("Failed") ? "Ocurrió un error al procesar tu solicitud" : err.message  }) //ADM Refactorizar para un mejor manejo de errores
+    } catch (err) {
+      debugger;
+      this.showAlert({
+        error: true,
+        message:
+          err.message.includes("Unexpected") || err.message.includes("Failed")
+            ? "Ocurrió un error al procesar tu solicitud"
+            : err.message,
+      }); //ADM Refactorizar para un mejor manejo de errores
     }
   }
 
@@ -366,11 +384,7 @@ class FormularioContacto extends Component {
               </div>
 
               <div className="boton">
-                <BancoppelBtn
-                  type="submit"
-                  
-                  amarillo
-                >
+                <BancoppelBtn type="submit" amarillo>
                   Enviar
                 </BancoppelBtn>
               </div>
