@@ -19,7 +19,7 @@ const StyledContacto = styled.div`
   background-image: url(${({ imgResponsive }) => imgResponsive});
   background-size: cover;
   background-repeat: no-repeat;
-
+  
   .container {
     display: flex;
     align-items: center;
@@ -191,7 +191,7 @@ class FormularioContacto extends Component {
 
   validateForm(){
     if( (!this.state.entity || this.state.entity == "" || this.state.entity < 0 ) || ( !this.state.product || this.state.product == "" || this.state.product < 0 ) ){
-      this.showAlert({ error: true, message: "Es necesario que completes todos los campos" })
+      this.showAlert({ error: true, message: "Completa los campos faltantes" })
       return false;
     }
   }
