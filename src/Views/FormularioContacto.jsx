@@ -189,11 +189,19 @@ class FormularioContacto extends Component {
     }
   }
 
+  validateForm(){
+    if( (!this.state.entity || this.state.entity == "" || this.state.entity < 0 ) || ( !this.state.product || this.state.product == "" || this.state.product < 0 ) ){
+      this.showAlert({ error: true, message: "Por favor, rellena todos los campos" })
+      return
+    }
+  }
+
   async onSubmit(e) {
     e.preventDefault();
+    this.validateForm()
     try{
       //const url = "https://dodobypaco.com/mail"; //ADM Cambiar a la URL Final
-      const url = "http://localhost:8888/index.php"; //ADM Cambiar a la URL Final
+      const url = "http://localhost:8888/mail/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
       const dataToSend = {
         name: this.state.name,
