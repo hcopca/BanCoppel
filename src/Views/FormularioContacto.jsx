@@ -192,13 +192,16 @@ class FormularioContacto extends Component {
   validateForm(){
     if( (!this.state.entity || this.state.entity == "" || this.state.entity < 0 ) || ( !this.state.product || this.state.product == "" || this.state.product < 0 ) ){
       this.showAlert({ error: true, message: "Es necesario que completes todos los campos" })
-      return
+      return false;
     }
   }
 
   async onSubmit(e) {
     e.preventDefault();
-    this.validateForm()
+    const isComplete = this.validateForm()
+    if( !isComplete || isComplete === "" || isComplete === null || isComplete === undefined ){
+      return
+    }
     try{
       const url = "http://localhost:8888/mail/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
