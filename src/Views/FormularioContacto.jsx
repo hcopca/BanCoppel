@@ -152,7 +152,7 @@ class FormularioContacto extends Component {
       job: "",
       entity: -1,
       product: -1,
-      passForm: false,
+      isCalling: false
     };
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
@@ -208,7 +208,6 @@ class FormularioContacto extends Component {
 
   async onSubmit(e) {
     e.preventDefault();
-    //this.validateForm();
     if ( !this.validateForm() ) {
       return;
     }
@@ -247,7 +246,6 @@ class FormularioContacto extends Component {
         product: "-1",
       });
     } catch (err) {
-      debugger;
       this.showAlert({
         error: true,
         message:
