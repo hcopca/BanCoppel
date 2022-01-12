@@ -191,7 +191,6 @@ class FormularioContacto extends Component {
   }
 
   validateForm() {
-    debugger
     if ((!this.state.entity || this.state.entity == "" || this.state.entity < 0) && this.state.entityAlertId !== 0 ) {
        toast.error("Completa los campos faltantes", {
         position: toast.POSITION.TOP_RIGHT,
@@ -213,6 +212,7 @@ class FormularioContacto extends Component {
     if ( !this.validateForm() ) {
       return;
     }
+    this.setState({  isCalling: true  })
     try {
       const url = "http://localhost:8888/mail/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
@@ -236,6 +236,7 @@ class FormularioContacto extends Component {
       const responseJson = await res.json();
       if (responseJson && responseJson.code === 200 && !responseJson.error) {
         this.showAlert({ error: false, message: responseJson.message });
+        this.setState({ isCalling: false })
       }
       this.setState({
         name: "",
@@ -383,7 +384,7 @@ class FormularioContacto extends Component {
               </div>
 
               <div className="boton">
-                <BancoppelBtn type="submit" amarillo>
+                <BancoppelBtn type="submit" amarillo disabled={ this.state.isCalling }  >
                   Enviar
                 </BancoppelBtn>
               </div>
