@@ -19,7 +19,7 @@ const StyledContacto = styled.div`
   background-image: url(${({ imgResponsive }) => imgResponsive});
   background-size: cover;
   background-repeat: no-repeat;
-
+  
   .container {
     display: flex;
     align-items: center;
