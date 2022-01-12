@@ -1,375 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mailing</title>
-    <style type="text/css">
-        body{
-    padding: 29px;
-}
-/* LOGO DE BANCOPPEL AZUL */
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-}
-/* CUADRO PADRE AZUL CON RADIUS */
-.container-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1.5px solid #81C1EA;
-    height: 100%;
-    border-radius: 12px;
-    width: 100%;
-}
-.top-logo{
-    max-width: 60%;
-}
-/* IMAGEN TOP CUADRO PADRE */
-.logo-container{
-    width: 100.1%;
-    margin-top: -1px;
-    margin-left: -0.1px;
-    border-radius: 12px;
-}
-/* CONTENIDO PRIMER ESPACIO EN BLANCO */
-.user-name p{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-    text-align: center;
-    color: #000000;
-    margin-top: 10px;
-}
-.user-name h4{
-    font-family: Montserrat;
-    font-style: bold;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-    color:  #225AA7;;
-    margin-top: -20px;
-}
-.user-name h3{
-    font-family: Futura;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    color: #000000;
-    margin-top: -12px;
-}
-/* CONTENIDO ESPACIO EN GRIS */
-.space-gray{
-    background-color: #F4F4F4;
-    width: 100%;
-}
-.space-gray h3{
-    font-family: Futura;
-    font-size: 12px;
-    line-height: 1px;
-    color: #000000;
-    text-align: center;
-    margin-top: 20px;
-}
-.contain-six{
-    display: flex;
-	flex-direction: column;
-	align-items: left;
-	align-content: space-around;
-    margin-left: 30px;
-    margin-bottom: 32px;
-}
-.title-blue{
-    margin-top: 15px;
-}
-.title-blue p {
-    font-family: Futura;
-    font-size: 14px;
-    line-height: 24px;
-    color: #006EB5;
-    margin-bottom: -5px;
-}
-.title-blue span{
-    font-family: Futura;
-    font-size: 14px;
-    line-height: 18px;
-    color: #000000;
-}
-.contain-two{
-    margin-left: 30px;
-}
-.linea{
-    border: 1px solid #81C1EA;
-    margin-top: 38px;
-    width: 80%;
-}
-.fecha{
-    display: flex;
-    flex-direction: column;
-}
-.first-fecha{
-    margin-top: 37px;
-    margin-bottom: 20px;
-}
-.fecha img{
-    max-width: 20px;
-    max-height: 20px;
-    margin-bottom: 5px;
-}
-.fecha span{
-    font-family: Futura;
-    font-size: 14px;
-    line-height: 24px;
-    color: #006EB5;
-}
-.fecha p{
-    font-family: Futura;
-    font-size: 14px;
-    line-height: 18px;
-    color: #000000;
-    margin-top: 0px;
-}
-
-/* SEGUNDO ESPACIO EN BLANCO */
-.space-white-down{
-    font-family: Futura;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-}
-.space-white-down p{
-    padding: 0 34px;
-}
-/* MINIFOOTER */
-.mini-footer{
-    display: flex;
-    flex-direction: column; 
-    /* CAMBIAR */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.cate span{
-    font-family: Futura;
-    font-size: 12px;
-    line-height: 24px;
-    color: #000000;
-    /* Cambiar */
-    margin-left: 30px; 
-}
-.cate p{
-    font-family: Futura;
-    font-size: 12px;
-    line-height: 21px;
-    color: #000000;
-    margin-top: -5px;
-}
-.footer-logo-bncpl img{
-    width: 150px;
-      /* Cambiar por 20px*/
-    margin-top: 0px;
-}
-
-.icns-rs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.yt{
-    width: 20px !important;
-    height: 20px !important;
-}
-.fb{
-    margin-top: 9px;
-}
-.fb img{
-    margin-top: 5px;
-    width: 20px !important;
-    height: 40px !important;
-}
-@media only screen and (min-width:576px){
-    .contain-six{
-        margin-left: 0px;
-    }
-    .title-blue{
-      margin-left: 35%;
-    }
-    .contain-two{
-        margin-right: 12%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-    }
-    .mini-footer{
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 30px;
-    }
-    .cate{
-        margin-left: 5%;
-    }
-    .cate span{
-        margin-left: 0px;
-    }
-    .icns-rs{
-        margin-right: 5%;
-    }
-}
-@media only screen and (min-width:700px){
-    .contain-two{
-        margin-right: 16%;
-    }
-
-}
-@media only screen and (min-width:974px){
-    .space-gray h3{
-    font-size: 14px;
-    }
-    .title-blue{
-        width: 50%;
-        margin-left: 0px;
-    }
-    .title-blue p{
-        margin-bottom: 5px !important;
-    }
-    .contain-six{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap !important;
-    justify-content: space-evenly;
-    margin-left: 20%;
-    }
-
-    .contain-two{
-        margin-right: 12%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap !important;
-        justify-content: space-evenly;
-    }
-    .first-fecha{
-        margin-right: 8%;
-    }
-    .second-fecha{
-        margin-left: 6.6%;
-    }
-    .footer-logo-bncpl{
-        width: 182px;
-        height: 18px;
-    }
-    .space-white-down{
-        margin-top: 20px; 
-        margin-bottom: -20px;
-        max-width: 70%;
-        padding: 0 450px;
-    }
-}
-    </style> 
-</head>
-<body>
-    <div class="logo">
-        <img class="top-logo" src="./Assets/logo_bancoppel_letras_azules.svg" alt="bancoppel-logo">
-    </div>
-    <div class="container-body">
-        <div class="img-top">
-            <img class="logo-container" src="./Assets/SolicitarInformacion.png" alt="solicitar_informacion_logo">
-        </div>
-
-        <div class="user-name">
-            <p>El usuario</p>
-            <h4>{NAME}</h4>
-            <h3>Ingresó una solicitud para contactar con un asesor.</h3>
-        </div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Mailing</title>
+    </head>
+    <body>
         
-        <div class="space-gray">
-            <h3>Datos de la operación</h3>
-            <div class="contain-six">
-                <div class="title-blue">
-                    <p>Nombre completo:</p>
-                    <span>{NAME}</span>
-                </div>
+        <!-- IMAGEN DEL TOP -->
+        <table class="wrapper" role="module" data-type="image" cellpadding="0" cellspacing="0" width="99%" max-width="600px" style="table-layout: fixed;" data-muid="bd6fd59a-c85b-412a-afad-35afa25c8c0d">
+            <tbody>
+                <tr>
+                    <td style="width: 100%;" valign="top" align="center" >
+                        <a href="https://www.bancoppel.com/empresas" target="_blank">
+                            <img class="img-top-bancoppel" style="margin-top: 42px; width: 40%; height: auto;" alt="bancoppel-logo" data-proportionally-constrained="true" data-responsive="true" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641972059/Empresas_ol68bq.png"></td>
+                        </a>
+                </tr>
+            </tbody>
+        </table>
+<!-- IMAGEN DE SOLICITUD -->
+        <table style="width: 100%; min-width: 300px !important; margin-top: 32px; max-width: 650px; padding: 0; border: 1.5px solid #81C1EA; border-radius: 12px; "class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="table-layout: fixed;" data-muid="bd6fd59a-c85b-412a-afad-35afa25c8c0d">
+            <tbody>
+                <tr>
+                <td style="margin-top: 27px; max-width:100%; width: 100%;" valign="top" align="center">          
+                    <img class="img-solicita" style=" width:100%; min-width: 300px; height:auto !important;" alt="Solicitud-img" data-proportionally-constrained="true" data-responsive="true" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641949807/SolicitarInformacion_i4bhuj.png">       
+                </td>
+                </tr>
+            </tbody>
+           <tbody align="center">
+               <tr>
+                   <td>
+                       <p style="margin: 8px 0 0 0; font-family: Futura; font-style: normal; font-weight: 500; font-size: 16px; line-height: 30px; color: #000000;">
+                         El usuario
+                        </p>
+                    </td>
+               </tr>
+               <tr>
+                   <td>
+                       <p style="font-family: Futura; font-style: normal; font-weight: 500; font-size: 22px; line-height: 30px; color: #225AA7; margin: 15px 0 15px 0;">
+                        {NAME}
+                        </p>
+                    </td>
+               </tr>
+               <tr>
+                   <td>
+                        <p style="font-family: Futura; font-size: 16px; line-height: 18px; color: #000000; margin: 0px 0 20px 0;">
+                          Ingresó una solicitud para contactar con un asesor. 
+                        </p>
+                   </td>
+               </tr>
+           </tbody>
 
-                <div class="title-blue">
-                    <p>Email:</p>
-                    <span>{EMAIL}</span>
-                </div>
+           <!-- INICIA LA PARTE GRIS -->
 
-                <div class="title-blue">
-                    <p>Teléfono:</p>
-                    <span>{PHONE}</span>
-                </div>
-
-                <div class="title-blue">
-                    <p>Puesto:</p>
-                    <span>{JOB}</span>
-                </div>
-
-                <div class="title-blue">
-                    <p>Entidad:</p>
-                    <span>{ENTITY}</span>
-                </div>
-
-                <div class="title-blue">
-                    <p>Producto seleccionado:</p>
-                    <span>{PRODUCT}</span>
-                </div>
-            </div>
-            <hr class="linea">
-            <div class="contain-two">
-                <div class="fecha first-fecha">
-                    <img src="./Assets/icn_fecha.svg" alt="fecha-logo">
-                    <span>Fecha de operación:</span>
-                    <p>04-01-2022</p>
-                </div>
+           <tbody style="background-color: #F4F4F4; width: 100%;">
+                <tr>
+                    <td align="center">
+                        <p style="font-family: Futura; font-size: 14px; line-height: 18px; color: #000000;">
+                            Datos de la operación
+                        </p>
+                    </td>
+                </tr>
                 
-                <div class="fecha second-fecha">
-                    <img src="./Assets/icn_hora.svg" alt="hora-logo">
-                    <span>Hora de operación:</span>
-                    <p>04-01-2022</p>
-                </div>   
-            </div>
-        </div>
+                <tr style="display: flex;">
+                    <td style="width: 50%; font-family: Futura; font-size: 14px; padding-left: 80px;">
+                        <p style="line-height: 0px; color: #006EB5; text-align: left;">
+                         Nombre completo:</p>
+                         <p style="line-height: 18px; color: #000000; ">{NAME}</p>
+                    </td>
+                    <td style="width: 50%; font-family: Futura; font-size: 14px;">
+                        <p style="line-height: 0px; color: #006EB5; text-align: left;">
+                        Email:</p>
+                        <p style="line-height: 18px; color: #000000; ">{EMAIL}</p>
+                    </td>
+                </tr>
 
-        <div class="space-white-down">
-            <p>Se solicita resolver antes de 24 horas asignando al cliente un asesor y comunicandose con el usuario para brindar mayor información.</p>
-        </div>
-        <hr class="linea">
+                <tr style="display: flex;  ">
+                    <td style="width: 50%; font-family: Futura; font-size: 14px; padding-left: 80px;">
+                        <p style="line-height: 0px; color: #006EB5; text-align: left;">
+                         Teléfono:</p>
+                         <p style="line-height: 18px; color: #000000; ">{PHONE}</p>
+                    </td>
+                    <td style="width: 50%; font-family: Futura; font-size: 14px;">
+                        <p style="line-height: 0px; color: #006EB5; text-align: left;">
+                        Puesto:</p>
+                        <p style="line-height: 18px; color: #000000; ">{JOB}</p>
+                    </td>
+                </tr>
 
-        <div class="mini-footer">
-            <div class="cate">
-                <span>
-                    Contacto
-                </span>
-                <p>
-                    CATE: 800 849 6187
-                </p>
-            </div>
-            <div class="footer-logo-bncpl">
-                <a href="https://www.bancoppel.com/empresas" target="_blank">
-                    <img src="./Assets/logo_bancoppel_letras_azules.svg" alt="bancoppel-logo">
-                </a>
-            </div>
-            
-            <div class="icns-rs">
-                <a href="https://www.facebook.com/BanCoppel/" target="_blank">
-                    <img class="fb" src="./Assets/facebook.svg" alt="bancoppel-logo">
-                 </a>
-                 <a href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank">
-                     <img clas="yt" src="./Assets/yt.svg" alt="bancoppel-logo">
-                 </a>
-            </div>
-        </div>
-    </div>
-    
-</body>
+                <tr style="display: flex;">
+                    <td style="width: 50%; font-family: Futura; font-size: 14px; text-align: left; padding-left: 80px;">
+                        <p style="line-height: 0px; color: #006EB5;">
+                         Entidad:</p>
+                         <p style="line-height: 18px; color: #000000;">{ENTITY}</p>
+                    </td>
+                    <td style="width: 50%; font-family: Futura; font-size: 14px; text-align: left;">
+                        <p style="line-height: 0px; color: #006EB5;">
+                        Producto seleccionado:</p>
+                        <p style="line-height: 18px; color: #000000;">{PRODUCT}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr style="width: 90%; border: 1px solid #81C1EA; margin-top: 28px; margin-bottom: 38px;">
+                    </td>
+                </tr>
+
+                <tr style="display: flex; margin-bottom: 30px;">
+                    <td style=" padding-left: 80px; width: 50%;">
+                        <img style="max-width: 20px; max-height: 20px;" data-proportionally-constrained="true" data-responsive="true" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641971921/icn_fecha_yf6ytc.png" alt="calendar-icn">
+                        <p style="font-size: 14px; margin: 3px 0 0 0; font-family: Futura; line-height: 18px; color: #006EB5; text-align: left;">Fecha de operación:</p>
+                        <p style="font-size: 14px; margin: 0px 0 0 0; font-family: Futura; line-height: 18px; color: #000000;">{DATE}</p>
+                    </td>
+                    <td style=" width: 50%;">
+                        <img style="max-width: 20px; max-height: 20px;" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641971921/icn_hora_ijnuxp.png" alt="clock-icn">
+                        <p style="font-size: 14px; margin: 3px 0 0 0; font-family: Futura; line-height: 18px; color: #006EB5; text-align: left;">Hora de operación:</p>
+                        <p style="font-size: 14px; margin: 0px 0 0 0; font-family: Futura; line-height: 18px; color: #000000;">{TIME}</p>
+                    </td>
+                </tr>
+           </tbody>
+
+           <!-- SEGUNDO ESPACIO EN BLANCO -->
+
+           <tbody>
+               <tr style="width: auto; display: flex; ">
+                   <td >
+                       <p style="font-family: Futura; font-size: 16px; line-height: 24px; text-align: center; color: #000000; margin: 20px auto 20px auto; width: 60%;">
+                        Se solicita resolver antes de 24 horas asignando al cliente un asesor y comunicandose con el usuario para brindar mayor información.
+                       </p>
+                   </td>
+               </tr>
+               <tr>
+                <td>
+                    <hr style="width: 90%; border: 1px solid #81C1EA; margin-top: 10px;">
+                </td>
+            </tr>
+            <!-- MINIFOOTER -->
+            <tr style="margin-bottom: 34px; height: 35px; display: flex; margin-top: 17px;">
+                <td style="width: 33%; height: 100%; text-align: left; margin-left: 30px; "  >
+                    <p style="margin: 0; width: 100%; height: 50%; font-family: Futura; font-size: 12px; line-height: 24px; color: #000000;">Contacto</p>
+                    <p style="margin: 0; height: 50%; font-family: Futura; font-size: 12px; line-height: 21px; color: #000000;">CATE: 800 849 6187</p>
+                </td>
+                 <td  style="width: 33%; height: 100%; text-align: center;">
+                    <a style="width: 100%; height: 100%;" href="https://www.bancoppel.com/empresas" target="_blank">
+                        <img style="height: 100%; width: 100%; object-fit: scale-down;" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641972059/Empresas_ol68bq.png" alt="bancoppel-logo">
+                    </a>
+                </td>
+                 <td style="width: 33%; text-align: right; margin-right: 30px; height: 100%; padding-top: 5px;" >
+                    <a href="https://www.facebook.com/BanCoppel/" target="_blank">
+                        <img style="height: 100%;" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641971921/facebook_vnq1n4.png" alt="fb-logo">
+                     </a>
+                     <a href="https://www.youtube.com/channel/UCiLO44Yr96fpdkv-ZN-duqg" target="_blank">
+                         <img style="padding-bottom: 10px; height: 70%;" src="https://res.cloudinary.com/dt2crjdk3/image/upload/v1641972034/yt_sj8lel.png" alt="yt-logo">
+                    </a>
+                </td>
+            </tr>
+           </tbody>
+        </table>
+    </body>
 </html>
