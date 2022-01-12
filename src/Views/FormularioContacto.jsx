@@ -150,8 +150,8 @@ class FormularioContacto extends Component {
       email: "",
       phone: "",
       job: "",
-      entity: "-1",
-      product: "-1",
+      entity: 0,
+      product: 0,
     };
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
@@ -191,7 +191,7 @@ class FormularioContacto extends Component {
 
   validateForm(){
     if( (!this.state.entity || this.state.entity == "" || this.state.entity < 0 ) || ( !this.state.product || this.state.product == "" || this.state.product < 0 ) ){
-      this.showAlert({ error: true, message: "Por favor, rellena todos los campos" })
+      this.showAlert({ error: true, message: "Es necesario que completes todos los campos" })
       return
     }
   }
