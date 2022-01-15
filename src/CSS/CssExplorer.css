@@ -1,0 +1,23 @@
+/* BOTÓN NAVBAR, ACCESO Y PERSONAS */
+.BancoppelBtn{
+    font-family: futura_heavy;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: white;
+    color: #225AA7;
+    border: 1.5px solid #225AA7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 143px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.BancoppelBtn:hover {
+    background-color: #225AA7;
+    color: white;
+  }
+
+  
