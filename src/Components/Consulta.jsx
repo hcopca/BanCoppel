@@ -56,7 +56,7 @@ export default function Consulta() {
           <br />
           <p>
             {" "}
-            Producto garantizado por el IPAB por 400 mil UDI.{" "}
+            Producto garantizadoo por el IPAB por 400 mil UDI.{" "}
             <a rel="noreferrer" href="https://www.gob.mx/ipab" target="_blank">
               <span className="llevar">www.ipab.org.mx</span>
             </a>
