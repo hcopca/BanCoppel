@@ -14,7 +14,7 @@ import {
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_nomina.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_nomina.jpg";
-import midImg from "../Assets/Heros/hero_nomina_mid.jpg"
+import midImg from "../Assets/Heros/hero_nomina_mid.jpg";
 import HeroHome from "../Assets/Heros/line1.svg";
 import styled from "styled-components";
 const StyledNominasBanCoppel = styled.div`
@@ -28,23 +28,23 @@ const StyledNominasBanCoppel = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-            height: 100px;
-            width: 330px;
-           }
-           .padresubtitle{
-            .subtitle{
-               height: 55px;
+          .subchildren {
+            h2 {
+              height: 100px;
+              width: 330px;
             }
-           }
-           img{
-             width: 25px;
-             height: 151px;
-             margin-top: -192px;
-             margin-left: 0px;
-           }
-         }
+            .padresubtitle {
+              .subtitle {
+                height: 55px;
+              }
+            }
+            img {
+              width: 25px;
+              height: 151px;
+              margin-top: -192px;
+              margin-left: 0px;
+            }
+          }
         }
       }
     }
@@ -56,25 +56,29 @@ const StyledNominasBanCoppel = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-           height: 170px;
-           width: 500px;
-           }
-           img{
-             margin-top: -251px;
-             height: 210px;
-             width: 35px;
-             margin-left: -10px;
-           }
-         }
+          .subchildren {
+            h2 {
+              height: 170px;
+              width: 500px;
+            }
+            img {
+              margin-top: -251px;
+              height: 210px;
+              width: 35px;
+              margin-left: -10px;
+            }
+          }
         }
       }
     }
   }
 `;
-const titleBanner = "EL DINERO DE TUS TRABAJADORES EN BUENAS MANOS"
-const subtitle = (<p><span>Transfiere tus fondos{" "}</span> cuando quieras</p>)
+const titleBanner = "EL DINERO DE TUS TRABAJADORES EN BUENAS MANOS";
+const subtitle = (
+  <p>
+    <span>Transfiere tus fondos </span> cuando quieras
+  </p>
+);
 class NominasBanCoppel extends Component {
   constructor(props) {
     super(props);
@@ -113,65 +117,69 @@ class NominasBanCoppel extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          Nómina BanCoppel: detalles y requisitos | BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="Nómina BanCoppel: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/nomina-bancoppel" />
-          <meta 
-          name="keywords"
-          content="nomina, bancoppel, requisitos, beneficios, transferencias bancarias" />
-           <meta name="description" 
-           content="Conoce las características y requisitos de Nómina BanCoppel y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel." 
-           />
-      </Helmet>
-      
-      <StyledNominasBanCoppel>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>EL DINERO DE TUS</h2>
-            <h2>
-              TRABAJADORES EN
-              <br />
-              BUENAS MANOS
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              <span>Transfiere tus fondos</span> cuando quieras
-            </h4>
-          </div>
-        </ResponsiveHeader>
+          <title>Nómina BanCoppel: detalles y requisitos | BanCoppel.com</title>
+          <meta
+            name="title"
+            content="Nómina BanCoppel: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/nomina-bancoppel"
+          />
+          <meta
+            name="keywords"
+            content="nomina, bancoppel, requisitos, beneficios, transferencias bancarias"
+          />
+          <meta
+            name="description"
+            content="Conoce las características y requisitos de Nómina BanCoppel y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel."
+          />
+        </Helmet>
 
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={midImg}
-          banner={HeroHome}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <h1>
-            NÓMINA <span>BANCOPPEL</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher
-          items={CravSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
+        <StyledNominasBanCoppel>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>EL DINERO DE TUS</h2>
+              <h2>
+                TRABAJADORES EN
+                <br />
+                BUENAS MANOS
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                <span>Transfiere tus fondos</span> cuando quieras
+              </h4>
+            </div>
+          </ResponsiveHeader>
 
-        <ListaProductos />
-      </StyledNominasBanCoppel>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={midImg}
+            banner={HeroHome}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <h1>
+              NÓMINA <span>BANCOPPEL</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={CravSections} body={this.body} />
+          <Switcher
+            items={CravSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+
+          <ListaProductos />
+        </StyledNominasBanCoppel>
       </>
     );
   }

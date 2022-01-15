@@ -25,72 +25,75 @@ const StyledFinanciamiento = styled.div`
       flex: 3.2;
     }
 
-  .hero_container{
-    .container{
-      .children{
-        .subchildren{
-          h2{
-          }
-          .padresubtitle{
-            .subtitle{
-              width: 330px;
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            h2 {
+            }
+            .padresubtitle {
+              .subtitle {
+                width: 330px;
+              }
             }
           }
         }
       }
     }
   }
-}
-  
-@media (min-width: 1200px) {
-  .hero_container {
-    .container {
-      .children {
-       .subchildren{
-         h2{
-           height: 70px;
-          width: 520px;
-         }
-         img{
-           margin-top: -160px;
-           width: 21px;
-           height: 126px;
-           margin-left: 4px;
-         }
-       }
+
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            h2 {
+              height: 70px;
+              width: 520px;
+            }
+            img {
+              margin-top: -160px;
+              width: 21px;
+              height: 126px;
+              margin-left: 4px;
+            }
+          }
+        }
       }
     }
   }
-}
-@media (min-width: 1400px) {
-  .header_body {
+  @media (min-width: 1400px) {
+    .header_body {
       flex: 9.6;
     }
-  .hero_container {
-    .container {
-      margin-left: 120px;
-      .children {
-       .subchildren{
-         h2{
-          width: 620px;
-          height: 90px;
-         }
-         img{
-           margin-top: -180px;
-           width: 24px;
-           height: 146px;
-           margin-left: 1px;
-         }
-       }
+    .hero_container {
+      .container {
+        margin-left: 120px;
+        .children {
+          .subchildren {
+            h2 {
+              width: 620px;
+              height: 90px;
+            }
+            img {
+              margin-top: -180px;
+              width: 24px;
+              height: 146px;
+              margin-left: 1px;
+            }
+          }
+        }
       }
     }
   }
-}
 `;
-const titleBanner = "DISEÑADO PARA RESOLVER TUS IMPREVISTOS"
+const titleBanner = "DISEÑADO PARA RESOLVER TUS IMPREVISTOS";
 const subtitle = (
-  <p>No te quedes sin lo <span>{" "}indispensable</span> para tu <span>{" "}negocio</span></p>
-)
+  <p>
+    No te quedes sin lo <span> indispensable</span> para tu{" "}
+    <span> negocio</span>
+  </p>
+);
 class FinanciamientoOrdenesCompra extends Component {
   constructor(props) {
     super(props);
@@ -142,61 +145,66 @@ class FinanciamientoOrdenesCompra extends Component {
   render() {
     return (
       <>
-       <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com
+            Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/financiamiento-ordenes-de-compra" />
-          <meta 
-          name="keywords"
-          content="ordenes de compra, financiamiento,banca empresarial, bancoppel, credito,requisitos, negocio" />
-           <meta
+          <meta
+            name="title"
+            content="Financiamiento de Órdenes de Compra - requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/financiamiento-ordenes-de-compra"
+          />
+          <meta
+            name="keywords"
+            content="ordenes de compra, financiamiento,banca empresarial, bancoppel, credito,requisitos, negocio"
+          />
+          <meta
             name="description"
             content="Conoce las características y requisitos del Financiamiento de Órdenes de compra y disfruta los beneficios de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-      <StyledFinanciamiento>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>Diseñado para</h2>
+        </Helmet>
+        <StyledFinanciamiento>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>Diseñado para</h2>
 
-            <h2>resolver tus imprevistos</h2>
-          </div>
-          <div className="copy">
-            <h4>
-              No te quedes sin lo <br /> indispensable para tu negocio
-            </h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          banner={HeroHome}
-          midImg={Hero_mid}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <h1 className="header_product">
-            Financiamiento de <span>Órdenes de compra</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher
-          items={SolucionesCreditoSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-      </StyledFinanciamiento>
+              <h2>resolver tus imprevistos</h2>
+            </div>
+            <div className="copy">
+              <h4>
+                No te quedes sin lo <br /> indispensable para tu negocio
+              </h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            banner={HeroHome}
+            midImg={Hero_mid}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <h1 className="header_product">
+              Financiamiento de <span>Órdenes de compra</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={SolucionesCreditoSections} body={this.body} />
+          <Switcher
+            items={SolucionesCreditoSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+        </StyledFinanciamiento>
       </>
     );
   }

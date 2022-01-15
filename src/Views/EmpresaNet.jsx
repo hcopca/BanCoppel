@@ -13,7 +13,7 @@ import {
 } from "../Components";
 import Hero_ from "../Assets/Heros/hero_empresanet.jpg";
 import Hero_responsive from "../Assets/Heros/hero_responsive_empresanet.jpg";
-import midImg from "../Assets/Heros/hero_empresanet_mid.jpg"
+import midImg from "../Assets/Heros/hero_empresanet_mid.jpg";
 import HeroHome from "../Assets/Heros/line1.svg";
 import styled from "styled-components";
 const StyledEmpresaNet = styled.div`
@@ -27,25 +27,25 @@ const StyledEmpresaNet = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-            height: 70px;
-            width: 450px;
-           }
-           .padresubtitle{
-            .subtitle{
-               height: 60px;
-               width: 260px;
-               padding-top: 5px;
+          .subchildren {
+            h2 {
+              height: 70px;
+              width: 450px;
             }
-           }
-           img{
-             width: 19px;
-             height: 114px;
-             margin-top: -157px;
-             margin-left: 6px;
-           }
-         }
+            .padresubtitle {
+              .subtitle {
+                height: 60px;
+                width: 260px;
+                padding-top: 5px;
+              }
+            }
+            img {
+              width: 19px;
+              height: 114px;
+              margin-top: -157px;
+              margin-left: 6px;
+            }
+          }
         }
       }
     }
@@ -58,32 +58,36 @@ const StyledEmpresaNet = styled.div`
       .container {
         margin-left: 90px;
         .children {
-         .subchildren{
-           h2{
-            height: 90px;
-            width: 650px;
-           }
-           .padresubtitle{
-            .subtitle{
-              height: 69px;
-               width: 378px;
+          .subchildren {
+            h2 {
+              height: 90px;
+              width: 650px;
             }
-           }
-           img{
-             margin-top: -180px;
-             height: 145px;
-             width: 24px;
-             margin-left: 1px;
-           }
-         }
+            .padresubtitle {
+              .subtitle {
+                height: 69px;
+                width: 378px;
+              }
+            }
+            img {
+              margin-top: -180px;
+              height: 145px;
+              width: 24px;
+              margin-left: 1px;
+            }
+          }
         }
       }
     }
   }
 `;
 
-const titleBanner = "LOS BENEFICIOS DE LA BANCA SIN SALIR DE CASA"
-const subtitle = (<p>Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span></p>)
+const titleBanner = "LOS BENEFICIOS DE LA BANCA SIN SALIR DE CASA";
+const subtitle = (
+  <p>
+    Maneja <span>tus cuentas</span> desde la comodidad de <span>tu hogar</span>
+  </p>
+);
 class EmpresaNet extends Component {
   constructor(props) {
     super(props);
@@ -120,66 +124,69 @@ class EmpresaNet extends Component {
   render() {
     return (
       <>
-       <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          EmpresaNet: banca por internet | BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="EmpresaNet: banca por internet | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/empresanet" />
-          <meta 
-          name="keywords"
-          content="banca empresarial, bancoppel, banco, cuentas, empresa,operaciones financieras,  negocio,  administrar," />
-           <meta
+          <title>EmpresaNet: banca por internet | BanCoppel.com</title>
+          <meta
+            name="title"
+            content="EmpresaNet: banca por internet | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/empresanet"
+          />
+          <meta
+            name="keywords"
+            content="banca empresarial, bancoppel, banco, cuentas, empresa,operaciones financieras,  negocio,  administrar,"
+          />
+          <meta
             name="description"
             content="Conoce todas las operaciones que puedes realizar desde EmpresaNet para tu negocio."
             data-react-helmet="true"
           />
-      </Helmet>
-      <StyledEmpresaNet>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>Los beneficios</h2>
-            <h2>
-              de la Banca sin
-              <br />
-              salir de casa
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              Maneja <span>tus cuentas</span> desde la comodidad de{" "}
-              <span>tu hogar</span>
-            </h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={midImg}
-          banner={HeroHome}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <h1>
-            Empresa<span>Net</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={CravSections} body={this.body} />
-        <Switcher
-          items={CravSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
+        </Helmet>
+        <StyledEmpresaNet>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>Los beneficios</h2>
+              <h2>
+                de la Banca sin
+                <br />
+                salir de casa
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                Maneja <span>tus cuentas</span> desde la comodidad de{" "}
+                <span>tu hogar</span>
+              </h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={midImg}
+            banner={HeroHome}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <h1>
+              Empresa<span>Net</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={CravSections} body={this.body} />
+          <Switcher
+            items={CravSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
 
-        <ListaProductos />
-      </StyledEmpresaNet>
+          <ListaProductos />
+        </StyledEmpresaNet>
       </>
     );
   }

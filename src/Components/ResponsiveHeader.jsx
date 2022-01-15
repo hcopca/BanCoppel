@@ -65,7 +65,7 @@ export default function ResponsiveHeader(props) {
     <StyledHeader>
       <Container>
         {props.children}
-        <Link to="/empresas/contacto">
+        <Link to="/contacto">
           <BancoppelBtn amarillo>Me interesa</BancoppelBtn>
         </Link>
       </Container>

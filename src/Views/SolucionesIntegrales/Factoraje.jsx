@@ -15,7 +15,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_factoraje.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_factoraje.jpg";
-import midImg from "../../Assets/Heros/hero_factoraje_mid.jpg"
+import midImg from "../../Assets/Heros/hero_factoraje_mid.jpg";
 import HeroHome from "../../Assets/Heros/line1.svg";
 
 import styled from "styled-components";
@@ -30,30 +30,30 @@ const StyledPruductHeader = styled.div`
   }
 `;
 const StyledFactoraje = styled.div`
-@media (min-width: 992px) {
+  @media (min-width: 992px) {
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-            height: 100px;
-            width: 454px;
-           }
-           .padresubtitle{
-              .subtitle{
+          .subchildren {
+            h2 {
+              height: 100px;
+              width: 454px;
+            }
+            .padresubtitle {
+              .subtitle {
                 max-width: 500px;
                 height: 55px;
+              }
             }
-           }
-           img{
-             width: 23px;
-             margin-top: -180px;
-             margin-left: 2px;
-           }
-           button{
-             margin-top: 0px;
-           }
-         }
+            img {
+              width: 23px;
+              margin-top: -180px;
+              margin-left: 2px;
+            }
+            button {
+              margin-top: 0px;
+            }
+          }
         }
       }
     }
@@ -65,20 +65,20 @@ const StyledFactoraje = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-           height: 110px;
-           }
-           img{
-             margin-top: -198px;
-             width: 26px;
-             height: 156px;
-             margin-left: -1px;
-           }
-           button{
-             margin-top: 35px;
-           }
-         }
+          .subchildren {
+            h2 {
+              height: 110px;
+            }
+            img {
+              margin-top: -198px;
+              width: 26px;
+              height: 156px;
+              margin-left: -1px;
+            }
+            button {
+              margin-top: 35px;
+            }
+          }
         }
       }
     }
@@ -90,31 +90,35 @@ const StyledFactoraje = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-             width: 530px;
-             height: 153px;
-           }
-           img{
-             margin-top: -231px;
-             width: 31px;
-             height: 192px;
-             margin-left: -6px;
-           }
-           .padresubtitle{
-              .subtitle{
+          .subchildren {
+            h2 {
+              width: 530px;
+              height: 153px;
+            }
+            img {
+              margin-top: -231px;
+              width: 31px;
+              height: 192px;
+              margin-left: -6px;
+            }
+            .padresubtitle {
+              .subtitle {
                 max-width: 600px;
                 height: 55px;
+              }
             }
-           }
-         }
+          }
         }
       }
     }
   }
 `;
-const titleBanner = "FINANCIMIENTO PENSADO PARA HACER CRECER TU EMPRESA"
-const subtitle = (<p>El manejo de <span>tu dinero</span> está en buenas manos</p>)
+const titleBanner = "FINANCIMIENTO PENSADO PARA HACER CRECER TU EMPRESA";
+const subtitle = (
+  <p>
+    El manejo de <span>tu dinero</span> está en buenas manos
+  </p>
+);
 class SolucionesCredito extends Component {
   constructor(props) {
     super(props);
@@ -141,7 +145,7 @@ class SolucionesCredito extends Component {
               Actividad Empresarial.
             </>
           );
-          return <PerfilSolicitante bullets={["Personas Morales.",]} />; //lleva "item" despues de personas morales para mostrar más requisitos en perfil de solicitante
+          return <PerfilSolicitante bullets={["Personas Morales."]} />; //lleva "item" despues de personas morales para mostrar más requisitos en perfil de solicitante
         default:
           console.error("No hay solucion definida", data);
       }
@@ -162,66 +166,73 @@ class SolucionesCredito extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Factoraje Financiero: detalles y requisitos | BanCoppel.com
+            Factoraje Financiero: detalles y requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Factoraje Financiero: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href=" https://www.bancoppel.com/empresas/factoraje-financiero" />
-          <meta 
-          name="keywords"
-          content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel" />
+          <meta
+            name="title"
+            content="Factoraje Financiero: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href=" https://www.bancoppel.com/bancoppel/factoraje-financiero"
+          />
+          <meta
+            name="keywords"
+            content="factoraje financiero, financiamiento, empresa, credito, requisitos, bancoppel"
+          />
           <meta
             name="description"
             content="Conoce las características y requisitos del Factoraje Financiero y disfruta de los beneficios de financiamiento de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-     <StyledFactoraje>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>
-              Producto de <br />
-              financiamiento
-            </h2>
-            <h2>
-              pensado para
-              <br /> hacer crecer a<br />
-              tu empresa
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              El manejo de tus cobros está <br /> en buenas manos
-            </h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={midImg}
-          banner={HeroHome}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <StyledPruductHeader>
-            <h1 className="header_product">FACTORAJE <span>FINANCIERO</span></h1>
-          </StyledPruductHeader>
-        </ProductHeader>
-        <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher
-          items={SolucionesCreditoSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
+        </Helmet>
+        <StyledFactoraje>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>
+                Producto de <br />
+                financiamiento
+              </h2>
+              <h2>
+                pensado para
+                <br /> hacer crecer a<br />
+                tu empresa
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                El manejo de tus cobros está <br /> en buenas manos
+              </h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={midImg}
+            banner={HeroHome}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <StyledPruductHeader>
+              <h1 className="header_product">
+                FACTORAJE <span>FINANCIERO</span>
+              </h1>
+            </StyledPruductHeader>
+          </ProductHeader>
+          <Accordion items={SolucionesCreditoSections} body={this.body} />
+          <Switcher
+            items={SolucionesCreditoSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
         </StyledFactoraje>
       </>
     );
@@ -237,8 +248,7 @@ const SolucionesCreditoSections = [
     card: {
       image: require("../../Assets/mano_factoraje.png").default,
       //Revisar el tamaño de card
-      copy2:
-        "Financiamiento que impulsa el crecimiento de tus Proveedores.",
+      copy2: "Financiamiento que impulsa el crecimiento de tus Proveedores.",
     },
 
     items: [

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import InputBancoppel from "./InputBancoppel";
-import BancoppelBtn from "./BancoppelBtn";
+import { BancoppelBtn } from "./BancoppelBtn";
 import styled from "styled-components";
 
 const StyledAcceso = styled.div`
@@ -15,7 +15,7 @@ const StyledAcceso = styled.div`
   box-shadow: 0px 10.8621px 10.8621px rgba(0, 0, 0, 0.1);
 
   z-index: 1000000;
-/* 
+  /* 
   .type_user {
     display: flex;
     .user {
@@ -113,7 +113,7 @@ export default class AccesoForm extends Component {
     e.preventDefault();
   }
 
-  render(){
+  render() {
     return (
       <StyledForm>
         <form onSubmit={(e) => this.onSubmit(e)}>
@@ -126,7 +126,6 @@ export default class AccesoForm extends Component {
               value={this.state.Usuario}
               onChange={(e) => this.onChange(e)}
               required
-              
             />
           </div>
           <div className="form_item">
@@ -138,7 +137,6 @@ export default class AccesoForm extends Component {
               value={this.state.Contraseña}
               onChange={(e) => this.onChange(e)}
               required
-            
             />
           </div>
 

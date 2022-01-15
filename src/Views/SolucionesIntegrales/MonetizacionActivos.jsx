@@ -15,7 +15,7 @@ import {
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_monetizacion.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_responsive_monetizacion.jpg";
-import midImg from "../../Assets/Heros/hero_monetizacion_mid.jpg"
+import midImg from "../../Assets/Heros/hero_monetizacion_mid.jpg";
 import HeroHome from "../../Assets/Heros/line1.svg";
 import styled from "styled-components";
 
@@ -24,70 +24,74 @@ const StyledPruductHeader = styled.div`
     .header_body {
       flex: 3.4;
     }
-  .hero_container{
-    .container{
-      .children{
-        .subchildren{
-          h2{
-            width: 400px;
-          }
-          .padresubtitle{
-            .subtitle{
-              width: 350px;
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            h2 {
+              width: 400px;
+            }
+            .padresubtitle {
+              .subtitle {
+                width: 350px;
+              }
             }
           }
         }
       }
     }
   }
-}
-  
-@media (min-width: 1200px) {
-  .hero_container {
-    .container {
-      .children {
-       .subchildren{
-         h2{
-          height: 70px;
-         }
-         img{
-           margin-top: -157px;
-           width: 20px;
-           height: 120px;
-           margin-left: 5px;
-         }
-       }
+
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            h2 {
+              height: 70px;
+            }
+            img {
+              margin-top: -157px;
+              width: 20px;
+              height: 120px;
+              margin-left: 5px;
+            }
+          }
+        }
       }
     }
   }
-}
-@media (min-width: 1400px) {
-  .header_body {
+  @media (min-width: 1400px) {
+    .header_body {
       flex: 5;
     }
-  .hero_container {
-    .container {
-      .children {
-       .subchildren{
-         h2{
-           width: 600px;
-          height: 90px;
-         }
-         img{
-           margin-top: -178px;
-           width: 23px;
-           height: 141px;
-           margin-left: 2px;
-         }
-       }
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            h2 {
+              width: 600px;
+              height: 90px;
+            }
+            img {
+              margin-top: -178px;
+              width: 23px;
+              height: 141px;
+              margin-left: 2px;
+            }
+          }
+        }
       }
     }
   }
-}
 `;
 
-const titleBanner = "CAPITAL DE TRABAJO PARA TU EMPRESA"
-const subtitle = (<p><span>Te ayudamos</span> a optimizar tus activos</p>)
+const titleBanner = "CAPITAL DE TRABAJO PARA TU EMPRESA";
+const subtitle = (
+  <p>
+    <span>Te ayudamos</span> a optimizar tus activos
+  </p>
+);
 class MonetizacionActivos extends Component {
   constructor(props) {
     super(props);
@@ -145,64 +149,69 @@ class MonetizacionActivos extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Monetización de Activos: detalles y requisitos | BanCoppel.com
+            Monetización de Activos: detalles y requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Monetización de Activos: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/monetizacion-de-activos" />
-          <meta 
-          name="keywords"
-          content="monetizacion, activos, bancoppel, financiamiento, credito, requisitos, credito empresarial" />
-           <meta
+          <meta
+            name="title"
+            content="Monetización de Activos: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/monetizacion-de-activos"
+          />
+          <meta
+            name="keywords"
+            content="monetizacion, activos, bancoppel, financiamiento, credito, requisitos, credito empresarial"
+          />
+          <meta
             name="description"
             content="Conoce las características y requisitos de la Monetización de Activos y disfruta los beneficios de financiamiento de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-     
-      <StyledPruductHeader>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>Arrendamiento</h2>
+        </Helmet>
 
-            <h2>a largo plazo</h2>
-          </div>
-          <div className="copy">
-            <h4>
-              El financiamiento que <br /> estabas buscando
-            </h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={midImg}
-          banner={HeroHome}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <StyledPruductHeader>
-            <h1 className="header_product">
-              Monetización <span>de Activos</span>
-            </h1>
-          </StyledPruductHeader>
-        </ProductHeader>
-        <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher
-          items={SolucionesCreditoSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-      </StyledPruductHeader>
+        <StyledPruductHeader>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>Arrendamiento</h2>
+
+              <h2>a largo plazo</h2>
+            </div>
+            <div className="copy">
+              <h4>
+                El financiamiento que <br /> estabas buscando
+              </h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={midImg}
+            banner={HeroHome}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <StyledPruductHeader>
+              <h1 className="header_product">
+                Monetización <span>de Activos</span>
+              </h1>
+            </StyledPruductHeader>
+          </ProductHeader>
+          <Accordion items={SolucionesCreditoSections} body={this.body} />
+          <Switcher
+            items={SolucionesCreditoSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+        </StyledPruductHeader>
       </>
     );
   }
@@ -216,8 +225,7 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../../Assets/mano_monetizacion.png").default,
-      copy2:
-        "Te brindamos liquidez sobre tu Activo Fijo.",
+      copy2: "Te brindamos liquidez sobre tu Activo Fijo.",
     },
 
     items: [

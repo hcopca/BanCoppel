@@ -29,8 +29,8 @@ const StyledEmpresas = styled.div`
         margin-bottom: 0;
       }
       &:hover {
-      font-family: futura_heavy; //Era bold
-    }
+        font-family: futura_heavy; //Era bold
+      }
     }
 
     .item_ {
@@ -110,17 +110,17 @@ class EmpresaSide extends Component {
 
   preOpen(path) {
     const soluciones_credito = [
-      "/empresas/credito-simple",
+      "/credito-simple",
       "/crav",
-      "/empresas/credito-cuenta-corriente",
-      "/empresas/credito-puente",
-      "/empresas/arrendamiento-financiero",
+      "/credito-cuenta-corriente",
+      "/credito-puente",
+      "/arrendamiento-financiero",
     ];
     const soluciones_integrales = [
-      "/empresas/proyectos-de-inversion",
-      "/empresas/financiamiento-ordenes-de-compra",
-      "/empresas/monetizacion-de-activos",
-      "/empresas/factoraje-financiero",
+      "/proyectos-de-inversion",
+      "/financiamiento-ordenes-de-compra",
+      "/monetizacion-de-activos",
+      "/factoraje-financiero",
     ];
 
     if (soluciones_credito.includes(path)) {
@@ -152,7 +152,7 @@ class EmpresaSide extends Component {
       <StyledEmpresas>
         <NavLink
           className="item_"
-          to="/empresas"
+          to="/"
           onClick={() => setState({ onOpen: false })}
         >
           Inicio
@@ -169,14 +169,14 @@ class EmpresaSide extends Component {
             >
               <AccordionItemButton>
                 Soluciones de crédito
-                {this.state.credito ? <Menos /> : <Mas />}
+                {/*this.state.credito ? <Menos /> : <Mas />*/}
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="body_">
                 <NavLink
                   className="item_"
-                  to="/empresas/credito-simple"
+                  to="/credito-simple"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -192,7 +192,7 @@ class EmpresaSide extends Component {
                 </NavLink> */}
                 <NavLink
                   className="item_"
-                  to="/empresas/credito-cuenta-corriente"
+                  to="/credito-cuenta-corriente"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -200,7 +200,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/credito-puente"
+                  to="/credito-puente"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -208,7 +208,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/arrendamiento-financiero"
+                  to="/arrendamiento-financiero"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -226,14 +226,14 @@ class EmpresaSide extends Component {
             >
               <AccordionItemButton>
                 Soluciones Integrales
-                {this.state.integrales ? <Menos /> : <Mas />}
+                {/*this.state.integrales ? <Menos /> : <Mas />*/}
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="body_">
                 <NavLink
                   className="item_"
-                  to="/empresas/proyectos-de-inversion"
+                  to="/proyectos-de-inversion"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -241,7 +241,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/financiamiento-ordenes-de-compra"
+                  to="/financiamiento-ordenes-de-compra"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -249,7 +249,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/monetizacion-de-activos"
+                  to="/monetizacion-de-activos"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -257,7 +257,7 @@ class EmpresaSide extends Component {
                 </NavLink>
                 <NavLink
                   className="item_"
-                  to="/empresas/factoraje-financiero"
+                  to="/factoraje-financiero"
                   activeClassName="selected_link"
                   onClick={() => setState({ onOpen: false })}
                 >
@@ -270,7 +270,7 @@ class EmpresaSide extends Component {
 
         <NavLink
           className="item_"
-          to="/empresas/nomina-bancoppel"
+          to="/nomina-bancoppel"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >
@@ -278,7 +278,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="item_"
-          to="/empresas/empresanet"
+          to="/empresanet"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >
@@ -286,7 +286,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="item_"
-          to="/empresas/cuenta-inversion-empresarial"
+          to="/cuenta-inversion-empresarial"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >
@@ -294,7 +294,7 @@ class EmpresaSide extends Component {
         </NavLink>
         <NavLink
           className="last item_"
-          to="/empresas/contacto"
+          to="/contacto"
           activeClassName="selected_link"
           onClick={() => setState({ onOpen: false })}
         >

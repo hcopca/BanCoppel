@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink, } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import BancoppelBtn from "./BancoppelBtn";
 import SideDrawer from "./SideDrawer";
@@ -101,7 +101,7 @@ class Navbar extends Component {
     super(props);
     this.state = { onOpen: false, openAcceso: false };
   }
-  
+
   render() {
     return (
       <>
@@ -116,29 +116,33 @@ class Navbar extends Component {
                 <div className="ham-item center"></div>
                 <div className="ham-item"></div>
               </div>
-              <Link to="/empresas">
+              <Link to="/">
                 <img className="bancoppel_logo" src={Logo} alt="" />
               </Link>
             </div>
             <div className="navigation">
-              <a href="https://www.bancoppel.com/main/index.html" target="_blank" rel="noreferrer" className="navigation-item">
+              <a
+                href="https://www.bancoppel.com/main/index.html"
+                target="_blank"
+                rel="noreferrer"
+                className="navigation-item"
+              >
                 <BancoppelBtn>Personas</BancoppelBtn>
               </a>
-              {/* <NavLink to="/empresas" className="navigation-item">
+              {/* <NavLink to="/bancoppel" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink> */}
-              <NavLink to="/empresas/login">
-              {/* <a href="https://dodobypaco.com/prueba/login_empresas.html"> */}
-              <BancoppelBtn
-                secundario
-                // onClick={() => openInNewTab("https://bancoppel.com/empresas/index.html")}
-                // onClick={() =>
-                //   this.setState({ openAcceso: !this.state.openAcceso })
-                // }
-              
-              >
-               Acceso 
-              </BancoppelBtn>
+              <NavLink to="/login">
+                {/* <a href="https://dodobypaco.com/prueba/login_empresas.html"> */}
+                <BancoppelBtn
+                  secundario
+                  // onClick={() => openInNewTab("https://bancoppel.com/bancoppel/index.html")}
+                  // onClick={() =>
+                  //   this.setState({ openAcceso: !this.state.openAcceso })
+                  // }
+                >
+                  Acceso
+                </BancoppelBtn>
               </NavLink>
               {/* </a> */}
               {this.state.openAcceso ? (

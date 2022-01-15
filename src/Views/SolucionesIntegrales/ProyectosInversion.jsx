@@ -12,7 +12,7 @@ import {
   Requisitos,
   PerfilSolicitante,
   TeInteresa,
-  ResponsiveHeader
+  ResponsiveHeader,
   // ListBullets,
 } from "../../Components";
 import Hero_ from "../../Assets/Heros/hero_proyectos_inversion.jpg";
@@ -70,79 +70,82 @@ const StyledPruductHeader = styled.div`
   }
 `;
 const StyledProyectosInversion = styled.div`
-@media (min-width: 992px) {
-  .hero_container{
-    .container{
-      .children{
-        .subchildren{
-          .padresubtitle{
-            .subtitle{
-              width: 310px; //CUADRO AZUL
+  @media (min-width: 992px) {
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            .padresubtitle {
+              .subtitle {
+                width: 310px; //CUADRO AZUL
+              }
+            }
+            h2 {
+              width: 500px;
+              height: 100px;
+            }
+            img {
+              width: 24px;
+              margin-top: -180px;
+              margin-left: 1px;
             }
           }
-          h2{
-            width: 500px;
-            height: 100px;
-          }
-          img{
-            width: 24px;
-            margin-top: -180px;
-            margin-left: 1px;
+        }
+      }
+    }
+    .header_body {
+      flex: 3.7;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero_container {
+      .container {
+        .children {
+          .subchildren {
+            img {
+              margin-top: -186px;
+              width: 25px;
+              height: 150px;
+              margin-left: 0px;
+            }
           }
         }
       }
     }
   }
-  .header_body {
-      flex: 3.7;
-    }
-}
-  
-@media (min-width: 1200px) {
-  .hero_container {
-    .container {
-      .children {
-       .subchildren{
-         img{
-           margin-top: -186px;
-           width: 25px;
-           height: 150px;
-           margin-left: 0px;
-         }
-       }
-      }
-    }
-  }
-}
-@media (min-width: 1400px) {
-  .header_body {
+  @media (min-width: 1400px) {
+    .header_body {
       flex: 4.5; //
     }
     .hero_container {
       .container {
         margin-left: 100px;
         .children {
-         .subchildren{
-           h2{
-            height: 100px;
-            width: 657px;
-           }
-           img{
-             margin-top: -188px;
-             width: 25px;
-            height: 152px;
-             margin-left: -0px;
-           }
-         }
+          .subchildren {
+            h2 {
+              height: 100px;
+              width: 657px;
+            }
+            img {
+              margin-top: -188px;
+              width: 25px;
+              height: 152px;
+              margin-left: -0px;
+            }
+          }
         }
       }
     }
   }
 `;
-const titleBanner = "CONSTRUIMOS SOLUCIONES A LA MEDIDA DE TU NEGOCIO"
+const titleBanner = "CONSTRUIMOS SOLUCIONES A LA MEDIDA DE TU NEGOCIO";
 const subtitle = (
-  <p><span>El financiamiento{" "}</span> que necesitas para darle vida a tus proyectos</p>
-)
+  <p>
+    <span>El financiamiento </span> que necesitas para darle vida a tus
+    proyectos
+  </p>
+);
 class ProyectosInversion extends Component {
   constructor(props) {
     super(props);
@@ -164,10 +167,14 @@ class ProyectosInversion extends Component {
             </>
           );
         case "Perfil del solicitante":
-          return <PerfilSolicitante bullets={[
-          <>Personas Morales.</>,
-          <>“Vehículos de propósito específico (SPV)"</>
-        ]} />;
+          return (
+            <PerfilSolicitante
+              bullets={[
+                <>Personas Morales.</>,
+                <>“Vehículos de propósito específico (SPV)"</>,
+              ]}
+            />
+          );
         default:
           console.error("No hay solucion definida", data);
       }
@@ -188,71 +195,76 @@ class ProyectosInversion extends Component {
   render() {
     return (
       <>
-       <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Proyectos de Inversión: detalles y requisitos | BanCoppel.com
+            Proyectos de Inversión: detalles y requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Proyectos de Inversión: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/proyectos-de-inversion" />
-          <meta 
-          name="keywords"
-          content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa" />
+          <meta
+            name="title"
+            content="Proyectos de Inversión: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/proyectos-de-inversion"
+          />
+          <meta
+            name="keywords"
+            content="proyectos de inversion, financiamiento,banca empresarial, bancoppel, credito,requisitos, empresa"
+          />
           <meta
             name="description"
             content="Conoce las características de los Proyectos de Inversión que tenemos en Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-      <StyledProyectosInversion>
-        <StyledHeader>
-          <Container>
-            <ResponsiveHeader>
-            <div className="title">
-              <h2>
-                Construimos <br /> soluciones a la
-              </h2>
+        </Helmet>
+        <StyledProyectosInversion>
+          <StyledHeader>
+            <Container>
+              <ResponsiveHeader>
+                <div className="title">
+                  <h2>
+                    Construimos <br /> soluciones a la
+                  </h2>
 
-              <h2>
-                medida de tu <br /> negocio
-              </h2>
-            </div>
-            <div className="copy">
-              <h4>
-                <span>El Financiamiento</span> que necesitas <br /> para darle
-                vida a tus proyectos
-              </h4>
-            </div>
-            </ResponsiveHeader>
-          </Container>
-        </StyledHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          banner={HeroHome}
-          midImg={Hero_mid}
-          path="/"
-          titleBanner = {titleBanner}
-          subtitle = {subtitle}
-        />
-        <ProductHeader>
-          <StyledPruductHeader>
-            <h1 className="header_product">
-              Proyectos <span>de inversión</span>
-            </h1>
-          </StyledPruductHeader>
-        </ProductHeader>
-        <Accordion items={SolucionesCreditoSections} body={this.body} />
-        <Switcher
-          items={SolucionesCreditoSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
+                  <h2>
+                    medida de tu <br /> negocio
+                  </h2>
+                </div>
+                <div className="copy">
+                  <h4>
+                    <span>El Financiamiento</span> que necesitas <br /> para
+                    darle vida a tus proyectos
+                  </h4>
+                </div>
+              </ResponsiveHeader>
+            </Container>
+          </StyledHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            banner={HeroHome}
+            midImg={Hero_mid}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <StyledPruductHeader>
+              <h1 className="header_product">
+                Proyectos <span>de inversión</span>
+              </h1>
+            </StyledPruductHeader>
+          </ProductHeader>
+          <Accordion items={SolucionesCreditoSections} body={this.body} />
+          <Switcher
+            items={SolucionesCreditoSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
         </StyledProyectosInversion>
       </>
     );
@@ -267,8 +279,7 @@ const SolucionesCreditoSections = [
 
     card: {
       image: require("../../Assets/mano_proyectos_inversion.png").default,
-      copy2:
-        "Financiamiento de largo plazo para tus proyectos.",
+      copy2: "Financiamiento de largo plazo para tus proyectos.",
     },
 
     items: [

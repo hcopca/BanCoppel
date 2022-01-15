@@ -26,51 +26,52 @@ body {
 @font-face {
   font-family: futura_bold;
   src: url("./Assets/Fonts/futura/Futura_Bold.eot"),
-  url("./Assets/Fonts/futura/Futura_Bold.woff") format('woff'),
-  url("./Assets/Fonts/futura/Futura_Bold.woff2")format('woff2'),
-  url("./Assets/Fonts/futura/Futura_Bold.ttf") format('truetype'); 
+    url("./Assets/Fonts/futura/Futura_Bold.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_Bold.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/Futura_Bold.ttf") format("truetype");
   /* font-display: swap; */
 }
 @font-face {
   font-family: futura_normal;
   src: url("./Assets/Fonts/futura/Futura_medium.eot"),
-  url("./Assets/Fonts/futura/Futura_medium.woff") format('woff'),
-  url("./Assets/Fonts/futura/Futura_medium.woff2")format('woff2'),
-  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
+    url("./Assets/Fonts/futura/Futura_medium.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_medium.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/futura_medium_bt.ttf") format("truetype");
   /* font-display: swap; */
 }
 @font-face {
   font-family: futura;
   src: url("./Assets/Fonts/futura/Futura_medium.eot"),
-  url("./Assets/Fonts/futura/Futura_medium.woff") format('woff'),
-  url("./Assets/Fonts/futura/Futura_medium.woff2") format('woff2'),
-  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
+    url("./Assets/Fonts/futura/Futura_medium.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_medium.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/futura_medium_bt.ttf") format("truetype");
   /* font-display: swap; */
 }
 @font-face {
   font-family: Futura;
   src: url("./Assets/Fonts/futura/Futura_medium.eot"),
-  url("./Assets/Fonts/futura/Futura_medium.woff"), format('woff')
-  url("./Assets/Fonts/futura/Futura_medium.woff2") format('woff2'),
-  url("./Assets/Fonts/futura/futura_medium_bt.ttf")format('truetype');
+    url("./Assets/Fonts/futura/Futura_medium.woff"),
+    format("woff") url("./Assets/Fonts/futura/Futura_medium.woff2")
+      format("woff2"),
+    url("./Assets/Fonts/futura/futura_medium_bt.ttf") format("truetype");
   /* font-display: swap; */
 }
 
 @font-face {
   font-family: futura_light;
   src: url("./Assets/Fonts/futura/Futura_Light_bt.eot"),
-  url("./Assets/Fonts/futura/Futura_light_bt.woff") format('woff'),
-  url("./Assets/Fonts/futura/Futura_light_bt.woff2") format('woff2'),
-  url("./Assets/Fonts/futura/futura_light_bt.ttf")format('truetype');
+    url("./Assets/Fonts/futura/Futura_light_bt.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_light_bt.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/futura_light_bt.ttf") format("truetype");
   /* font-display: swap; */
 }
 
 @font-face {
   font-family: futura_heavy;
   src: url("./Assets/Fonts/futura/Futura_Heavy.eot"),
-  url("./Assets/Fonts/futura/Futura_Heavy.woff") format('woff'),
-  url("./Assets/Fonts/futura/Futura_Heavy.woff2") format('woff2'),
-  url("./Assets/Fonts/futura/Futura_Heavy_font.ttf") format('truetype');
+    url("./Assets/Fonts/futura/Futura_Heavy.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_Heavy.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/Futura_Heavy_font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   /* font-display: swap; */
@@ -79,9 +80,9 @@ body {
 @font-face {
   font-family: futura_book;
   src: url("./Assets/Fonts/futura/Futura_Book.eot"),
-  url("./Assets/Fonts/futura/Futura_Book.woff")format('woff'),
-  url("./Assets/Fonts/futura/Futura_Book.woff2")format('woff2'),
-  url("./Assets/Fonts/futura/Futura_Book_font.ttf")format('truetype');
+    url("./Assets/Fonts/futura/Futura_Book.woff") format("woff"),
+    url("./Assets/Fonts/futura/Futura_Book.woff2") format("woff2"),
+    url("./Assets/Fonts/futura/Futura_Book_font.ttf") format("truetype");
   /* font-display: swap; */
 }
 
@@ -169,11 +170,13 @@ a {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-.Toastify__progress-bar--success{
+.Toastify__progress-bar--success {
   background: #225aa7 !important;
 }
 
-.Toastify__progress-bar--success .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter svg{
+.Toastify__progress-bar--success
+  .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter
+  svg {
   fill: #225aa7 !important;
 }
 
@@ -189,4 +192,3 @@ a {
 /* .bancoppel * {
   border: 1px solid red;
 } */
-

@@ -16,7 +16,7 @@ const StyledNav = styled.div`
       cursor: pointer;
       font-size: 14px;
       margin-left: 8px;
-      :first-child{
+      :first-child {
         margin-left: 0px;
       } //Espacio entre botones del secondary nav
       font-family: Futura;
@@ -34,12 +34,12 @@ export default class SecondaryNav extends Component {
     return (
       <StyledNav>
         <div className="secondaryNav">
-        <Link to="/empresas">
+          <Link to="/">
             <h4>Inicio</h4>
           </Link>
           {/* <h4>Soluciones</h4>
           <h4>Pymes</h4> */}
-          <Link to="/empresas/contacto">
+          <Link to="/contacto">
             <h4>Contáctanos</h4>
           </Link>
         </div>

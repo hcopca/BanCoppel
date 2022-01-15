@@ -15,7 +15,7 @@ import {
 import Hero_ from "../../Assets/Heros/hero_puente.jpg";
 import Hero_responsive from "../../Assets/Heros/hero_puente_responsive.jpg";
 import HeroHome from "../../Assets/Heros/line1.svg";
-import midImg from "../../Assets/Heros/hero_credito_puente_mid.jpg"
+import midImg from "../../Assets/Heros/hero_credito_puente_mid.jpg";
 import styled from "styled-components";
 
 const StyledCreditoPuente = styled.div`
@@ -26,21 +26,21 @@ const StyledCreditoPuente = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-             width: 550px;
-           }
-           img{
-            margin-top: -155px;
-             width: 19px;
-             margin-left: 6px;
-           }
-           .padresubtitle{
-            .subtitle{
-             height: 55px;
+          .subchildren {
+            h2 {
+              width: 550px;
             }
-           }
-         }
+            img {
+              margin-top: -155px;
+              width: 19px;
+              margin-left: 6px;
+            }
+            .padresubtitle {
+              .subtitle {
+                height: 55px;
+              }
+            }
+          }
         }
       }
     }
@@ -52,18 +52,17 @@ const StyledCreditoPuente = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-         h2{
-           height: 70px;
+          .subchildren {
+            h2 {
+              height: 70px;
+            }
+            img {
+              margin-top: -160px;
+              width: 20px;
+              height: 120px;
+              margin-left: 5px;
+            }
           }
-          img{
-             margin-top: -160px;
-             width: 20px;
-             height: 120px;
-             margin-left: 5px;
-             
-           }
-         }
         }
       }
     }
@@ -75,29 +74,31 @@ const StyledCreditoPuente = styled.div`
     .hero_container {
       .container {
         .children {
-        margin-left: -150px;
-         .subchildren{
-         h2{
-           width: 700px;
-           height: 95px;
+          margin-left: -150px;
+          .subchildren {
+            h2 {
+              width: 700px;
+              height: 95px;
+            }
+            img {
+              margin-top: -185px;
+              width: 24px;
+              height: 145px;
+              margin-left: 1px;
+            }
           }
-          img{
-             margin-top: -185px;
-             width: 24px;
-             height: 145px;
-             margin-left: 1px;
-           }
-         }
         }
       }
     }
   }
 `;
 
-const titleBanner = "PENSADO PARA CREAR PROYECTOS HABITACIONALES"
+const titleBanner = "PENSADO PARA CREAR PROYECTOS HABITACIONALES";
 const subtitle = (
-  <p><span>Construimos{" "}</span>contigo</p>
-)
+  <p>
+    <span>Construimos </span>contigo
+  </p>
+);
 class CreditoPuente extends Component {
   constructor(props) {
     super(props);
@@ -135,67 +136,70 @@ class CreditoPuente extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          Crédito Puente: detalles y requisitos | BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="Crédito Puente: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-puente" />
-          <meta 
-          name="keywords"
-          content="credito puente, proyectos habitacionales, banca empresarial, bancoppel, credito,requisitos" />
-           <meta
+          <title>Crédito Puente: detalles y requisitos | BanCoppel.com</title>
+          <meta
+            name="title"
+            content="Crédito Puente: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/credito-puente"
+          />
+          <meta
+            name="keywords"
+            content="credito puente, proyectos habitacionales, banca empresarial, bancoppel, credito,requisitos"
+          />
+          <meta
             name="description"
             content="Conoce los detalles y requisitos para tu Crédito Puente y disfruta los beneficios para proyectos habitaciones de Banca Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-      <StyledCreditoPuente>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>
-              Pensado <br /> para crear
-            </h2>
-            <h2>
-              proyectos
-              <br />
-              habitacionales
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              <span>Construimos</span> contigo.
-            </h4>
-          </div>
-        </ResponsiveHeader>
+        </Helmet>
+        <StyledCreditoPuente>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>
+                Pensado <br /> para crear
+              </h2>
+              <h2>
+                proyectos
+                <br />
+                habitacionales
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                <span>Construimos</span> contigo.
+              </h4>
+            </div>
+          </ResponsiveHeader>
 
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={midImg}
-          banner={HeroHome}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <h1>
-            CRÉDITO <span>PUENTE</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={CreditoPuenteSections} body={this.body} />
-        <Switcher
-          items={CreditoPuenteSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-      </StyledCreditoPuente>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={midImg}
+            banner={HeroHome}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <h1>
+              CRÉDITO <span>PUENTE</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={CreditoPuenteSections} body={this.body} />
+          <Switcher
+            items={CreditoPuenteSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+        </StyledCreditoPuente>
       </>
     );
   }
@@ -209,8 +213,7 @@ const CreditoPuenteSections = [
 
     card: {
       image: require("../../Assets/mano_credito_puente.png").default,
-      copy2:
-        "El impulso que necesitas para comenzar a construir.",
+      copy2: "El impulso que necesitas para comenzar a construir.",
     },
 
     items: [

@@ -28,22 +28,22 @@ const StyledInversionEmpresarial = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-            height: 70px;
-            width: 420px;
-           }
-           .padresubtitle{
-            .subtitle{
-               width: 310px;
+          .subchildren {
+            h2 {
+              height: 70px;
+              width: 420px;
             }
-           }
-           img{
-             width: 19px;
-             margin-top: -150px;
-            margin-left: 6px;
-           }
-         }
+            .padresubtitle {
+              .subtitle {
+                width: 310px;
+              }
+            }
+            img {
+              width: 19px;
+              margin-top: -150px;
+              margin-left: 6px;
+            }
+          }
         }
       }
     }
@@ -52,18 +52,18 @@ const StyledInversionEmpresarial = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-           height: 70px;
-           width: 400px;
-           }
-           img{
-             margin-top: -160px;
-             width: 20px;
-             height: 124px;
-             margin-left: 5px;
-           }
-         }
+          .subchildren {
+            h2 {
+              height: 70px;
+              width: 400px;
+            }
+            img {
+              margin-top: -160px;
+              width: 20px;
+              height: 124px;
+              margin-left: 5px;
+            }
+          }
         }
       }
     }
@@ -76,25 +76,29 @@ const StyledInversionEmpresarial = styled.div`
       .container {
         margin-left: 100px;
         .children {
-         .subchildren{
-           h2{
-           height: 90px;
-           width: 500px;
-           }
-           img{
-             margin-top: -175px;
-             width: 23px;
-             height: 140px;
-             margin-left: 2px;
-           }
-         }
+          .subchildren {
+            h2 {
+              height: 90px;
+              width: 500px;
+            }
+            img {
+              margin-top: -175px;
+              width: 23px;
+              height: 140px;
+              margin-left: 2px;
+            }
+          }
         }
       }
     }
   }
 `;
-const titleBanner = "LA CUENTA QUE TU EMPRESA NECESITA"
-const subtitle = (<p>Obtén <span>mejores rendimientos</span> en tu saldo a la vista</p>)
+const titleBanner = "LA CUENTA QUE TU EMPRESA NECESITA";
+const subtitle = (
+  <p>
+    Obtén <span>mejores rendimientos</span> en tu saldo a la vista
+  </p>
+);
 class CuentaInversionEmpresarial extends Component {
   constructor(props) {
     super(props);
@@ -141,64 +145,69 @@ class CuentaInversionEmpresarial extends Component {
   render() {
     return (
       <>
-       <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com
+            Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/cuenta-inversion-empresarial" />
-          <meta 
-          name="keywords"
-          content="banca empresarial, bancoppel, banco, empresa,cuenta de inversion, rendimiento, caracteristicas, requisitos, negocio," />
-           <meta
+          <meta
+            name="title"
+            content="Cuenta Inversión Empresarial: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/cuenta-inversion-empresarial"
+          />
+          <meta
+            name="keywords"
+            content="banca empresarial, bancoppel, banco, empresa,cuenta de inversion, rendimiento, caracteristicas, requisitos, negocio,"
+          />
+          <meta
             name="description"
             content="Conoce más sobre características y requisitos de la Cuenta de Inversión Empresarial BanCoppel."
             data-react-helmet="true"
           />
-      </Helmet>
-      <StyledInversionEmpresarial>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>El dinero de tus</h2>
-            <h2>
-              trabajadores en
-              <br />
-              buenas manos
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>La cuenta que tu empresa necesita</h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          banner={HeroHome}
-          midImg={Hero_mid}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <ProductHeader>
-          <h1>
-            Cuenta <span>Inversión Empresarial</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={InversionEmpresarialSections} body={this.body} />
-        <Switcher
-          items={InversionEmpresarialSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
+        </Helmet>
+        <StyledInversionEmpresarial>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>El dinero de tus</h2>
+              <h2>
+                trabajadores en
+                <br />
+                buenas manos
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>La cuenta que tu empresa necesita</h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            banner={HeroHome}
+            midImg={Hero_mid}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <ProductHeader>
+            <h1>
+              Cuenta <span>Inversión Empresarial</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={InversionEmpresarialSections} body={this.body} />
+          <Switcher
+            items={InversionEmpresarialSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
 
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-        {this.state.view.section === "Beneficios" ? <Consulta /> : null}
-      </StyledInversionEmpresarial>
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+          {this.state.view.section === "Beneficios" ? <Consulta /> : null}
+        </StyledInversionEmpresarial>
       </>
     );
   }

@@ -1,3 +1,4 @@
+import "core-js";
 export { default as Navbar } from "./Navbar";
 export { default as Container } from "./Container";
 export { default as BancoppelBtn } from "./BancoppelBtn";
@@ -25,4 +26,4 @@ export { default as Consulta } from "./Consulta";
 export { default as EmpresaSide } from "./EmpresaSide";
 export { default as Spin } from "./Spin";
 export { default as AccesoFormulario } from "./AccesoFormulario";
-export { default as TwoProductsAccess } from "./TwoProductsAccess"
+export { default as TwoProductsAccess } from "./TwoProductsAccess";

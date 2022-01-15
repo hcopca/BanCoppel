@@ -3,9 +3,6 @@
   position: relative;
 }
 
-
-
-
 .caritem-enter {
   opacity: 0;
 }
@@ -14,10 +11,11 @@
   transition: opacity 500ms ease-in;
 }
 
-.caritem-exit-active, .caritem-exit {
-  display: none!important;
+.caritem-exit-active,
+.caritem-exit {
+  display: none !important;
 }
 
-.accordion__panel{
+.accordion__panel {
   animation: fadeIn 500ms;
 }

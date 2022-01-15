@@ -164,12 +164,12 @@ class SideDrawer extends Component {
                 className="close"
                 onClick={() => setState({ onOpen: false })}
               />
-              <Link to="/empresas" onClick={() => setState({ onOpen: false })}>
+              <Link to="/" onClick={() => setState({ onOpen: false })}>
                 <LogoBN className="logo" />
               </Link>
             </div>
             {/* LUPA */}
-            {/* <Search className="search" /> */} 
+            {/* <Search className="search" /> */}
           </div>
           <div className="kindUser">
             {/* <button

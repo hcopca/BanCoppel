@@ -95,8 +95,8 @@ const StyledTeInteresa = styled.div`
       p {
         font-size: 16px;
       }
-      .boton{
-        button{
+      .boton {
+        button {
           margin-bottom: 10px;
         }
       }
@@ -167,7 +167,7 @@ export default function TeInteresa() {
           <h2>¿Te interesa?</h2>
           <p>Consúltalo directamente con un ejecutivo</p>
           <div className="boton">
-            <Link to="/empresas/contacto">
+            <Link to="/contacto">
               <Button amarillo>¡Déjanos tus datos!</Button>
             </Link>
           </div>

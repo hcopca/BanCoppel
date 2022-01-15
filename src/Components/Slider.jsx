@@ -76,15 +76,14 @@ const StylesCarousel = styled.div`
   }
   @media (min-width: 1400px) {
     .bancoppel_slider {
-    .carousel .control-next.control-arrow:before {
-      margin-right: 42px;
-    }
+      .carousel .control-next.control-arrow:before {
+        margin-right: 42px;
+      }
 
-    .carousel .control-prev.control-arrow:before {
-     
-      margin-left: 42px;
+      .carousel .control-prev.control-arrow:before {
+        margin-left: 42px;
+      }
     }
-  }
   }
 `;
 
@@ -126,13 +125,13 @@ class Slider extends Component {
           onChange={(e) => this.updateCurrentSlide(e)}
           selectedItem={this.state.currentSlide}
         >
-          {this.props.items.map((item, idx) => {
+          {/*this.props.items.map((item, idx) => {
             return (
               <div className="slide" key={idx}>
                 <Container>{this.props.body(item, true)}</Container>
               </div>
             );
-          })}
+          })alma*/}
         </Carousel>
       </StylesCarousel>
     );

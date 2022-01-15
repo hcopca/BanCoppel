@@ -19,7 +19,7 @@ const StyledContacto = styled.div`
   background-image: url(${({ imgResponsive }) => imgResponsive});
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   .container {
     display: flex;
     align-items: center;
@@ -152,7 +152,7 @@ class FormularioContacto extends Component {
       job: "",
       entity: -1,
       product: -1,
-      isCalling: false
+      isCalling: false,
     };
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
@@ -191,27 +191,36 @@ class FormularioContacto extends Component {
   }
 
   validateForm() {
-    if ((!this.state.entity || this.state.entity == "" || this.state.entity < 0) && this.state.entityAlertId !== 0 ) {
-       toast.error("Completa los campos faltantes", {
-        position: toast.POSITION.TOP_RIGHT,
-      });
-      return false
-    }
-    if ((this.state.product < 0 || !this.state.product || this.state.product == "") ) {
+    if (
+      (!this.state.entity ||
+        this.state.entity == "" ||
+        this.state.entity < 0) &&
+      this.state.entityAlertId !== 0
+    ) {
       toast.error("Completa los campos faltantes", {
         position: toast.POSITION.TOP_RIGHT,
       });
-      return false
+      return false;
     }
-    return true
+    if (
+      this.state.product < 0 ||
+      !this.state.product ||
+      this.state.product == ""
+    ) {
+      toast.error("Completa los campos faltantes", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return false;
+    }
+    return true;
   }
 
   async onSubmit(e) {
     e.preventDefault();
-    if ( !this.validateForm() ) {
+    if (!this.validateForm()) {
       return;
     }
-    this.setState({  isCalling: true  })
+    this.setState({ isCalling: true });
     try {
       const url = "http://localhost:8888/mail/index.php"; //ADM Cambiar a la URL Final
       //const dataToSend = { ...this.state } //ADM 20220110 Esta línea suponiendo que solo existen los inputs del Form dentro de state, cambiar si es que se agrega otra cosa
@@ -235,7 +244,7 @@ class FormularioContacto extends Component {
       const responseJson = await res.json();
       if (responseJson && responseJson.code === 200 && !responseJson.error) {
         this.showAlert({ error: false, message: responseJson.message });
-        this.setState({ isCalling: false })
+        this.setState({ isCalling: false });
       }
       this.setState({
         name: "",
@@ -268,7 +277,7 @@ class FormularioContacto extends Component {
           />
           <link
             rel="canonical"
-            href="https://www.bancoppel.com/empresas/contacto"
+            href="https://www.bancoppel.com/bancoppel/contacto"
           />
           <meta
             name="keywords"
@@ -382,7 +391,11 @@ class FormularioContacto extends Component {
               </div>
 
               <div className="boton">
-                <BancoppelBtn type="submit" amarillo disabled={ this.state.isCalling }  >
+                <BancoppelBtn
+                  type="submit"
+                  amarillo
+                  disabled={this.state.isCalling}
+                >
                   Enviar
                 </BancoppelBtn>
               </div>

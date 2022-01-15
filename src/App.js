@@ -1,5 +1,6 @@
+import "core-js";
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer } from "./Components";
 
@@ -21,6 +22,7 @@ import FinanciamientoOrdenesCompra from "./Views/SolucionesIntegrales/Financiami
 import ProyectosInversion from "./Views/SolucionesIntegrales/ProyectosInversion";
 import CreditoAmortizable from "./Views/SolucionesCredito/CreditoAmortizable";
 import Acceso from "./Views/Acceso";
+import { config } from "./config/config";
 
 class App extends Component {
   render() {
@@ -28,49 +30,46 @@ class App extends Component {
       <div className="bancoppel">
         <Navbar />
         <Switch>
-          <Route exact path="/empresas">
+          <Route exact path="/">
             <Home />
           </Route>
-          {/* <Route path="/crav">
-            <Crav />
-          </Route> */}
-          <Route path="/empresas/credito-simple">
+          <Route exact path="/credito-simple">
             <CreditoSimple />
           </Route>
-          <Route path="/empresas/credito-cuenta-corriente">
+          <Route path="/credito-cuenta-corriente">
             <CreditoAmortizable />
           </Route>
-          <Route path="/empresas/credito-puente">
+          <Route path="/credito-puente">
             <CreditoPuente />
           </Route>
-          <Route path="/empresas/arrendamiento-financiero">
+          <Route path="/arrendamiento-financiero">
             <ArrendamientoFinanciero />
           </Route>
-          <Route path="/empresas/nomina-bancoppel">
+          <Route path="/nomina-bancoppel">
             <NominasBanCoppel />
           </Route>
-          <Route path="/empresas/empresanet">
+          <Route path="/empresanet">
             <EmpresaNet />
           </Route>
-          <Route path="/empresas/cuenta-inversion-empresarial">
+          <Route path="/cuenta-inversion-empresarial">
             <CuentaInversionEmpresarial />
           </Route>
-          <Route path="/empresas/factoraje-financiero">
+          <Route path="/factoraje-financiero">
             <SolucionesIntegrales />
           </Route>
-          <Route path="/empresas/monetizacion-de-activos">
+          <Route path="/monetizacion-de-activos">
             <MonetizacionActivos />
           </Route>
-          <Route path="/empresas/financiamiento-ordenes-de-compra">
+          <Route path="/financiamiento-ordenes-de-compra">
             <FinanciamientoOrdenesCompra />
           </Route>
-          <Route path="/empresas/proyectos-de-inversion">
+          <Route path="/proyectos-de-inversion">
             <ProyectosInversion />
           </Route>
-          <Route path="/empresas/contacto">
+          <Route exact path="/contacto">
             <FormularioContacto />
           </Route>
-          <Route path="/empresas/login">
+          <Route path="/login">
             <Acceso />
           </Route>
         </Switch>

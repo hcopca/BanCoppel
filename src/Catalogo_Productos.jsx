@@ -4,13 +4,16 @@ const productos = [
     name: "Cuenta Inversión Empresarial",
     title_custom: (
       <>
-        Cuenta <span>Inversión <br /> Empresarial</span>
+        Cuenta{" "}
+        <span>
+          Inversión <br /> Empresarial
+        </span>
       </>
     ),
     homeCopy:
       "La nueva forma de administrar de manera eficiente los recursos de tu empresa.",
     cardcopy: "La nueva forma de administrar los recursos de tu empresa.",
-    path: "/empresas/cuenta-inversion-empresarial",
+    path: "/cuenta-inversion-empresarial",
     image: require("./Assets/mano_cuenta_empresarial.png").default,
   },
   {
@@ -25,7 +28,7 @@ const productos = [
       "Servicio que brinda la facilidad de transferir de forma masiva o individual el dinero.",
     cardcopy:
       "Servicio que brinda la facilidad de transferir de forma masiva...",
-    path: "/empresas/nomina-bancoppel",
+    path: "/nomina-bancoppel",
     image: require("./Assets/mano_nomina.png").default,
   },
   {
@@ -41,7 +44,7 @@ const productos = [
 
     homeCopy: "Financiamiento para impulsar tu negocio.",
     cardcopy: "Financiamiento para impulsar tu negocio",
-    path: "/empresas/credito-simple",
+    path: "/credito-simple",
     image: require("./Assets/Persons2.png").default,
   },
   // {
@@ -70,7 +73,7 @@ const productos = [
     ),
     homeCopy: "Financiamiento de Activos Fijos pensados para tu empresa.",
     cardcopy: "Financiamiento de Activos Fijos pensados para tu empresa.",
-    path: "/empresas/arrendamiento-financiero",
+    path: "/arrendamiento-financiero",
     image: require("./Assets/IpadHands.png").default,
   },
   {
@@ -84,7 +87,7 @@ const productos = [
     ),
     homeCopy: "El impulso que necesitas para comenzar a construir.",
     cardcopy: "El impulso que necesitas para comenzar a construir.",
-    path: "/empresas/credito-puente",
+    path: "/credito-puente",
     image: require("./Assets/GirlHand.png").default,
   },
   {
@@ -98,16 +101,21 @@ const productos = [
     ),
     homeCopy: "Apoyamos tus necesidades de capital de trabajo.",
     cardcopy: "Apoyamos tus necesidades de capital de trabajo.",
-    path: "/empresas/credito-cuenta-corriente",
+    path: "/credito-cuenta-corriente",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
   {
     family: "Soluciones integrales",
     name: "Factoraje",
-    title_custom: <>Factoraje <br /><span>Financiero</span></>,
+    title_custom: (
+      <>
+        Factoraje <br />
+        <span>Financiero</span>
+      </>
+    ),
     homeCopy: "Financiamiento que impulsa el crecimiento de tus Proveedores.", //
     cardcopy: "Financiamiento que impulsa el crecimiento de tus Proveedores.",
-    path: "/empresas/factoraje-financiero",
+    path: "/factoraje-financiero",
     image: require("./Assets/mano_cuenta_amortizable.png").default,
   },
 
@@ -122,7 +130,7 @@ const productos = [
     ),
     homeCopy: "Te brindamos liquidez sobre tu Activo Fijo.",
     cardcopy: "Te brindamos liquidez sobre tu Activo Fijo.",
-    path: "/empresas/monetizacion-de-activos",
+    path: "/monetizacion-de-activos",
     image: require("./Assets/mano_monetizacion.png").default,
   },
   {
@@ -134,9 +142,11 @@ const productos = [
         <br /> <span>órdenes de compra</span>
       </>
     ),
-    homeCopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
-    cardcopy: "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
-    path: "/empresas/financiamiento-ordenes-de-compra",
+    homeCopy:
+      "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
+    cardcopy:
+      "Financiamiento del ciclo operativo sobre tus pedidos confirmados.",
+    path: "/financiamiento-ordenes-de-compra",
     image: require("./Assets/mano_financiamiento.png").default,
   },
   {
@@ -150,7 +160,7 @@ const productos = [
     ),
     homeCopy: "Financiamiento de largo plazo para tus proyectos.",
     cardcopy: "Financiamiento de largo plazo para tus proyectos.",
-    path: "/empresas/proyectos-de-inversion",
+    path: "/proyectos-de-inversion",
     image: require("./Assets/mano_proyectos_inversion.png").default,
   },
   // {
@@ -165,7 +175,7 @@ const productos = [
   //     "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
   //   cardcopy:
   //     "Servicio que permite controlar, administrar y realizar operaciones financieras de tus cuentas de forma segura.",
-  //   path: "/empresas/empresanet",
+  //   path: "/bancoppel/empresanet",
   //   image: require("./Assets/mano_empresanet.png").default,
   // },
 ];

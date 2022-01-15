@@ -64,8 +64,8 @@ const StyledHero = styled.div`
           display: flex;
           flex-direction: column;
           justify-content: center;
-          .subchildren{  
-            h2{
+          .subchildren {
+            h2 {
               text-transform: uppercase;
               padding-top: 5px;
               padding-left: 25px;
@@ -75,80 +75,79 @@ const StyledHero = styled.div`
               font-size: 32px;
               margin-bottom: 30px;
               text-transform: uppercase;
-              color: #FFFFFF;
+              color: #ffffff;
             }
-            .padresubtitle{
+            .padresubtitle {
               padding-left: 25px;
               padding-bottom: 70px;
-                .subtitle{
+              .subtitle {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                background: #002A61;
+                background: #002a61;
                 max-width: 400px;
                 height: 64px;
                 padding: 10px;
                 border-radius: 16px;
                 font-family: futura_book;
                 font-size: 18px;
-                color: #FFFFFF;
-              p{
-                span{
-                  font-family: futura_heavy;
-                  color:white;
-                  font-size: 18px;
-                    }
+                color: #ffffff;
+                p {
+                  span {
+                    font-family: futura_heavy;
+                    color: white;
+                    font-size: 18px;
                   }
                 }
               }
-          img {
-            width: 20px;
-            margin-top: -160px;
-            margin-left: 5px;
-            position: absolute;
+            }
+            img {
+              width: 20px;
+              margin-top: -160px;
+              margin-left: 5px;
+              position: absolute;
+            }
+            button {
+              margin-left: 30px;
+              align-self: flex-start;
+              margin-top: 13px;
+              font-family: futura_heavy;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              width: 156px;
+            }
           }
-          button {
-            margin-left: 30px;
-            align-self: flex-start;
-            margin-top: 13px;
-            font-family: futura_heavy;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            width: 156px;
-          }
-         }
         }
       }
     }
   }
 
   @media (min-width: 1200px) {
-
     max-height: 400px;
-    img{
+    img {
       height: 400px;
     }
     .hero_container {
       .container {
         .children {
-          .subchildren{
-            h2{
-            height: 80px;
-            font-size: 32px;
-            padding-top: 0px;
-              }
-          img {
-            width: 22px;
-            height: 133px;
-            margin-top: -170px;
-            margin-left: 3px;
-            max-width: 505px;
-           }
-           button{
-             margin-top: 35px;
-           }
+          .subchildren {
+            h2 {
+              height: 80px;
+              font-size: 32px;
+              padding-top: 0px;
+            }
+            img {
+              width: 22px;
+              height: 133px;
+              margin-top: -170px;
+              margin-left: 3px;
+              max-width: 505px;
+            }
+            button {
+              margin-top: 35px;
+            }
           }
         }
       }
@@ -156,28 +155,28 @@ const StyledHero = styled.div`
   }
   @media (min-width: 1400px) {
     max-height: 500px;
-    img{
+    img {
       height: 500px;
     }
     .hero_container {
       .container {
         .children {
-          .subchildren{
-            h2{
+          .subchildren {
+            h2 {
               font-size: 44px;
-               }
-               img {
-                width: 23px;
-                height: 142px;
-                margin-top: -170px;
-                margin-left: 3px;
-                max-width: 505px;
-              }
-             }
-           }
+            }
+            img {
+              width: 23px;
+              height: 142px;
+              margin-top: -170px;
+              margin-left: 3px;
+              max-width: 505px;
+            }
+          }
         }
       }
     }
+  }
 `;
 
 class Hero extends Component {
@@ -190,7 +189,15 @@ class Hero extends Component {
   }
 
   render() {
-    const { banner, btnCoppy, imagen, responsiveImg, midImg, titleBanner, subtitle,} = this.props;
+    const {
+      banner,
+      btnCoppy,
+      imagen,
+      responsiveImg,
+      midImg,
+      titleBanner,
+      subtitle,
+    } = this.props;
 
     return (
       <>
@@ -216,18 +223,16 @@ class Hero extends Component {
               <div className="children">
                 <div className="subchildren">
                   <h2>{titleBanner}</h2>
-            
+
                   <div className="padresubtitle">
-                    <div className="subtitle">
-                    {subtitle}
-                    </div>
+                    <div className="subtitle">{subtitle}</div>
                   </div>
                   <img
                     src={banner ? banner : bannerDeafult}
                     alt="banner"
                     onLoad={(e) => this.setState({ copy: false })}
                   />
-                  <Link to={"/empresas/contacto"}>
+                  <Link to={"/contacto"}>
                     <BancoppelBtn amarillo>
                       {btnCoppy ? btnCoppy : "no copy"}
                     </BancoppelBtn>

@@ -62,62 +62,66 @@ class Crav extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>
-          Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com
+            Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com
           </title>
-          <meta 
-          name="title" 
-          content="Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-cuenta-corriente-crav" />
-          <meta 
-          name="keywords"
-          content="credito cuenta corriente, banca empresarial, bancoppel, capacidad de pago, financiamiento, credito, requisitos," />
+          <meta
+            name="title"
+            content="Crédito cuenta corriente CRAV: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/credito-cuenta-corriente-crav"
+          />
+          <meta
+            name="keywords"
+            content="credito cuenta corriente, banca empresarial, bancoppel, capacidad de pago, financiamiento, credito, requisitos,"
+          />
+        </Helmet>
+        <StyledCrav>
+          <ResponsiveHeader>
+            <div className="title">
+              <h1>UN CRÉDITO</h1>
+              <h1>
+                DE ACUERDO A<br />
+                TUS NECESIDADES
+              </h1>
+            </div>
+            <div className="copy">
+              <h4>
+                Ajustamos el crédito a tu <br /> <span>capacidad de pago.</span>
+              </h4>
+            </div>
+          </ResponsiveHeader>
 
-      </Helmet>
-      <StyledCrav>
-        <ResponsiveHeader>
-          <div className="title">
-            <h1>UN CRÉDITO</h1>
-            <h1>
-              DE ACUERDO A<br />
-              TUS NECESIDADES
-            </h1>
-          </div>
-          <div className="copy">
-            <h4>
-              Ajustamos el crédito a tu <br /> <span>capacidad de pago.</span>
-            </h4>
-          </div>
-        </ResponsiveHeader>
-
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={Hero_mid}
-          banner={HeroHome}
-          path="/"
-        />
-        <ProductHeader>
-          <h2>
-            CRÉDITO{" "}
-            <span>
-              CUENTA <br />
-              CORRIENTE CRAV
-            </span>
-          </h2>
-        </ProductHeader>
-        <Accordion items={CravSections} body={this.body.bind(this)} />
-        <Switcher
-          items={CravSections}
-          body={this.body.bind(this)}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-      </StyledCrav>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={Hero_mid}
+            banner={HeroHome}
+            path="/"
+          />
+          <ProductHeader>
+            <h2>
+              CRÉDITO{" "}
+              <span>
+                CUENTA <br />
+                CORRIENTE CRAV
+              </span>
+            </h2>
+          </ProductHeader>
+          <Accordion items={CravSections} body={this.body.bind(this)} />
+          <Switcher
+            items={CravSections}
+            body={this.body.bind(this)}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+        </StyledCrav>
       </>
     );
   }

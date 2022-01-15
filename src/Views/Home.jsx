@@ -27,21 +27,21 @@ const StyledHome = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-            width: 362px;
-            height: 75px;
-           }
-           img{
-            margin-top: -157px;
-           }
-           .padresubtitle{
-            .subtitle{
-               width: 350px;
-               height: 62px;
+          .subchildren {
+            h2 {
+              width: 362px;
+              height: 75px;
             }
-           }
-         }
+            img {
+              margin-top: -157px;
+            }
+            .padresubtitle {
+              .subtitle {
+                width: 350px;
+                height: 62px;
+              }
+            }
+          }
         }
       }
     }
@@ -50,13 +50,13 @@ const StyledHome = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           img{
-             margin-top: -170px;
-             width: 22px;
-             margin-left: 3px;
-           }
-         }
+          .subchildren {
+            img {
+              margin-top: -170px;
+              width: 22px;
+              margin-left: 3px;
+            }
+          }
         }
       }
     }
@@ -65,18 +65,18 @@ const StyledHome = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-          h2{
-            width: 500px;
-            height: 90px;
-           }
-           img{
-            height: 144px;
-            margin-top: -180px;
-             width: 24px;
-             margin-left: 1px;
-           }
-         }
+          .subchildren {
+            h2 {
+              width: 500px;
+              height: 90px;
+            }
+            img {
+              height: 144px;
+              margin-top: -180px;
+              width: 24px;
+              margin-left: 1px;
+            }
+          }
         }
       }
     }
@@ -103,14 +103,14 @@ const StyledCardsSlider = styled.div`
     1fr
   );
   grid-gap: 26px;
-  .center{
+  .center {
     margin: auto !important;
   }
   .item_card {
     display: flex;
     justify-content: flex-start;
     margin: auto;
-    &:nth-child(odd){
+    &:nth-child(odd) {
       margin-right: 0;
     }
     &:nth-child(even) {
@@ -118,29 +118,32 @@ const StyledCardsSlider = styled.div`
       justify-content: flex-end;
     }
   }
+  .CardBlue {
+    width: 100%;
+    .card_body {
+      .copy {
+        padding: 0px 0px 10px 10px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
     .CardBlue {
       width: 100%;
-      .card_body {
-        .copy {
-          padding: 0px 0px 10px 10px;
-        }
-      }
+      min-width: 423px;
     }
-    @media (min-width: 1200px) {
-      .CardBlue {
-        width: 100%;
-        min-width: 423px;
-      }
-    }
-  
+  }
 `;
-const titleBanner = "LA BANCA QUE TU EMPRESA NECESITA"
+const titleBanner = "LA BANCA QUE TU EMPRESA NECESITA";
 const subtitle = (
-  <p>Brindamos{" "}<span> soluciones</span> a tu<span> empresa</span></p>
+  <p>
+    Brindamos <span> soluciones</span> a tu<span> empresa</span>
+  </p>
 );
 class Home extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+    this.renderCards = this.renderCards.bind(this);
+    this.body = this.body.bind(this);
     this.state = {};
   }
 
@@ -171,36 +174,44 @@ class Home extends Component {
     );
   }
 
+  arrayByGroups(data) {
+    var arr = [];
+    for (var i = 0; i < data.length; i += 4) {
+      arr.push(data.slice(i, i + 4));
+    }
+    return arr;
+  }
+
+  renderCards(cards) {
+    return (
+      <StyledCardsSlider length={cards.length}>
+        {cards ? (
+          cards.map((card, idx) => {
+            return (
+              <div
+                className={`item_card ${cards.length === 1 ? "center" : ""}`}
+                key={idx}
+              >
+                <CardBlue card={card} row />
+              </div>
+            );
+          })
+        ) : (
+          <p>no hay "cards" para mostrar</p>
+        )}
+      </StyledCardsSlider>
+    );
+  }
+
   bodySlider(data) {
     const { cards } = data;
     if (cards) {
-      function arrayByGroups(data) {
-        var arr = [];
-        for (var i = 0; i < data.length; i += 4) {
-          arr.push(data.slice(i, i + 4));
-        }
-        return arr;
+      let arrays = [];
+      for (var i = 0; i < cards.length; i += 4) {
+        arrays.push(cards.slice(i, i + 4));
       }
-      var Arrays = arrayByGroups(cards);
-      function renderCards(cards) {
-        return (
-          <StyledCardsSlider length={cards.length}>
-            {cards ? (
-              cards.map((card, idx) => {
-                return (
-                  <div className={`item_card ${cards.length === 1 ? "center" : ""}`}  key={idx}>
-                    <CardBlue card={card} row />
-                  </div>
-                );
-              })
-            ) : (
-              <p>no hay "cards" para mostrar</p>
-            )}
-          </StyledCardsSlider>
-        );
-      }
-
-      if (Arrays) {
+      //this.arrayByGroups(cards);
+      if (arrays) {
         return (
           <TransitionGroup className="carousel-anim">
             <CSSTransition
@@ -208,7 +219,7 @@ class Home extends Component {
               timeout={500}
               classNames="caritem"
             >
-              <Slider items={Arrays} body={renderCards} />
+              <Slider items={arrays} body={this.renderCards} />
             </CSSTransition>
           </TransitionGroup>
         );
@@ -218,61 +229,60 @@ class Home extends Component {
   render() {
     return this.state.HomeSections ? (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          Banca Empresarial BanCoppel | BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="Banca Empresarial BanCoppel | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas" />
-          <meta 
-          name="keywords"
-          content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito" />
-           <meta
+          <title>Banca Empresarial BanCoppel | BanCoppel.com</title>
+          <meta
+            name="title"
+            content="Banca Empresarial BanCoppel | BanCoppel.com"
+          />
+          <link rel="canonical" href="https://www.bancoppel.com/bancoppel" />
+          <meta
+            name="keywords"
+            content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito"
+          />
+          <meta
             name="description"
             content="Conoce más sobre Banca Empresarial BanCoppel, cuentas de nómina, cuentas de inversión, crédito y muchos más beneficios para tu negocio."
             data-react-helmet="true"
           />
+        </Helmet>
+        <StyledHome>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>La Banca que</h2>
+              <h2>
+                tu empresa <br /> necesita
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                Brindamos <span>soluciones </span>
+              </h4>
+              <h4>
+                a tu <span>empresa</span>
+              </h4>
+            </div>
+          </ResponsiveHeader>
 
-      </Helmet>
-      <StyledHome>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>La Banca que</h2>
-            <h2>
-              tu empresa <br /> necesita
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              Brindamos <span>soluciones </span>
-            </h4>
-            <h4>
-              a tu <span>empresa</span>
-            </h4>
-          </div>
-        </ResponsiveHeader>
-
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          midImg={Hero_mid}
-          banner={HeroHome}
-          path="/empresas/contacto"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />
-        <Accordion items={this.state.HomeSections} body={this.body} />
-        <Switcher
-          items={this.state.HomeSections}
-          body={this.bodySlider}
-          noContainer
-        />
-        <ConoceCredito />
-      </StyledHome>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            midImg={Hero_mid}
+            banner={HeroHome}
+            path="/contacto"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />
+          <Accordion items={this.state.HomeSections} body={this.body} />
+          <Switcher
+            items={this.state.HomeSections}
+            body={this.bodySlider}
+            noContainer
+          />
+          <ConoceCredito />
+        </StyledHome>
       </>
     ) : null;
   }

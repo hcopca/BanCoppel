@@ -58,10 +58,10 @@ const StyledBanner = styled.section`
     .img-holder {
       display: flex;
       justify-content: center;
-    img {
-      max-width: 70%;
+      img {
+        max-width: 70%;
+      }
     }
-  }
 
     .contenido_sobrepuesto {
       width: calc(100% - 30px);
@@ -72,9 +72,9 @@ const StyledBanner = styled.section`
         margin-bottom: 10px;
         margin-left: 130px;
         button {
-        width: 140px;
-        height: 30px;
-      }
+          width: 140px;
+          height: 30px;
+        }
       }
     }
   }
@@ -85,12 +85,12 @@ const StyledBanner = styled.section`
         margin-bottom: 27px;
         margin-left: 185px;
         button {
-        p{
-          padding: 2px;
+          p {
+            padding: 2px;
+          }
+          width: 140px;
+          height: 40px;
         }
-        width: 140px;
-        height: 40px;
-      }
       }
     }
   }
@@ -102,24 +102,23 @@ const StyledBanner = styled.section`
     }
   }
   @media (min-width: 1366px) {
-
     .img-holder {
       img {
         max-width: 100%;
-          }
-       }
+      }
+    }
     .contenido_sobrepuesto {
       a {
         margin-bottom: 20px;
         margin-left: 60px;
         button {
-        width: 183px;
-        height: 50px;
-      }
+          width: 183px;
+          height: 50px;
+        }
       }
     }
   }
-    @media (min-width: 1400px) {
+  @media (min-width: 1400px) {
     .container {
       padding-top: 63px;
       padding-bottom: 63px;
@@ -127,15 +126,14 @@ const StyledBanner = styled.section`
     .contenido_sobrepuesto {
       a {
         margin-bottom: 40px;
-       margin-left: 113px;
+        margin-left: 113px;
       }
     }
     img {
       width: 848px;
       height: 354px;
     }
-   }
-  
+  }
 `;
 
 export default class ConoceCredito extends Component {
@@ -160,8 +158,10 @@ export default class ConoceCredito extends Component {
           </div>
 
           <div className="contenido_sobrepuesto">
-            <Link to="/empresas/contacto">
-              <BancoppelBtn amarillo><p>Solicita tu crédito</p></BancoppelBtn>
+            <Link to="/contacto">
+              <BancoppelBtn amarillo>
+                <p>Solicita tu crédito</p>
+              </BancoppelBtn>
             </Link>
           </div>
         </Container>

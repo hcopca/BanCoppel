@@ -25,17 +25,17 @@ const StyledCreditoSimple = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-          img{
-            margin-top: -155px;
-             margin-left: 5px;
-           }
-           .padresubtitle{
-            .subtitle{
-               max-width: 280px;
-           }
-           }
-         }
+          .subchildren {
+            img {
+              margin-top: -155px;
+              margin-left: 5px;
+            }
+            .padresubtitle {
+              .subtitle {
+                max-width: 280px;
+              }
+            }
+          }
         }
       }
     }
@@ -47,17 +47,17 @@ const StyledCreditoSimple = styled.div`
     .hero_container {
       .container {
         .children {
-         .subchildren{
-           h2{
-             height: 80px;
-             font-size: 32px;
-           }
-           img{
-             margin-top: -177px;
-             height: 142px;
-             width: 23px;
-             margin-left: 2px;
-           }
+          .subchildren {
+            h2 {
+              height: 80px;
+              font-size: 32px;
+            }
+            img {
+              margin-top: -177px;
+              height: 142px;
+              width: 23px;
+              margin-left: 2px;
+            }
           }
         }
       }
@@ -71,29 +71,31 @@ const StyledCreditoSimple = styled.div`
       .container {
         margin-right: 300px;
         .children {
-          .subchildren{
-            h2{
+          .subchildren {
+            h2 {
               width: 650px;
               height: 90px;
               font-size: 44px;
-               }
-               img {
-                width: 25px;
-                height: 152px;
-                margin-top: -187px;
-                margin-left: 1px;
-                max-width: 505px;
-              }
-             }
-           }
+            }
+            img {
+              width: 25px;
+              height: 152px;
+              margin-top: -187px;
+              margin-left: 1px;
+              max-width: 505px;
+            }
+          }
         }
       }
+    }
   }
 `;
-const titleBanner = "FINANCIAMIENTO PARA IMPULSAR TU NEGOCIO."
+const titleBanner = "FINANCIAMIENTO PARA IMPULSAR TU NEGOCIO.";
 const subtitle = (
-  <p>Crédito a <span>largo plazo</span>  para darle vida a tus proyectos</p>
-)
+  <p>
+    Crédito a <span>largo plazo</span> para darle vida a tus proyectos
+  </p>
+);
 
 class CreditoSimple extends Component {
   constructor(props) {
@@ -132,66 +134,68 @@ class CreditoSimple extends Component {
   render() {
     return (
       <>
-      <Helmet>
+        <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>
-          Crédito Simple: detalles y requisitos | BanCoppel.com
-          </title>
-          <meta 
-          name="title" 
-          content="Crédito Simple: detalles y requisitos | BanCoppel.com" />
-          <link rel="canonical" href="https://www.bancoppel.com/empresas/credito-simple" />
-          <meta 
-          name="keywords"
-          content="credito simple, banca empresarial, bancoppel, financiamiento, credito, requisitos," />
-           <meta
+          <title>Crédito Simple: detalles y requisitos | BanCoppel.com</title>
+          <meta
+            name="title"
+            content="Crédito Simple: detalles y requisitos | BanCoppel.com"
+          />
+          <link
+            rel="canonical"
+            href="https://www.bancoppel.com/bancoppel/credito-simple"
+          />
+          <meta
+            name="keywords"
+            content="credito simple, banca empresarial, bancoppel, financiamiento, credito, requisitos,"
+          />
+          <meta
             name="description"
             content="Conoce las características y requisitos del Crédito Simple y disfruta de los beneficios que el financiamiento de Banca empresarial BanCoppel te ofrece."
             data-react-helmet="true"
           />
-
-      </Helmet>
-      <StyledCreditoSimple>
-        <ResponsiveHeader>
-          <div className="title">
-            <h2>EL FINANCIAMIENTO PARA</h2>
-            <h2>
-              IMPULSAR TU
-              <br />
-              NEGOCIO
-            </h2>
-          </div>
-          <div className="copy">
-            <h4>
-              Financiamiento a <span>largo plazo</span>
-              <br /> para darle vida a tus proyectos
-            </h4>
-          </div>
-        </ResponsiveHeader>
-        <Hero
-          btnCoppy="Me interesa"
-          imagen={Hero_}
-          responsiveImg={Hero_responsive}
-          banner={HeroHome}
-          midImg={Hero_mid}
-          path="/"
-          titleBanner={titleBanner}
-          subtitle={subtitle}
-        />{" "}
-        <ProductHeader>
-          <h1>
-            CRÉDITO <span>SIMPLE</span>
-          </h1>
-        </ProductHeader>
-        <Accordion items={CreditoSimpleSections} body={this.body} />
-        <Switcher
-          items={CreditoSimpleSections}
-          body={this.body}
-          isRequisitos={this.isRequisitos.bind(this)}
-        />
-        {this.state.Requisitos ? <TeInteresa /> : null}
-        <ListaProductos />
-      </StyledCreditoSimple>
+        </Helmet>
+        <StyledCreditoSimple>
+          <ResponsiveHeader>
+            <div className="title">
+              <h2>EL FINANCIAMIENTO PARA</h2>
+              <h2>
+                IMPULSAR TU
+                <br />
+                NEGOCIO
+              </h2>
+            </div>
+            <div className="copy">
+              <h4>
+                Financiamiento a <span>largo plazo</span>
+                <br /> para darle vida a tus proyectos
+              </h4>
+            </div>
+          </ResponsiveHeader>
+          <Hero
+            btnCoppy="Me interesa"
+            imagen={Hero_}
+            responsiveImg={Hero_responsive}
+            banner={HeroHome}
+            midImg={Hero_mid}
+            path="/"
+            titleBanner={titleBanner}
+            subtitle={subtitle}
+          />{" "}
+          <ProductHeader>
+            <h1>
+              CRÉDITO <span>SIMPLE</span>
+            </h1>
+          </ProductHeader>
+          <Accordion items={CreditoSimpleSections} body={this.body} />
+          <Switcher
+            items={CreditoSimpleSections}
+            body={this.body}
+            isRequisitos={this.isRequisitos.bind(this)}
+          />
+          {this.state.Requisitos ? <TeInteresa /> : null}
+          <ListaProductos />
+        </StyledCreditoSimple>
       </>
     );
   }
