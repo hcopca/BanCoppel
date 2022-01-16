@@ -31,8 +31,8 @@ const StyledNavbar = styled.div`
           height: 26px;
         }
       }
-
-      .hamburger {
+       /* DESCOMENTAR EN CASO DE NO USAR CssExplorer.css */
+      /* .hamburger {
         cursor: pointer;
         width: 24px;
         height: 20px;
@@ -51,7 +51,7 @@ const StyledNavbar = styled.div`
         .center {
           width: 70%;
         }
-      }
+      } */
       img {
         max-width: 95%;
       }
@@ -111,7 +111,20 @@ class Navbar extends Component {
               <div
                 className="hamburger"
                 onClick={() => this.setState({ onOpen: true })}
+                style={{
+                  cursor: "pointer",
+                  width: "24px",
+                  height: "20px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "space-around",
+                  marginRight: "32px",
+
+                }}
               >
+          
+          
                 <div className="ham-item"></div>
                 <div className="ham-item center"></div>
                 <div className="ham-item"></div>
