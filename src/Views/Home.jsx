@@ -157,7 +157,6 @@ class Home extends Component {
     this.setState({
       HomeSections: sections,
     });
-    console.log("SECTIONS", sections);
   }
 
   body(data) {
@@ -174,44 +173,41 @@ class Home extends Component {
     );
   }
 
-  arrayByGroups(data) {
-    var arr = [];
-    for (var i = 0; i < data.length; i += 4) {
-      arr.push(data.slice(i, i + 4));
-    }
-    return arr;
-  }
-
-  renderCards(cards) {
-    return (
-      <StyledCardsSlider length={cards.length}>
-        {cards ? (
-          cards.map((card, idx) => {
-            return (
-              <div
-                className={`item_card ${cards.length === 1 ? "center" : ""}`}
-                key={idx}
-              >
-                <CardBlue card={card} row />
-              </div>
-            );
-          })
-        ) : (
-          <p>no hay "cards" para mostrar</p>
-        )}
-      </StyledCardsSlider>
-    );
-  }
-
   bodySlider(data) {
     const { cards } = data;
     if (cards) {
-      let arrays = [];
-      for (var i = 0; i < cards.length; i += 4) {
-        arrays.push(cards.slice(i, i + 4));
+      function arrayByGroups(data) {
+        var arr = [];
+        for (var i = 0; i < data.length; i += 4) {
+          arr.push(data.slice(i, i + 4));
+        }
+        return arr;
       }
-      // this.arrayByGroups(cards);
-      if (arrays) {
+      var Arrays = arrayByGroups(cards);
+      function renderCards(cards) {
+        return (
+          <StyledCardsSlider length={cards.length}>
+            {cards ? (
+              cards.map((card, idx) => {
+                return (
+                  <div
+                    className={`item_card ${
+                      cards.length === 1 ? "center" : ""
+                    }`}
+                    key={idx}
+                  >
+                    <CardBlue card={card} row />
+                  </div>
+                );
+              })
+            ) : (
+              <p>no hay "cards" para mostrar</p>
+            )}
+          </StyledCardsSlider>
+        );
+      }
+
+      if (Arrays) {
         return (
           <TransitionGroup className="carousel-anim">
             <CSSTransition
@@ -219,7 +215,7 @@ class Home extends Component {
               timeout={500}
               classNames="caritem"
             >
-              <Slider items={arrays} body={this.renderCards} />
+              <Slider items={Arrays} body={renderCards} />
             </CSSTransition>
           </TransitionGroup>
         );
@@ -236,7 +232,7 @@ class Home extends Component {
             name="title"
             content="Banca Empresarial BanCoppel | BanCoppel.com"
           />
-          <link rel="canonical" href="https://www.bancoppel.com/bancoppel" />
+          <link rel="canonical" href="https://www.bancoppel.com/empresas" />
           <meta
             name="keywords"
             content="banca empresarial, bancoppel, banco, empresa, negocio,  cuenta de inversion, cuenta de nomina, credito"
@@ -271,7 +267,7 @@ class Home extends Component {
             responsiveImg={Hero_responsive}
             midImg={Hero_mid}
             banner={HeroHome}
-            path="/contacto"
+            path="/empresas/contacto"
             titleBanner={titleBanner}
             subtitle={subtitle}
           />
