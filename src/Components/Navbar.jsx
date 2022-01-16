@@ -6,13 +6,14 @@ import SideDrawer from "./SideDrawer";
 import AccesoForm from "./AccesoForm";
 import Logo from "../Assets/logo_bancoppel_letras_azules.svg";
 import SecondaryNav from "./SecondaryNav";
+import { globalColors } from "../config/config";
 
 const StyledNavbar = styled.div`
-  background: var(--white);
+  background: ${globalColors["--white"]};
   padding: 16px;
   padding-top: 35px;
 
-  border-bottom: 2px solid var(--shadow-blue);
+  border-bottom: 2px solid ${globalColors["--shadow-blue"]};
   .nav_container {
     display: flex;
     align-items: center;
@@ -44,7 +45,7 @@ const StyledNavbar = styled.div`
         .ham-item {
           width: 100%;
           height: 2px;
-          background: var(--storm-blue);
+          background: ${globalColors["--storm-blue"]};
           border-radius: 10px;
           padding: 1px;
         }
@@ -103,6 +104,8 @@ class Navbar extends Component {
   }
 
   render() {
+    debugger;
+    console.log(globalColors);
     return (
       <>
         <StyledNavbar className="bancoppel_nav">
@@ -132,18 +135,7 @@ class Navbar extends Component {
               {/* <NavLink to="/bancoppel" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>
               </NavLink> */}
-              <NavLink to="/login">
-                {/* <a href="https://dodobypaco.com/prueba/login_empresas.html"> */}
-                <BancoppelBtn
-                  // secundario
-                  // onClick={() => openInNewTab("https://bancoppel.com/bancoppel/index.html")}
-                  // onClick={() =>
-                  //   this.setState({ openAcceso: !this.state.openAcceso })
-                  // }
-                >
-                  Acceso
-                </BancoppelBtn>
-              </NavLink>
+
               {/* </a> */}
               {this.state.openAcceso ? (
                 <AccesoForm setState={this.setState.bind(this)} />

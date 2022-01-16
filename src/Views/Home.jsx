@@ -9,18 +9,14 @@ import {
   Switcher,
   Slider,
 } from "../Components";
-
 import styled from "styled-components";
 import Hero_ from "../Assets/Heros/hero_home.jpg";
 import Hero_mid from "../Assets/Heros/hero_home_mid.jpg";
 import Hero_responsive from "../Assets/Heros/hero_home_responsive.jpg";
 import HeroHome from "../Assets/Heros/line1.svg";
 import Catalogo from "../Catalogo_Productos";
-
 import "./Animation.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-//import Config from "Config";
-//fetchData(Config.serverUrl + '/Enterprises/...')
 const StyledHome = styled.div`
   .btn {
     width: 197px;
@@ -142,7 +138,8 @@ const subtitle = (
   </p>
 );
 class Home extends Component {
-  constructor(props) { //escribí props
+  constructor(props) {
+    //escribí props
     super(props); //escribí props
     this.renderCards = this.renderCards.bind(this);
     this.body = this.body.bind(this);
@@ -150,8 +147,6 @@ class Home extends Component {
   }
 
   async componentDidMount() {
-    debugger;
-    //console.log(Config);
     var sections = await [
       ...new Set(Catalogo.map((producto) => producto.family)),
     ].map((item) => ({
@@ -162,9 +157,9 @@ class Home extends Component {
     this.setState({
       HomeSections: sections,
     });
-    console.log("SECTIONS", sections)
+    console.log("SECTIONS", sections);
   }
-  
+
   body(data) {
     return (
       <StyledCards>
