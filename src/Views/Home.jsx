@@ -19,6 +19,8 @@ import Catalogo from "../Catalogo_Productos";
 
 import "./Animation.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+//import Config from "Config";
+//fetchData(Config.serverUrl + '/Enterprises/...')
 const StyledHome = styled.div`
   .btn {
     width: 197px;
@@ -148,6 +150,8 @@ class Home extends Component {
   }
 
   async componentDidMount() {
+    debugger;
+    //console.log(Config);
     var sections = await [
       ...new Set(Catalogo.map((producto) => producto.family)),
     ].map((item) => ({
