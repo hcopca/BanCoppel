@@ -140,8 +140,8 @@ const subtitle = (
   </p>
 );
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) { //escribí props
+    super(props); //escribí props
     this.renderCards = this.renderCards.bind(this);
     this.body = this.body.bind(this);
     this.state = {};
@@ -158,8 +158,9 @@ class Home extends Component {
     this.setState({
       HomeSections: sections,
     });
+    console.log("SECTIONS", sections)
   }
-
+  
   body(data) {
     return (
       <StyledCards>
@@ -210,7 +211,7 @@ class Home extends Component {
       for (var i = 0; i < cards.length; i += 4) {
         arrays.push(cards.slice(i, i + 4));
       }
-      //this.arrayByGroups(cards);
+      // this.arrayByGroups(cards);
       if (arrays) {
         return (
           <TransitionGroup className="carousel-anim">

@@ -135,7 +135,7 @@ class Navbar extends Component {
               <NavLink to="/login">
                 {/* <a href="https://dodobypaco.com/prueba/login_empresas.html"> */}
                 <BancoppelBtn
-                  secundario
+                  // secundario
                   // onClick={() => openInNewTab("https://bancoppel.com/bancoppel/index.html")}
                   // onClick={() =>
                   //   this.setState({ openAcceso: !this.state.openAcceso })
