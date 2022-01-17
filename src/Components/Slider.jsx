@@ -158,7 +158,7 @@ class Slider extends Component {
               <div
                 style={{
                   display: "flex",
-                  flexWrap: "wrap"
+                  flexWrap: "wrap",
                   margin: "6px !important",
                 }}
                 className={`item_card ${cards.length === 1 ? "center" : ""}`}
