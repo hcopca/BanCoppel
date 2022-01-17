@@ -64,7 +64,7 @@ const Button = (props) => {
   background: "var(--white)",
   color: "var(--storm-blue)",
   padding: "0 10px",
-  height: "37px",
+  height: "50px",
   minWidth: "80px",
   display: "flex",
   flexDirection: "row",

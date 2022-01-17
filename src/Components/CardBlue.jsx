@@ -234,13 +234,15 @@ class CardBlue extends Component {
           maxWidth: "472px",
           height: "224px",
           display: "flex",
+          borderRadius: "10px",
+          background: "#002A61",
         }}
       >
         {card.image ? (
           <img
             src={card.image}
             alt="img"
-            style={{ height: "224px", maxWidth: "200px" }}
+            style={{ height: "224px", maxWidth: "200px", borderRadius: "10px", }}
           />
         ) : null}
         <div
@@ -261,7 +263,9 @@ class CardBlue extends Component {
               display: "flex",
               flexDirection: "column",
               boxSizing: "border-box",
-              textAlign: "center",
+              textAlign: "left",
+              justifyContent: "center",
+              marginLeft: "27px",
             }}
           >
             <h2
@@ -276,21 +280,30 @@ class CardBlue extends Component {
                 fontWeight: "normal",
                 color: "#fff",
               }}
+              
             >
               {card.title_custom}
             </h2>
-            {card.homeCopy ? <p>{card.homeCopy}</p> : null}
+            <div p style={{
+              marginTop: "8px",
+            }}>
+            {card.homeCopy ? <p style={{color: "white", fontFamily: "futura", fontSize:"14px", lineHeight: "16px", paddingRight: "5px"}}>
+              {card.homeCopy}</p> : null}
+            </div>
             {card.copy2 ? <h3>{card.copy2}</h3> : null}
             {card.access ? <h2>{card.access}</h2> : null}
-          </div>
-
-          {card.path ? (
+            <div button style={{
+              marginTop:"17px",
+            }}>
+            {card.path ? (
             <Link to={card.path}>
               <BancoppelBtn onClick={() => window.scrollTo(0, 0)}>
                 {rest.row ? "Me interesa" : "Ver más"}
               </BancoppelBtn>
             </Link>
           ) : null}
+          </div>
+          </div>
 
           {/* BOTONES PARA LA VISTA DE ACCESO */}
           {card.accessLlama ? (

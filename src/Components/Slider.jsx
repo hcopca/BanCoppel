@@ -161,7 +161,7 @@ class Slider extends Component {
           selectedItem={this.state.currentSlide}
         >
           {this.props.items.map((item, idx) => {
-            debugger;
+            // debugger;
             return (
               <div className="slide" key={idx}>
                 <Container>{this.renderCards(item, true)}</Container>

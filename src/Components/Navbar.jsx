@@ -93,10 +93,10 @@ const StyledNavbar = styled.div`
     }
   }
 `;
-// const openInNewTab = (url) => {
-//   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-//   if (newWindow) newWindow.opener = null
-// }
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -104,7 +104,7 @@ class Navbar extends Component {
   }
 
   render() {
-    debugger;
+    // debugger;
     console.log(globalColors);
     return (
       <>
@@ -144,6 +144,14 @@ class Navbar extends Component {
                 className="navigation-item"
               >
                 <BancoppelBtn>Personas</BancoppelBtn>
+              </a>
+              <a
+                onClick={() => openInNewTab("https://bancoppel.com/empresas/index.html")}
+                target="_blank"
+                rel="noreferrer"
+                className="navigation-item"
+              >
+                <BancoppelBtn>Acceso</BancoppelBtn>
               </a>
               {/* <NavLink to="/bancoppel" className="navigation-item">
                 <BancoppelBtn>Empresas</BancoppelBtn>

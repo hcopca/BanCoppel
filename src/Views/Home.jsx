@@ -173,7 +173,7 @@ class Home extends Component {
 
   //ADM 20220116 Se sacan estás funciones para que renderize bien en IE 10
   renderCards = (cards, flag) => {
-    debugger;
+    // debugger;
     return (
       <StyledCardsSlider length={cards.length}>
         {cards ? (
@@ -225,7 +225,7 @@ class Home extends Component {
         arrays.push(data.cards.slice(i, i + 4));
       }
       if (arrays && arrays.length > 0) {
-        debugger;
+        // debugger;
         return (
           <TransitionGroup className="carousel-anim">
             <CSSTransition
