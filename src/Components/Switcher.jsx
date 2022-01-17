@@ -64,7 +64,7 @@ const StyledSwitch = styled.div`
   @media (min-width: 1400px) {
     padding-bottom: 82px;
     display: block;
-    .sections{
+    .sections {
       margin-bottom: 60px;
     }
   }

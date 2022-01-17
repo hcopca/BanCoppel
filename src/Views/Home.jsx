@@ -139,10 +139,8 @@ const subtitle = (
 );
 class Home extends Component {
   constructor(props) {
-    //escribí props
     super(props); //escribí props
-    this.renderCards = this.renderCards.bind(this);
-    this.body = this.body.bind(this);
+    //this.renderCards = this.renderCards.bind(this);
     this.state = {};
   }
 
@@ -173,41 +171,61 @@ class Home extends Component {
     );
   }
 
-  bodySlider(data) {
-    const { cards } = data;
-    if (cards) {
-      function arrayByGroups(data) {
-        var arr = [];
-        for (var i = 0; i < data.length; i += 4) {
-          arr.push(data.slice(i, i + 4));
-        }
-        return arr;
-      }
-      var Arrays = arrayByGroups(cards);
-      function renderCards(cards) {
-        return (
-          <StyledCardsSlider length={cards.length}>
-            {cards ? (
-              cards.map((card, idx) => {
-                return (
-                  <div
-                    className={`item_card ${
-                      cards.length === 1 ? "center" : ""
-                    }`}
-                    key={idx}
-                  >
-                    <CardBlue card={card} row />
-                  </div>
-                );
-              })
-            ) : (
-              <p>no hay "cards" para mostrar</p>
-            )}
-          </StyledCardsSlider>
-        );
-      }
+  //ADM 20220116 Se sacan estás funciones para que renderize bien en IE 10
+  renderCards = (cards, flag) => {
+    debugger;
+    return (
+      <StyledCardsSlider length={cards.length}>
+        {cards ? (
+          cards.map((card, idx) => {
+            return (
+              <div
+                className={`item_card ${cards.length === 1 ? "center" : ""}`}
+                key={idx}
+              >
+                <CardBlue card={card} row />
+              </div>
+            );
+          })
+        ) : (
+          <p>no hay "cards" para mostrar</p>
+        )}
+      </StyledCardsSlider>
+    );
+  };
 
-      if (Arrays) {
+  holaCards(cards) {
+    return (
+      <StyledCardsSlider length={cards.length}>
+        {cards ? (
+          cards.map((card, idx) => {
+            return (
+              <div
+                className={`item_card ${cards.length === 1 ? "center" : ""}`}
+                key={idx}
+              >
+                <CardBlue card={card} row />
+              </div>
+            );
+          })
+        ) : (
+          <p>no hay "cards" para mostrar</p>
+        )}
+      </StyledCardsSlider>
+    );
+  }
+
+  bodySlider(data) {
+    if (!data || !data.section) {
+      return;
+    }
+    const arrays = [];
+    if (data.cards && data.cards.length > 0) {
+      for (var i = 0; i < data.cards.length; i += 4) {
+        arrays.push(data.cards.slice(i, i + 4));
+      }
+      if (arrays && arrays.length > 0) {
+        debugger;
         return (
           <TransitionGroup className="carousel-anim">
             <CSSTransition
@@ -215,7 +233,12 @@ class Home extends Component {
               timeout={500}
               classNames="caritem"
             >
-              <Slider items={Arrays} body={renderCards} />
+              <Slider
+                items={arrays}
+                bodyAdm={this.renderCards}
+                holaCards={this.holaCards}
+                alex="alex"
+              />
             </CSSTransition>
           </TransitionGroup>
         );

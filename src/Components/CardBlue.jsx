@@ -20,13 +20,13 @@ const Card = styled.div`
   .card_body {
     display: flex;
     flex-direction: column;
-   
+
     align-items: center;
     justify-content: space-between;
     height: calc(100% - 262px);
 
     .copy {
-      padding: 25px 15px 0 25px;  //mobile
+      padding: 25px 15px 0 25px; //mobile
       display: flex;
       align-items: left;
       flex-direction: column;
@@ -83,7 +83,7 @@ const Card = styled.div`
       margin-left: 25px;
       display: flex;
       .copy {
-       /* margin-bottom: -25px; */ //ajustar el botón con el bottom
+        /* margin-bottom: -25px; */ //ajustar el botón con el bottom
         h2 {
           margin-top: 20px; //TOP tiulo
           font-size: 18px;
@@ -156,7 +156,8 @@ const Card = styled.div`
   @media (min-width: 992px) {
     display: ${({ row }) => (row ? "flex" : null)};
 
-    max-width: ${({ row }) => (row ? "423px" : null)};//Ya no se mueve CARDS 4x4
+    max-width: ${({ row }) =>
+      row ? "423px" : null}; //Ya no se mueve CARDS 4x4
     height: ${({ row }) => (row ? "190px" : null)};
 
     img {
@@ -175,7 +176,6 @@ const Card = styled.div`
 
     .card_body {
       .copy {
-        
         h2 {
           font-size: 18px;
           line-height: 100%;
@@ -187,7 +187,7 @@ const Card = styled.div`
           line-height: 16px;
         }
       }
-      button{
+      button {
         width: 156px !important;
         height: 50px !important;
         margin-left: 90px;
@@ -196,8 +196,8 @@ const Card = styled.div`
   }
 
   @media (min-width: 1400px) {
-
-    max-width: ${({ row }) => (row ? "472px" : null)};//Ya no se mueve CARDS 4x4
+    max-width: ${({ row }) =>
+      row ? "472px" : null}; //Ya no se mueve CARDS 4x4
     height: ${({ row }) => (row ? "224px" : null)};
 
     img {
@@ -210,7 +210,6 @@ const Card = styled.div`
     }
     .card_body {
       .copy {
-        
         h2 {
           font-size: 24px;
         }
@@ -227,19 +226,67 @@ class CardBlue extends Component {
     const { card, ...rest } = this.props;
 
     return (
-      <Card className="CardBlue" {...rest}>
-        {card.image ? <img src={card.image} alt="img" /> : null}
-        <div className="card_body">
-          <div className="copy">
-            <h2>{card.title_custom}</h2>
+      <div
+        className="CardBlue"
+        style={{
+          width: "100%",
+          width: "100%",
+          maxWidth: "472px",
+          height: "224px",
+          display: "flex",
+        }}
+      >
+        {card.image ? (
+          <img
+            src={card.image}
+            alt="img"
+            style={{ height: "224px", maxWidth: "200px" }}
+          />
+        ) : null}
+        <div
+          className="card_body"
+          style={{
+            width: "472px",
+            height: "224px",
+            alignItems: "flex-start",
+            flexDirection: "column",
+            "-webkit-box-align": "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div
+            className="copy"
+            style={{
+              padding: "0px 0px 10px 10px",
+              display: "flex",
+              flexDirection: "column",
+              boxSizing: "border-box",
+              textAlign: "center",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "24px",
+                lineHeight: "100%",
+                maxWidth: "212px",
+                textAlign: "left",
+                marginTop: "20px",
+                fontFamily: "futura_heavy",
+                fontStyle: "normal",
+                fontWeight: "normal",
+                color: "#fff",
+              }}
+            >
+              {card.title_custom}
+            </h2>
             {card.homeCopy ? <p>{card.homeCopy}</p> : null}
             {card.copy2 ? <h3>{card.copy2}</h3> : null}
             {card.access ? <h2>{card.access}</h2> : null}
           </div>
-          
+
           {card.path ? (
             <Link to={card.path}>
-              <BancoppelBtn onClick={ () => window.scrollTo(0,0)  }>
+              <BancoppelBtn onClick={() => window.scrollTo(0, 0)}>
                 {rest.row ? "Me interesa" : "Ver más"}
               </BancoppelBtn>
             </Link>
@@ -256,13 +303,17 @@ class CardBlue extends Component {
 
           {card.accessVisitala ? (
             <Link to={card.accessVisitala}>
-              <BancoppelBtn onClick={()=>{window.scrollTo(0,0)}}>
+              <BancoppelBtn
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
                 {rest.row ? "¡Visítala!" : "¡Visítala!"}
               </BancoppelBtn>
             </Link>
           ) : null}
         </div>
-      </Card>
+      </div>
     );
   }
 }
