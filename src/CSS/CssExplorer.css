@@ -26,13 +26,13 @@
   max-width: 241px;
   font-family: futura_heavy;
   text-align: center;
-  color: var(--light-gray);
+  color: #aaaaaa;
   font-weight: bold;
   font-size: 14px;
 }
 
 .section .current {
-  border-bottom: 2px solid var(--yellow) !important;
+  border-bottom: 2px solid #fcda47 !important;
 }
 .section .current h3 {
   text-align: "center";
@@ -51,7 +51,7 @@
   padding-bottom: 0;
 }
 .active {
-  border-bottom: 0px solid var(--shadow-blue) !important;
+  border-bottom: 0px solid #dae0e9 !important;
 }
 /* //duda */
 

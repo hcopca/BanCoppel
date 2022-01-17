@@ -115,9 +115,9 @@ class Slider extends Component {
       <div
         length={cards.length}
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(1, 1fr)",
-          gap: "26px",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "25px",
         }}
       >
         {cards ? (
@@ -129,6 +129,37 @@ class Slider extends Component {
                   "-webkit-box-pack": "start",
                   justifyContent: "center",
                   margin: "auto !important",
+                }}
+                className={`item_card ${cards.length === 1 ? "center" : ""}`}
+                key={idx}
+              >
+                <CardBlue card={card} row />
+              </div>
+            );
+          })
+        ) : (
+          <p>no hay "cards" para mostrar</p>
+        )}
+      </div>
+    );
+  }
+  renderInternetExplorerCards(cards) {
+    return (
+      <div
+        length={cards.length}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+        }}
+      >
+        {cards ? (
+          cards.map((card, idx) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap"
+                  margin: "6px !important",
                 }}
                 className={`item_card ${cards.length === 1 ? "center" : ""}`}
                 key={idx}
