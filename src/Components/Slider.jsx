@@ -143,13 +143,16 @@ class Slider extends Component {
       </div>
     );
   }
-  renderInternetExplorerCards(cards) {
+  renderVerticalCards(cards) {
     return (
       <div
-        length={cards.length}
+        className="vertical-card-container"
         style={{
           display: "flex",
-          flexWrap: "wrap",
+          overflowY: "hidden",
+          overflowX: "scroll",
+          width: "100%",
+          justifyContent: "center",
         }}
       >
         {cards ? (
@@ -157,14 +160,16 @@ class Slider extends Component {
             return (
               <div
                 style={{
-                  display: "flex",
-                  flexWrap: "wrap"
-                  margin: "6px !important",
+                  maxHeight: "522px",
+                  height: "522px",
+                  maxWidth: "306px",
+                  width: "306px",
+                  marginRight: "26px",
                 }}
                 className={`item_card ${cards.length === 1 ? "center" : ""}`}
                 key={idx}
               >
-                <CardBlue card={card} row />
+                <CardBlue card={card} renderVerticalCard />
               </div>
             );
           })
@@ -195,7 +200,11 @@ class Slider extends Component {
             // debugger;
             return (
               <div className="slide" key={idx}>
-                <Container>{this.renderCards(item, true)}</Container>
+                <Container>
+                  {this.props.renderVerticalCard
+                    ? this.renderVerticalCards(item, true)
+                    : this.renderCards(item, true)}
+                </Container>
               </div>
             );
           })}
