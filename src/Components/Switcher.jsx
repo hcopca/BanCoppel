@@ -119,7 +119,7 @@ class Switcher extends Component {
                   }`}
                   onClick={() => this.selectedView(item)}
                 >
-                  <h3>{item.section}</h3>
+                  <h3 style={{}}>{item.section}</h3>
                 </div>
               );
             })}

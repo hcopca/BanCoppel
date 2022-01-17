@@ -16,6 +16,36 @@
   --light-gray: #aaaaaa;
 }
 
+.section {
+  padding: 20px;
+  border-bottom: 2px solid var(--shadow-blue);
+  cursor: pointer;
+}
+.section h3 {
+  width: 100%;
+  max-width: 241px;
+  font-family: futura_heavy;
+  text-align: center;
+  color: var(--light-gray);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section .current {
+  border-bottom: 2px solid var(--yellow) !important;
+}
+.section .current h3 {
+  text-align: "center";
+  color: "rgb(0, 42, 97)";
+  width: "100%";
+  max-width: "241px";
+  font-family: "futura_heavy";
+}
+
+.hero_container {
+  left: 0 !important;
+}
+
 /* BOTÓN NAVBAR, ACCESO Y PERSONAS */
 .second-styled-accordion:last-child {
   padding-bottom: 0;
